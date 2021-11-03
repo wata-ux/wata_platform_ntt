@@ -1,0 +1,229 @@
+@@include('./include/platform-header.html')
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- history / live -->
+        <div class="btn-mid-holder">
+            <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-white">
+                    <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
+                </label>
+                <label class="btn btn-white active">
+                    <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
+                </label>
+            </div>
+        </div>
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
+            <div class="btn-group ml-2">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
+                        aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>이벤트 설정</strong></div>
+                        <ul class="item-list mb-2">
+                            <li><a href="#n" class="active"><i
+                                        class="material-icons">location_on</i><span>개별위치</span></a></li>
+                            <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header"><strong>경보 설정</strong></div>
+                        <ul class="item-list">
+                            <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
+                            <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
+                            <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
+                            <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header"><strong>경보 설정</strong></div>
+                        <ul class="item-list">
+                            <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
+                            <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="map-location ml-2">
+                <div class="location-header d-flex align-items-center">
+                    <strong>프로젝트 A</strong>
+                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location"
+                        href="#map-location">
+                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                    </a>
+                </div>
+                <div class="collapse location-body" id="map-location">
+                    <div class="sidebar">
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu01">
+                                    <li class="sidebar-menu-item active">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">B1</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">4F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">5F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">6F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">7F</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu02">
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('./include/platform-tools.html')
+    </div>
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-event active" id="sm-event">
+                        <!-- 이벤트 등록 -->
+                        <div class="event-inner">
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex align-items-center">
+                                    <a href="event_list.html" class="pr-2"><i class="material-icons">arrow_back</i></a>
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">이벤트 보기</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid contents-view">
+                                <div class="form-group">
+                                    <em class="form-title">마감전 파이널 세일</em>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventArea">기간</label>
+                                    <p class="form-text">2021-02-01 ~ 2021-02-28</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventArea">구역</label>
+                                    <p class="form-text">본관 지하1층 롯데마트 프레쉬 코너</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label mb-0 text-50" for="eventTitle">제목</label>
+                                    <p class="form-text">20:30분 마감 파이널 세일</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label text-50">내용</label>
+                                    <div class="form-text-content">
+                                        <p>마감 전까지 신선제품 50% 세일</p>
+                                        <h6>할인 품목</h6>
+                                        <ul>
+                                            <li>야채</li>
+                                            <li>고기</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="formFile" class="form-label text-50">첨부파일</label>
+                                    <div class="form-row align-items-center">
+                                        <div class="col-auto">
+                                            <div class="avatar">
+                                                <img src="images/slider01.jpg" class="avatar-img rounded" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="font-weight-bold" data-dz-name="">coupon_img.jpg</div>
+                                            <p class="small text-muted mb-0" data-dz-size=""><strong>0.2</strong> MB</p>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#" class="text-muted-light" data-dz-remove="">
+                                                <i class="material-icons">file_download</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="set-list">
+                                        <label class="form-label mb-0" for="option01">활성화 여부</label>
+                                        <div class="control-cover">
+                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                                <input checked="" type="checkbox" id="option03"
+                                                    class="custom-control-input" checked="checked"
+                                                    onclick="return false">
+                                                <label class="custom-control-label" for="option03">active</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-32pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="event_write.html" class="btn btn-outline-secondary mr-8pt">수정하기</a>
+                                        <a href="event_done.html" class="btn btn-accent ml-0">이벤트 종료</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')

@@ -1,0 +1,467 @@
+@@include('./include/platform-header.html')
+
+<!-- Drawer Layout -->
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- history / live -->
+        <div class="btn-mid-holder">
+            <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-white">
+                    <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
+                </label>
+                <label class="btn btn-white active">
+                    <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
+                </label>
+            </div>
+        </div>
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
+            <div class="btn-group ml-2">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
+                        aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>이벤트 설정</strong></div>
+                        <ul class="item-list mb-2">
+                            <li><a href="#n" class="active"><i
+                                        class="material-icons">location_on</i><span>개별위치</span></a></li>
+                            <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header"><strong>경보 설정</strong></div>
+                        <ul class="item-list">
+                            <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
+                            <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
+                            <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
+                            <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header"><strong>경보 설정</strong></div>
+                        <ul class="item-list">
+                            <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
+                            <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="map-location ml-2">
+                <div class="location-header d-flex align-items-center">
+                    <strong>프로젝트 A</strong>
+                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location"
+                        href="#map-location">
+                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                    </a>
+                </div>
+                <div class="collapse location-body" id="map-location">
+                    <div class="sidebar">
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu01">
+                                    <li class="sidebar-menu-item active">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">B1</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">4F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">5F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">6F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">7F</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu02">
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('./include/platform-tools.html')
+    </div>
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-sector active" id="sm-sector">
+                        <div class="sector-inner">
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex">
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">지오펜스 등록</h3>
+                                    </div>
+                                </div>
+                                <div class="btn-group">
+                                    <a href="#n" class="btn btn-outline-accent dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">기능 선택</a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-header"><strong>범위 지정</strong></div>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">highlight_alt</i>
+                                            구조물 선택</a>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">adjust</i> 범위 선택</a>
+                                        <a class="dropdown-item" href="#"><i class="material-icons">timeline</i> 선
+                                            그리기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label mb-0 text-50 essential" for="eventName">지오펜스명</label>
+                                    <input type="text" class="form-line" id="eventName" placeholder="지오펜스명을 입력해주세요.">
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50 mb-3" for="">지오펜스 선택</label>
+                                    <em class="none-list">아직 생성된 지오펜스가 없습니다.</em>
+                                    <div class="element-list-group mb-4 dragula-list" data-toggle="dragula">
+                                        <div class="accordion js-accordion list-group-flush" id="path-parent">
+                                            <div class="accordion__item">
+                                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                                    data-target="#path-group" data-parent="#path-parent">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons-outlined">folder</i>
+                                                    </div>
+                                                    <span class="ele-title flex">제목 없는 그룹 1</span>
+                                                    <span
+                                                        class="accordion__toggle-icon material-icons icon-24pt">keyboard_arrow_down</span>
+                                                </a>
+                                                <div class="collapse" id="path-group">
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 3</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion js-accordion list-group-flush" id="path-parent">
+                                            <div class="accordion__item">
+                                                <a href="#" class="accordion__toggle collapsed">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons-outlined">place</i>
+                                                    </div>
+                                                    <span class="ele-title flex">제목 없는 포인트 1</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="accordion js-accordion list-group-flush" id="path-parent2">
+                                            <div class="accordion__item">
+                                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                                    data-target="#path-group2" data-parent="#path-parent2">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons-outlined">folder</i>
+                                                    </div>
+                                                    <span class="ele-title flex">제목 없는 그룹 2</span>
+                                                    <span
+                                                        class="accordion__toggle-icon material-icons icon-24pt">keyboard_arrow_down</span>
+                                                </a>
+                                                <div class="collapse" id="path-group2">
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 3</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion js-accordion list-group-flush" id="path-parent3">
+                                            <div class="accordion__item">
+                                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                                    data-target="#path-group3" data-parent="#path-parent3">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons-outlined">folder</i>
+                                                    </div>
+                                                    <span class="ele-title flex">제목 없는 그룹 3</span>
+                                                    <span
+                                                        class="accordion__toggle-icon material-icons icon-24pt">keyboard_arrow_down</span>
+                                                </a>
+                                                <div class="collapse" id="path-group3">
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 3</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion js-accordion list-group-flush" id="path-parent4">
+                                            <div class="accordion__item">
+                                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                                    data-target="#path-group4" data-parent="#path-parent4">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons-outlined">folder</i>
+                                                    </div>
+                                                    <span class="ele-title flex">제목 없는 그룹 4</span>
+                                                    <span
+                                                        class="accordion__toggle-icon material-icons icon-24pt">keyboard_arrow_down</span>
+                                                </a>
+                                                <div class="collapse" id="path-group4">
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 3</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="element-item-list">
+                                                        <div class="d-flex align-items-center item-list">
+                                                            <div class="poi-icon">
+                                                                <i class="material-icons">highlight_alt</i>
+                                                            </div>
+                                                            <a href="#n" class="ele-title">
+                                                                <span>제목 없는 다각형 4</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-32pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="sector_list.html" class="btn btn-outline-secondary mr-8pt">취소하기</a>
+                                        <a href="event_done.html" class="btn btn-outline-accent ml-0">등록하기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // END drawer -->
+</div>
+
+<!-- // END Drawer Layout -->
+
+
+@@include('./include/platform-footer.html')

@@ -1,0 +1,47 @@
+@@include('./include/platform-header.html')
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
+        </div>
+        @@include('./include/platform-tools.html')
+    </div>
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-accident active" id="sm-accident">
+                        <!-- 등록 완료 -->
+                        <div class="accident-inner">
+                            <div class="tit-intro">
+                                <div class="preloader-container">
+                                    <div class="preloader-dots d-none">
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                    </div>
+                                    <div class="preloader-spinner d-none">
+                                        <svg class="spinner-container" width="65px" height="65px" viewBox="0 0 52 52">
+                                            <circle class="path" cx="26px" cy="26px" r="20px" fill="none"
+                                                stroke-width="4px" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <em>전송을 완료했습니다.</em>
+                                <a href="accident_list.html" class="btn btn-outline-accent">목록으로</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')

@@ -1,0 +1,578 @@
+@@include('./include/platform-header.html')
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- history / live -->
+        <div class="btn-mid-holder">
+            <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-white">
+                    <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true"> 히스토리
+                </label>
+                <label class="btn btn-white active">
+                    <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true" checked=""> 실시간
+                </label>
+            </div>
+        </div>
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <div class="btn-group ml-2">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
+                        aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>이벤트 설정</strong></div>
+                        <ul class="item-list mb-2">
+                            <li><a href="#n" class="active"><i
+                                        class="material-icons">location_on</i><span>개별위치</span></a></li>
+                            <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header"><strong>경보 설정</strong></div>
+                        <ul class="item-list">
+                            <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
+                            <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
+                            <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
+                            <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header"><strong>경보 설정</strong></div>
+                        <ul class="item-list">
+                            <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
+                            <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="map-location ml-2">
+                <div class="location-header d-flex align-items-center">
+                    <strong>프로젝트 A</strong>
+                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location"
+                        href="#map-location">
+                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                    </a>
+                </div>
+                <div class="collapse location-body" id="map-location">
+                    <div class="sidebar">
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu01"
+                                    data-perfect-scrollbar>
+                                    <li class="sidebar-menu-item active">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">B1</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">4F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">5F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">6F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">7F</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu02"
+                                    data-perfect-scrollbar>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-holder">
+            <div class="inner">
+                <span><strong>Ctrl</strong>을 누른 상태에서 사용자를 클릭하면 다중 선택이 가능합니다.</span>
+            </div>
+            <div class="inner">
+                <span><strong>Shift</strong>를 누른 상태에서 사용자를 클릭하면 해제 가능합니다.</span>
+            </div>
+            <div class="inner bg-accent">
+                <span><strong>Ctrl</strong> + 다중 선택 가능</span>
+            </div>
+            <div class="inner bg-accent">
+                <span><strong>Shift</strong> + 선택 해제 가능</span>
+            </div>
+            <div class="inner bg-accent">
+                <span class="wrong-location">현재 위치를 찾을 수 없습니다.</span>
+            </div>
+        </div>
+        @@include('./include/platform-tools.html')
+    </div>
+    <!-- <div class="navbar-toggler-box">
+        <button class="navbar-toggler d-block" type="button" data-toggle="sidebar">
+            <span class="material-icons">short_text</span>
+        </button>
+    </div> -->
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-user active" id="sm-user">
+                        <!-- 프로젝트 등록 -->
+                        <div class="user-inner">
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex">
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">사용자 다중 선택</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="contents-tab the-num03 nav mb-4" role="tablist">
+                                    <a href="#tab05" class="" data-toggle="tab" role="tab" aria-selected="true">
+                                        <span class="menu-cover"><span>정보</span></span>
+                                    </a>
+                                    <a href="#tab06" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                        <span class="menu-cover"><span>메세지</span></span>
+                                    </a>
+                                    <a href="#tab07" class="active" data-toggle="tab" role="tab" aria-selected="false">
+                                        <span class="menu-cover"><span>동선추적</span></span>
+                                    </a>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <span class="d-flex flex m-0"><strong class="text-iden">10</strong>명의 사용자가
+                                        선택되었습니다.</span>
+                                    <a href="#n" class="btn-link text-accent">전체삭제</a>
+                                </div>
+                                <div class="selected-user mt-2" data-perfect-scrollbar>
+                                    <div class="card-inner">
+                                        <ul>
+                                            <li>
+                                                <a href="#n" class="active">01012345678 / 남성 / 23세</a>
+                                                <a href="#n" class="btn-del"><i class="material-icons">close</i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#n" class="disabled">01012345678 / 남성 / 23세</a>
+                                                <a href="#n" class="btn-del"><i class="material-icons">close</i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#n">01012345678 / 남성 / 23세</a>
+                                                <a href="#n" class="btn-del"><i class="material-icons">close</i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#n">01012345678 / 남성 / 23세</a>
+                                                <a href="#n" class="btn-del"><i class="material-icons">close</i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#n">01012345678 / 남성 / 23세</a>
+                                                <a href="#n" class="btn-del"><i class="material-icons">close</i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#n">01012345678 / 남성 / 23세</a>
+                                                <a href="#n" class="btn-del"><i class="material-icons">close</i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#n">01012345678 / 남성 / 23세</a>
+                                                <a href="#n" class="btn-del"><i class="material-icons">close</i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#n">01012345678 / 남성 / 23세</a>
+                                                <a href="#n" class="btn-del"><i class="material-icons">close</i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#n">01012345678 / 남성 / 23세</a>
+                                                <a href="#n" class="btn-del"><i class="material-icons">close</i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div id="tab05" class="tab-pane" role="tabpanel">
+                                        <div class="user-info">
+                                            <div class="p-16pt">
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">사용자</dt>
+                                                    <dd class="m-0">01012345678</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">식별 ID</dt>
+                                                    <dd class="m-0">A-1241</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">성별</dt>
+                                                    <dd class="m-0">남성</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">나이</dt>
+                                                    <dd class="m-0">32</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">체류시간</dt>
+                                                    <dd class="m-0">10분</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab06" class="tab-pane" role="tabpanel">
+                                        <!-- 메세지 전송 -->
+                                        <div class="p-16pt">
+                                            <div class="form-group mb-4">
+                                                <label class="form-label mb-0 text-50 essential" for="form01">제목</label>
+                                                <input id="form01" type="email" required="" class="form-line"
+                                                    placeholder="제목을 입력해주세요.">
+                                            </div>
+                                            <div class="form-group mb-4">
+                                                <label class="form-label mb-0 text-50 essential mb-2"
+                                                    for="form02">내용</label>
+                                                <div class="msg-box">
+                                                    <textarea class="form-control" name="comment" id="form02" rows="3"
+                                                        placeholder="내용을 입력해 주세요."
+                                                        style="margin-top: 0px; margin-bottom: 0px; height: 148px; resize: none;"></textarea>
+                                                    <div class="d-flex p-2">
+                                                        <span class="">1/1000</span>
+                                                        <a href="#n" class="disabled">메세지 전송</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-sort">
+                                            <a href="#n" class="items active">1일 전</a>
+                                            <a href="#n" class="items">1주 전</a>
+                                            <a href="#n" class="items">1달 전</a>
+                                            <a href="#n" class="items">3달 전</a>
+                                            <a href="#n" class="items">6달 전</a>
+                                        </div>
+                                        <div class="sidebar">
+                                            <ul class="sidebar-menu">
+                                                <li class="sidebar-menu-item">
+                                                    <a class="sidebar-menu-button" data-toggle="collapse"
+                                                        href="#user-location-list04">
+                                                        <span class="material-icons">date_range</span>2021.04.05
+                                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                                    </a>
+                                                    <div class="msg-list collapse" id="user-location-list04">
+                                                        <div class="msg-history">
+                                                            <div class="form-group mb-4">
+                                                                <label class="form-label mb-0 text-50"
+                                                                    for="form01">제목</label>
+                                                                <p class="py-2 ml-2">안녕하세요 빌딩에서 알려드립니다</p>
+                                                            </div>
+                                                            <div class="form-group mb-4">
+                                                                <label class="form-label mb-0 text-50"
+                                                                    for="form02">내용</label>
+                                                                <p class="py-2 ml-2">화재가 발생하였으니 대피소로 신속히 대피해주시기 바랍니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="sidebar-menu-item">
+                                                    <a class="sidebar-menu-button" data-toggle="collapse"
+                                                        href="#user-location-list05">
+                                                        <span class="material-icons">date_range</span>2021.04.05
+                                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                                    </a>
+                                                    <div class="msg-list collapse" id="user-location-list05">
+                                                        <div class="msg-history">
+                                                            <div class="form-group mb-4">
+                                                                <label class="form-label mb-0 text-50"
+                                                                    for="form01">제목</label>
+                                                                <p class="py-2 ml-2">안녕하세요 빌딩에서 알려드립니다</p>
+                                                            </div>
+                                                            <div class="form-group mb-4">
+                                                                <label class="form-label mb-0 text-50"
+                                                                    for="form02">내용</label>
+                                                                <p class="py-2 ml-2">화재가 발생하였으니 대피소로 신속히 대피해주시기 바랍니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="sidebar-menu-item">
+                                                    <a class="sidebar-menu-button" data-toggle="collapse"
+                                                        href="#user-location-list06">
+                                                        <span class="material-icons">date_range</span> 2021.04.05
+                                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                                    </a>
+                                                    <div class="msg-list collapse" id="user-location-list06">
+                                                        <div class="msg-history">
+                                                            <div class="form-group mb-4">
+                                                                <label class="form-label mb-0 text-50"
+                                                                    for="form01">제목</label>
+                                                                <p class="py-2 ml-2">안녕하세요 빌딩에서 알려드립니다</p>
+                                                            </div>
+                                                            <div class="form-group mb-4">
+                                                                <label class="form-label mb-0 text-50"
+                                                                    for="form02">내용</label>
+                                                                <p class="py-2 ml-2">화재가 발생하였으니 대피소로 신속히 대피해주시기 바랍니다.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <a href="user_movement_live.html"
+                                                class="btn btn-link text-accent"><strong>실시간 보기</strong></a>
+                                        </div>
+                                    </div>
+                                    <div id="tab07" class="tab-pane active" role="tabpanel">
+                                        <div class="item-sort">
+                                            <a href="#n" class="items active">1일 전</a>
+                                            <a href="#n" class="items">1주 전</a>
+                                            <a href="#n" class="items">1달 전</a>
+                                            <a href="#n" class="items">3달 전</a>
+                                            <a href="#n" class="items">6달 전</a>
+                                        </div>
+
+                                        <div class="sidebar">
+                                            <ul class="sidebar-menu">
+                                                <li class="sidebar-menu-item">
+                                                    <a class="sidebar-menu-button" data-toggle="collapse"
+                                                        href="#user-location-list01">
+                                                        <span class="material-icons">date_range</span>2021.04.05
+                                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                                    </a>
+                                                    <div class="route-list collapse" id="user-location-list01">
+                                                        <ul class="route-user01">
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">12:00</span>
+                                                                        <h6 class="title">경로5</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">11:55</span>
+                                                                        <h6 class="title">경로4</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">11:50</span>
+                                                                        <h6 class="title">경로3</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">11:45</span>
+                                                                        <h6 class="title">경로2</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">11:40</span>
+                                                                        <h6 class="title">경로1</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="sidebar-menu-item">
+                                                    <a class="sidebar-menu-button" data-toggle="collapse"
+                                                        href="#user-location-list02">
+                                                        <span class="material-icons">date_range</span>2021.04.05
+                                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                                    </a>
+                                                    <div class="route-list collapse" id="user-location-list02">
+                                                        <ul class="route-user01">
+                                                            <li class="line-blue current">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">12:00</span>
+                                                                        <h6 class="title">경로5</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">11:55</span>
+                                                                        <h6 class="title">경로4</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">11:50</span>
+                                                                        <h6 class="title">경로3</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">11:45</span>
+                                                                        <h6 class="title">경로2</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">11:40</span>
+                                                                        <h6 class="title">경로1</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="sidebar-menu-item">
+                                                    <a class="sidebar-menu-button" data-toggle="collapse"
+                                                        href="#user-location-list03">
+                                                        <span class="material-icons">date_range</span> 2021.04.05
+                                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                                    </a>
+                                                    <div class="route-list collapse" id="user-location-list03">
+                                                        <ul class="route-user01">
+                                                            <li class="line-blue current">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">12:00</span>
+                                                                        <h6 class="title">경로5</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">11:55</span>
+                                                                        <h6 class="title">경로4</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">11:50</span>
+                                                                        <h6 class="title">경로3</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">11:45</span>
+                                                                        <h6 class="title">경로2</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="line-blue">
+                                                                <div class="route-inner">
+                                                                    <div class="route-title">
+                                                                        <span class="time">11:40</span>
+                                                                        <h6 class="title">경로1</h6>
+                                                                    </div>
+                                                                    <a href="#n" class="btn-location"><i
+                                                                            class="material-icons">place</i></a>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <a href="user_movement_live.html"
+                                                class="btn btn-link text-accent"><strong>실시간 보기</strong></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')

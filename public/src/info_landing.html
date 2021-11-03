@@ -1,0 +1,80 @@
+@@include('./include/platform-header.html')
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- history / live -->
+        <div class="btn-mid-holder">
+            <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-white">
+                    <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true"> 히스토리
+                </label>
+                <label class="btn btn-white active">
+                    <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true" checked=""> 실시간
+                </label>
+            </div>
+        </div>
+        @@include('./include/platform-tools.html')
+    </div>
+    <!-- drawer -->
+    <!-- <div class="navbar-toggler-box">
+        <button class="navbar-toggler d-block" type="button" data-toggle="sidebar">
+            <span class="material-icons">short_text</span>
+        </button>
+    </div> -->
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-info active" id="sm-info">
+                        <div class="info-inner">
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex">
+                                    <div class="mr-24pt">
+                                        <h3 class="mb-0">정보 관리</h3>
+                                        <p class="text-70 mb-0">정보 관리 페이지입니다.</p>
+                                    </div>
+                                </div>
+                                <a href="assets_write.html" class="btn btn-outline-dark">신규등록</a>
+                            </div>
+                            <div class="container-fluid">
+                                <ul class="info-panel info-link">
+                                    <li>
+                                        <a href="user_list.html">
+                                            <p>사용자</p>
+                                            <div class="cell">
+                                                <span class="material-icons">person_search</span>
+                                                <em><strong>42</strong>명</em>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="assets_dist_list.html">
+                                            <p>물류</p>
+                                            <div class="cell">
+                                                <span class="material-icons">view_in_ar</span>
+                                                <em><strong>42</strong>개</em>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="assets_list.html">
+                                            <p>자산</p>
+                                            <div class="cell">
+                                                <span class="material-icons">category</span>
+                                                <em><strong>127</strong>개</em>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')
