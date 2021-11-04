@@ -7690,6 +7690,7 @@ dl.space-id{
     @include transition(all, 0.2s, ease-in-out);
     &.user{
         background: url(../images/person_pin.svg) no-repeat center;
+        background-size: 100%;
     }
     &.active{
         background: url(../images/person_pin_active.svg) no-repeat center;
@@ -7702,27 +7703,34 @@ dl.space-id{
     }
     &.user-unknow{
         background: url(../images/person_pin_unknow.svg) no-repeat center;
+        background-size: 100%;
     }
     &.warning-fire, &.warning-cau, &.warning-virus, &.warning-emg, &.place-pin, &.location-pin{
         padding: 1.5rem;
     }
     &.warning-fire{
         background: url(../images/warning_fire.svg) no-repeat center;
+        background-size: 100%;
     }
     &.warning-cau{
         background: url(../images/warning_cau.svg) no-repeat center;
+        background-size: 100%;
     }
     &.warning-virus{
         background: url(../images/warning_virus.svg) no-repeat center;
+        background-size: 100%;
     }
     &.warning-emg{
         background: url(../images/warning_emg.svg) no-repeat center;
+        background-size: 100%;
     }
     &.place-pin{
         background: url(../images/place_pin.svg) no-repeat center;
+        background-size: 100%;
     }
     &.location-pin{
         background: url(../images/location_pin.svg) no-repeat center;
+        background-size: 100%;
     }
     &.space-marker{
         &:hover{
@@ -7788,18 +7796,23 @@ dl.space-id{
     }
     &.manager{
         background: url(../images/local_police.svg) no-repeat center;
+        background-size: 100%;
     }
     &.user-mo{
         background: url(../images/person_pin_mo.svg) no-repeat center;
+        background-size: 100%;
     }
     &.user-red{
         background: url(../images/person_pin_red.svg) no-repeat center;
+        background-size: 100%;
     }
     &.dist-pin{
         background: url(../images/dist_pin.svg) no-repeat center;
+        background-size: 100%;
     }
     &.assets{
         background: url(../images/assets_pin.svg) no-repeat center;
+        background-size: 100%;
     }
     .user-point {
         -webkit-filter: drop-shadow(0 0 5px rgba(232, 34, 34, 0.7));
@@ -7825,6 +7838,7 @@ dl.space-id{
                 }
                 .poi-bg{
                     background: url(../images/sensor_pin_blue.svg) no-repeat center;
+                    background-size: 100%;
                 }
             }
             &.level-item02{
@@ -7833,6 +7847,7 @@ dl.space-id{
                 }
                 .poi-bg{
                     background: url(../images/sensor_pin_green.svg) no-repeat center;
+                    background-size: 100%;
                 }
             }
             &.level-item03{
@@ -7841,6 +7856,7 @@ dl.space-id{
                 }
                 .poi-bg{
                     background: url(../images/sensor_pin_yellow.svg) no-repeat center;
+                    background-size: 100%;
                 }
             }
             &.level-item04{
@@ -7849,6 +7865,7 @@ dl.space-id{
                 }
                 .poi-bg{
                     background: url(../images/sensor_pin_red.svg) no-repeat center;
+                    background-size: 100%;
                 }
             }
             &.level-item-compound{
@@ -7866,6 +7883,7 @@ dl.space-id{
                 }
                 .poi-bg{
                     background: url(../images/sensor_pin_compound.svg) no-repeat center;
+                    background-size: 100%;
                 }
             }
             &.assets{
@@ -7874,11 +7892,13 @@ dl.space-id{
                 }
                 .poi-bg{
                     background: url(../images/assets_pin.svg) no-repeat center;
+                    background-size: 100%;
                 }
             }
             &.fluid{
                 .poi-bg{
                     background: url(../images/assets_pin_fluid.svg) no-repeat center;
+                    background-size: 100%;
                 }
             }
             &.poi-off{
@@ -7887,6 +7907,7 @@ dl.space-id{
                 }
                 .poi-bg{
                     background: url(../images/assets_pin_off.svg) no-repeat center;
+                    background-size: 100%;
                 }
             }
         }
