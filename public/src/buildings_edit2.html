@@ -1,0 +1,124 @@
+@@include('./include/platform-header.html')
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout">
+    <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+        <!-- Navbar toggler -->
+        <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+            <span class="material-icons">short_text</span>
+        </button>
+        <div class="top-process">
+            <div class="process-bar bd-process ps-3"></div>
+            <div class="process-txt">
+                <em>3/4</em>
+                
+            </div>
+        </div>
+
+        <div class="d-flex flex justify-content-end align-items-center">
+            <div class="form-group m-0 ml-4 form-lang">
+                <select id="custom-select" class="custom-line">
+                    <option selected="">KOR</option>
+                    <option value="1">JPN</option>
+                    <option value="2">ENG</option>
+                </select>
+            </div>
+            <div class="nav-item dropdown ml-4">
+                <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                    <span class="avatar avatar-sm">
+                        <span class="avatar-title rounded-circle">SH</span>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header"><strong>Account</strong></div>
+                    <a class="dropdown-item" href="#n">정보수정</a>
+                    <a class="dropdown-item" href="#n">멤버십</a>
+                    <a class="dropdown-item" href="#n">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
+        </div>
+        @@include('./include/platform-tools.html')
+    </div>
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu-space.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-maps active" id="sm-maps">
+                        <!-- 맵 보기 -->
+                        <div class="maps-inner">
+                            <div class="container-fluid py-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="flex d-flex flex-sm-row align-items-center mb-0">
+                                        <a href="buildings_detail2.html" class="circle-pin pr-2"><i
+                                                class="material-icons">arrow_back</i></a>
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">경로편집</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50 essential" for="projectName">제목</label>
+                                    <input type="text" class="form-line" id="projectName" placeholder="제목을 입력해주세요.">
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50">카테고리</label>
+                                    <select name="category" class="form-line">
+                                        <option value="경보 이벤트">옵션1</option>
+                                        <option value="화재">옵션2</option>
+                                        <option value="감염병">옵션3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label text-50">아이콘</label>
+                                    <div class="poi-list">
+                                        <ul>
+                                            <li><a href="#n" class="circle-pin"><img src="images/poi/fashion_beauty.svg"
+                                                        alt=""></a></li>
+                                            <li><a href="#n" class="circle-pin"><img src="images/poi/fashion_cloth.svg"
+                                                        alt=""></a></li>
+                                            <li><a href="#n" class="circle-pin"><img src="images/poi/fashion_jewely.svg"
+                                                        alt=""></a></li>
+                                            <li><a href="#n" class="circle-pin"><img
+                                                        src="images/poi/fashion_langerie.svg" alt=""></a></li>
+                                            <li><a href="#n" class="circle-pin"><img src="images/poi/fashion_shoes.svg"
+                                                        alt=""></a></li>
+                                            <li><a href="#n" class="circle-pin"><img src="images/poi/fashion_stuff.svg"
+                                                        alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-row mb-32pt">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample01">위도</label>
+                                        <input type="number" class="form-line" id="validationSample01" placeholder=""
+                                            value="" required="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-50" for="validationSample02">경도</label>
+                                        <input type="number" class="form-line" id="validationSample02" placeholder=""
+                                            value="" required="">
+                                    </div>
+                                </div>
+                                <div class="my-32pt">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="buildings_detail2.html" class="btn btn-outline-accent ml-0">저장</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')
