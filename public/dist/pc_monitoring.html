@@ -1128,26 +1128,432 @@
 </div>
             <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                 <div class="tab-content">
-                    <div class="tab-pane sm-assets active" id="sm-assets">
-                        <div class="assets-inner">
-                            <div class="tit-intro">
-                                <div class="preloader-container">
-                                    <div class="preloader-dots d-none">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </div>
-                                    <div class="preloader-spinner d-none">
-                                        <svg class="spinner-container" width="65px" height="65px" viewBox="0 0 52 52">
-                                            <circle class="path" cx="26px" cy="26px" r="20px" fill="none"
-                                                stroke-width="4px" />
-                                        </svg>
+                    <div class="tab-pane sm-entry active" id="sm-entry">
+                        <div class="entry-inner">
+                            <div class="container-fluid py-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="flex d-flex flex-sm-row align-items-center mb-0">
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">PC 모니터링</h3>
+                                        </div>
                                     </div>
                                 </div>
-                                <em>자산 등록을 완료했습니다.</em>
-                                <a href="assets_list.html" class="btn btn-outline-accent">목록으로</a>
+                                <div class="board-title">
+                                    <p>2021.10.20 현재 총인원 <strong class="text-iden ml-1">n</strong>명</p>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="form-group mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h5 class="d-flex flex m-0">부서</h5>
+                                        <span class="v">총 <strong class="text-iden">n</strong>개의 부서</span>
+                                    </div>
+                                    <select name="category" class="form-control custom-select">
+                                        <option value="vuejs">전체</option>
+                                        <option value="vuejs">부서 A</option>
+                                        <option value="vuejs">부서 B</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h5 class="d-flex flex m-0">사업</h5>
+                                        <span class="v">총 <strong class="text-iden">n</strong>대</span>
+                                    </div>
+                                    <ul class="sidebar-menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-on" data-toggle="collapse"
+                                                href="#workers_info">
+                                                <span class="dot"></span>
+                                                <!-- <i class="person_pin"><img src="images/person_pin.svg" alt=""></i> -->
+                                                BT-PC 01
+                                                <span class="sidebar-menu-badge ml-auto mr-2">사용중</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info">
+                                                <div class="cover">
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">사용자</span>
+                                                        <p class="m-0">사용자명 (user@email.com)</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">Mac Address</span>
+                                                        <p class="m-0">BO-25-AA-32-OD-1C</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">위치</span>
+                                                        <p class="m-0">회의실</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">PC 상태 로그</span>
+                                                        <ul class="list-unstyled">
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0 text-accent">로그인 시도 감지</p><span class="ml-auto">2021-10-20 15:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-cover mt-3">
+                                                        <a href="pc_monitoring_board.html" class="btn">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-off" data-toggle="collapse"
+                                                href="#workers_info2">
+                                                <span class="dot"></span>
+                                                BT-PC 02
+                                                <span class="sidebar-menu-badge ml-auto mr-2">사용 종료</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info2">
+                                                <div class="cover">
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">사용자</span>
+                                                        <p class="m-0">사용자명 (user@email.com)</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">Mac Address</span>
+                                                        <p class="m-0">BO-25-AA-32-OD-1C</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">위치</span>
+                                                        <p class="m-0">회의실</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">PC 상태 로그</span>
+                                                        <ul class="list-unstyled">
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0 text-accent">로그인 시도 감지</p><span class="ml-auto">2021-10-20 15:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-cover mt-3">
+                                                        <a href="pc_monitoring_board.html" class="btn">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-blank" data-toggle="collapse"
+                                                href="#workers_info3">
+                                                <span class="dot"></span>
+                                                BT-PC 03
+                                                <span class="sidebar-menu-badge ml-auto mr-2">자리 비움</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info3">
+                                                <div class="cover">
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">사용자</span>
+                                                        <p class="m-0">사용자명 (user@email.com)</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">Mac Address</span>
+                                                        <p class="m-0">BO-25-AA-32-OD-1C</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">위치</span>
+                                                        <p class="m-0">회의실</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">PC 상태 로그</span>
+                                                        <ul class="list-unstyled">
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0 text-accent">로그인 시도 감지</p><span class="ml-auto">2021-10-20 15:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-cover mt-3">
+                                                        <a href="pc_monitoring_board.html" class="btn">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-red" data-toggle="collapse"
+                                                href="#workers_info4">
+                                                <span class="dot"></span>
+                                                BT-PC 04
+                                                <span class="sidebar-menu-badge ml-auto mr-2">이상 감지</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info4">
+                                                <div class="cover">
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">사용자</span>
+                                                        <p class="m-0">사용자명 (user@email.com)</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">Mac Address</span>
+                                                        <p class="m-0">BO-25-AA-32-OD-1C</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">위치</span>
+                                                        <p class="m-0">회의실</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">PC 상태 로그</span>
+                                                        <ul class="list-unstyled">
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0 text-accent">로그인 시도 감지</p><span class="ml-auto">2021-10-20 15:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-cover mt-3">
+                                                        <a href="pc_monitoring_board.html" class="btn">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-on" data-toggle="collapse"
+                                                href="#workers_info5">
+                                                <span class="dot"></span>
+                                                <!-- <i class="person_pin"><img src="images/person_pin.svg" alt=""></i> -->
+                                                BT-PC 05
+                                                <span class="sidebar-menu-badge ml-auto mr-2">사용중</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info5">
+                                                <div class="cover">
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">사용자</span>
+                                                        <p class="m-0">사용자명 (user@email.com)</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">Mac Address</span>
+                                                        <p class="m-0">BO-25-AA-32-OD-1C</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">위치</span>
+                                                        <p class="m-0">회의실</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">PC 상태 로그</span>
+                                                        <ul class="list-unstyled">
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0 text-accent">로그인 시도 감지</p><span class="ml-auto">2021-10-20 15:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-cover mt-3">
+                                                        <a href="pc_monitoring_board.html" class="btn">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h5 class="d-flex flex m-0">마케팅</h5>
+                                        <span class="v">총 <strong class="text-iden">n</strong>대</span>
+                                    </div>
+                                    <ul class="sidebar-menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-on" data-toggle="collapse"
+                                                href="#workers_info6">
+                                                <span class="dot"></span>
+                                                <!-- <i class="person_pin"><img src="images/person_pin.svg" alt=""></i> -->
+                                                BT-PC 01
+                                                <span class="sidebar-menu-badge ml-auto mr-2">사용중</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info6">
+                                                <div class="cover">
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">사용자</span>
+                                                        <p class="m-0">사용자명 (user@email.com)</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">Mac Address</span>
+                                                        <p class="m-0">BO-25-AA-32-OD-1C</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">위치</span>
+                                                        <p class="m-0">회의실</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">PC 상태 로그</span>
+                                                        <ul class="list-unstyled">
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0 text-accent">로그인 시도 감지</p><span class="ml-auto">2021-10-20 15:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-cover mt-3">
+                                                        <a href="pc_monitoring_board.html" class="btn">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-off" data-toggle="collapse"
+                                                href="#workers_info7">
+                                                <span class="dot"></span>
+                                                BT-PC 02
+                                                <span class="sidebar-menu-badge ml-auto mr-2">사용 종료</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info7">
+                                                <div class="cover">
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">사용자</span>
+                                                        <p class="m-0">사용자명 (user@email.com)</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">Mac Address</span>
+                                                        <p class="m-0">BO-25-AA-32-OD-1C</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">위치</span>
+                                                        <p class="m-0">회의실</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">PC 상태 로그</span>
+                                                        <ul class="list-unstyled">
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0 text-accent">로그인 시도 감지</p><span class="ml-auto">2021-10-20 15:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-cover mt-3">
+                                                        <a href="pc_monitoring_board.html" class="btn">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-blank" data-toggle="collapse"
+                                                href="#workers_info8">
+                                                <span class="dot"></span>
+                                                BT-PC 03
+                                                <span class="sidebar-menu-badge ml-auto mr-2">자리 비움</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info8">
+                                                <div class="cover">
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">사용자</span>
+                                                        <p class="m-0">사용자명 (user@email.com)</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">Mac Address</span>
+                                                        <p class="m-0">BO-25-AA-32-OD-1C</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">위치</span>
+                                                        <p class="m-0">회의실</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">PC 상태 로그</span>
+                                                        <ul class="list-unstyled">
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0 text-accent">로그인 시도 감지</p><span class="ml-auto">2021-10-20 15:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-cover mt-3">
+                                                        <a href="pc_monitoring_board.html" class="btn">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-red" data-toggle="collapse"
+                                                href="#workers_info9">
+                                                <span class="dot"></span>
+                                                BT-PC 04
+                                                <span class="sidebar-menu-badge ml-auto mr-2">이상 감지</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info9">
+                                                <div class="cover">
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">사용자</span>
+                                                        <p class="m-0">사용자명 (user@email.com)</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">Mac Address</span>
+                                                        <p class="m-0">BO-25-AA-32-OD-1C</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">위치</span>
+                                                        <p class="m-0">회의실</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">PC 상태 로그</span>
+                                                        <ul class="list-unstyled">
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0 text-accent">로그인 시도 감지</p><span class="ml-auto">2021-10-20 15:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-cover mt-3">
+                                                        <a href="pc_monitoring_board.html" class="btn">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button dot-on" data-toggle="collapse"
+                                                href="#workers_info10">
+                                                <span class="dot"></span>
+                                                <!-- <i class="person_pin"><img src="images/person_pin.svg" alt=""></i> -->
+                                                BT-PC 05
+                                                <span class="sidebar-menu-badge ml-auto mr-2">사용중</span>
+                                                <span class="sidebar-menu-toggle-icon"></span>
+                                            </a>
+                                            <div class="sidebar-submenu collapse sm-indent" id="workers_info10">
+                                                <div class="cover">
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">사용자</span>
+                                                        <p class="m-0">사용자명 (user@email.com)</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">Mac Address</span>
+                                                        <p class="m-0">BO-25-AA-32-OD-1C</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">위치</span>
+                                                        <p class="m-0">회의실</p>
+                                                    </div>
+                                                    <div class="col-12 p-2">
+                                                        <span class="d-flex text-50 mb-2">PC 상태 로그</span>
+                                                        <ul class="list-unstyled">
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0 text-accent">로그인 시도 감지</p><span class="ml-auto">2021-10-20 15:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                            <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-cover mt-3">
+                                                        <a href="pc_monitoring_board.html" class="btn">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

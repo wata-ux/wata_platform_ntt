@@ -609,127 +609,6 @@
                 </label>
             </div>
         </div>
-        <!-- edit tool -->
-        <div class="btn-top-holder">
-            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
-            <div class="btn-group ml-2">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
-                        aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-header"><strong>이벤트 설정</strong></div>
-                        <ul class="item-list mb-2">
-                            <li><a href="#n" class="active"><i
-                                        class="material-icons">location_on</i><span>개별위치</span></a></li>
-                            <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
-                        </ul>
-                        <div class="dropdown-divider"></div>
-                        <div class="dropdown-header"><strong>경보 설정</strong></div>
-                        <ul class="item-list">
-                            <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
-                            <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
-                            <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
-                            <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
-                        </ul>
-                        <div class="dropdown-divider"></div>
-                        <div class="dropdown-header"><strong>경보 설정</strong></div>
-                        <ul class="item-list">
-                            <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
-                            <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="map-location ml-2">
-                <div class="location-header d-flex align-items-center">
-                    <strong>프로젝트 A</strong>
-                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location"
-                        href="#map-location">
-                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                    </a>
-                </div>
-                <div class="collapse location-body" id="map-location">
-                    <div class="sidebar">
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu01"
-                                    data-perfect-scrollbar>
-                                    <li class="sidebar-menu-item active">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">B1</span>
-                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">1F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">2F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">3F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">4F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">5F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">6F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">7F</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu02"
-                                    data-perfect-scrollbar>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">1F</span>
-                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">2F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">3F</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
             <!-- history / live -->
     <div class="btn-mid-holder d-none">
         <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -1128,26 +1007,110 @@
 </div>
             <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                 <div class="tab-content">
-                    <div class="tab-pane sm-assets active" id="sm-assets">
+                    <div class="tab-pane active">
                         <div class="assets-inner">
-                            <div class="tit-intro">
-                                <div class="preloader-container">
-                                    <div class="preloader-dots d-none">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
+                            <div class="container-fluid d-flex align-items-center py-4">
+                                <div class="flex d-flex align-items-center dot-red">
+                                    <a href="pc_monitoring.html" class="pr-2"><i class="material-icons">arrow_back</i></a>
+                                    <div class="mr-24pt d-flex align-items-center">
+                                        <span class="dot"></span>
+                                        <h3 class="mb-0">BT-PC 04</h3>
                                     </div>
-                                    <div class="preloader-spinner d-none">
-                                        <svg class="spinner-container" width="65px" height="65px" viewBox="0 0 52 52">
-                                            <circle class="path" cx="26px" cy="26px" r="20px" fill="none"
-                                                stroke-width="4px" />
-                                        </svg>
+                                    <strong class="sidebar-menu-badge ml-auto mr-2">이상 감지</strong>
+                                </div>
+                            </div>
+                            <div class="container-fluid contents-view">
+                                <div class="contents-tab the-num02 nav mb-4" role="tablist">
+                                    <a href="#board-tab1" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                                        <span class="menu-active"><span>PC 정보</span></span>
+                                    </a>
+                                    <a href="#board-tab2" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                        <span class="menu-cover"><span>사용자 정보</span></span>
+                                    </a>
+                                </div>
+                                <div class="tab-content">
+                                    <div id="board-tab1" class="tab-pane active" role="tabpanel">
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventArea">Mac Address</label>
+                                            <p class="form-text">BO-25-AA-32-OD-1C</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventArea">위치</label>
+                                            <p class="form-text">회의실</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventArea">PC 상태 로그</label>
+                                            <ul class="list-unstyled mt-2">
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0 text-accent">로그인 시도 감지</p><span class="ml-auto">2021-10-20 15:55</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 15:50</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 12:55</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김</p><span class="ml-auto">2021-10-20 11:30</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0 text-accent">로그인 시도 감지</p><span class="ml-auto">2021-10-20 15:55</span></li>
+                                                <li class="d-flex flex-row align-items-center mb-2"><p class="m-0">잠김 해제</p><span class="ml-auto">2021-10-20 08:00</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="my-32pt">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <a href="pc_monitoring.html" class="btn btn-accent ml-0">목록으로</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="board-tab2" class="tab-pane" role="tabpanel">
+                                        <h5 class="mb-4">기본정보</h5>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventTitle">이메일</label>
+                                            <p class="form-text">user@email.com</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventTitle">이름</label>
+                                            <p class="form-text">사용자</p>
+                                        </div>
+                                        <div class="form-group mb-5">
+                                            <label class="form-label mb-0 text-50" for="eventTitle">위치</label>
+                                            <p class="form-text">회의실</p>
+                                        </div>
+
+                                        <h5 class="mb-4">소속 정보</h5>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventTitle">회사명</label>
+                                            <p class="form-text">WATA Inc</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventTitle">부서</label>
+                                            <p class="form-text">사업부</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventTitle">유형</label>
+                                            <p class="form-text">IT</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventTitle">규모</label>
+                                            <p class="form-text">스타트업</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label mb-0 text-50" for="eventTitle">분야</label>
+                                            <p class="form-text">LBS</p>
+                                        </div>
+                                        <div class="my-32pt">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <a href="pc_monitoring.html" class="btn btn-accent ml-0">목록으로</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <em>자산 등록을 완료했습니다.</em>
-                                <a href="assets_list.html" class="btn btn-outline-accent">목록으로</a>
                             </div>
                         </div>
                     </div>

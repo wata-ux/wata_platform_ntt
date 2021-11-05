@@ -2,6 +2,12 @@
 @import "lib";
 @import "fonts";
 
+.material-icons-two-tone{
+    &.red{
+        filter: invert(0.5) sepia(1) saturate(150) hue-rotate(20deg);
+    }
+}
+
 /* -------------------------------- global
 
 global
@@ -5791,13 +5797,7 @@ a.cd-filter-trigger {
                     word-break: keep-all;
                     max-width: 210px;
                 }
-                .dot{
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 100%;
-                    margin-right: .75rem;
-                    background-color: #d6d6d6;
-                }
+                
                 .sidebar-menu-badge{
                     color: rgba(0,0,0,0.3);
                 }
@@ -5837,31 +5837,7 @@ a.cd-filter-trigger {
                         color: #e64746;
                     }
                 }
-                &.dot-on{
-                    .dot{
-                        background-color: #68ec15;
-                        // border: 1px solid rgba(0,0,0,0.1);
-                        // box-shadow: 0 0 5px 1px rgba(136,255,167,0.8);
-                    }
-                    .sidebar-menu-badge{
-                        color: #77c13a;
-                    }
-                }
-                &.dot-off{
-                    .dot{
-                        background-color: #d6d6d6;
-                    }
-                }
-                &.dot-red{
-                    .dot{
-                        background-color: $identity;
-                        box-shadow: 0 0 5px 1px rgba(255,0,0,0.5);
-                        border: 1px solid rgba(0,0,0,0.2);
-                    }
-                    .sidebar-menu-badge{
-                        color: $identity;
-                    }
-                }
+
                 .person_pin{
                     width: 24px;
                     height: 24px;
@@ -6012,6 +5988,46 @@ a.cd-filter-trigger {
                 }
             }
         }
+    }
+}
+.dot{
+    display: flex;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-right: .75rem;
+    background-color: #d6d6d6;
+}
+.dot-on{
+    .dot{
+        background-color: #68ec15;
+        // border: 1px solid rgba(0,0,0,0.1);
+        // box-shadow: 0 0 5px 1px rgba(136,255,167,0.8);
+    }
+    .sidebar-menu-badge{
+        color: #77c13a;
+    }
+}
+.dot-off{
+    .dot{
+        background-color: #d6d6d6;
+    }
+}
+.dot-blank{
+    .dot{
+        background-color: #fff;
+        border: 2px solid #555;
+    }
+    .sidebar-menu-badge{
+        color: #555;
+    }
+}
+.dot-red{
+    .dot{
+        background-color: $identity;
+    }
+    .sidebar-menu-badge{
+        color: $identity;
     }
 }
 .list-opt-box{
