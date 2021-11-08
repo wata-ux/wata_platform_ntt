@@ -3,18 +3,7 @@
 <div class="mdk-drawer-layout js-mdk-drawer-layout">
     @@include('./include/platform-topbar.html')
     <div class="mdk-drawer-layout__content page-content">
-        <!-- history / live -->
-        <div class="btn-mid-holder">
-            <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-white">
-                    <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true"> 히스토리
-                </label>
-                <label class="btn btn-white active">
-                    <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true" checked=""> 실시간
-                </label>
-            </div>
-        </div>
-        <div class="info-holder">
+        <div class="info-holder d-none">
             <div class="inner">
                 <span><strong>작업구역 A</strong> - 사용자 A123</span>
             </div>
@@ -101,6 +90,30 @@
                                 <div class="tab-content">
                                     <div id="tab05" class="tab-pane active" role="tabpanel">
                                         <div class="user-info">
+                                            <div class="p-16pt">
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">사용자</dt>
+                                                    <dd class="m-0">01012345678</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">식별 ID</dt>
+                                                    <dd class="m-0">A-1241</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">성별</dt>
+                                                    <dd class="m-0">남성</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">나이</dt>
+                                                    <dd class="m-0">32</dd>
+                                                </dl>
+                                                <dl class="d-flex align-items-center">
+                                                    <dt class="flex mr-2">체류시간</dt>
+                                                    <dd class="m-0">10분</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="user-info d-none">
                                             <div class="p-16pt">
                                                 <dl class="d-flex align-items-center">
                                                     <dt class="flex mr-2">이름</dt>

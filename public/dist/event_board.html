@@ -180,7 +180,7 @@
     <div id="filter-bar">
         <a href="#0" class="cd-filter-trigger"><i class="material-icons">tune</i>필터</a>
         <div class="status-map align-items-center justify-content-center">
-            <div class="tabBox mapStauts01 status-con active">
+            <div class="tabBox mapStauts01 status-con">
                 <div class="filter-cell filter-list d-flex align-items-center">
                     <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
                         <strong><span>기간</span> 2021.04.05~2021.04.31</strong>
@@ -361,8 +361,8 @@
                     <a href="#n" class="is-loading is-loading-sm">Button</a>
                 </div>
             </div>
-            <div class="tabBox mapStauts02 status-con">
-                <span class="d-flex align-items-center mr-4 pl-3">
+            <div class="tabBox mapStauts02 status-con active">
+                <span class="d-none align-items-center mr-4 pl-3">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
                     </span>
@@ -371,7 +371,7 @@
                         <strong class="navbar-text-100">117명<span class="liveUser liveUser-up">2명 증가</span></strong>
                     </small>
                 </span>
-                <span class="d-flex align-items-center mr-4">
+                <span class="d-none align-items-center mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
                     </span>
@@ -380,7 +380,7 @@
                         <strong class="navbar-text-100">11명<span class="liveUser liveUser-down">5명 감소</span></strong>
                     </small>
                 </span>
-                <span class="d-flex align-items-center mr-4">
+                <span class="d-none align-items-center mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar"><i class="material-icons">access_time</i></span>
                     </span>
@@ -389,7 +389,7 @@
                         <strong class="navbar-text-100">10분</strong>
                     </small>
                 </span>
-                <span class="d-flex align-items-center mr-4">
+                <span class="d-none align-items-center mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar"><i class="material-icons">track_changes</i></span>
                     </span>
@@ -398,7 +398,7 @@
                         <strong class="navbar-text-100">미디어회의실</strong>
                     </small>
                 </span>
-                <span class="d-flex align-items-center mr-4">
+                <span class="d-none align-items-center mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar"><i
                                 class="material-icons">notification_important</i></span>
@@ -408,7 +408,7 @@
                         <strong class="navbar-text-100">0건</strong>
                     </small>
                 </span>
-                <span class="d-flex align-items-center tip-box mr-4">
+                <span class="d-none align-items-center tip-box mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar bg-level_4"><i
                                 class="material-icons">thermostat</i></span>
@@ -483,7 +483,7 @@
                         </div>
                     </div>
                 </span>
-                <span class="d-flex align-items-center tip-box mr-4">
+                <span class="d-none align-items-center tip-box mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar bg-level_2"><i
                                 class="material-icons">water_drop</i></span>
@@ -517,7 +517,7 @@
                         </div>
                     </div>
                 </span>
-                <span class="d-flex align-items-center tip-box mr-4">
+                <span class="d-none align-items-center tip-box mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar bg-level_3"><i class="fas fa-radiation-alt"></i></span>
                     </span>
@@ -544,7 +544,7 @@
                         </div>
                     </div>
                 </span>
-                <div class="filter-btn-cell d-flex flex justify-content-end align-items-center">
+                <div class="filter-btn-cell d-none flex justify-content-end align-items-center">
                     <a href="#n" class=""><i class="material-icons mr-1">autorenew</i> 새로고침</a>
                 </div>
             </div>
@@ -598,145 +598,14 @@
     </div>
 </div>
     <div class="mdk-drawer-layout__content page-content">
-        <!-- history / live -->
-        <div class="btn-mid-holder">
-            <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-white">
-                    <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
-                </label>
-                <label class="btn btn-white active">
-                    <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
-                </label>
-            </div>
-        </div>
-        <!-- edit tool -->
-        <div class="btn-top-holder">
-            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
-            <div class="btn-group ml-2">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
-                        aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-header"><strong>이벤트 설정</strong></div>
-                        <ul class="item-list mb-2">
-                            <li><a href="#n" class="active"><i
-                                        class="material-icons">location_on</i><span>개별위치</span></a></li>
-                            <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
-                        </ul>
-                        <div class="dropdown-divider"></div>
-                        <div class="dropdown-header"><strong>경보 설정</strong></div>
-                        <ul class="item-list">
-                            <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
-                            <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
-                            <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
-                            <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
-                        </ul>
-                        <div class="dropdown-divider"></div>
-                        <div class="dropdown-header"><strong>경보 설정</strong></div>
-                        <ul class="item-list">
-                            <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
-                            <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="map-location ml-2">
-                <div class="location-header d-flex align-items-center">
-                    <strong>프로젝트 A</strong>
-                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location"
-                        href="#map-location">
-                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                    </a>
-                </div>
-                <div class="collapse location-body" id="map-location">
-                    <div class="sidebar">
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu01">
-                                    <li class="sidebar-menu-item active">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">B1</span>
-                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">1F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">2F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">3F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">4F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">5F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">6F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">7F</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu02">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">1F</span>
-                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">2F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">3F</span>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
             <!-- history / live -->
     <div class="btn-mid-holder d-none">
         <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-white">
-                <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
+                <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true"> 히스토리
             </label>
             <label class="btn btn-white active">
-                <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
+                <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true" checked=""> 실시간
             </label>
         </div>
     </div>

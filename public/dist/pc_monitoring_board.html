@@ -180,7 +180,7 @@
     <div id="filter-bar">
         <a href="#0" class="cd-filter-trigger"><i class="material-icons">tune</i>필터</a>
         <div class="status-map align-items-center justify-content-center">
-            <div class="tabBox mapStauts01 status-con active">
+            <div class="tabBox mapStauts01 status-con">
                 <div class="filter-cell filter-list d-flex align-items-center">
                     <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
                         <strong><span>기간</span> 2021.04.05~2021.04.31</strong>
@@ -361,8 +361,8 @@
                     <a href="#n" class="is-loading is-loading-sm">Button</a>
                 </div>
             </div>
-            <div class="tabBox mapStauts02 status-con">
-                <span class="d-flex align-items-center mr-4 pl-3">
+            <div class="tabBox mapStauts02 status-con active">
+                <span class="d-none align-items-center mr-4 pl-3">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
                     </span>
@@ -371,7 +371,7 @@
                         <strong class="navbar-text-100">117명<span class="liveUser liveUser-up">2명 증가</span></strong>
                     </small>
                 </span>
-                <span class="d-flex align-items-center mr-4">
+                <span class="d-none align-items-center mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
                     </span>
@@ -380,7 +380,7 @@
                         <strong class="navbar-text-100">11명<span class="liveUser liveUser-down">5명 감소</span></strong>
                     </small>
                 </span>
-                <span class="d-flex align-items-center mr-4">
+                <span class="d-none align-items-center mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar"><i class="material-icons">access_time</i></span>
                     </span>
@@ -389,7 +389,7 @@
                         <strong class="navbar-text-100">10분</strong>
                     </small>
                 </span>
-                <span class="d-flex align-items-center mr-4">
+                <span class="d-none align-items-center mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar"><i class="material-icons">track_changes</i></span>
                     </span>
@@ -398,7 +398,7 @@
                         <strong class="navbar-text-100">미디어회의실</strong>
                     </small>
                 </span>
-                <span class="d-flex align-items-center mr-4">
+                <span class="d-none align-items-center mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar"><i
                                 class="material-icons">notification_important</i></span>
@@ -408,7 +408,7 @@
                         <strong class="navbar-text-100">0건</strong>
                     </small>
                 </span>
-                <span class="d-flex align-items-center tip-box mr-4">
+                <span class="d-none align-items-center tip-box mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar bg-level_4"><i
                                 class="material-icons">thermostat</i></span>
@@ -483,7 +483,7 @@
                         </div>
                     </div>
                 </span>
-                <span class="d-flex align-items-center tip-box mr-4">
+                <span class="d-none align-items-center tip-box mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar bg-level_2"><i
                                 class="material-icons">water_drop</i></span>
@@ -517,7 +517,7 @@
                         </div>
                     </div>
                 </span>
-                <span class="d-flex align-items-center tip-box mr-4">
+                <span class="d-none align-items-center tip-box mr-4">
                     <span class="avatar mr-12pt">
                         <span class="avatar-title navbar-avatar bg-level_3"><i class="fas fa-radiation-alt"></i></span>
                     </span>
@@ -544,7 +544,7 @@
                         </div>
                     </div>
                 </span>
-                <div class="filter-btn-cell d-flex flex justify-content-end align-items-center">
+                <div class="filter-btn-cell d-none flex justify-content-end align-items-center">
                     <a href="#n" class=""><i class="material-icons mr-1">autorenew</i> 새로고침</a>
                 </div>
             </div>
@@ -598,25 +598,14 @@
     </div>
 </div>
     <div class="mdk-drawer-layout__content page-content">
-        <!-- history / live -->
-        <div class="btn-mid-holder">
-            <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-white">
-                    <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
-                </label>
-                <label class="btn btn-white active">
-                    <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
-                </label>
-            </div>
-        </div>
             <!-- history / live -->
     <div class="btn-mid-holder d-none">
         <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-white">
-                <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true" checked=""> 히스토리
+                <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true"> 히스토리
             </label>
             <label class="btn btn-white active">
-                <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true"> 실시간
+                <input type="radio" id="mapStauts02" name="mapStauts" aria-checked="true" checked=""> 실시간
             </label>
         </div>
     </div>
