@@ -6005,7 +6005,7 @@ a.cd-filter-trigger {
         // box-shadow: 0 0 5px 1px rgba(136,255,167,0.8);
     }
     .sidebar-menu-badge{
-        color: #77c13a;
+        color: #77c13a !important;
     }
 }
 .dot-off{
@@ -6019,7 +6019,7 @@ a.cd-filter-trigger {
         border: 2px solid #555;
     }
     .sidebar-menu-badge{
-        color: #555;
+        color: #555 !important;
     }
 }
 .dot-red{
@@ -6027,7 +6027,7 @@ a.cd-filter-trigger {
         background-color: $identity;
     }
     .sidebar-menu-badge{
-        color: $identity;
+        color: $identity !important;
     }
 }
 .list-opt-box{

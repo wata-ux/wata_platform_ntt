@@ -1,8 +1,8 @@
 {
-  "name": "coin_pc_re",
+  "name": "wata",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "home.js",
   "dependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
