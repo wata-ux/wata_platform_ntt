@@ -518,16 +518,20 @@
                                     <div class="d-flex">
                                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                             <label class="btn btn-outline-secondary active">
-                                                <input type="radio" id="nodeTypeUwb" name="NodeType" value="" checked=""
-                                                    aria-checked="true" /> Uwb
+                                                <input type="radio" id="nodeTypeWIFI" name="NodeType" value=""
+                                                    aria-checked="true" /> WIFI
                                             </label>
                                             <label class="btn btn-outline-secondary">
-                                                <input type="radio" id="nodeTypeBle" name="NodeType" value=""
-                                                    aria-checked="true" /> Ble
+                                                <input type="radio" id="nodeTypeUWB" name="NodeType" value=""
+                                                    aria-checked="true" /> UWB
                                             </label>
                                             <label class="btn btn-outline-secondary">
-                                                <input type="radio" id="nodeTypeRTT" name="NodeType" value=""
-                                                    aria-checked="true" /> RTT
+                                                <input type="radio" id="nodeTypeBLE" name="NodeType" value=""  checked=""
+                                                    aria-checked="true" /> BLE
+                                            </label>
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" id="nodeTypeLIDAR" name="NodeType" value=""
+                                                    aria-checked="true" /> LIDAR
                                             </label>
                                         </div>
                                     </div>
@@ -612,7 +616,7 @@
                                     <div class="form-group mb-32pt">
                                         <label class="form-label text-50 essential">타입</label>
                                         <select name="category" class="form-line">
-                                            <option value="앵커">Scanner</option>
+                                            <option value="">고정형</option>
                                         </select>
                                     </div>
                                     <div class="form-group mb-32pt over-txt">
