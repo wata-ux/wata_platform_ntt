@@ -8595,7 +8595,7 @@ dl.space-id{
         padding: 1rem 1.5rem;
         border-top: 1px solid $border-color;
     }
-    ul.tab-menu{
+    ul.side-tab-menu{
         background-color: #fff;
         li{
             display: flex;
@@ -8644,7 +8644,63 @@ dl.space-id{
                 max-width: 50%;
             }
         }
+    }
+    ul.side-sub-tab-menu{
+        background-color: #fff;
+        padding: .5rem 1rem;
+        border-bottom: 1px solid $border-color;
+        a{
+            color: rgba(0,0,0,0.3);
+            margin-left: -.5rem;
+            &.active{
+                color: $identity;
+                text-decoration: underline;
+            }
+        }
+    }
+    ul.cell-panel{
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        border-top: 1px solid $border-color;
         li{
+            display: flex;
+            flex: 0 0 50%;
+            max-width: 50%;
+            flex-direction: column;
+            margin-top: -1px;
+            padding: 1rem 1.5rem;
+            border-top: 1px solid $border-color;
+            &:nth-child(even){
+                border-left: 1px solid $border-color;
+            }
+            &:nth-child(1){
+                border-top: none;
+            }
+            &:nth-child(2){
+                border-top: none;
+            }
+            p{
+                word-break: keep-all;
+                color: rgba(0,0,0,0.4);
+                min-height: 38px;
+            }
+            em{
+                display: flex;
+                justify-content: flex-end;
+                align-items: baseline;
+                color: #999;
+                font-size: 1rem;
+                color: $identity;
+                strong{
+                    font-size: 2rem;
+                    font-weight: 600;
+                    margin: 0 .25rem;
+                }
+            }
+
         }
     }
 }
