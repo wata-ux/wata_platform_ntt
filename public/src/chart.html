@@ -6,6 +6,226 @@
     @@include('./include/platform-topbar.html')
     <div class="mdk-drawer-layout__content page-content">
         @@include('./include/platform-tools.html')
+        <div class="cd-panel cd-panel--from-right js-cd-panel-main cd-panel--is-visible">
+            <a href="#0" class="cd-panel__close js-cd-close">Close</a>
+
+            <div class="cd-panel__container">
+                <div class="cd-panel__content" data-perfect-scrollbar>
+                    <div class="d-flex flex-column bg-white border-bottom-1 mb-2">
+                        <div class="d-flex flex-column p-4">
+                            <h3 class="d-flex align-items-center mb-0">NTT팩토리 3F</h3>
+                            <p class="text-50 m-0">2021-07-01 13:00:00 기준</p>
+                        </div>
+                        <div class="tab-cover">
+                            <ul class="nav tab-menu col-item03" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#sidebar-menu11"><span class="material-icons-outlined">
+                                        bar_chart
+                                        </span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#sidebar-menu12"><span class="material-icons-outlined">
+                                        info
+                                        </span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#sidebar-menu13"><span class="material-icons-outlined">
+                                        timeline
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div id="sidebar-menu11" class="tab-pane active" role="tabpanel">
+                            <div class="accordion js-accordion list-group-flush" id="parent">
+
+                                <div class="accordion__item mb-2 open">
+                                    <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                        data-target="#panel01" data-parent="#parent">
+                                        <span class="flex d-flex align-items-center">
+                                            <!-- <span class="material-icons-outlined icon--left">watch_later</span> -->
+                                            실시간 집계
+                                        </span>
+                                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                    </a>
+                                    <div class="accordion__menu collapse show" id="panel01">
+                                        <div class="inner">
+                                            <div class="accordion__menu-link px-0 state-up">
+                                                <div class="visitor-group visitor-type2">
+                                                    <ul class="visitor-list">
+                                                        <li>사용자<span>20</span></li>
+                                                        <li>물류<span>5</span></li>
+                                                        <li>자산<span>5</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__menu-link state-up active">
+                                                <div class="panel-list">
+                                                    <a href="#n" class="w-100">
+                                                        <h6>A구역 <span class="d-flex badge badge-mg lv-09 ml-auto">41</span></h6>
+                                                        <ul>
+                                                            <li>인원 <span>32</span></li>
+                                                            <li>물류 <span>4</span></li>
+                                                            <li>자산 <span>5</span></li>
+                                                        </ul>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__menu-link state-up">
+                                                <div class="panel-list">
+                                                    <a href="#n" class="w-100">
+                                                        <h6>B구역 <span class="d-flex badge badge-mg lv-03 ml-auto">15</span></h6>
+                                                        <ul>
+                                                            <li>인원 <span>13</span></li>
+                                                            <li>물류 <span>2</span></li>
+                                                            <li>자산 <span>0</span></li>
+                                                        </ul>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__menu-link state-up">
+                                                <div class="panel-list">
+                                                    <a href="#n" class="w-100">
+                                                        <h6>C구역 <span class="d-flex badge badge-mg lv-05 ml-auto">21</span></h6>
+                                                        <ul>
+                                                            <li>인원 <span>15</span></li>
+                                                            <li>물류 <span>4</span></li>
+                                                            <li>자산 <span>2</span></li>
+                                                        </ul>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__menu-link state-up">
+                                                <div class="panel-list">
+                                                    <a href="#n" class="w-100">
+                                                        <h6>D구역 <span class="d-flex badge badge-mg lv-10 ml-auto">44</span></h6>
+                                                        <ul>
+                                                            <li>인원 <span>29</span></li>
+                                                            <li>물류 <span>7</span></li>
+                                                            <li>자산 <span>8</span></li>
+                                                        </ul>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="legendary">
+                                                <h6>범례</h6>
+                                                <div class="level-list">
+                                                    <ul class="step4">
+                                                        <li class="text-left">원활</li>
+                                                        <li></li>
+                                                        <li></li>
+                                                        <li class="text-right">혼잡</li>
+                                                    </ul>
+                                                    <div class="level-bar color-num2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="accordion__item mb-2 open">
+                                    <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                        data-target="#panel04" data-parent="#parent">
+                                        <span class="flex d-flex align-items-center">
+                                            <!-- <span class="material-icons-outlined icon--left">emoji_events</span> -->
+                                            실시간 혼잡구역</span>
+                                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                    </a>
+                                    <div class="accordion__menu collapse more-cover ac-item02 show" id="panel04">
+                                        <div class="inner">
+                                            <div class="accordion__menu-link">
+                                                <a href="#n" class="d-flex align-items-center w-100">
+                                                    <p class="d-flex m-0">개발 부서 구역</p>
+                                                    <span class="d-flex badge badge-accent ml-auto">혼잡</span>
+                                                </a>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <a href="#n" class="d-flex align-items-center w-100">
+                                                    <p class="d-flex m-0">디자인 부서 구역</p>
+                                                    <span class="d-flex badge badge-success ml-auto">여유</span>
+                                                </a>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <a href="#n" class="d-flex align-items-center w-100">
+                                                    <p class="d-flex m-0">마케팅 부서 구역</p>
+                                                    <span class="d-flex badge badge-accent-yellow ml-auto">보통</span>
+                                                </a>
+                                            </div>
+                                            <div class="accordion__menu-link active">
+                                                <a href="#n" class="d-flex align-items-center w-100">
+                                                    <p class="d-flex m-0">기획팀 부서 구역</p>
+                                                    <span class="d-flex badge badge-success ml-auto">여유</span>
+                                                </a>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <a href="#n" class="d-flex align-items-center w-100">
+                                                    <p class="d-flex m-0">경영지원 부서 구역</p>
+                                                    <span class="d-flex badge badge-success ml-auto">여유</span>
+                                                </a>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <a href="#n" class="d-flex align-items-center w-100">
+                                                    <p class="d-flex m-0">글로벌 비즈니스 부서 구역</p>
+                                                    <span class="d-flex badge badge-success ml-auto">여유</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center more-btn-cover">
+                                            <button type="button" class="btn btn-link text-secondary btn-more"></button>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="accordion__item mb-2 open">
+                                    <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                        data-target="#panel02" data-parent="#parent">
+                                        <span class="flex d-flex align-items-center">
+                                            <!-- <span class="material-icons-outlined icon--left">flag</span> -->
+                                            알림
+                                        </span>
+                                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                    </a>
+                                    <div class="accordion__menu collapse show" id="panel02">
+                                        <div class="accordion__menu-link state-up">
+                                            <a href="#n" class="d-flex align-items-center flex-row w-100">
+                                                <span
+                                                    class="material-icons-outlined text-accent mr-1 font-size-16pt">info</span>
+                                                <p class="d-flex m-0 text-accent pr-4">개발 부서 구역 '비인가 출입' 1명</p>
+                                                <span class="d-flex text-50 ml-auto">2021.07.05</span>
+                                            </a>
+                                        </div>
+                                        <div class="accordion__menu-link state-up">
+                                            <a href="#n" class="d-flex align-items-center flex-row w-100">
+                                                <span
+                                                    class="material-icons-outlined text-accent mr-1 font-size-16pt">info</span>
+                                                <p class="d-flex m-0 text-accent pr-4">개발 부서 구역 '비인가 출입' 1명</p>
+                                                <span class="d-flex text-50 ml-auto">2021.07.05</span>
+                                            </a>
+                                        </div>
+                                        <div class="accordion__menu-link state-up">
+                                            <a href="#n" class="d-flex align-items-center flex-row w-100">
+                                                <span
+                                                    class="material-icons-outlined text-accent mr-1 font-size-16pt">info</span>
+                                                <p class="d-flex m-0 text-accent pr-4">개발 부서 구역 '비인가 출입' 1명</p>
+                                                <span class="d-flex text-50 ml-auto">2021.07.05</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="sidebar-menu12" class="tab-pane" role="tabpanel">
+                            
+                        </div>
+                        <div id="sidebar-menu13" class="tab-pane" role="tabpanel">
+                            
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
         <div class="sidebar-depth" data-perfect-scrollbar>
             <div class="sidebar-depth-wrap responsive-item">
                 <div class="tab-cover mb-4">
@@ -1827,13 +2047,60 @@
                                 </div>
                             </div>
                             <div class="container-fluid">
-                                <ul class="dot-list">
-                                    <li><a href="#n" class="active"><span></span> 전체</a></li>
-                                    <li><a href="#n" class=""><span></span> A구역</a></li>
-                                    <li><a href="#n" class=""><span></span> B구역</a></li>
-                                    <li><a href="#n" class=""><span></span> C구역</a></li>
-                                    <li><a href="#n" class=""><span></span> D구역</a></li>
-                                </ul>
+                                <div class="list-group block-list dragula-list mb-4" data-toggle="dragula">
+                                    <div class="list-group-item d-flex active">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">A 구역</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-accent">배포중</span> 2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <!-- <a href="#" class="circle-pin active"><i class="material-icons">push_pin</i></a> -->
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex disabled">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">B 구역</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-secondary">수정중</span> 2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">C 구역</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-accent">배포중</span> 2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1843,111 +2110,8 @@
     </div>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCode" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="qrCode">QR발행</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="qr-cover">
-                    <img src="images/qr_test.webp" class="img-qr-code" alt="">
-                    <p><a href="#n" class="btn btn-link text-accent">QR코드 인쇄</a></p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button>
-            </div>
-        </div>
-    </div>
-</div>
 
-
-<!-- jQuery -->
-<script src="vendor/jquery.min.js"></script>
-
-<!-- Bootstrap -->
-<script src="vendor/popper.min.js"></script>
-<script src="vendor/bootstrap.min.js"></script>
-
-<!-- Perfect Scrollbar -->
-<script src="vendor/perfect-scrollbar.min.js"></script>
-
-<!-- DOM Factory -->
-<script src="vendor/dom-factory.js"></script>
-
-<!-- MDK -->
-<script src="vendor/material-design-kit.js"></script>
-
-<!-- App JS -->
-<script src="js/app.js"></script>
-
-<!-- Preloader -->
-<script src="js/preloader.js"></script>
-
-<!-- Global Settings -->
-<script src="js/settings.js"></script>
-
-<!-- Moment.js -->
-<script src="vendor/moment.min.js"></script>
-<script src="vendor/moment-range.js"></script>
-
-<!-- Flatpickr -->
-<script src="vendor/flatpickr/flatpickr.min.js"></script>
-<script src="js/flatpickr.js"></script>
-
-<!-- Chart.js -->
-<script src="vendor/Chart.min.js"></script>
-<script src="js/chartjs.js"></script>
-<script src="js/chartjs-rounded-bar.js"></script>
-
-<!-- Chart.js Samples -->
-<script src="js/page.hr-dashboard.js"></script>
-
-<!-- Chart.js Samples -->
-<script src="js/page.ecommerce.js"></script>
-
-<!-- Chart.js Samples -->
-<script src="js/page.employees.js"></script>
-
-<!-- List.js -->
-<script src="vendor/list.min.js"></script>
-<script src="js/list.js"></script>
-
-
-<!-- modernizr.js -->
-<script src="js/modernizr.js"></script>
-
-<!-- Tables -->
-<script src="js/toggle-check-all.js"></script>
-<script src="js/check-selected-row.js"></script>
-
-<script src="js/custom.js"></script>
-<script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
-
-
-
-<!-- Sidebar Mini JS -->
-<script src="js/sidebar-mini.js"></script>
-<script>
-    (function () {
-        'use strict';
-        // ENABLE sidebar menu tabs
-        $('.js-sidebar-mini-tabs [data-toggle="tab"]').on('click', function (e) {
-            e.preventDefault()
-            $(this).tab('show')
-        })
-        $('.js-sidebar-mini-tabs').on('show.bs.tab', function (e) {
-            $('.js-sidebar-mini-tabs > .active').removeClass('active')
-            $(e.target).parent().addClass('active')
-        })
-    })()
-</script>
-
+@@include('./include/platform-footer.html')
 
 
 
