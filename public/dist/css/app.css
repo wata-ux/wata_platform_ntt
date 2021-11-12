@@ -3259,7 +3259,7 @@ pre code {
 
 [dir] .form-control:disabled,
 [dir] .form-control[readonly] {
-    background-color: #f7f7f7 !important;
+    background-color: #f7f7f7;
     /* background-color: #e9ecef; */
 }
 
