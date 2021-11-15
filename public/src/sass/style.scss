@@ -8064,6 +8064,12 @@ dl.space-id{
             border-radius: 0;
         }
     }
+    &.cd-panel-extend{
+        width: 900px;
+        .cd-panel__container{
+            width: 900px;
+        }
+    }
 }
 .cd-panel__close {
     position: absolute;
@@ -8727,7 +8733,7 @@ dl.space-id{
             }
             p{
                 word-break: keep-all;
-                color: rgba(0,0,0,0.4);
+                color: var(--dark);
                 min-height: 38px;
             }
             em{

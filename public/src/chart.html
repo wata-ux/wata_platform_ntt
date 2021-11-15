@@ -6,7 +6,7 @@
     @@include('./include/platform-topbar.html')
     <div class="mdk-drawer-layout__content page-content">
         @@include('./include/platform-tools.html')
-        <div class="cd-panel cd-panel--from-right js-cd-panel-main cd-panel--is-visible">
+        <div class="cd-panel cd-panel--from-right js-cd-panel-main cd-panel--is-visible cd-panel-extend">
             <a href="#0" class="cd-panel__close js-cd-close">Close</a>
 
             <div class="cd-panel__container">
@@ -20,19 +20,22 @@
                             <ul class="nav side-tab-menu col-item03" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" data-toggle="tab" href="#sidebar-menu01"><span
-                                            class="material-icons-outlined">
+                                            class="material-icons-outlined" data-toggle="tooltip"
+                                            data-title="차트 메인" data-placement="left" data-boundary="window">
                                             bar_chart
                                         </span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#sidebar-menu02"><span
-                                            class="material-icons-outlined">
+                                            class="material-icons-outlined" data-toggle="tooltip"
+                                            data-title="정보" data-placement="left" data-boundary="window">
                                             info
                                         </span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#sidebar-menu03"><span
-                                            class="material-icons-outlined">
+                                            class="material-icons-outlined" data-toggle="tooltip"
+                                            data-title="이동동선 추적" data-placement="left" data-boundary="window">
                                             timeline
                                         </span></a>
                                 </li>
@@ -55,25 +58,25 @@
                                     <div class="accordion__menu collapse show" id="tem01-01">
                                         <ul class="cell-panel">
                                             <li>
-                                                <p>Total / Average number of visitors</p>
+                                                <p>일 평균 출입 사용자 수 / 누적 출입 사용자 수</p>
                                                 <div class="cell">
                                                     <em>66,734 / 214</em>
                                                 </div>
                                             </li>
                                             <li>
-                                                <p>Total / Average number of used materials</p>
+                                                <p>일 평균 이동 물류 수 / 누적 이동 물류 수</p>
                                                 <div class="cell">
                                                     <em>5,600 / 253</em>
                                                 </div>
                                             </li>
                                             <li>
-                                                <p>Average number of used assets</p>
+                                                <p>일 평균 이동 자산 수</p>
                                                 <div class="cell">
                                                     <em>60</em>
                                                 </div>
                                             </li>
                                             <li>
-                                                <p>Average residence time</p>
+                                                <p>일 평균 사용자 체류시간(시간)</p>
                                                 <div class="cell">
                                                     <em>8.32</em>
                                                 </div>
@@ -85,12 +88,12 @@
                                 <div class="accordion__item mb-2 open">
                                     <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                         data-target="#tem01-02" data-parent="#accordion-item01">
-                                        <span class="flex d-flex align-items-center">Number of entry per area</span>
+                                        <span class="flex d-flex align-items-center">구역별 누적 사용자 이동 수</span>
                                         <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                     </a>
                                     <div class="accordion__menu collapse show" id="tem01-02">
-                                        <div class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                            <p class="no-data text-50">照会されたデータがありません。</p>
+                                        <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                            <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -98,12 +101,12 @@
                                 <div class="accordion__item mb-2 open">
                                     <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                         data-target="#tem01-03" data-parent="#accordion-item01">
-                                        <span class="flex d-flex align-items-center">Residence time per area</span>
+                                        <span class="flex d-flex align-items-center">1회 출입 시 사용자 평균 체류시간(분)</span>
                                         <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                     </a>
                                     <div class="accordion__menu collapse show" id="tem01-03">
-                                        <div class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                            <p class="no-data text-50">照会されたデータがありません。</p>
+                                        <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                            <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -111,12 +114,12 @@
                                 <div class="accordion__item mb-2 open">
                                     <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                         data-target="#tem01-04" data-parent="#accordion-item01">
-                                        <span class="flex d-flex align-items-center">Visitor move rate</span>
+                                        <span class="flex d-flex align-items-center">사용자 이동 비율</span>
                                         <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                     </a>
                                     <div class="accordion__menu collapse show" id="tem01-04">
-                                        <div class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                            <p class="no-data text-50">照会されたデータがありません。</p>
+                                        <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                            <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -124,12 +127,12 @@
                                 <div class="accordion__item mb-2 open">
                                     <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                         data-target="#tem01-05" data-parent="#accordion-item01">
-                                        <span class="flex d-flex align-items-center">Material move rate</span>
+                                        <span class="flex d-flex align-items-center">물류 이동 비율</span>
                                         <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                     </a>
                                     <div class="accordion__menu collapse show" id="tem01-05">
-                                        <div class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                            <p class="no-data text-50">照会されたデータがありません。</p>
+                                        <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                            <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -137,12 +140,12 @@
                                 <div class="accordion__item mb-2 open">
                                     <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                         data-target="#tem01-06" data-parent="#accordion-item01">
-                                        <span class="flex d-flex align-items-center">Asset move rate</span>
+                                        <span class="flex d-flex align-items-center">자산 이동 비율</span>
                                         <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                     </a>
                                     <div class="accordion__menu collapse show" id="tem01-06">
-                                        <div class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                            <p class="no-data text-50">照会されたデータがありません。</p>
+                                        <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                            <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -152,13 +155,13 @@
                         <div id="sidebar-menu02" class="tab-pane" role="tabpanel">
                             <ul class="nav side-sub-tab-menu col-item03" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#sidebar-sub-menu01">Visitor</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#sidebar-sub-menu01">사용자</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#sidebar-sub-menu02">Material</a>
+                                    <a class="nav-link" data-toggle="tab" href="#sidebar-sub-menu02">물류</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#sidebar-sub-menu03">Asset</a>
+                                    <a class="nav-link" data-toggle="tab" href="#sidebar-sub-menu03">자산</a>
                                 </li>
                             </ul>
                             <div class="tab-content">
@@ -168,14 +171,13 @@
                                         <div class="accordion__item mb-2 open">
                                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                                 data-target="#tem02-01-01" data-parent="#accordion-item02-01">
-                                                <span class="flex d-flex align-items-center">Visiter category</span>
+                                                <span class="flex d-flex align-items-center">카테고리 별 이동 비율</span>
                                                 <span
                                                     class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                             </a>
                                             <div class="accordion__menu collapse show" id="tem02-01-01">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                                    <p class="no-data text-50">照会されたデータがありません。</p>
+                                                <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -183,14 +185,13 @@
                                         <div class="accordion__item mb-2 open">
                                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                                 data-target="#tem02-01-02" data-parent="#accordion-item02-01">
-                                                <span class="flex d-flex align-items-center">Visitor sub category</span>
+                                                <span class="flex d-flex align-items-center">상세 카테고리 별 이동 비율</span>
                                                 <span
                                                     class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                             </a>
                                             <div class="accordion__menu collapse show" id="tem02-01-02">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                                    <p class="no-data text-50">照会されたデータがありません。</p>
+                                                <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -198,15 +199,12 @@
                                         <div class="accordion__item mb-2 open">
                                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                                 data-target="#tem02-01-03" data-parent="#accordion-item02-01">
-                                                <span class="flex d-flex align-items-center">Visitor congestion by
-                                                    hour</span>
-                                                <span
-                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                                <span class="flex d-flex align-items-center">시간대 별 혼잡도</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                             </a>
                                             <div class="accordion__menu collapse show" id="tem02-01-03">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                                    <p class="no-data text-50">照会されたデータがありません。</p>
+                                                <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -214,15 +212,33 @@
                                         <div class="accordion__item mb-2 open">
                                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                                 data-target="#tem02-01-04" data-parent="#accordion-item02-01">
-                                                <span class="flex d-flex align-items-center">Comparison of visitor's
-                                                    residence time range</span>
+                                                <span class="flex d-flex align-items-center">구역 / 카테고리 / 상세 카테고리 별 체류시간 비교</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                            </a>
+                                            <div class="accordion__menu collapse show" id="tem02-01-04">
+                                                <div class="d-flex p-3 border-top-1">
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-sm btn-accent font-weight-normal">구역</button>
+                                                        <button type="button" class="btn btn-sm btn-light font-weight-normal">카테고리</button>
+                                                        <button type="button" class="btn btn-sm btn-light font-weight-normal">상세 카테고리</button>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion__item mb-2 open">
+                                            <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                                data-target="#tem02-01-05" data-parent="#accordion-item02-01">
+                                                <span class="flex d-flex align-items-center">요일 및 시간대 별 혼잡도</span>
                                                 <span
                                                     class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                             </a>
-                                            <div class="accordion__menu collapse show" id="tem02-01-04">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                                    <p class="no-data text-50">照会されたデータがありません。</p>
+                                            <div class="accordion__menu collapse show" id="tem02-01-05">
+                                                <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -234,14 +250,12 @@
                                         <div class="accordion__item mb-2 open">
                                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                                 data-target="#tem02-02-01" data-parent="#accordion-item02-02">
-                                                <span class="flex d-flex align-items-center">Visiter category</span>
-                                                <span
-                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                                <span class="flex d-flex align-items-center">카테고리 별 이동 비율</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                             </a>
                                             <div class="accordion__menu collapse show" id="tem02-02-01">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                                    <p class="no-data text-50">照会されたデータがありません。</p>
+                                                <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -249,14 +263,12 @@
                                         <div class="accordion__item mb-2 open">
                                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                                 data-target="#tem02-02-02" data-parent="#accordion-item02-02">
-                                                <span class="flex d-flex align-items-center">Visitor sub category</span>
-                                                <span
-                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                                <span class="flex d-flex align-items-center">상세 카테고리 별 이동 비율</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                             </a>
                                             <div class="accordion__menu collapse show" id="tem02-02-02">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                                    <p class="no-data text-50">照会されたデータがありません。</p>
+                                                <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -264,15 +276,12 @@
                                         <div class="accordion__item mb-2 open">
                                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                                 data-target="#tem02-02-03" data-parent="#accordion-item02-02">
-                                                <span class="flex d-flex align-items-center">Visitor congestion by
-                                                    hour</span>
-                                                <span
-                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                                <span class="flex d-flex align-items-center">시간대 별 혼잡도</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                             </a>
                                             <div class="accordion__menu collapse show" id="tem02-02-03">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                                    <p class="no-data text-50">照会されたデータがありません。</p>
+                                                <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -280,15 +289,32 @@
                                         <div class="accordion__item mb-2 open">
                                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                                 data-target="#tem02-02-04" data-parent="#accordion-item02-02">
-                                                <span class="flex d-flex align-items-center">Comparison of visitor's
-                                                    residence time range</span>
-                                                <span
-                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                                <span class="flex d-flex align-items-center">구역 / 카테고리 / 상세 카테고리 별 체류시간 비교</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                             </a>
                                             <div class="accordion__menu collapse show" id="tem02-02-04">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                                    <p class="no-data text-50">照会されたデータがありません。</p>
+                                                <div class="d-flex p-3 border-top-1">
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-sm btn-accent font-weight-normal">구역</button>
+                                                        <button type="button" class="btn btn-sm btn-light font-weight-normal">카테고리</button>
+                                                        <button type="button" class="btn btn-sm btn-light font-weight-normal">상세 카테고리</button>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion__item mb-2 open">
+                                            <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                                data-target="#tem02-02-05" data-parent="#accordion-item02-02">
+                                                <span class="flex d-flex align-items-center">요일 및 시간대 별 혼잡도</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                            </a>
+                                            <div class="accordion__menu collapse show" id="tem02-02-05">
+                                                <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -299,14 +325,12 @@
                                         <div class="accordion__item mb-2 open">
                                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                                 data-target="#tem02-03-01" data-parent="#accordion-item02-03">
-                                                <span class="flex d-flex align-items-center">Visiter category</span>
-                                                <span
-                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                                <span class="flex d-flex align-items-center">카테고리 별 이동 비율</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                             </a>
                                             <div class="accordion__menu collapse show" id="tem02-03-01">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                                    <p class="no-data text-50">照会されたデータがありません。</p>
+                                                <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -314,14 +338,12 @@
                                         <div class="accordion__item mb-2 open">
                                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                                 data-target="#tem02-03-02" data-parent="#accordion-item02-03">
-                                                <span class="flex d-flex align-items-center">Visitor sub category</span>
-                                                <span
-                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                                <span class="flex d-flex align-items-center">상세 카테고리 별 이동 비율</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                             </a>
                                             <div class="accordion__menu collapse show" id="tem02-03-02">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                                    <p class="no-data text-50">照会されたデータがありません。</p>
+                                                <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -329,15 +351,12 @@
                                         <div class="accordion__item mb-2 open">
                                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                                 data-target="#tem02-03-03" data-parent="#accordion-item02-03">
-                                                <span class="flex d-flex align-items-center">Visitor congestion by
-                                                    hour</span>
-                                                <span
-                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                                <span class="flex d-flex align-items-center">시간대 별 혼잡도</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                             </a>
                                             <div class="accordion__menu collapse show" id="tem02-03-03">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                                    <p class="no-data text-50">照会されたデータがありません。</p>
+                                                <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -345,15 +364,32 @@
                                         <div class="accordion__item mb-2 open">
                                             <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
                                                 data-target="#tem02-03-04" data-parent="#accordion-item02-03">
-                                                <span class="flex d-flex align-items-center">Comparison of visitor's
-                                                    residence time range</span>
-                                                <span
-                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                                <span class="flex d-flex align-items-center">구역 / 카테고리 / 상세 카테고리 별 체류시간 비교</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                             </a>
                                             <div class="accordion__menu collapse show" id="tem02-03-04">
-                                                <div
-                                                    class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                                    <p class="no-data text-50">照会されたデータがありません。</p>
+                                                <div class="d-flex p-3 border-top-1">
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-sm btn-accent font-weight-normal">구역</button>
+                                                        <button type="button" class="btn btn-sm btn-light font-weight-normal">카테고리</button>
+                                                        <button type="button" class="btn btn-sm btn-light font-weight-normal">상세 카테고리</button>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion__item mb-2 open">
+                                            <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                                data-target="#tem02-03-05" data-parent="#accordion-item02-03">
+                                                <span class="flex d-flex align-items-center">요일 및 시간대 별 혼잡도</span>
+                                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                            </a>
+                                            <div class="accordion__menu collapse show" id="tem02-03-05">
+                                                <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                                    <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -364,26 +400,14 @@
                         </div>
                         <div id="sidebar-menu03" class="tab-pane mt-2" role="tabpanel">
                             <div class="accordion js-accordion list-group-flush" id="accordion-item03">
-                                <div class="accordion__item mb-2 open">
-                                    <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
-                                        data-target="#tem03-01" data-parent="#accordion-item03">
-                                        <span class="flex d-flex align-items-center">Total residence time (min)</span>
-                                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                                    </a>
-                                    <div class="accordion__menu collapse show" id="tem03-01">
-                                        <div class="d-flex align-items-center justify-content-center border-top-1 p-5">
-                                            <p class="no-data text-50">照会されたデータがありません。</p>
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <div class="accordion__item mb-2 open">
                                     <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
-                                        data-target="#tem03-02" data-parent="#accordion-item03">
-                                        <span class="flex d-flex align-items-center">Route by time</span>
+                                        data-target="#tem03-01" data-parent="#accordion-item03">
+                                        <span class="flex d-flex align-items-center">상세 이동내역</span>
                                         <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                                     </a>
-                                    <div class="accordion__menu collapse show" id="tem03-02">
+                                    <div class="accordion__menu collapse show" id="tem03-01">
                                         <div class="table-box-wrap">
                                             <div class="table-box" style="max-height: 200px;" data-perfect-scrollbar>
                                                 <table class="table table-bordered table-nowrap sm-table mb-0 border-bottom-0">
@@ -480,8 +504,19 @@
                                                 </table>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
 
-
+                                <div class="accordion__item mb-2 open">
+                                    <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                        data-target="#tem03-02" data-parent="#accordion-item03">
+                                        <span class="flex d-flex align-items-center">구역별 누적 체류시간(분)</span>
+                                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                    </a>
+                                    <div class="accordion__menu collapse show" id="tem03-02">
+                                        <div class="d-flex align-items-center justify-content-center border-top-1 p-3">
+                                            <p class="no-data text-50 mb-0 py-4">조회된 데이터가 없습니다.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
