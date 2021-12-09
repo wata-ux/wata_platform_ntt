@@ -556,11 +556,6 @@ ul.signin-help {
     75% {background-position: 40%;}
     100%  {background-position: 0 0;}
 }
-@media only screen and (min-width: 1000px) {
-    [dir] .navbar {
-        padding: 0 3.125rem;
-    }
-}
 
 /* modal */
 .modal{
@@ -10587,18 +10582,22 @@ xnugget info
 }
 
 .pl-container{
+    height: 100vh;
     .pl-cover{
-        margin-top: 64px;
         overflow-x: hidden;
         display: flex;
         flex-direction: row;
-        .pl-col-left,
-        .pl-col-mid,
-        .pl-col-right{
-        }
+        height: calc(100% - 64px);
         .pl-col-left{
             flex: 0 0 18.125%;
             max-width: 18.125%;
+            .mdk-drawer__content{
+                width: inherit;
+                transform: none;
+            }
+            .sidebar-secondary{
+                width: 400px;
+            }
         }
         .pl-col-right{
             flex: 0 0 15.625%;
@@ -10611,20 +10610,25 @@ xnugget info
                 flex: 0 0 84.375%;
                 max-width: 84.375%;
             }
+            &.pl-col-12{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
     }
     .collapsed {
         display: none;
     }
-
     #sidebar-left.collapsed {
         margin-left: -18.125%;
         /* same width as sidebar */
     }
-
     #sidebar-right.collapsed {
         margin-right: -15.625%;
         /* same width as sidebar */
     }
 }
 
+.navbar{
+    padding: 0 !important;
+}
