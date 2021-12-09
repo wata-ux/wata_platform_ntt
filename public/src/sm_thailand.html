@@ -1,0 +1,636 @@
+@@include('./include/platform-header.html')
+
+<div class="mdk-drawer-layout js-mdk-drawer-layout">
+    @@include('./include/platform-topbar.html')
+    <div class="mdk-drawer-layout__content page-content">
+        <!-- edit tool -->
+        <div class="btn-top-holder">
+            <div class="btn-group ml-2">
+                <button type="button" class="btn btn-white active" data-toggle="tooltip" data-title="사람" data-placement="top" data-boundary="window"><i class="material-icons">person</i></button>
+                <button type="button" class="btn btn-white" data-toggle="tooltip" data-title="자동차" data-placement="top" data-boundary="window"><i class="material-icons">directions_car</i></button>
+                <button type="button" class="btn btn-white" data-toggle="tooltip" data-title="자전거" data-placement="top" data-boundary="window"><i class="material-icons">pedal_bike</i></button>
+                <button type="button" class="btn btn-white" data-toggle="tooltip" data-title="모바일" data-placement="top" data-boundary="window"><i class="material-icons">smartphone</i></button>
+            </div>
+            <!-- <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button> -->
+            <div class="btn-group ml-2">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
+                        aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>지도 설정</strong></div>
+                        <ul class="item-list mb-2">
+                            <li><a href="#n"><i class="material-icons">sensors</i><span>BLE/AP</span></a></li>
+                            <li><a href="#n"><i class="material-icons">router</i><span>Gateway</span></a></li>
+                            <li><a href="#n"><i class="material-icons">place</i><span>POI</span></a></li>
+                            <li><a href="#n"><i class="material-icons">space_dashboard</i><span>지오펜스</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="map-location ml-2">
+                <div class="location-header d-flex align-items-center">
+                    <strong>프로젝트 A</strong>
+                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
+                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                    </a>
+                </div>
+                <div class="collapse location-body" id="map-location">
+                    <div class="sidebar">
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu01">
+                                    <li class="sidebar-menu-item active">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">B1</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">4F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">5F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">6F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">7F</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu02">
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">1F</span>
+                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">2F</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="#n">
+                                            <span class="sidebar-menu-text">3F</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- mouse pointer -->
+        <div class="pointer-wrap">
+            <div class="mouse-point user-mo" style="left: 45.5%; top: 51%;"></div>
+            <div class="mouse-point user" style="left: 44.5%; top: 51%;"></div>
+            <div class="mouse-point car" style="left: 45%; top: 51.5%;"></div>
+            <div class="mouse-point bike" style="left: 46%; top: 52.5%;"></div>
+            <div class="mouse-point user-mo" style="left: 44%; top: 50.3%;"></div>
+            <div class="mouse-point user" style="left: 45%; top: 50.1%;"></div>
+            <div class="mouse-point car" style="left: 46.2%; top: 52%;"></div>
+            <div class="mouse-point bike" style="left: 35%; top: 35%;"></div>
+            <div class="mouse-point user-mo" style="left: 62%; top: 43%;"></div>
+            <div class="mouse-point user" style="left: 32%; top: 16%;"></div>
+            <div class="mouse-point car" style="left: 75%; top: 65%;"></div>
+            <div class="mouse-point bike" style="left: 42%; top: 23%;" data-toggle="popover" data-placement="left" data-trigger="click"></div>
+            <div class="popoverContainer d-none">
+                <h6 class="mb-3">상세정보</h6>
+                <div
+                    class="list-group list-group-flush list-popover">
+                    <div class="list-group-item">
+                        <div class="d-flex popover-title">
+                            <span class="text-50">Object Type</span>
+                        </div>
+                        <div class="d-flex popover-content">
+                            <span class="text-headings">Bike</span>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="d-flex popover-title">
+                            <span class="text-50">Height</span>
+                        </div>
+                        <div class="d-flex popover-content">
+                            <span
+                                class="text-headings">nnn cm</span>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="d-flex popover-title">
+                            <span class="text-50">Latitude</span>
+                        </div>
+                        <div class="d-flex popover-content">
+                            <span class="text-headings">N37°25'12.5</span>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="d-flex popover-title">
+                            <span class="text-50">Longitude</span>
+                        </div>
+                        <div class="d-flex popover-content">
+                            <span class="text-headings">N37°25'12.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mouse-point user-mo" style="left: 55%; top: 50%;"></div>
+            <div class="mouse-point user" style="left: 35%; top: 40%;"></div>
+            <div class="mouse-point car" style="left: 48%; top: 55%;"></div>
+        </div>
+
+        <!-- map zoom/out -->
+        <div class="btn-widget-holder">
+            <ul>
+                <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-globe"></i></button></li>
+                <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-crosshairs"></i></button></li>
+                <li>
+                    <div class="btn-group-vertical">
+                        <button type="button" class="btn btn-white"><i class="fas fa-plus"></i></button>
+                        <button type="button" class="btn btn-white"><i class="fas fa-minus"></i></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="cd-panel__open">
+            <a href="#n" class="js-cd-panel-trigger" data-panel="main">
+                <span class="material-icons-outlined">query_stats</span>
+                <small>Chart</small>
+            </a>
+        </div>
+
+        <div class="info-bar">
+            <span>38&#176;06&#39;95&#34;N</span>
+            <span>126&#176;14&#39;45&#34;E</span>
+        </div>
+
+        <!-- map container -->
+        <div id="map" style="width:100%;height:100vh;"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
+        <script>
+            var container = document.getElementById('map');
+            var options = {
+                center: new kakao.maps.LatLng(37.54537298405762, 127.2238266278939),
+                level: 1
+            };
+
+            var map = new kakao.maps.Map(container, options);
+            //var mapTypeControl = new kakao.maps.MapTypeControl();
+            //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+        </script>
+        <div class="cd-panel cd-panel--from-right js-cd-panel-main cd-panel--is-visible">
+            <a href="#0" class="cd-panel__close js-cd-close">Close</a>
+
+            <div class="cd-panel__container">
+                <div class="cd-panel__content" data-perfect-scrollbar>
+                    <div class="d-flex flex-row align-items-center bg-white border-bottom-1 mb-2 p-4">
+                        <div class="flex">
+                            <h3 class="d-flex align-items-center mb-0">태국 스마트 시티</h3>
+                            <p class="text-50 m-0">2021-07-01 13:00:00 기준</p>
+                        </div>
+                    </div>
+                    <div class="accordion js-accordion list-group-flush" id="parent">
+
+                        <div class="accordion__item mb-2 open">
+                            <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                data-target="#panel01" data-parent="#parent">
+                                <span class="flex d-flex align-items-center">
+                                    <!-- <span class="material-icons-outlined icon--left">watch_later</span> -->
+                                    실시간 집계
+                                </span>
+                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <div class="accordion__menu collapse show" id="panel01">
+                                <div class="inner">
+                                    <div class="accordion__menu-link px-0 state-up">
+                                        <div class="visitor-group visitor-type2">
+                                            <ul class="visitor-list col-num04">
+                                                <li>사람<span>20</span></li>
+                                                <li>자동차<span>5</span></li>
+                                                <li>자전거<span>5</span></li>
+                                                <li>모바일<span>5</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion__item mb-2 open">
+                            <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                                data-target="#panel02" data-parent="#parent">
+                                <span class="flex d-flex align-items-center">
+                                    <!-- <span class="material-icons-outlined icon--left">flag</span> -->
+                                    실시간 혼잡 구역
+                                </span>
+                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <div class="accordion__menu collapse show" id="panel02">
+                                <div class="accordion__menu-link">
+                                    <a href="#n" class="d-flex align-items-center w-100">
+                                        <p class="d-flex m-0">구역 1</p>
+                                        <span class="d-flex badge badge-accent ml-auto">혼잡</span>
+                                    </a>
+                                </div>
+                                <div class="accordion__menu-link">
+                                    <a href="#n" class="d-flex align-items-center w-100">
+                                        <p class="d-flex m-0">구역 2</p>
+                                        <span class="d-flex badge badge-success ml-auto">여유</span>
+                                    </a>
+                                </div>
+                                <div class="accordion__menu-link">
+                                    <a href="#n" class="d-flex align-items-center w-100">
+                                        <p class="d-flex m-0">구역 3</p>
+                                        <span class="d-flex badge badge-accent-yellow ml-auto">보통</span>
+                                    </a>
+                                </div>
+                                <div class="legendary">
+                                    <h6>범례</h6>
+                                    <div class="level-list">
+                                        <ul class="step4">
+                                            <li class="text-left">원활</li>
+                                            <li></li>
+                                            <li></li>
+                                            <li class="text-right">혼잡</li>
+                                        </ul>
+                                        <div class="level-bar color-num2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="chart.html" class="btn btn-accent ml-0">통계 자세히보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
+        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
+            @@include('./include/platform-side-menu.html')
+            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                <div class="tab-content">
+                    <div class="tab-pane sm-projects active" id="sm-projects">
+                        <div class="project-inner">
+                            <div class="container-fluid py-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="flex d-flex flex-sm-row align-items-center mb-0">
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">프로젝트 A</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row" role="tablist">
+                                        <div class="col-auto">
+                                            <div class="dropdown">
+                                                <a href="project_list.html" data-toggle="dropdown" data-caret="false"
+                                                    class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item">복사</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="board-title">
+                                    <p>discription</p>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row align-items-center mb-4">
+                                    <div class="col-auto">
+                                        <div class="d-flex align-items-center">
+                                            <div class="avatar avatar-xs">
+                                                <span class="avatar-title rounded-circle">SH</span>
+                                            </div>
+                                            <strong class="flex ml-1">SH Jeong</strong>
+                                        </div>
+                                    </div>
+                                    <div class="col text-right">
+                                        <select class="form-none" name="" id="" disabled>
+                                            <option value="">스마트 팩토리</option>
+                                            <option value="">스마트 리테일</option>
+                                            <option value="">스마트 빌딩</option>
+                                            <option value="">스마트 뱡원</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <em class="none-list mb-4">등록한 건물이 없습니다.</em>
+                                <div class="list-group block-list dragula-list mb-4" data-toggle="dragula">
+                                    <div class="list-group-item d-flex active">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">건물 A</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-accent">배포중</span> 2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <!-- <a href="#" class="circle-pin active"><i class="material-icons">push_pin</i></a> -->
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex disabled">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">건물 B</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-secondary">수정중</span> 2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">건물 C</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-accent">배포중</span> 2021.01.07</div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="buildings_write.html" class="btn-row-add"><i class="material-icons">add</i>
+                                        공간 추가</a>
+                                </div>
+                                <ul class="pagination justify-content-center pagination-xsm m-0 d-none">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                            <span>Prev</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 1">
+                                            <span>1</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 2">
+                                            <span>2</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span>Next</span>
+                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="contents-tab nav mb-4 the-num02 d-none" role="tablist">
+                                    <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                                        <span class="menu-cover"><span>공간</span></span>
+                                    </a>
+                                    <!-- <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                        <span class="menu-cover"><span>앱키</span></span>
+                                    </a> -->
+                                    <a href="#tab03" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                        <span class="menu-cover"><span>통계</span></span>
+                                    </a>
+                                    <!-- <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                        <span class="menu-cover"><span>팀관리</span></span>
+                                    </a> -->
+                                </div>
+                                <div class="tab-content d-none">
+                                    <div id="tab01" class="tab-pane active" role="tabpanel">
+                                        <em class="none-list mb-4">등록한 건물이 없습니다.</em>
+                                        <div class="list-group block-list dragula-list mb-4" data-toggle="dragula">
+                                            <div class="list-group-item d-flex active">
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="#n">건물 A</a>
+                                                        <div class="card-subtitle text-50"><span
+                                                                class="badge badge-accent">배포중</span> 2021.01.07</div>
+                                                    </div>
+                                                </div>
+                                                <!-- <a href="#" class="circle-pin active"><i class="material-icons">push_pin</i></a> -->
+                                                <div class="dropdown">
+                                                    <a href="#" data-toggle="dropdown" data-caret="false"
+                                                        class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item d-flex disabled">
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="#n">건물 B</a>
+                                                        <div class="card-subtitle text-50"><span
+                                                                class="badge badge-secondary">수정중</span> 2021.01.07
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a href="#" data-toggle="dropdown" data-caret="false"
+                                                        class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item d-flex">
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <div class="flex">
+                                                        <a class="card-title" href="#n">건물 C</a>
+                                                        <div class="card-subtitle text-50"><span
+                                                                class="badge badge-accent">배포중</span> 2021.01.07</div>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a href="#" data-toggle="dropdown" data-caret="false"
+                                                        class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <a href="buildings_write.html" class="btn-row-add"><i
+                                                    class="material-icons">add</i> 공간 추가</a>
+                                        </div>
+                                        <ul class="pagination justify-content-center pagination-xsm m-0 d-none">
+                                            <li class="page-item disabled">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                    <span>Prev</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Page 1">
+                                                    <span>1</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Page 2">
+                                                    <span>2</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span>Next</span>
+                                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- <div id="tab02" class="tab-pane" role="tabpanel">2
+                                    </div> -->
+                                    <div id="tab03" class="tab-pane" role="tabpanel">
+                                        <em class="none-list mb-4 d-none">등록한 데이터가 없습니다.</em>
+                                        <div class="list-card">
+                                            <a href="project_board_graph.html" class="card-cover">
+                                                <div class="media-left mr-12pt">
+                                                    <div class="avatar">
+                                                        <span class="material-icons-round">area_chart</span>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h5>통계</h5>
+                                                    <p>프로젝트의 모든 통계 데이터를 확인하실 수 있습니다.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="list-card">
+                                            <a href="project_board_data.html" class="card-cover">
+                                                <div class="media-left mr-12pt">
+                                                    <div class="avatar">
+                                                        <span class="material-icons-round">notes</span>
+                                                    </div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h5>데이터</h5>
+                                                    <p>프로젝트의 모든 데이터를 확인하실 수 있습니다.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+
+                                        <div class="list-group block-list mb-4 d-none">
+                                            <div class="list-group-item d-flex js-cd-panel-trigger active"
+                                                data-panel="main">
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <div class="flex">
+                                                        <div class="card-title">방문객</div>
+                                                        <p class="card-subtitle text-50 d-flex align-items-center">
+                                                            31.5%
+                                                            <i
+                                                                class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- <a href="#" class="circle-pin active"><i class="material-icons">push_pin</i></a> -->
+                                                <div class="dropdown">
+                                                    <a href="#" data-toggle="dropdown" data-caret="false"
+                                                        class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-group-item d-flex js-cd-panel-trigger" data-panel="main">
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <div class="flex">
+                                                        <div class="card-title">체류시간</div>
+                                                        <p class="card-subtitle text-50 d-flex align-items-center">
+                                                            51.5%
+                                                            <i
+                                                                class="material-icons text-primary ml-4pt icon-16pt">keyboard_arrow_down</i>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a href="#" data-toggle="dropdown" data-caret="false"
+                                                        class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="project_board_graph.html" class="btn-row-add mb-4 d-none"><i
+                                                class="material-icons">add</i> 새로운 그래프 추가</a>
+                                    </div>
+                                    <!-- <div id="tab04" class="tab-pane" role="tabpanel">4
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')

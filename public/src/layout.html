@@ -1,0 +1,74 @@
+@@include('./include/platform-header.html')
+
+<div class="pl-container">
+    <div class="pl-top">
+        @@include('./include/platform-topbar.html')
+    </div>
+    <div class="pl-cover">
+        <div class="pl-col-left" id="sidebar-left">left</div>
+        <div class="pl-col-mid" id="main-contents">
+            mid
+            <div class="btn-group" role="group" aria-label="Controls">
+                <button type="button" class="btn btn-danger toggle-sidebar-left">Toggle left</button>
+                <button type="button" class="btn btn-danger toggle-sidebar-right">Toggle right</button>
+            </div>
+        </div>
+        <div class="pl-col-right" id="sidebar-right">right</div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function toggleSidebar(side) {
+            if (side !== "left" && side !== "right") {
+                return false;
+            }
+            var plLeft = $("#sidebar-left"),
+                plRight = $("#sidebar-right"),
+                plContent = $("#main-contents"),
+                openSidebarsCount = 0,
+                contentClass = "";
+
+            // toggle sidebar
+            if (side === "left") {
+                plLeft.toggleClass("collapsed");
+            } else if (side === "right") {
+                plRight.toggleClass("collapsed");
+            }
+
+            // determine number of open sidebars
+            if (!plLeft.hasClass("collapsed")) {
+                openSidebarsCount += 1;
+            }
+
+            if (!plRight.hasClass("collapsed")) {
+                openSidebarsCount += 1;
+            }
+
+            // determine appropriate content class
+            if (openSidebarsCount === 0) {
+                contentClass = "pl-col-12";
+            } else if (openSidebarsCount === 1) {
+                contentClass = "pl-col-9";
+            } else {
+                contentClass = "pl-col-6";
+            }
+
+            // apply class to content
+            plContent.removeClass("pl-col-12 pl-col-9 pl-col-6")
+                .addClass(contentClass);
+        }
+        $(".toggle-sidebar-left").click(function () {
+            toggleSidebar("left");
+
+            return false;
+        });
+        $(".toggle-sidebar-right").click(function () {
+            toggleSidebar("right");
+
+            return false;
+        });
+    });
+</script>
+
+@@include('./include/platform-footer.html')
