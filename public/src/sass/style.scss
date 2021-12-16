@@ -4565,6 +4565,7 @@ a.btn-add-cat{
     display: none;
     position: absolute;
     left: 0;
+    z-index: 3;
     top: 64px;
     width: 100%;
     border-top: 1px solid $border-color;
