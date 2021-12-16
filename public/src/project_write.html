@@ -1,94 +1,84 @@
 @@include('./include/platform-header.html')
 
-<div class="mdk-drawer-layout js-mdk-drawer-layout">
-    <!-- Header -->
-    <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
-        <!-- Navbar toggler -->
-        <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
-            <span class="material-icons">short_text</span>
-        </button>
-        <div class="top-process">
-            <div class="process-bar ps-1"></div>
-            <div class="process-txt">
-                <em>1/7</em>
-            </div>
-        </div>
 
-        <div class="d-flex flex justify-content-end align-items-center">
-            <div class="form-group m-0 ml-4 form-lang">
-                <select id="custom-select" class="custom-line">
-                    <option selected="">KOR</option>
-                    <option value="1">JPN</option>
-                    <option value="2">ENG</option>
-                </select>
-            </div>
-            <div class="nav-item dropdown ml-4">
-                <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-                    <span class="avatar avatar-sm">
-                        <span class="avatar-title rounded-circle">SH</span>
-                    </span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <div class="dropdown-header"><strong>Account</strong></div>
-                    <a class="dropdown-item" href="#n">정보수정</a>
-                    <a class="dropdown-item" href="#n">멤버십</a>
-                    <a class="dropdown-item" href="#n">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mdk-drawer-layout__content page-content">
-        <!-- edit tool -->
-        <div class="btn-top-holder">
-            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
-        </div>
-        @@include('./include/platform-tools.html')
-    </div>
-    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
-            <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
-                <!-- Brand -->
-                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+                    <!-- Brand -->
+                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
                     <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
                 </a>
-                <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
-                    <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs"
-                        role="tablist">
-                        <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">topic</i>
-                                <span class="sidebar-menu-text">프로젝트</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="top-process">
+                    <div class="process-bar ps-1"></div>
+                    <div class="process-txt">
+                        <em>1/7</em>
+                    </div>
+                </div>
+        
+                <div class="d-flex flex justify-content-end align-items-center pr-4">
+                    <div class="form-group m-0 ml-4 form-lang">
+                        <select id="custom-select" class="custom-line">
+                            <option selected="">KOR</option>
+                            <option value="1">JPN</option>
+                            <option value="2">ENG</option>
+                        </select>
+                    </div>
+                    <div class="nav-item dropdown ml-4">
+                        <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                            <span class="avatar avatar-sm">
+                                <span class="avatar-title rounded-circle">SH</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item" href="#n">정보수정</a>
+                            <a class="dropdown-item" href="#n">멤버십</a>
+                            <a class="dropdown-item" href="#n">Logout</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
-                <div class="tab-content">
-                    <div class="tab-pane sm-projects active" id="sm-projects">
-                        <!-- 프로젝트 등록 -->
-                        <div class="project-inner">
-                            <div class="container-fluid d-flex align-items-center py-4">
-                                <div class="flex d-flex">
-                                    <div class="mr-24pt">
-                                        <h3 class="mb-0">정보입력</h3>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
+                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
+                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                                <li class="sidebar-menu-item active" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">topic</i>
+                                        <span class="sidebar-menu-text">프로젝트</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="sm-projects">
+                                <div class="container-fluid d-flex align-items-center py-4">
+                                    <div class="flex d-flex">
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">정보입력</h3>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="container-fluid">
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 essential" for="projectName">프로젝트명</label>
-                                    <input type="text" class="form-line" id="projectName" placeholder="프로젝트명을 입력해주세요.">
-                                </div>
-                                <div class="form-group mb-32pt">
-                                    <label class="form-label text-50 essential" for="">내용</label>
-                                    <input type="text" class="form-line" id="" placeholder="내용을 입력해주세요.">
-                                </div>
-                                <div class="my-32pt">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="project_list.html" class="btn btn-outline-secondary mr-8pt">취소하기</a>
-                                        <a href="project_write2.html" class="btn btn-outline-accent ml-0">저장 후 다음으로</a>
+                                <div class="container-fluid">
+                                    <div class="form-group mb-32pt">
+                                        <label class="form-label text-50 essential" for="projectName">프로젝트명</label>
+                                        <input type="text" class="form-line" id="projectName" placeholder="프로젝트명을 입력해주세요.">
+                                    </div>
+                                    <div class="form-group mb-32pt">
+                                        <label class="form-label text-50 essential" for="">내용</label>
+                                        <input type="text" class="form-line" id="" placeholder="내용을 입력해주세요.">
+                                    </div>
+                                    <div class="my-32pt">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <a href="project_list.html" class="btn btn-outline-secondary mr-8pt">취소하기</a>
+                                            <a href="project_write2.html" class="btn btn-outline-accent ml-0">저장 후 다음으로</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -96,8 +86,13 @@
                     </div>
                 </div>
             </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    @@include('./include/platform-tools.html')
+                </div>
+            </div>
         </div>
     </div>
-</div>
+
 
 @@include('./include/platform-footer.html')

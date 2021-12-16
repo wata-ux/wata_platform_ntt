@@ -82,7 +82,7 @@
 
 </head>
 
-<body class="layout-compact">
+<body class="layout-mini-secondary layout-mini-secondary">
 
     <!-- <div class="preloader">
         <div class="sk-chase">
@@ -96,50 +96,225 @@
     </div> -->
 
 
-<div class="mdk-drawer-layout js-mdk-drawer-layout">
-    <!-- Header -->
-    <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
-        <!-- Navbar toggler -->
-        <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
-            <span class="material-icons">short_text</span>
-        </button>
-        <div class="top-process">
-            <div class="process-bar ps-2"></div>
-            <div class="process-txt">
-                <em>2/7</em>
-            </div>
-        </div>
-
-        <div class="d-flex flex justify-content-end align-items-center">
-            <div class="form-group m-0 ml-4 form-lang">
-                <select id="custom-select" class="custom-line">
-                    <option selected="">KOR</option>
-                    <option value="1">JPN</option>
-                    <option value="2">ENG</option>
-                </select>
-            </div>
-            <div class="nav-item dropdown ml-4">
-                <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-                    <span class="avatar avatar-sm">
-                        <span class="avatar-title rounded-circle">SH</span>
-                    </span>
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+                    <!-- Brand -->
+                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <div class="dropdown-header"><strong>Account</strong></div>
-                    <a class="dropdown-item" href="#n">정보수정</a>
-                    <a class="dropdown-item" href="#n">멤버십</a>
-                    <a class="dropdown-item" href="#n">Logout</a>
+                <div class="top-process">
+                    <div class="process-bar ps-2"></div>
+                    <div class="process-txt">
+                        <em>2/7</em>
+                    </div>
+                </div>
+        
+                <div class="d-flex flex justify-content-end align-items-center pr-4">
+                    <div class="form-group m-0 ml-4 form-lang">
+                        <select id="custom-select" class="custom-line">
+                            <option selected="">KOR</option>
+                            <option value="1">JPN</option>
+                            <option value="2">ENG</option>
+                        </select>
+                    </div>
+                    <div class="nav-item dropdown ml-4">
+                        <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                            <span class="avatar avatar-sm">
+                                <span class="avatar-title rounded-circle">SH</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item" href="#n">정보수정</a>
+                            <a class="dropdown-item" href="#n">멤버십</a>
+                            <a class="dropdown-item" href="#n">Logout</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="mdk-drawer-layout__content page-content">
-        <!-- edit tool -->
-        <div class="btn-top-holder">
-            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
-        </div>
-            <!-- history / live -->
-    <div class="btn-mid-holder d-none">
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
+                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
+                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                                <li class="sidebar-menu-item active" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">topic</i>
+                                        <span class="sidebar-menu-text">프로젝트</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="sm-projects">
+                                <div class="container-fluid d-flex align-items-center py-4">
+                                    <div class="flex d-flex">
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">공간 연결</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <!-- 연결된 데이터 없을때 -->
+                                    <em class="none-list mb-4">공간을 연결해 주세요.</em>
+                                    <!-- 연결된 데이터 있을때 -->
+                                    <div class="accordion js-accordion accordion--boxed mb-4 d-none" id="parent">
+                                        <div class="accordion__item">
+                                            <a href="#" class="accordion__toggle" data-toggle="collapse"
+                                                data-target="#course-toc-1" data-parent="#parent">
+                                                <span class="flex">스타트업캠퍼스 1동 <small class="text-danger">(5)</small></span>
+                                                <span
+                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                            </a>
+                                            <div class="dropdown acc-del">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-100"><i
+                                                        class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item text-primary">건물연결 해제</a>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__menu collapse" id="course-toc-1">
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 1동 1층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 1동 2층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 1동 3층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 1동 4층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 1동 5층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__item">
+                                            <a href="#" class="accordion__toggle" data-toggle="collapse"
+                                                data-target="#course-toc-2" data-parent="#parent">
+                                                <span class="flex">스타트업캠퍼스 2동 <small class="text-danger">(3)</small></span>
+                                                <span
+                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                            </a>
+                                            <div class="dropdown acc-del">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-100"><i
+                                                        class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item text-primary">건물연결 해제</a>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__menu collapse" id="course-toc-2">
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 2동 1층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 2동 2층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 2동 3층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="buildings_write.html" class="btn-row-add" data-toggle="tooltip"
+                                            data-title="등록한 공간이 없을경우 새로운 건물을 등록해 보세요." data-placement="top"
+                                            data-boundary="window"><i class="material-icons">add</i> 새로운 공간 등록</a>
+                                        <a href="space_connection.html" class="btn-row-add ml-2" data-toggle="tooltip"
+                                            data-title="기존에 등록한 공간을 연결해 보세요." data-placement="top" data-boundary="window"><i
+                                                class="material-icons">insert_link</i> 공간 연결</a>
+                                        <!-- <a href="maps_write2.html" class="btn-add" data-toggle="tooltip" data-title="지도 등록" data-placement="left" data-boundary="window"><i class="material-icons">add</i></a> -->
+                                    </div>
+                                    <!-- <div class="form-group mb-32pt">
+                                        <ul class="list-wrap">
+                                            <li class="list-group-item d-flex align-items-center on">
+                                                <span class="icon-holder">
+                                                    <i class="material-icons icon-16pt">done</i>
+                                                </span>
+                                                <p class="m-0">스마트공장A동.map</p>
+                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                            </li>
+                                            <li class="list-group-item d-flex align-items-center on">
+                                                <span class="icon-holder">
+                                                    <i class="material-icons icon-16pt">done</i>
+                                                </span>
+                                                <p class="m-0">스마트공장B동.map</p>
+                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a href="project_write_depth.html" class="d-flex align-items-center">
+                                                    <span class="icon-holder">
+                                                        <i class="material-icons icon-16pt">file_upload</i>
+                                                    </span>
+                                                    <p class="m-0">지도 등록</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <div class="my-32pt">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <a href="project_write.html" class="btn btn-outline-secondary mr-8pt">이전 단계</a>
+                                            <a href="project_write3.html" class="btn btn-outline-accent ml-0">저장 후 다음으로</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                        <!-- history / live -->
+    <div class="btn-mid-holder">
         <div role="group" id="status-map" class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-white">
                 <input type="radio" id="mapStauts01" name="mapStauts" aria-checked="true"> 히스토리
@@ -160,12 +335,177 @@
             </div>
         </div>
     </div>
+    <!-- mouse click -->
+    <div class="context-wrap row d-none" style="top: 30%; left: 40%;">
+        <div class="context-menu type-row">
+            <!-- 지도 클릭시 -->
+            <div class="nav">
+                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">open_with</i> menu01</a>
+                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">filter_tilt_shift</i> menu02</a>
+                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">pin_drop</i> menu03</a>
+            </div>
+        </div>
+    </div>
+    <!-- mouse click -->
+    <div class="context-wrap row d-none" style="top: 30%; left: 50%;">
+        <div class="context-menu type-row">
+            <!-- 지도 클릭시 -->
+            <div class="nav">
+                <div class="toolbox-distance">
+                    <dl class="row align-items-center">
+                        <dt class="col">반경</dt>
+                        <dd class="col">100.0m</dd>
+                    </dl>
+                    <a href="#n" class="btn-ers"><i class="fas fa-eraser"></i> 지우기</a>
+                </div>
+                <a href="#n" class="d-flex align-items-center active"><i class="material-icons icon--left">person_search</i> 사용자 정보</a>
+                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">mail_outline</i> 메세지 전송</a>
+            </div>
+        </div>
+    </div>
+    <!-- mouse click -->
+    <div class="context-wrap row d-none" style="top: 30%; left: 60%;">
+        <div class="context-menu type-row">
+            <!-- 지도 클릭시 -->
+            <div class="nav">
+                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">person_search</i> 사용자 정보</a>
+                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">mail_outline</i> 메세지 전송</a>
+                <div class="dropdown-divider"></div>
+                <a href="#n" class="d-flex align-items-center">menu02</a>
+                <a href="#n" class="d-flex align-items-center js-cd-panel-trigger" data-panel="main">menu03</a>
+            </div>
+        </div>
+    </div>
+    <!-- mouse pointer -->
+    <div class="pointer-wrap">
+        <div class="mouse-point user-mo" style="left: 81.5%; top: 56%;" data-toggle="tooltip" data-title="A-1231" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user active" style="left: 44.5%; top: 51%;" data-toggle="tooltip" data-title="A-1232" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point location-pin" style="left: 45%; top: 64.5%;" data-toggle="tooltip" data-title="A-1233" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point car" style="left: 46%; top: 74.5%;" data-toggle="tooltip" data-title="A-1234" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user-mo" style="left: 29%; top: 50.3%;" data-toggle="tooltip" data-title="A-1235" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user-mo" style="left: 46%; top: 35.1%;" data-toggle="tooltip" data-title="A-1236" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point user" style="left: 36.2%; top: 52%;" data-toggle="tooltip" data-title="A-1237" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point car" style="left: 35%; top: 35%;" data-toggle="tooltip" data-title="A-1238" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point warning-fire" style="left: 39%; top: 45%;"></div>
+        <div class="mouse-point user-unknow" style="left: 55%; top: 66%;"></div>
+        <div class="mouse-point warning-cau" style="left: 68%; top: 75%;"></div>
+        <div class="mouse-point warning-virus" style="left: 64%; top: 49%;"></div>
+        <div class="mouse-point user" style="left: 62%; top: 43%;" data-toggle="tooltip" data-title="A-1240" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point bike" style="left: 32%; top: 16%;" data-toggle="tooltip" data-title="A-1241" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point bike" style="left: 75%; top: 65%;" data-toggle="tooltip" data-title="A-1242" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point car active" style="left: 42%; top: 23%;" data-toggle="tooltip" data-title="A-1243" data-placement="right" data-boundary="window"></div>
+        <div class="mouse-point warning-emg" style="left: 35%; top: 24%;"></div>
+        <div class="mouse-point dist-pin" style="left: 55%; top: 50%;"></div>
+        <div class="mouse-point dist-pin" style="left: 35%; top: 40%;"></div>
+        <div class="mouse-point place-pin" style="left: 48%; top: 55%;"></div>
+        <div class="mouse-point flexible-poi" style="left: 66%; top: 55%;">
+            <div class="level-cover assets fluid">
+                <span class="poi-bg"></span>
+            </div>
+        </div>
+        <!-- <div class="mouse-point flexible-poi" style="left: 68%; top: 55%;">
+            <div class="level-cover assets">
+                <span class="poi-bg"></span>
+            </div>
+        </div>
+        <div class="mouse-point space-marker" style="left: 58%; top: 35%;">
+            <div class="marker-inner">
+                <div class="marker-icon"><span class="material-icons">location_on</span></div>
+                <div class="marker-name">H스퀘어</div>
+            </div>
+        </div>
+        <div class="mouse-point flexible-poi" style="left: 54%; top: 55%;">
+            <div class="level-cover level-item-compound">
+                <span class="status bg-pin-blue mb-1">19&deg;/30&deg;</span>
+                <span class="status bg-pin-green mb-1">19%/30%</span>
+                <span class="status bg-pin-yellow">19&deg;/30&deg;</span>
+                <span class="poi-bg"></span>
+            </div>
+        </div>
+        <div class="mouse-point flexible-poi" style="left: 58%; top: 55%;">
+            <div class="level-cover level-item01">
+                <span class="status">19&deg;/30&deg;</span>
+                <span class="poi-bg"></span>
+            </div>
+        </div>
+        <div class="mouse-point flexible-poi" style="left: 60%; top: 55%;">
+            <div class="level-cover level-item02">
+                <span class="status">25&deg;/30&deg;</span>
+                <span class="poi-bg"></span>
+            </div>
+        </div>
+        <div class="mouse-point flexible-poi" style="left: 62%; top: 55%;">
+            <div class="level-cover level-item03">
+                <span class="status">28&deg;/30&deg;</span>
+                <span class="poi-bg"></span>
+            </div>
+        </div>
+        <div class="mouse-point flexible-poi" style="left: 64%; top: 55%;">
+            <div class="level-cover level-item04">
+                <span class="status">32&deg;/30&deg;</span>
+                <span class="poi-bg"></span>
+            </div>
+        </div>
+        <div class="mouse-point flexible-poi" style="left: 70%; top: 55%;">
+            <div class="level-cover assets poi-off">
+                <span class="status">T-999</span>
+                <span class="poi-bg"></span>
+            </div>
+        </div> -->
+    </div>
+    <!-- 지오펜스 style-->
+    <div class="gf-wrap d-none" style="left: 30%; bottom: 30%;">
+        <div class="gf-container gf-col-blue active">
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+        </div>
+    </div>
+    <div class="gf-wrap d-none" style="left: 30%; bottom: 15%;">
+        <div class="gf-container gf-col-blue disabled">
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+        </div>
+    </div>
+
+    <div class="gf-wrap d-none" style="left: 60%; bottom: 30%;">
+        <div class="gf-container gf-col-red">
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+        </div>
+    </div>
+    <div class="gf-wrap d-none" style="left: 60%; bottom: 15%;">
+        <div class="gf-container gf-col-blue disabled">
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+            <div class="gf-cell"></div>
+        </div>
+    </div>
+
     <!-- edit tool -->
     <div class="btn-top-holder">
         <div class="btn-group ml-2">
-            <button type="button" class="btn btn-white active" data-toggle="tooltip" data-title="인원" data-placement="top" data-boundary="window"><i class="material-icons">person</i></button>
-            <button type="button" class="btn btn-white" data-toggle="tooltip" data-title="자산" data-placement="top" data-boundary="window"><i class="material-icons">category</i></button>
-            <button type="button" class="btn btn-white" data-toggle="tooltip" data-title="물류" data-placement="top" data-boundary="window"><i class="material-icons">view_in_ar</i></button>
+            <button type="button" class="btn btn-white active" data-toggle="tooltip" data-title="사람" data-placement="top" data-boundary="window"><i class="material-icons">person</i></button>
+            <button type="button" class="btn btn-white" data-toggle="tooltip" data-title="자동차" data-placement="top" data-boundary="window"><i class="material-icons">directions_car</i></button>
+            <button type="button" class="btn btn-white" data-toggle="tooltip" data-title="자전거" data-placement="top" data-boundary="window"><i class="material-icons">pedal_bike</i></button>
             <button type="button" class="btn btn-white" data-toggle="tooltip" data-title="모바일" data-placement="top" data-boundary="window"><i class="material-icons">smartphone</i></button>
         </div>
         <!-- <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button> -->
@@ -187,7 +527,7 @@
         </div>
         <div class="map-location ml-2">
             <div class="location-header d-flex align-items-center">
-                <strong>프로젝트 A</strong>
+                <strong>Smart City Day</strong>
                 <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
                     <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                 </a>
@@ -272,199 +612,44 @@
             </div>
         </div>
     </div>
-    <!-- mouse click -->
-    <div class="context-wrap row d-none" style="top: 30%; left: 40%;">
-        <div class="context-menu type-row">
-            <!-- 지도 클릭시 -->
-            <div class="nav">
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">open_with</i> menu01</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">filter_tilt_shift</i> menu02</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">pin_drop</i> menu03</a>
-            </div>
-        </div>
-    </div>
-    <!-- mouse click -->
-    <div class="context-wrap row d-none" style="top: 30%; left: 50%;">
-        <div class="context-menu type-row">
-            <!-- 지도 클릭시 -->
-            <div class="nav">
-                <div class="toolbox-distance">
-                    <dl class="row align-items-center">
-                        <dt class="col">반경</dt>
-                        <dd class="col">100.0m</dd>
-                    </dl>
-                    <a href="#n" class="btn-ers"><i class="fas fa-eraser"></i> 지우기</a>
-                </div>
-                <a href="#n" class="d-flex align-items-center active"><i class="material-icons icon--left">person_search</i> 사용자 정보</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">mail_outline</i> 메세지 전송</a>
-            </div>
-        </div>
-    </div>
-    <!-- mouse click -->
-    <div class="context-wrap row d-none" style="top: 30%; left: 60%;">
-        <div class="context-menu type-row">
-            <!-- 지도 클릭시 -->
-            <div class="nav">
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">person_search</i> 사용자 정보</a>
-                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">mail_outline</i> 메세지 전송</a>
-                <div class="dropdown-divider"></div>
-                <a href="#n" class="d-flex align-items-center">menu02</a>
-                <a href="#n" class="d-flex align-items-center js-cd-panel-trigger" data-panel="main">menu03</a>
-            </div>
-        </div>
-    </div>
-    <!-- mouse pointer -->
-    <div class="pointer-wrap">
-        <div class="mouse-point user-mo" style="left: 45.5%; top: 51%;" data-toggle="tooltip" data-title="A-1231" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user active" style="left: 44.5%; top: 51%;" data-toggle="tooltip" data-title="A-1232" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point location-pin" style="left: 45%; top: 51.5%;" data-toggle="tooltip" data-title="A-1233" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 46%; top: 52.5%;" data-toggle="tooltip" data-title="A-1234" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user-mo" style="left: 44%; top: 50.3%;" data-toggle="tooltip" data-title="A-1235" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user-mo" style="left: 45%; top: 50.1%;" data-toggle="tooltip" data-title="A-1236" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 46.2%; top: 52%;" data-toggle="tooltip" data-title="A-1237" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user-mo" style="left: 35%; top: 35%;" data-toggle="tooltip" data-title="A-1238" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point warning-fire" style="left: 39%; top: 45%;"></div>
-        <div class="mouse-point user-unknow" style="left: 55%; top: 66%;"></div>
-        <div class="mouse-point warning-cau" style="left: 68%; top: 75%;"></div>
-        <div class="mouse-point warning-virus" style="left: 64%; top: 49%;"></div>
-        <div class="mouse-point user" style="left: 62%; top: 43%;" data-toggle="tooltip" data-title="A-1240" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user-mo" style="left: 32%; top: 16%;" data-toggle="tooltip" data-title="A-1241" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user" style="left: 75%; top: 65%;" data-toggle="tooltip" data-title="A-1242" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point user active" style="left: 42%; top: 23%;" data-toggle="tooltip" data-title="A-1243" data-placement="right" data-boundary="window"></div>
-        <div class="mouse-point warning-emg" style="left: 35%; top: 24%;"></div>
-        <div class="mouse-point dist-pin" style="left: 55%; top: 50%;"></div>
-        <div class="mouse-point dist-pin" style="left: 35%; top: 40%;"></div>
-        <div class="mouse-point place-pin" style="left: 48%; top: 55%;"></div>
-        <div class="mouse-point flexible-poi" style="left: 66%; top: 55%;">
-            <div class="level-cover assets fluid">
-                <span class="poi-bg"></span>
-            </div>
-        </div>
-        <div class="mouse-point flexible-poi" style="left: 68%; top: 55%;">
-            <div class="level-cover assets">
-                <span class="poi-bg"></span>
-            </div>
-        </div>
-        <div class="mouse-point space-marker" style="left: 58%; top: 35%;">
-            <div class="marker-inner">
-                <div class="marker-icon"><span class="material-icons">location_on</span></div>
-                <div class="marker-name">H스퀘어</div>
-            </div>
-        </div>
-        <div class="mouse-point flexible-poi" style="left: 54%; top: 55%;">
-            <div class="level-cover level-item-compound">
-                <span class="status bg-pin-blue mb-1">19&deg;/30&deg;</span>
-                <span class="status bg-pin-green mb-1">19%/30%</span>
-                <span class="status bg-pin-yellow">19&deg;/30&deg;</span>
-                <span class="poi-bg"></span>
-            </div>
-        </div>
-        <div class="mouse-point flexible-poi" style="left: 58%; top: 55%;">
-            <div class="level-cover level-item01">
-                <span class="status">19&deg;/30&deg;</span>
-                <span class="poi-bg"></span>
-            </div>
-        </div>
-        <div class="mouse-point flexible-poi" style="left: 60%; top: 55%;">
-            <div class="level-cover level-item02">
-                <span class="status">25&deg;/30&deg;</span>
-                <span class="poi-bg"></span>
-            </div>
-        </div>
-        <div class="mouse-point flexible-poi" style="left: 62%; top: 55%;">
-            <div class="level-cover level-item03">
-                <span class="status">28&deg;/30&deg;</span>
-                <span class="poi-bg"></span>
-            </div>
-        </div>
-        <div class="mouse-point flexible-poi" style="left: 64%; top: 55%;">
-            <div class="level-cover level-item04">
-                <span class="status">32&deg;/30&deg;</span>
-                <span class="poi-bg"></span>
-            </div>
-        </div>
-        <div class="mouse-point flexible-poi" style="left: 70%; top: 55%;">
-            <div class="level-cover assets poi-off">
-                <span class="status">T-999</span>
-                <span class="poi-bg"></span>
-            </div>
-        </div>
-    </div>
-    <!-- 지오펜스 style-->
-    <div class="gf-wrap" style="left: 30%; bottom: 30%;">
-        <div class="gf-container gf-col-blue active">
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-        </div>
-    </div>
-    <div class="gf-wrap" style="left: 30%; bottom: 15%;">
-        <div class="gf-container gf-col-blue disabled">
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-        </div>
-    </div>
-
-    <div class="gf-wrap" style="left: 60%; bottom: 30%;">
-        <div class="gf-container gf-col-red">
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-        </div>
-    </div>
-    <div class="gf-wrap" style="left: 60%; bottom: 15%;">
-        <div class="gf-container gf-col-blue disabled">
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-            <div class="gf-cell"></div>
-        </div>
-    </div>
-
-
     <!-- map zoom/out -->
     <div class="btn-widget-holder">
         <ul>
-            <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-globe"></i></button></li>
-            <li><button type="button" class="btn btn-white mb-3"><i class="fas fa-crosshairs"></i></button></li>
-            <li>
+            <li class="mb-3"><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="지도 회전" data-placement="left"
+                data-boundary="window"><i class="fas fa-globe"></i></a></li>
+            <li class="mb-3">
                 <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-white"><i class="fas fa-plus"></i></button>
-                    <button type="button" class="btn btn-white"><i class="fas fa-minus"></i></button>
+                    <a href="#n" class="btn btn-white font-size-12pt" data-toggle="tooltip" data-title="2D 보기" data-placement="left"
+                    data-boundary="window">2D</a>
+                    <!-- <button type="button" class="btn btn-white font-size-12pt" data-toggle="tooltip" data-title="2.5D 보기" data-placement="left"
+                            data-boundary="window">2.5D</button> -->
+                    <a href="#layerPopup" class="btn btn-white font-size-12pt btn_layerpopup" data-toggle="tooltip" data-title="3D 보기" data-placement="left"
+                    data-boundary="window">3D</a>
                 </div>
             </li>
+            <li class="mb-3">
+                <div class="btn-group-vertical">
+                    <a href="" class="btn btn-white" data-toggle="tooltip" data-title="확대" data-placement="left"
+                    data-boundary="window"><i class="fas fa-plus"></i></a>
+                    <a href=""  class="btn btn-white" data-toggle="tooltip" data-title="축소" data-placement="left"
+                    data-boundary="window"><i class="fas fa-minus"></i></a>
+                </div>
+            </li>
+            <li><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="현재위치" data-placement="left"
+                data-boundary="window"><i class="fas fa-crosshairs"></i></a></li>
         </ul>
     </div>
-    <div class="cd-panel__open">
-        <a href="#n" class="js-cd-panel-trigger" data-panel="main">
-            <span class="material-icons-outlined">query_stats</span>
-            <small>Chart</small>
-        </a>
+    <!-- information -->
+    <div class="info-holder">
+        <div class="inner">
+            <span><strong>[3D 모드]</strong> 3D 모드 활성화</span>
+        </div>
     </div>
-
-    <div class="info-bar">
-        <span>38&#176;06&#39;95&#34;N</span>
-        <span>126&#176;14&#39;45&#34;E</span>
-    </div>
-
+    <!-- slide button -->
+    <a href="#n" class="btn-col-left toggle-sidebar-left"><span class="material-icons-outlined">chevron_right</span></a>
+    <a href="#n" class="btn-col-right toggle-sidebar-right"><span class="material-icons-outlined">chevron_left</span></a>
     <!-- map container -->
-    <div id="map" style="width:100%;height:100vh;"></div>
+    <div id="map" style="width:100%;height:100%;"></div>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
     <script>
         var container = document.getElementById('map');
@@ -477,191 +662,17 @@
         //var mapTypeControl = new kakao.maps.MapTypeControl();
         //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
     </script>
+    <div class="layer-popup" id="layerPopup">
+        <a href="#n" class="btn_layerpopup btn_close_layer"><span class="material-icons">close</span></a>
+        <div class="layer-map">
 
+        </div>
     </div>
-    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
-            <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
-                <!-- Brand -->
-                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
-                    <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
-                </a>
-                <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
-                    <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs"
-                        role="tablist">
-                        <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
-                            <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">topic</i>
-                                <span class="sidebar-menu-text">프로젝트</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
-                <div class="tab-content">
-                    <div class="tab-pane sm-projects active" id="sm-projects">
-                        <div class="project-inner">
-                            <div class="container-fluid d-flex align-items-center py-4">
-                                <div class="flex d-flex">
-                                    <div class="mr-24pt">
-                                        <h3 class="mb-0">공간 연결</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid">
-                                <!-- 연결된 데이터 없을때 -->
-                                <em class="none-list mb-4">공간을 연결해 주세요.</em>
-                                <!-- 연결된 데이터 있을때 -->
-                                <div class="accordion js-accordion accordion--boxed mb-4 d-none" id="parent">
-                                    <div class="accordion__item">
-                                        <a href="#" class="accordion__toggle" data-toggle="collapse"
-                                            data-target="#course-toc-1" data-parent="#parent">
-                                            <span class="flex">스타트업캠퍼스 1동 <small class="text-danger">(5)</small></span>
-                                            <span
-                                                class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                                        </a>
-                                        <div class="dropdown acc-del">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-100"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item text-primary">건물연결 해제</a>
-                                            </div>
-                                        </div>
-                                        <div class="accordion__menu collapse" id="course-toc-1">
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 1동 1층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 1동 2층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 1동 3층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 1동 4층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 1동 5층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion__item">
-                                        <a href="#" class="accordion__toggle" data-toggle="collapse"
-                                            data-target="#course-toc-2" data-parent="#parent">
-                                            <span class="flex">스타트업캠퍼스 2동 <small class="text-danger">(3)</small></span>
-                                            <span
-                                                class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                                        </a>
-                                        <div class="dropdown acc-del">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-100"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item text-primary">건물연결 해제</a>
-                                            </div>
-                                        </div>
-                                        <div class="accordion__menu collapse" id="course-toc-2">
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 2동 1층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 2동 2층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 2동 3층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <a href="buildings_write.html" class="btn-row-add" data-toggle="tooltip"
-                                        data-title="등록한 공간이 없을경우 새로운 건물을 등록해 보세요." data-placement="top"
-                                        data-boundary="window"><i class="material-icons">add</i> 새로운 공간 등록</a>
-                                    <a href="space_connection.html" class="btn-row-add ml-2" data-toggle="tooltip"
-                                        data-title="기존에 등록한 공간을 연결해 보세요." data-placement="top" data-boundary="window"><i
-                                            class="material-icons">insert_link</i> 공간 연결</a>
-                                    <!-- <a href="maps_write2.html" class="btn-add" data-toggle="tooltip" data-title="지도 등록" data-placement="left" data-boundary="window"><i class="material-icons">add</i></a> -->
-                                </div>
-                                <!-- <div class="form-group mb-32pt">
-                                    <ul class="list-wrap">
-                                        <li class="list-group-item d-flex align-items-center on">
-                                            <span class="icon-holder">
-                                                <i class="material-icons icon-16pt">done</i>
-                                            </span>
-                                            <p class="m-0">스마트공장A동.map</p>
-                                            <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                        </li>
-                                        <li class="list-group-item d-flex align-items-center on">
-                                            <span class="icon-holder">
-                                                <i class="material-icons icon-16pt">done</i>
-                                            </span>
-                                            <p class="m-0">스마트공장B동.map</p>
-                                            <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <a href="project_write_depth.html" class="d-flex align-items-center">
-                                                <span class="icon-holder">
-                                                    <i class="material-icons icon-16pt">file_upload</i>
-                                                </span>
-                                                <p class="m-0">지도 등록</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div> -->
-                                <div class="my-32pt">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="project_write.html" class="btn btn-outline-secondary mr-8pt">이전 단계</a>
-                                        <a href="project_write3.html" class="btn btn-outline-accent ml-0">저장 후 다음으로</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 
     <!-- alert -->
     <div class="map-alert-container d-none"> 
@@ -775,6 +786,7 @@
     </div>
     
     <!-- jQuery -->
+    <script src="js/jquery-1.11.3-min.js"></script>
     <script src="vendor/jquery.min.js"></script>
 
     <!-- Bootstrap -->
@@ -875,3 +887,5 @@
 </body>
 
 </html>
+
+

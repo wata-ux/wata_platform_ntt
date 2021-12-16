@@ -1,261 +1,172 @@
 @@include('./include/platform-header.html')
 
-<div class="mdk-drawer-layout js-mdk-drawer-layout">
-    @@include('./include/platform-topbar.html')
-    <div class="mdk-drawer-layout__content page-content">
-        @@include('./include/platform-tools.html')
-    </div>
-    <!-- <div class="navbar-toggler-box">
-        <button class="navbar-toggler d-block" type="button" data-toggle="sidebar">
-            <span class="material-icons">short_text</span>
-        </button>
-    </div> -->
-    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
-            @@include('./include/platform-side-menu.html')
-            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
-                <div class="tab-content">
-                    <div class="tab-pane sm-user active" id="sm-user">
-                        <div class="user-inner">
-                            <div class="container-fluid d-flex align-items-center py-4">
-                                <div class="flex d-flex align-items-center">
-                                    <a href="info_landing.html" class="btn-location"><i class="material-icons">arrow_back</i></a>
-                                    <div class="mr-24pt">
-                                        <h3 class="mb-0">사용자 리스트</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-4">
-                                <!-- <div class="form-group">
-                                    <label class="form-label">Category</label>
-                                    <select name="category" class="form-control custom-select">
-                                        <option value="vuejs">전체</option>
-                                        <option value="vuejs">스마트빌딩</option>
-                                        <option value="vuejs">스마트팩토리</option>
-                                        <option value="vuejs">스마트아파트</option>
-                                        <option value="vuejs">스마트오피스텔</option>
-                                    </select>
-                                </div> -->
-                                <em class="none-list mb-4 d-none">등록한 사용자가 없습니다.</em>
-                                <div class="list-group row-list list-group-flush mb-4">
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <div class="flex">
-                                                <a class="card-title" href="user_movement_live.html">사용자 A</a>
-                                                <div class="card-subtitle text-50">2021.01.07</div>
-                                            </div>
-                                        </div>
-                                        <p class="m-0 mr-3">A zone</p>
-                                        <a href="#n" class="btn-location"><i class="material-icons">place</i></a>
-                                    </div>
-                                    <div class="list-group-item d-flex active">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="user_movement_live.html">사용자 B</a>
-                                                <div class="card-subtitle text-50">2020.11.21</div>
-                                            </div>
-                                        </div>
-                                        <p class="m-0 mr-3">B zone</p>
-                                        <a href="#n" class="btn-location"><i class="material-icons">place</i></a>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="user_movement_live.html">사용자 C</a>
-                                                <div class="card-subtitle text-50">2020.11.21</div>
-                                            </div>
-                                        </div>
-                                        <p class="m-0 mr-3">C zone</p>
-                                        <a href="#n" class="btn-location disabled"><i class="material-icons">place</i></a>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="user_movement_live.html">사용자 D</a>
-                                                <div class="card-subtitle text-50">2020.11.21</div>
-                                            </div>
-                                        </div>
-                                        <p class="m-0 mr-3">D zone</p>
-                                        <a href="#n" class="btn-location disabled"><i class="material-icons">place</i></a>
-                                    </div>
-                                </div>
-                                <ul class="pagination justify-content-center pagination-xsm m-0">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                            <span>Prev</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Page 1">
-                                            <span>1</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Page 2">
-                                            <span>2</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span>Next</span>
-                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade d-none" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-    style="display: block; opacity: 1;">
-    <div class="modal-guide">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">사용자 메뉴 가이드</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="position-relative ">
-                    <div class="guide-cover">
-                        <div class="col-left">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#guide01">
-                                        <span class="material-icons-round">
-                                            person_search
-                                        </span>
-                                        <div class="boxing">
-                                            <h5>사용자 정보 보기</h5>
-                                            <p>사용자의 기본 정보를 확인합니다.</p>
-                                        </div>
+    <div class="pl-container">
+        <div class="pl-top">
+            @@include('./include/platform-topbar.html')
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
+                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
+                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                                <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button active" href="project_board.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">shop_2</i>
+                                        <span class="sidebar-menu-text">앱</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#guide02">
-                                        <span class="material-icons-round">
-                                            email
-                                        </span>
-                                        <div class="boxing">
-                                            <h5>메세지 보내기</h5>
-                                            <p>사용자에게 메세지 전송을 할 수 있습니다.</p>
-                                        </div>
+                                <li class="sidebar-menu-item" data-title="Info" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="pc_monitoring.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">security</i>
+                                        <span class="sidebar-menu-text">PC<br>모니터링</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#guide03">
-                                        <span class="material-icons-round">
-                                            timeline
-                                        </span>
-                                        <div class="boxing">
-                                            <h5>사용자 동선추적</h5>
-                                            <p>과거 방문 이력과 동선을 확인 할 수 있습니다.</p>
-                                        </div>
+                                <li class="sidebar-menu-item" data-title="User" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="chart.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">bar_chart</i>
+                                        <span class="sidebar-menu-text">통계</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Sector" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="sector_list.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">space_dashboard</i>
+                                        <span class="sidebar-menu-text">지오펜스</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Event" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="event_list.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">local_mall</i>
+                                        <span class="sidebar-menu-text">이벤트</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Entry" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="entry_list.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">camera_outdoor</i>
+                                        <span class="sidebar-menu-text">출입관리</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Accident" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="accident_landing.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">report_problem</i>
+                                        <span class="sidebar-menu-text">사고관리</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item active" data-title="Info" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="info_landing.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">info</i>
+                                        <span class="sidebar-menu-text">정보</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-right">
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="guide01" role="tabpanel"
-                                    aria-labelledby="guide01">
-                                    <!-- Swiper -->
-                                    <div class="swiper-container guide-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="images/guide01.jpg" alt=""></div>
-                                            <div class="swiper-slide"><img src="images/guide01_2.jpg" alt=""></div>
+                    </div>
+                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                        <div class="tab-content">
+                            <div class="tab-pane sm-user active" id="sm-user">
+                                <div class="container-fluid d-flex align-items-center py-4">
+                                    <div class="flex d-flex align-items-center">
+                                        <a href="info_landing.html" class="btn-location"><i class="material-icons">arrow_back</i></a>
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">사용자 리스트</h3>
                                         </div>
-                                        <!-- Add Pagination -->
-                                        <div class="swiper-pagination"></div>
-                                        <!-- Add Arrows -->
-                                        <div class="guide-arrow guide-next"></div>
-                                        <div class="guide-arrow guide-prev"></div>
                                     </div>
-                                    <ol>
-                                        <li>사용자 아이콘에 <mark>마우스 오른쪽 버튼</mark>을 클릭 하시면 메뉴가 나타납니다.</li>
-                                        <li>좌측 정보창에서 사용자 정보를 확인하실 수 있습니다.</li>
-                                    </ol>
                                 </div>
-                                <div class="tab-pane fade show" id="guide02" role="tabpanel" aria-labelledby="guide02">
-                                    <!-- Swiper -->
-                                    <div class="swiper-container guide-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="images/guide02.jpg" alt=""></div>
-                                            <div class="swiper-slide"><img src="images/guide02_2.jpg" alt=""></div>
+                                <div class="mb-4">
+                                    <!-- <div class="form-group">
+                                        <label class="form-label">Category</label>
+                                        <select name="category" class="form-control custom-select">
+                                            <option value="vuejs">전체</option>
+                                            <option value="vuejs">스마트빌딩</option>
+                                            <option value="vuejs">스마트팩토리</option>
+                                            <option value="vuejs">스마트아파트</option>
+                                            <option value="vuejs">스마트오피스텔</option>
+                                        </select>
+                                    </div> -->
+                                    <em class="none-list mb-4 d-none">등록한 사용자가 없습니다.</em>
+                                    <div class="list-group row-list list-group-flush mb-4">
+                                        <div class="list-group-item d-flex">
+                                            <div class="flex d-flex align-items-center mr-16pt">
+                                                <div class="flex">
+                                                    <a class="card-title" href="user_movement_live.html">사용자 A</a>
+                                                    <div class="card-subtitle text-50">2021.01.07</div>
+                                                </div>
+                                            </div>
+                                            <p class="m-0 mr-3">A zone</p>
+                                            <a href="#n" class="btn-location"><i class="material-icons">place</i></a>
                                         </div>
-                                        <!-- Add Pagination -->
-                                        <div class="swiper-pagination"></div>
-                                        <!-- Add Arrows -->
-                                        <div class="guide-arrow guide-next"></div>
-                                        <div class="guide-arrow guide-prev"></div>
-                                    </div>
-                                    <ol>
-                                        <li>사용자 아이콘에 <mark>마우스 오른쪽 버튼</mark>을 클릭 하시면 메뉴가 나타납니다.</li>
-                                        <li>좌측 정보창에서 사용자에게 메세지를 전송할 수 있습니다.</li>
-                                    </ol>
-                                </div>
-                                <div class="tab-pane fade show" id="guide03" role="tabpanel" aria-labelledby="guide03">
-                                    <!-- Swiper -->
-                                    <div class="swiper-container guide-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="images/guide03.jpg" alt=""></div>
-                                            <div class="swiper-slide"><img src="images/guide03_2.jpg" alt=""></div>
+                                        <div class="list-group-item d-flex active">
+                                            <div class="flex d-flex align-items-center mr-16pt">
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="user_movement_live.html">사용자 B</a>
+                                                    <div class="card-subtitle text-50">2020.11.21</div>
+                                                </div>
+                                            </div>
+                                            <p class="m-0 mr-3">B zone</p>
+                                            <a href="#n" class="btn-location"><i class="material-icons">place</i></a>
                                         </div>
-                                        <!-- Add Pagination -->
-                                        <div class="swiper-pagination"></div>
-                                        <!-- Add Arrows -->
-                                        <div class="guide-arrow guide-next"></div>
-                                        <div class="guide-arrow guide-prev"></div>
+                                        <div class="list-group-item d-flex">
+                                            <div class="flex d-flex align-items-center mr-16pt">
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="user_movement_live.html">사용자 C</a>
+                                                    <div class="card-subtitle text-50">2020.11.21</div>
+                                                </div>
+                                            </div>
+                                            <p class="m-0 mr-3">C zone</p>
+                                            <a href="#n" class="btn-location disabled"><i class="material-icons">place</i></a>
+                                        </div>
+                                        <div class="list-group-item d-flex">
+                                            <div class="flex d-flex align-items-center mr-16pt">
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="user_movement_live.html">사용자 D</a>
+                                                    <div class="card-subtitle text-50">2020.11.21</div>
+                                                </div>
+                                            </div>
+                                            <p class="m-0 mr-3">D zone</p>
+                                            <a href="#n" class="btn-location disabled"><i class="material-icons">place</i></a>
+                                        </div>
                                     </div>
-                                    <ol>
-                                        <li>사용자 아이콘에 <mark>마우스 오른쪽 버튼</mark>을 클릭 하시면 메뉴가 나타납니다.</li>
-                                        <li>좌측 정보창에서 사용의 동선을 확인하실 수 있습니다.</li>
-                                    </ol>
+                                    <ul class="pagination justify-content-center pagination-xsm m-0">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                <span>Prev</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Page 1">
+                                                <span>1</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Page 2">
+                                                <span>2</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span>Next</span>
+                                                <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <link rel="stylesheet" href="css/swiper.min.css">
-                            <!-- Swiper JS -->
-                            <script src="js/swiper.min.js"></script>
-
-                            <!-- Initialize Swiper -->
-                            <script>
-                                var swiper = new Swiper('.guide-container', {
-                                    spaceBetween: 30,
-                                    observer: true,
-                                    observeParents: true,
-                                    // autoplay: {
-                                    //     delay: 7000,
-                                    //     disableOnInteraction: false,
-                                    // },
-                                    pagination: {
-                                        el: '.swiper-pagination',
-                                        type: 'fraction',
-                                    },
-                                    navigation: {
-                                        nextEl: '.guide-next',
-                                        prevEl: '.guide-prev',
-                                    },
-                                });
-                            </script>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="checkItem01">
-                    <label for="checkItem01" class="custom-control-label">더이상 보지 않기</label>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    @@include('./include/platform-tools.html')
+                </div>
+                <div class="pl-col-right" id="sidebar-right">
+                    @@include('./include/platform-right-menu.html')
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="modal-backdrop fade show d-none"></div>
+
+
 @@include('./include/platform-footer.html')

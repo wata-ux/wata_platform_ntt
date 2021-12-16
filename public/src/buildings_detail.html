@@ -1,272 +1,272 @@
 @@include('./include/platform-header.html')
 
-<div class="mdk-drawer-layout js-mdk-drawer-layout">
-    <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
-        <!-- Navbar toggler -->
-        <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
-            <span class="material-icons">short_text</span>
-        </button>
-        <div class="top-process">
-            <div class="process-bar bd-process ps-3"></div>
-            <div class="process-txt">
-                <em>3/4</em>
-                
-            </div>
-        </div>
 
-        <div class="d-flex flex justify-content-end align-items-center">
-            <div class="form-group m-0 ml-4 form-lang">
-                <select id="custom-select" class="custom-line">
-                    <option selected="">KOR</option>
-                    <option value="1">JPN</option>
-                    <option value="2">ENG</option>
-                </select>
-            </div>
-            <div class="nav-item dropdown ml-4">
-                <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-                    <span class="avatar avatar-sm">
-                        <span class="avatar-title rounded-circle">SH</span>
-                    </span>
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+                    <!-- Brand -->
+                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <div class="dropdown-header"><strong>Account</strong></div>
-                    <a class="dropdown-item" href="#n">정보수정</a>
-                    <a class="dropdown-item" href="#n">멤버십</a>
-                    <a class="dropdown-item" href="#n">Logout</a>
+                <div class="top-process">
+                    <div class="process-bar bd-process ps-3"></div>
+                    <div class="process-txt">
+                        <em>3/4</em>
+                    </div>
+                </div>
+        
+                <div class="d-flex flex justify-content-end align-items-center pr-4">
+                    <div class="form-group m-0 ml-4 form-lang">
+                        <select id="custom-select" class="custom-line">
+                            <option selected="">KOR</option>
+                            <option value="1">JPN</option>
+                            <option value="2">ENG</option>
+                        </select>
+                    </div>
+                    <div class="nav-item dropdown ml-4">
+                        <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                            <span class="avatar avatar-sm">
+                                <span class="avatar-title rounded-circle">SH</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item" href="#n">정보수정</a>
+                            <a class="dropdown-item" href="#n">멤버십</a>
+                            <a class="dropdown-item" href="#n">Logout</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="mdk-drawer-layout__content page-content">
-        <!-- 층 버튼 -->
-        <div class="btn-mid-holder">
-            <div class="btn-group">
-                <a href="#n" class="btn btn-white">B1</a>
-                <a href="#n" class="btn btn-white active">1F</a>
-                <a href="#n" class="btn btn-white">2F</a>
-                <a href="#n" class="btn btn-white">3F</a>
-                <a href="#n" class="btn btn-white">4F</a>
-                <a href="#n" class="btn btn-white">5F</a>
-                <a href="#n" class="btn btn-white">6F</a>
-                <a href="#n" class="btn btn-white">7F</a>
-            </div>
-        </div>
-        <!-- edit tool -->
-        <div class="btn-top-holder">
-            <button type="button" class="btn btn-white ml-2 active d-none" data-toggle="tooltip" data-title="평면도 보기"
-                data-placement="left" data-boundary="window"><i class="material-icons">visibility</i></button>
-            <button type="button" class="btn btn-white ml-2" data-toggle="tooltip" data-title="평면도 보기"
-                data-placement="left" data-boundary="window"><i class="material-icons">visibility_off</i></button>
-                <button type="button" class="btn btn-white ml-2 map-e" data-toggle="modal" data-target="#imageMapModal">이미지맵</button>
-                <button type="button" class="btn btn-white"><i class="material-icons">save</i></button>
-                <button type="button" class="btn btn-white ml-2 map-e">편집도구</button>
-        </div>
-        @@include('./include/platform-tools.html')
-    </div>
-    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
-            @@include('./include/platform-side-menu-space.html')
-            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
-                <div class="tab-content">
-                    <div class="tab-pane sm-maps active" id="sm-maps">
-                        <!-- 맵 보기 -->
-                        <div class="maps-inner">
-                            <div class="container-fluid py-4">
-                                <div class="d-flex align-items-center mb-2">
-                                    <div class="flex d-flex flex-sm-row align-items-center mb-0">
-                                        <div class="mr-24pt">
-                                            <h3 class="mb-0">지하창고</h3>
-                                            <p class="text-70 mb-0">디스크립션 입력해주세요</p>
-                                        </div>
-                                    </div>
-                                    <div class="row" role="tablist">
-                                        <div class="col-auto">
-                                            <div class="dropdown">
-                                                <a href="project_list.html" data-toggle="dropdown" data-caret="false"
-                                                    class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#n" class="dropdown-item">복사</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#n" class="dropdown-item text-danger">전체삭제</a>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
+                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
+                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                                <li class="sidebar-menu-item active" data-title="Maps" data-placement="right" data-container="body"
+                                    data-boundary="window">
+                                    <a class="sidebar-menu-button active" href="#sm-maps" data-toggle="tab" role="tab"
+                                        aria-controls="sm-maps">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">business</i>
+                                        <span class="sidebar-menu-text">공간</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Maps" data-placement="right" data-container="body"
+                                    data-boundary="window">
+                                    <a class="sidebar-menu-button" href="#sm-maps" data-toggle="tab" role="tab"
+                                        aria-controls="sm-maps">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">category</i>
+                                        <span class="sidebar-menu-text">자산관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                        <div class="tab-content">
+                            <div class="tab-pane sm-maps active" id="sm-maps">
+                                <div class="d-flex flex-column h-100">
+                                    <div class="container-fluid py-4">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="flex d-flex flex-sm-row align-items-center mb-0">
+                                                <div class="mr-24pt">
+                                                    <h3 class="mb-0">지하창고</h3>
+                                                    <p class="text-70 mb-0">디스크립션 입력해주세요</p>
+                                                </div>
+                                            </div>
+                                            <div class="row" role="tablist">
+                                                <div class="col-auto">
+                                                    <div class="dropdown">
+                                                        <a href="project_list.html" data-toggle="dropdown" data-caret="false"
+                                                            class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a href="#n" class="dropdown-item">복사</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                            <a href="#n" class="dropdown-item text-danger">전체삭제</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid">
-                                <div class="contents-tab nav mb-4 the-num04">
-                                    <a href="buildings_detail2.html">
-                                        <span class="menu-cover"><span>수집경로</span></span>
-                                    </a>
-                                    <a href="buildings_detail.html" class="active">
-                                        <span class="menu-cover"><span>실내지도</span></span>
-                                    </a>
-                                    <a href="buildings_detail3.html">
-                                        <span class="menu-cover"><span>인프라</span></span>
-                                    </a>
-                                    <a href="buildings_detail4.html">
-                                        <span class="menu-cover"><span>태그</span></span>
-                                    </a>
-                                </div>
-                                <em class="none-list d-none">우측 상단에 편집버튼을 클릭 후 편집모드로 전환하세요.</em>
-                                <div class="d-flex align-items-sm-center sort-wrap">
-                                    <div class="item-sort">
-                                        <a href="buildings_detail.html" class="items active">공간</a>
-                                        <a href="buildings_detail_poi.html" class="items">POI</a>
-                                        <a href="buildings_detail_group.html" class="items">그룹</a>
-                                    </div>
-                                    <form class="form-inline ml-auto">
-                                        <input type="text" class="form-control search" id="inlineFormFilterBy"
-                                            placeholder="Search">
-                                        <a href="#n" class="btn btn-sm btn-light"><i
-                                                class="material-icons">search</i></a>
-                                    </form>
-                                </div>
-                                <div class="element-list-group mb-4">
-                                    <div class="element-item-list">
-                                        <div class="d-flex align-items-center">
-                                            <div class="poi-icon">
-                                                <i class="material-icons">highlight_alt</i>
-                                            </div>
-                                            <a href="#n" class="ele-title">
-                                                <span>제목 없는 다각형 1</span>
+                                    <div class="container-fluid">
+                                        <div class="contents-tab nav mb-4 the-num04">
+                                            <a href="buildings_detail2.html">
+                                                <span class="menu-cover"><span>수집경로</span></span>
                                             </a>
-                                            <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
-                                                    class="material-icons">edit</i></a>
-                                        </div>
-                                    </div>
-                                    <div class="element-item-list">
-                                        <div class="d-flex align-items-center">
-                                            <div class="poi-icon">
-                                                <i class="material-icons">highlight_alt</i>
-                                            </div>
-                                            <a href="#n" class="ele-title">
-                                                <span>제목 없는 다각형 2</span>
+                                            <a href="buildings_detail.html" class="active">
+                                                <span class="menu-cover"><span>실내지도</span></span>
                                             </a>
-                                            <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
-                                                    class="material-icons">edit</i></a>
-                                        </div>
-                                    </div>
-                                    <div class="element-item-list">
-                                        <div class="d-flex align-items-center">
-                                            <div class="poi-icon">
-                                                <i class="material-icons">highlight_alt</i>
-                                            </div>
-                                            <a href="#n" class="ele-title">
-                                                <span>제목 없는 다각형 3</span>
+                                            <a href="buildings_detail3.html">
+                                                <span class="menu-cover"><span>인프라</span></span>
                                             </a>
-                                            <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
-                                                    class="material-icons">edit</i></a>
-                                        </div>
-                                    </div>
-                                    <div class="element-item-list">
-                                        <div class="d-flex align-items-center">
-                                            <div class="poi-icon">
-                                                <i class="material-icons">highlight_alt</i>
-                                            </div>
-                                            <a href="#n" class="ele-title">
-                                                <span>제목 없는 다각형 4</span>
+                                            <a href="buildings_detail4.html">
+                                                <span class="menu-cover"><span>태그</span></span>
                                             </a>
-                                            <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
-                                                    class="material-icons">edit</i></a>
                                         </div>
-                                    </div>
-                                    <div class="element-item-list">
-                                        <div class="d-flex align-items-center">
-                                            <div class="poi-icon">
-                                                <i class="material-icons">highlight_alt</i>
+                                        <em class="none-list d-none">우측 상단에 편집버튼을 클릭 후 편집모드로 전환하세요.</em>
+                                        <div class="d-flex align-items-sm-center sort-wrap">
+                                            <div class="item-sort">
+                                                <a href="buildings_detail.html" class="items active">공간</a>
+                                                <a href="buildings_detail_poi.html" class="items">POI</a>
+                                                <a href="buildings_detail_group.html" class="items">그룹</a>
                                             </div>
-                                            <a href="#n" class="ele-title">
-                                                <span>제목 없는 다각형 5</span>
-                                            </a>
-                                            <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
-                                                    class="material-icons">edit</i></a>
+                                            <form class="form-inline ml-auto">
+                                                <input type="text" class="form-control search" id="inlineFormFilterBy"
+                                                    placeholder="Search">
+                                                <a href="#n" class="btn btn-sm btn-light"><i
+                                                        class="material-icons">search</i></a>
+                                            </form>
                                         </div>
-                                    </div>
-                                    <div class="element-item-list">
-                                        <div class="d-flex align-items-center">
-                                            <div class="poi-icon">
-                                                <i class="material-icons">highlight_alt</i>
+                                        <div class="element-list-group mb-4">
+                                            <div class="element-item-list">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons">highlight_alt</i>
+                                                    </div>
+                                                    <a href="#n" class="ele-title">
+                                                        <span>제목 없는 다각형 1</span>
+                                                    </a>
+                                                    <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
+                                                            class="material-icons">edit</i></a>
+                                                </div>
                                             </div>
-                                            <a href="#n" class="ele-title">
-                                                <span>제목 없는 다각형 6</span>
-                                            </a>
-                                            <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
-                                                    class="material-icons">edit</i></a>
-                                        </div>
-                                    </div>
-                                    <div class="element-item-list">
-                                        <div class="d-flex align-items-center">
-                                            <div class="poi-icon">
-                                                <i class="material-icons">highlight_alt</i>
+                                            <div class="element-item-list">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons">highlight_alt</i>
+                                                    </div>
+                                                    <a href="#n" class="ele-title">
+                                                        <span>제목 없는 다각형 2</span>
+                                                    </a>
+                                                    <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
+                                                            class="material-icons">edit</i></a>
+                                                </div>
                                             </div>
-                                            <a href="#n" class="ele-title">
-                                                <span>제목 없는 다각형 7</span>
-                                            </a>
-                                            <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
-                                                    class="material-icons">edit</i></a>
-                                        </div>
-                                    </div>
-                                    <div class="element-item-list">
-                                        <div class="d-flex align-items-center">
-                                            <div class="poi-icon">
-                                                <i class="material-icons">highlight_alt</i>
+                                            <div class="element-item-list">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons">highlight_alt</i>
+                                                    </div>
+                                                    <a href="#n" class="ele-title">
+                                                        <span>제목 없는 다각형 3</span>
+                                                    </a>
+                                                    <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
+                                                            class="material-icons">edit</i></a>
+                                                </div>
                                             </div>
-                                            <a href="#n" class="ele-title">
-                                                <span>제목 없는 다각형 8</span>
-                                            </a>
-                                            <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
-                                                    class="material-icons">edit</i></a>
+                                            <div class="element-item-list">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons">highlight_alt</i>
+                                                    </div>
+                                                    <a href="#n" class="ele-title">
+                                                        <span>제목 없는 다각형 4</span>
+                                                    </a>
+                                                    <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
+                                                            class="material-icons">edit</i></a>
+                                                </div>
+                                            </div>
+                                            <div class="element-item-list">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons">highlight_alt</i>
+                                                    </div>
+                                                    <a href="#n" class="ele-title">
+                                                        <span>제목 없는 다각형 5</span>
+                                                    </a>
+                                                    <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
+                                                            class="material-icons">edit</i></a>
+                                                </div>
+                                            </div>
+                                            <div class="element-item-list">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons">highlight_alt</i>
+                                                    </div>
+                                                    <a href="#n" class="ele-title">
+                                                        <span>제목 없는 다각형 6</span>
+                                                    </a>
+                                                    <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
+                                                            class="material-icons">edit</i></a>
+                                                </div>
+                                            </div>
+                                            <div class="element-item-list">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons">highlight_alt</i>
+                                                    </div>
+                                                    <a href="#n" class="ele-title">
+                                                        <span>제목 없는 다각형 7</span>
+                                                    </a>
+                                                    <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
+                                                            class="material-icons">edit</i></a>
+                                                </div>
+                                            </div>
+                                            <div class="element-item-list">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="poi-icon">
+                                                        <i class="material-icons">highlight_alt</i>
+                                                    </div>
+                                                    <a href="#n" class="ele-title">
+                                                        <span>제목 없는 다각형 8</span>
+                                                    </a>
+                                                    <a href="buildings_edit.html" class="btn-ele-edit circle-pin"><i
+                                                            class="material-icons">edit</i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="pagination justify-content-center pagination-xsm my-4">
+                                            <li class="page-item disabled">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                    <span>Prev</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Page 1">
+                                                    <span>1</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Page 2">
+                                                    <span>2</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span>Next</span>
+                                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="my-32pt d-none">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <a href="buildings_write2.html" class="btn btn-outline-secondary mr-8pt">이전
+                                                    단계</a>
+                                                <a href="buildings_done.html" class="btn btn-outline-accent ml-0">저장 후 등록</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <ul class="pagination justify-content-center pagination-xsm my-4">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                            <span>Prev</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Page 1">
-                                            <span>1</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Page 2">
-                                            <span>2</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span>Next</span>
-                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="my-32pt d-none">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="buildings_write2.html" class="btn btn-outline-secondary mr-8pt">이전
-                                            단계</a>
-                                        <a href="buildings_done.html" class="btn btn-outline-accent ml-0">저장 후 등록</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pub-con">
-                                <div class="pub-inner">
-                                    <div class="pub-txt">
-                                        <h5>데이터 공개 여부</h5>
-                                    </div>
-                                    <div class="pub-switch">
-                                        <label class="form-label mb-0" for="subscribe">배포중</label>
-                                        <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
-                                            <input checked="" type="checkbox" id="subscribe"
-                                                class="custom-control-input">
-                                            <label class="custom-control-label" for="subscribe">Yes</label>
+                                    <div class="pub-con">
+                                        <div class="pub-inner">
+                                            <div class="pub-txt">
+                                                <h5>데이터 공개 여부</h5>
+                                            </div>
+                                            <div class="pub-switch">
+                                                <label class="form-label mb-0" for="subscribe">배포중</label>
+                                                <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+                                                    <input checked="" type="checkbox" id="subscribe"
+                                                        class="custom-control-input">
+                                                    <label class="custom-control-label" for="subscribe">Yes</label>
+                                                </div>
+        
+                                            </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -274,60 +274,76 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="imageMapModal" tabindex="-1" aria-labelledby="imageMap" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-custom col-wide-6">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="title-group mb-4 d-flex align-items-center">
-                    <h5 class="modal-title" id="groupAddLabel">이미지맵 선택</h5>
-                    <div class="btn-cover">
-                        <label for="imageMapUpload" class="btn btn-outline-secondary  btn-sm m-0">
-                            <span class="material-icons mr-1">file_upload</span>파일선택
-                        </label>
-                        <input type="file" id="imageMapUpload" class="upload-box" placeholder="Upload File">
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    <!-- edit tool -->
+                    <div class="btn-top-holder">
+                        <div class="btn-group ml-2 map-edit-tools">
+                            <button type="button" class="btn btn-white active"><i class="material-icons">highlight_alt</i></button>
+                            <button type="button" class="btn btn-white"><i class="material-icons">adjust</i></button>
+                            <button type="button" class="btn btn-white"><i class="material-icons">timeline</i></button>
+                        </div>
                     </div>
+                    <div class="info-holder">
+                        <div class="inner">
+                            <span><strong>[생성모드]</strong> 포인트 생성 중입니다.</span>
+                        </div>
+                        <div class="inner">
+                            <span><strong>[생성모드]</strong> 라인 생성 중입니다.</span>
+                        </div>
+                        <div class="inner">
+                            <span><strong>[생성모드]</strong> 폴리곤 생성 중입니다</span>
+                        </div>
+                        <div class="inner">
+                            <span><strong>[수정모드]</strong> 포인트 위치/속성 수정 중입니다.</span>
+                        </div>
+                        <div class="inner">
+                            <span><strong>[수정모드]</strong> 라인 형상 수정 중입니다.</span>
+                        </div>
+                        <div class="inner">
+                            <span><strong>[수정모드]</strong> 폴리곤 형상 수정 중입니다.</span>
+                        </div>
+                        <div class="inner">
+                            <span><strong>[삭제모드]</strong> 포인트 삭제 중입니다.</span>
+                        </div>
+                        <div class="inner">
+                            <span><strong>[삭제모드]</strong> 라인 삭제 중입니다.</span>
+                        </div>
+                        <div class="inner">
+                            <span><strong>[삭제모드]</strong> 폴리곤 삭제 중입니다.</span>
+                        </div>
+                    </div>
+                    @@include('./include/platform-tools-map.html')
                 </div>
-                <table class="table table-sm mb-5 thead-bg-light">
-                    <thead>
-                        <tr>
-                            <th>영역명</th>
-                            <th>호수</th>
-                            <th>역명</th>
-                            <th>파일명</th>
-                            <th>층수</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="5">
-                                <div class="text-center py-4">
-                                    <span class="material-icons-outlined text-50 font-size-32pt">info</span>
-                                    <p class="m-0 text-50">등록된 이미지가 없습니다.</p>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>로비</td>
-                            <td>1205</td>
-                            <td>강남역</td>
-                            <td>gangnam_station_b2.jpg</td>
-                            <td>B2</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
-</div>
+
+    
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".floor-item", {
+            // allowTouchMove: false,
+            direction: "horizontal",
+            mousewheel: true,
+            slidesPerView: 10,
+            slidesPerGroup: 10,
+            spaceBetween: 0,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".floor-button-next",
+                prevEl: ".floor-button-prev",
+            },
+        });
+    </script>
+
 
 @@include('./include/platform-footer.html')
+

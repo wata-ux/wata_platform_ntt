@@ -1,216 +1,163 @@
 @@include('./include/platform-header.html')
 
-<div class="mdk-drawer-layout js-mdk-drawer-layout">
-    @@include('./include/platform-topbar.html')
-    <div class="mdk-drawer-layout__content page-content">
-        <!-- edit tool -->
-        <div class="btn-top-holder">
-            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
-            <div class="btn-group ml-2">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown"
-                        aria-expanded="false"> <i class="material-icons">layers</i> <span class="caret"></span> </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-header"><strong>이벤트 설정</strong></div>
-                        <ul class="item-list mb-2">
-                            <li><a href="#n" class="active"><i class="material-icons">location_on</i><span>개별위치</span></a></li>
-                            <li><a href="#n"><i class="material-icons">navigation</i><span>위치안내</span></a></li>
-                        </ul>
-                        <div class="dropdown-divider"></div>
-                        <div class="dropdown-header"><strong>경보 설정</strong></div>
-                        <ul class="item-list">
-                            <li><a href="#n"><i class="material-icons">warning</i><span>긴급상황</span></a></li>
-                            <li><a href="#n"><i class="material-icons">local_fire_department</i><span>화재</span></a></li>
-                            <li><a href="#n"><i class="material-icons">local_hospital</i><span>구조요청</span></a></li>
-                            <li><a href="#n"><i class="material-icons">coronavirus</i><span>감염병</span></a></li>
-                        </ul>
-                        <div class="dropdown-divider"></div>
-                        <div class="dropdown-header"><strong>경보 설정</strong></div>
-                        <ul class="item-list">
-                            <li><a href="#n"><i class="material-icons">blur_on</i><span>열지도</span></a></li>
-                            <li><a href="#n"><i class="material-icons">scatter_plot</i><span>분포도</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="map-location ml-2">
-                <div class="location-header d-flex align-items-center">
-                    <strong>프로젝트 A</strong>
-                    <a class="btn btn-accent ml-auto" data-toggle="collapse" data-parent="#map-location" href="#map-location">
-                        <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                    </a>
-                </div>
-                <div class="collapse location-body" id="map-location">
-                    <div class="sidebar">
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu01">건물 A
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu01">
-                                    <li class="sidebar-menu-item active">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">B1</span>
-                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">1F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">2F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">3F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">4F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">5F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">6F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">7F</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" data-toggle="collapse" href="#location-menu02">건물 B
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent" id="location-menu02">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">1F</span>
-                                            <span class="badge badge-notifications badge-accent ml-auto">2</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">2F</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button" href="#n">
-                                            <span class="sidebar-menu-text">3F</span>
-                                        </a>
-                                    </li>
 
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <div class="pl-container">
+        <div class="pl-top">
+            @@include('./include/platform-topbar.html')
         </div>
-        @@include('./include/platform-tools.html')
-    </div>
-    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
-            @@include('./include/platform-side-menu.html')
-            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
-                <div class="tab-content">
-                    <div class="tab-pane sm-accident active" id="sm-accident">
-                        <!-- 사고관리 리스트 -->
-                        <div class="accident-inner">
-                            <div class="container-fluid d-flex align-items-center py-4">
-                                <div class="flex d-flex">
-                                    <div class="mr-24pt">
-                                        <h3 class="mb-0">사고등록</h3>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
+                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
+                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                                <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button active" href="project_board.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">shop_2</i>
+                                        <span class="sidebar-menu-text">앱</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Info" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="pc_monitoring.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">security</i>
+                                        <span class="sidebar-menu-text">PC<br>모니터링</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="User" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="chart.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">bar_chart</i>
+                                        <span class="sidebar-menu-text">통계</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Sector" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="sector_list.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">space_dashboard</i>
+                                        <span class="sidebar-menu-text">지오펜스</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Event" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="event_list.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">local_mall</i>
+                                        <span class="sidebar-menu-text">이벤트</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Entry" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="entry_list.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">camera_outdoor</i>
+                                        <span class="sidebar-menu-text">출입관리</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item active" data-title="Accident" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="accident_landing.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">report_problem</i>
+                                        <span class="sidebar-menu-text">사고관리</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Info" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="info_landing.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">info</i>
+                                        <span class="sidebar-menu-text">정보</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="sm-accident">
+                                <!-- 사고관리 리스트 -->
+                                <div class="container-fluid d-flex align-items-center py-4">
+                                    <div class="flex d-flex">
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">사고등록</h3>
+                                        </div>
                                     </div>
+                                    <a href="accident_list.html" class="btn btn-outline-dark">등록내역</a>
                                 </div>
-                                <a href="accident_list.html" class="btn btn-outline-dark">등록내역</a>
-                            </div>
-                            <div class="container-fluid">
-                                <h5 class="mb-1">위치 지정</h5>
-                                <p class="text-50">아래 버튼을 클릭후 사고 발생 지점을 클릭하세요.</p>
-                                <ul class="info-panel accident-panel info-link">
-                                    <li class="active">
-                                        <a href="#n">
-                                            <p>긴급상황</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">warning</i></em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#n">
-                                            <p>화재 발생</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">local_fire_department</i></em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#n">
-                                            <p>구조 요청</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">local_hospital</i></em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#n">
-                                            <p>감염병 발생</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">coronavirus</i></em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <h5 class="mb-1">범위 지정</h5>
-                                <p class="text-50">아래 버튼을 클릭후 사고 발생 범위를 설정해 보세요.</p>
-                                <ul class="info-panel accident-panel info-link">
-                                    <li>
-                                        <a href="#n">
-                                            <p>구조물 선택</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">highlight_alt</i></em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#n">
-                                            <p>범위 선택</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">adjust</i></em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#n">
-                                            <p>선 그리기</p>
-                                            <div class="cell">
-                                                <em><i class="material-icons">timeline</i></em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
+                                <div class="container-fluid">
+                                    <h5 class="mb-1">위치 지정</h5>
+                                    <p class="text-50">아래 버튼을 클릭후 사고 발생 지점을 클릭하세요.</p>
+                                    <ul class="info-panel accident-panel info-link">
+                                        <li class="active">
+                                            <a href="#n">
+                                                <p>긴급상황</p>
+                                                <div class="cell">
+                                                    <em><i class="material-icons">warning</i></em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <p>화재 발생</p>
+                                                <div class="cell">
+                                                    <em><i class="material-icons">local_fire_department</i></em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <p>구조 요청</p>
+                                                <div class="cell">
+                                                    <em><i class="material-icons">local_hospital</i></em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <p>감염병 발생</p>
+                                                <div class="cell">
+                                                    <em><i class="material-icons">coronavirus</i></em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+    
+                                    <h5 class="mb-1">범위 지정</h5>
+                                    <p class="text-50">아래 버튼을 클릭후 사고 발생 범위를 설정해 보세요.</p>
+                                    <ul class="info-panel accident-panel info-link">
+                                        <li>
+                                            <a href="#n">
+                                                <p>구조물 선택</p>
+                                                <div class="cell">
+                                                    <em><i class="material-icons">highlight_alt</i></em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <p>범위 선택</p>
+                                                <div class="cell">
+                                                    <em><i class="material-icons">adjust</i></em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#n">
+                                                <p>선 그리기</p>
+                                                <div class="cell">
+                                                    <em><i class="material-icons">timeline</i></em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    @@include('./include/platform-tools.html')
+                </div>
+                <div class="pl-col-right" id="sidebar-right">
+                    @@include('./include/platform-right-menu.html')
+                </div>
+            </div>
         </div>
     </div>
-</div>
+
 
 @@include('./include/platform-footer.html')
+
+

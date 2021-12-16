@@ -1,755 +1,763 @@
 @@include('./include/platform-header.html')
 
-<div class="mdk-drawer-layout js-mdk-drawer-layout">
-    <!-- Header -->
-    <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
-        <!-- Navbar toggler -->
-        <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
-            <span class="material-icons">short_text</span>
-        </button>
-        <div class="top-process">
-            <div class="process-bar ps-2"></div>
-            <div class="process-txt">
-                <em>2/7</em>
-            </div>
-        </div>
 
-        <div class="d-flex flex justify-content-end align-items-center">
-            <div class="form-group m-0 ml-4 form-lang">
-                <select id="custom-select" class="custom-line">
-                    <option selected="">KOR</option>
-                    <option value="1">JPN</option>
-                    <option value="2">ENG</option>
-                </select>
-            </div>
-            <div class="nav-item dropdown ml-4">
-                <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-                    <span class="avatar avatar-sm">
-                        <span class="avatar-title rounded-circle">SH</span>
-                    </span>
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+                    <!-- Brand -->
+                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <div class="dropdown-header"><strong>Account</strong></div>
-                    <a class="dropdown-item" href="#n">정보수정</a>
-                    <a class="dropdown-item" href="#n">멤버십</a>
-                    <a class="dropdown-item" href="#n">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mdk-drawer-layout__content page-content">
-        <!-- edit tool -->
-        <div class="btn-top-holder">
-            <button type="button" class="btn btn-white ml-2 map-e">빠른 실행</button>
-        </div>
-        @@include('./include/platform-tools.html')
-        <div class="sidebar-depth" data-perfect-scrollbar>
-            <div class="sidebar-depth-wrap">
-                <div class="tab-cover">
-                    <ul class="nav tab-menu" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#sidebar-menu01">사용자 등록</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#sidebar-menu02">공공지도</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="tab-content mt-4 text-70">
-                    <div id="sidebar-menu01" class="tab-pane active" role="tabpanel">
-                        <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
-                            <div class="flex title-row">
-                                <h5 class="mb-0">공간 목록</h5>
-                            </div>
-                            <!-- <div class="w-auto table d-flex align-items-center mb-sm-0">
-                                <small class="text-muted text-headings text-uppercase mr-3 d-none d-sm-block">Sort by</small>
-                                <a href="#" class="sort desc small text-headings text-uppercase">최근순</a>
-                                <a href="#" class="sort small text-headings text-uppercase ml-2">이름순</a>
-                            </div> -->
-                            <form class="form-inline ml-4">
-                                <input type="text" class="form-control search" id="inlineFormFilterBy" placeholder="Search">
-                                <a href="#n" class="btn btn-sm btn-light"><i class="material-icons">search</i></a>
-                            </form>
-                        </div>
-    
-                        <table class="table mb-4 table-nowrap">
-                            <colgroup>
-                                <col width="6%">
-                                <col width="*">
-                                <col width="22%">
-                                <col width="22%">
-                                <col width="10%">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-toggle-check-all"
-                                                data-target="#projects" id="customCheckAll">
-                                            <label class="custom-control-label" for="customCheckAll"><span
-                                                    class="text-hide">Toggle all</span></label>
-                                        </div>
-                                    </th>
-                                    <th>
-                                        <a href="javascript:void(0)" class="sort"
-                                            data-sort="js-lists-values-project">공간명</a>
-                                    </th>
-                                    <th>
-                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">최근
-                                            수정일</a>
-                                    </th>
-                                    <th>
-                                        <a href="javascript:void(0)" class="sort"
-                                            data-sort="js-lists-values-status">배포일자</a>
-                                    </th>
-                                    <th>
-                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">상태</a>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody class="list" id="projects">
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_1">
-                                            <label class="custom-control-label" for="customCheck1_1"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 A</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.06</td>
-                                    <td>2021.01.10</td>
-                                    <td><span class="text-accent">배포중</span>
-                                    </td>
-                                </tr>
-                                <tr class="selected">
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                checked="" id="customCheck1_5">
-                                            <label class="custom-control-label" for="customCheck1_5"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider02.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 B</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-accent">배포중</span>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_2">
-                                            <label class="custom-control-label" for="customCheck1_2"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 C</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-secondary">수정중</span>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_2">
-                                            <label class="custom-control-label" for="customCheck1_2"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 C</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-secondary">수정중</span>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_2">
-                                            <label class="custom-control-label" for="customCheck1_2"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 C</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-secondary">수정중</span>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_2">
-                                            <label class="custom-control-label" for="customCheck1_2"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 C</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-secondary">수정중</span>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_2">
-                                            <label class="custom-control-label" for="customCheck1_2"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 C</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-secondary">수정중</span>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_2">
-                                            <label class="custom-control-label" for="customCheck1_2"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 C</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-secondary">수정중</span>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_2">
-                                            <label class="custom-control-label" for="customCheck1_2"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 C</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-secondary">수정중</span>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_2">
-                                            <label class="custom-control-label" for="customCheck1_2"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 C</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-secondary">수정중</span>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_2">
-                                            <label class="custom-control-label" for="customCheck1_2"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 C</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-secondary">수정중</span>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_2">
-                                            <label class="custom-control-label" for="customCheck1_2"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 C</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-secondary">수정중</span>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_2">
-                                            <label class="custom-control-label" for="customCheck1_2"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 C</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-secondary">수정중</span>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_2">
-                                            <label class="custom-control-label" for="customCheck1_2"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="flex d-flex align-items-center mr-16pt">
-                                            <a href="buildings_board.html" class="avatar mr-12pt">
-                                                <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
-                                            </a>
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="buildings_board.html">건물 C</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2021.01.07</td>
-                                    <td>2021.01.12</td>
-                                    <td><span class="text-secondary">수정중</span>
-                                </tr>
-                            </tbody>
-                        </table>
-    
-                        <ul class="pagination justify-content-center pagination-xsm m-0">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                    <span>Prev</span>
-                                </a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Page 1"><span>1</span></a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Page 2"><span>2</span></a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span>Next</span>
-                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="my-32pt">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <a href="#n" class="btn btn-outline-accent">선택파일 등록</a>
-                            </div>
-                        </div>
+                <div class="top-process">
+                    <div class="process-bar ps-2"></div>
+                    <div class="process-txt">
+                        <em>2/7</em>
                     </div>
-                    <div id="sidebar-menu02" class="tab-pane" role="tabpanel">
-                        <h5>카테고리</h5>
-                        <div class="btn-group mb-3 category-group">
-                            <button type="button" class="btn btn-outline-secondary active">지하철</button>
-                            <button type="button" class="btn btn-outline-secondary">백화점</button>
-                            <button type="button" class="btn btn-outline-secondary">공항</button>
-                            <button type="button" class="btn btn-outline-secondary">병원</button>
-                            <button type="button" class="btn btn-outline-secondary">공장</button>
-                            <button type="button" class="btn btn-outline-secondary">공원</button>
-                            <button type="button" class="btn btn-outline-secondary">빌딩</button>
+                </div>
+        
+                <div class="d-flex flex justify-content-end align-items-center pr-4">
+                    <div class="form-group m-0 ml-4 form-lang">
+                        <select id="custom-select" class="custom-line">
+                            <option selected="">KOR</option>
+                            <option value="1">JPN</option>
+                            <option value="2">ENG</option>
+                        </select>
+                    </div>
+                    <div class="nav-item dropdown ml-4">
+                        <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                            <span class="avatar avatar-sm">
+                                <span class="avatar-title rounded-circle">SH</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item" href="#n">정보수정</a>
+                            <a class="dropdown-item" href="#n">멤버십</a>
+                            <a class="dropdown-item" href="#n">Logout</a>
                         </div>
-                        <!-- <div class="row align-items-center mb-5">
-                            <div class="d-flex col-md">
-                                <a href="#n" class="d-flex align-items-center justify-content-center">
-                                    <div class="rounded-circle bg-dark w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                        <i class="fas fa-subway text-white"></i>
-                                    </div>
-                                    <div class="flex">
-                                        <div class="card-title mb-4pt">지하철</div>
-                                        <p class="card-subtitle text-70">description.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="d-flex col-md">
-                                <a href="#n" class="d-flex align-items-center justify-content-center">
-                                    <div class="rounded-circle bg-dark w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                        <i class="fas fa-hotel text-white"></i>
-                                    </div>
-                                    <div class="flex">
-                                        <div class="card-title mb-4pt">백화점</div>
-                                        <p class="card-subtitle text-70">description.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="d-flex col-md">
-                                <a href="#n" class="d-flex align-items-center justify-content-center">
-                                    <div class="rounded-circle bg-dark w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                        <i class="fas fa-road text-white"></i>
-                                    </div>
-                                    <div class="flex">
-                                        <div class="card-title mb-4pt">공항</div>
-                                        <p class="card-subtitle text-70">description.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="d-flex col-md">
-                                <a href="#n" class="d-flex align-items-center justify-content-center">
-                                    <div class="rounded-circle bg-dark w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                        <i class="fas fa-hospital text-white"></i>
-                                    </div>
-                                    <div class="flex">
-                                        <div class="card-title mb-4pt">병원</div>
-                                        <p class="card-subtitle text-70">description.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div> -->
-                        <table class="table mb-4 thead-border-top-0 table-nowrap">
-                            <colgroup>
-                                <col width="5%" />
-                                <col width="*" />
-                                <col width="*" />
-                                <col width="*" />
-                                <col width="*" />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th class="pr-0">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-toggle-check-all"
-                                                data-target="#projects" id="customCheckAll">
-                                            <label class="custom-control-label" for="customCheckAll"><span
-                                                    class="text-hide">Toggle all</span></label>
-                                        </div>
-                                    </th>
-                                    <th>호선</th>
-                                    <th>역명</th>
-                                    <th>층수</th>
-                                    <th>갱신일</th>
-                                </tr>
-                            </thead>
-                            <tbody class="list" id="projects">
-                                <tr class="d-none">
-                                    <td colspan="5" class="noData">
-                                        <em>아직 등록된 파일이 없습니다.</em>
-                                        <a href="#n" class="btn btn-outline-accent btn-rounded btn-sm">파일등록</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pr-0">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_1">
-                                            <label class="custom-control-label" for="customCheck1_1"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>1호선</td>
-                                    <td>서울</td>
-                                    <td>3</td>
-                                    <td>2020-12-27</td>
-                                </tr>
-                                <tr>
-                                    <td class="pr-0">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_1">
-                                            <label class="custom-control-label" for="customCheck1_1"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>2호선</td>
-                                    <td>명동</td>
-                                    <td>3</td>
-                                    <td>2020-12-23</td>
-                                </tr>
-                                <tr>
-                                    <td class="pr-0">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input js-check-selected-row"
-                                                id="customCheck1_1">
-                                            <label class="custom-control-label" for="customCheck1_1"><span
-                                                    class="text-hide">Check</span></label>
-                                        </div>
-                                    </td>
-                                    <td>3호선</td>
-                                    <td>양재</td>
-                                    <td>3</td>
-                                    <td>2020-12-06</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <ul class="pagination justify-content-center pagination-xsm m-0">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                    <span>Prev</span>
-                                </a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Page 1"><span>1</span></a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Page 2"><span>2</span></a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span>Next</span>
-                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
-        </div>        
-    </div>
-    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
-            @@include('./include/platform-side-menu.html')
-            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
-                <div class="tab-content">
-                    <div class="tab-pane sm-projects active" id="sm-projects">
-                        <!-- 프로젝트 등록 -->
-                        <div class="project-inner">
-
-                            <div class="container-fluid d-flex align-items-center py-4">
-                                <div class="flex d-flex">
-                                    <div class="mr-24pt">
-                                        <h3 class="mb-0">공간 연결</h3>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
+                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
+                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                                <li class="sidebar-menu-item active" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">topic</i>
+                                        <span class="sidebar-menu-text">프로젝트</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="sm-projects">
+                                <div class="container-fluid d-flex align-items-center py-4">
+                                    <div class="flex d-flex">
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">공간 연결</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <em class="none-list mb-4">공간을 연결해 주세요.</em>
+                                    <div class="accordion js-accordion accordion--boxed mb-4 d-none" id="parent">
+                                        <div class="accordion__item">
+                                            <a href="#" class="accordion__toggle" data-toggle="collapse"
+                                                data-target="#course-toc-1" data-parent="#parent">
+                                                <span class="flex">스타트업캠퍼스 1동 <small class="text-danger">(5)</small></span>
+                                                <span
+                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                            </a>
+                                            <div class="dropdown acc-del">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-100"><i
+                                                        class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item text-primary">건물연결 해제</a>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__menu collapse" id="course-toc-1">
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 1동 1층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 1동 2층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 1동 3층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 1동 4층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 1동 5층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__item">
+                                            <a href="#" class="accordion__toggle" data-toggle="collapse"
+                                                data-target="#course-toc-2" data-parent="#parent">
+                                                <span class="flex">스타트업캠퍼스 2동 <small class="text-danger">(3)</small></span>
+                                                <span
+                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                            </a>
+                                            <div class="dropdown acc-del">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-100"><i
+                                                        class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item text-primary">건물연결 해제</a>
+                                                </div>
+                                            </div>
+                                            <div class="accordion__menu collapse" id="course-toc-2">
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 2동 1층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 2동 2층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                                <div class="accordion__menu-link">
+                                                    <span
+                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
+                                                        <i class="far fa-map"></i>
+                                                    </span>
+                                                    <p class="flex m-0">스타트업캠퍼스 2동 3층</p>
+                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a href="project_bd_write.html" class="btn-row-add" data-toggle="tooltip"
+                                            data-title="등록한 공간이 없을경우 새로운 건물을 등록해 보세요." data-placement="top"
+                                            data-boundary="window"><i class="material-icons">add</i> 새로운 공간 등록</a>
+                                        <a href="project_write_depth.html" class="btn-row-add ml-2" data-toggle="tooltip"
+                                            data-title="기존에 등록한 공간을 연결해 보세요." data-placement="top" data-boundary="window"><i
+                                                class="material-icons">insert_link</i> 공간 연결</a>
+                                        <!-- <a href="maps_write2.html" class="btn-add" data-toggle="tooltip" data-title="지도 등록" data-placement="left" data-boundary="window"><i class="material-icons">add</i></a> -->
+                                    </div>
+                                    <div class="my-32pt">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <a href="project_write.html" class="btn btn-outline-secondary mr-8pt">이전 단계</a>
+                                            <a href="project_write3.html" class="btn btn-outline-accent ml-0">저장 후 다음으로</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="container-fluid">
-                                <em class="none-list mb-4">공간을 연결해 주세요.</em>
-                                <div class="accordion js-accordion accordion--boxed mb-4 d-none" id="parent">
-                                    <div class="accordion__item">
-                                        <a href="#" class="accordion__toggle" data-toggle="collapse"
-                                            data-target="#course-toc-1" data-parent="#parent">
-                                            <span class="flex">스타트업캠퍼스 1동 <small class="text-danger">(5)</small></span>
-                                            <span
-                                                class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                                        </a>
-                                        <div class="dropdown acc-del">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-100"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item text-primary">건물연결 해제</a>
-                                            </div>
-                                        </div>
-                                        <div class="accordion__menu collapse" id="course-toc-1">
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 1동 1층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 1동 2층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 1동 3층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 1동 4층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 1동 5층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    <div class="sidebar-depth" data-perfect-scrollbar>
+                        <div class="tab-cover">
+                            <ul class="nav tab-menu" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#sidebar-menu01">사용자 등록</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#sidebar-menu02">공공지도</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content mt-4 text-70">
+                            <div id="sidebar-menu01" class="tab-pane active" role="tabpanel">
+                                <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt sort-wrap">
+                                    <div class="flex title-row">
+                                        <h5 class="mb-0">공간 목록</h5>
                                     </div>
-                                    <div class="accordion__item">
-                                        <a href="#" class="accordion__toggle" data-toggle="collapse"
-                                            data-target="#course-toc-2" data-parent="#parent">
-                                            <span class="flex">스타트업캠퍼스 2동 <small class="text-danger">(3)</small></span>
-                                            <span
-                                                class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                    <!-- <div class="w-auto table d-flex align-items-center mb-sm-0">
+                                        <small class="text-muted text-headings text-uppercase mr-3 d-none d-sm-block">Sort by</small>
+                                        <a href="#" class="sort desc small text-headings text-uppercase">최근순</a>
+                                        <a href="#" class="sort small text-headings text-uppercase ml-2">이름순</a>
+                                    </div> -->
+                                    <form class="form-inline ml-4">
+                                        <input type="text" class="form-control search" id="inlineFormFilterBy" placeholder="Search">
+                                        <a href="#n" class="btn btn-sm btn-light"><i class="material-icons">search</i></a>
+                                    </form>
+                                </div>
+            
+                                <table class="table mb-4 table-nowrap">
+                                    <colgroup>
+                                        <col width="6%">
+                                        <col width="*">
+                                        <col width="22%">
+                                        <col width="22%">
+                                        <col width="10%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-toggle-check-all"
+                                                        data-target="#projects" id="customCheckAll">
+                                                    <label class="custom-control-label" for="customCheckAll"><span
+                                                            class="text-hide">Toggle all</span></label>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <a href="javascript:void(0)" class="sort"
+                                                    data-sort="js-lists-values-project">공간명</a>
+                                            </th>
+                                            <th>
+                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">최근
+                                                    수정일</a>
+                                            </th>
+                                            <th>
+                                                <a href="javascript:void(0)" class="sort"
+                                                    data-sort="js-lists-values-status">배포일자</a>
+                                            </th>
+                                            <th>
+                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">상태</a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list" id="projects">
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_1">
+                                                    <label class="custom-control-label" for="customCheck1_1"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider01.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 A</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.06</td>
+                                            <td>2021.01.10</td>
+                                            <td><span class="text-accent">배포중</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="selected">
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        checked="" id="customCheck1_5">
+                                                    <label class="custom-control-label" for="customCheck1_5"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider02.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 B</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-accent">배포중</span>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_2">
+                                                    <label class="custom-control-label" for="customCheck1_2"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-secondary">수정중</span>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_2">
+                                                    <label class="custom-control-label" for="customCheck1_2"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-secondary">수정중</span>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_2">
+                                                    <label class="custom-control-label" for="customCheck1_2"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-secondary">수정중</span>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_2">
+                                                    <label class="custom-control-label" for="customCheck1_2"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-secondary">수정중</span>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_2">
+                                                    <label class="custom-control-label" for="customCheck1_2"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-secondary">수정중</span>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_2">
+                                                    <label class="custom-control-label" for="customCheck1_2"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-secondary">수정중</span>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_2">
+                                                    <label class="custom-control-label" for="customCheck1_2"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-secondary">수정중</span>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_2">
+                                                    <label class="custom-control-label" for="customCheck1_2"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-secondary">수정중</span>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_2">
+                                                    <label class="custom-control-label" for="customCheck1_2"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-secondary">수정중</span>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_2">
+                                                    <label class="custom-control-label" for="customCheck1_2"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-secondary">수정중</span>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_2">
+                                                    <label class="custom-control-label" for="customCheck1_2"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-secondary">수정중</span>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_2">
+                                                    <label class="custom-control-label" for="customCheck1_2"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex d-flex align-items-center mr-16pt">
+                                                    <a href="buildings_board.html" class="avatar mr-12pt">
+                                                        <img src="images/slider03.jpg" alt="" class="avatar-img rounded">
+                                                    </a>
+                                                    <div class="flex list-els">
+                                                        <a class="card-title" href="buildings_board.html">건물 C</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>2021.01.07</td>
+                                            <td>2021.01.12</td>
+                                            <td><span class="text-secondary">수정중</span>
+                                        </tr>
+                                    </tbody>
+                                </table>
+            
+                                <ul class="pagination justify-content-center pagination-xsm m-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                            <span>Prev</span>
                                         </a>
-                                        <div class="dropdown acc-del">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-100"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item text-primary">건물연결 해제</a>
-                                            </div>
-                                        </div>
-                                        <div class="accordion__menu collapse" id="course-toc-2">
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 2동 1층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 2동 2층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                            <div class="accordion__menu-link">
-                                                <span
-                                                    class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                    <i class="far fa-map"></i>
-                                                </span>
-                                                <p class="flex m-0">스타트업캠퍼스 2동 3층</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <a href="project_bd_write.html" class="btn-row-add" data-toggle="tooltip"
-                                        data-title="등록한 공간이 없을경우 새로운 건물을 등록해 보세요." data-placement="top"
-                                        data-boundary="window"><i class="material-icons">add</i> 새로운 공간 등록</a>
-                                    <a href="project_write_depth.html" class="btn-row-add ml-2" data-toggle="tooltip"
-                                        data-title="기존에 등록한 공간을 연결해 보세요." data-placement="top" data-boundary="window"><i
-                                            class="material-icons">insert_link</i> 공간 연결</a>
-                                    <!-- <a href="maps_write2.html" class="btn-add" data-toggle="tooltip" data-title="지도 등록" data-placement="left" data-boundary="window"><i class="material-icons">add</i></a> -->
-                                </div>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 1"><span>1</span></a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 2"><span>2</span></a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span>Next</span>
+                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                        </a>
+                                    </li>
+                                </ul>
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a href="project_write.html" class="btn btn-outline-secondary mr-8pt">이전 단계</a>
-                                        <a href="project_write3.html" class="btn btn-outline-accent ml-0">저장 후 다음으로</a>
+                                        <a href="#n" class="btn btn-outline-accent">선택파일 등록</a>
                                     </div>
                                 </div>
+                            </div>
+                            <div id="sidebar-menu02" class="tab-pane" role="tabpanel">
+                                <h5>카테고리</h5>
+                                <div class="btn-group mb-3 category-group">
+                                    <button type="button" class="btn btn-outline-secondary active">지하철</button>
+                                    <button type="button" class="btn btn-outline-secondary">백화점</button>
+                                    <button type="button" class="btn btn-outline-secondary">공항</button>
+                                    <button type="button" class="btn btn-outline-secondary">병원</button>
+                                    <button type="button" class="btn btn-outline-secondary">공장</button>
+                                    <button type="button" class="btn btn-outline-secondary">공원</button>
+                                    <button type="button" class="btn btn-outline-secondary">빌딩</button>
+                                </div>
+                                <!-- <div class="row align-items-center mb-5">
+                                    <div class="d-flex col-md">
+                                        <a href="#n" class="d-flex align-items-center justify-content-center">
+                                            <div class="rounded-circle bg-dark w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                <i class="fas fa-subway text-white"></i>
+                                            </div>
+                                            <div class="flex">
+                                                <div class="card-title mb-4pt">지하철</div>
+                                                <p class="card-subtitle text-70">description.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="d-flex col-md">
+                                        <a href="#n" class="d-flex align-items-center justify-content-center">
+                                            <div class="rounded-circle bg-dark w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                <i class="fas fa-hotel text-white"></i>
+                                            </div>
+                                            <div class="flex">
+                                                <div class="card-title mb-4pt">백화점</div>
+                                                <p class="card-subtitle text-70">description.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="d-flex col-md">
+                                        <a href="#n" class="d-flex align-items-center justify-content-center">
+                                            <div class="rounded-circle bg-dark w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                <i class="fas fa-road text-white"></i>
+                                            </div>
+                                            <div class="flex">
+                                                <div class="card-title mb-4pt">공항</div>
+                                                <p class="card-subtitle text-70">description.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="d-flex col-md">
+                                        <a href="#n" class="d-flex align-items-center justify-content-center">
+                                            <div class="rounded-circle bg-dark w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                <i class="fas fa-hospital text-white"></i>
+                                            </div>
+                                            <div class="flex">
+                                                <div class="card-title mb-4pt">병원</div>
+                                                <p class="card-subtitle text-70">description.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div> -->
+                                <table class="table mb-4 thead-border-top-0 table-nowrap">
+                                    <colgroup>
+                                        <col width="5%" />
+                                        <col width="*" />
+                                        <col width="*" />
+                                        <col width="*" />
+                                        <col width="*" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-0">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-toggle-check-all"
+                                                        data-target="#projects" id="customCheckAll">
+                                                    <label class="custom-control-label" for="customCheckAll"><span
+                                                            class="text-hide">Toggle all</span></label>
+                                                </div>
+                                            </th>
+                                            <th>호선</th>
+                                            <th>역명</th>
+                                            <th>층수</th>
+                                            <th>갱신일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list" id="projects">
+                                        <tr class="d-none">
+                                            <td colspan="5" class="noData">
+                                                <em>아직 등록된 파일이 없습니다.</em>
+                                                <a href="#n" class="btn btn-outline-accent btn-rounded btn-sm">파일등록</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pr-0">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_1">
+                                                    <label class="custom-control-label" for="customCheck1_1"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>1호선</td>
+                                            <td>서울</td>
+                                            <td>3</td>
+                                            <td>2020-12-27</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pr-0">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_1">
+                                                    <label class="custom-control-label" for="customCheck1_1"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>2호선</td>
+                                            <td>명동</td>
+                                            <td>3</td>
+                                            <td>2020-12-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pr-0">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_1">
+                                                    <label class="custom-control-label" for="customCheck1_1"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>3호선</td>
+                                            <td>양재</td>
+                                            <td>3</td>
+                                            <td>2020-12-06</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <ul class="pagination justify-content-center pagination-xsm m-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                            <span>Prev</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 1"><span>1</span></a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 2"><span>2</span></a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span>Next</span>
+                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -757,6 +765,7 @@
             </div>
         </div>
     </div>
-</div>
+
 
 @@include('./include/platform-footer.html')
+

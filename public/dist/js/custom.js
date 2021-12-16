@@ -84,7 +84,57 @@ jQuery(document).ready(function ($) {
 		}
 	}
 });
+jQuery(document).ready(function () {
+	function toggleSidebar(side) {
+		if (side !== "left" && side !== "right") {
+			return false;
+		}
+		var plLeft = $("#sidebar-left"),
+			plRight = $("#sidebar-right"),
+			plContent = $("#main-contents"),
+			openSidebarsCount = 0,
+			contentClass = "";
 
+		// toggle sidebar
+		if (side === "left") {
+			plLeft.toggleClass("pl-collapsed");
+		} else if (side === "right") {
+			plRight.toggleClass("pl-collapsed");
+		}
+
+		// determine number of open sidebars
+		if (!plLeft.hasClass("pl-collapsed")) {
+			openSidebarsCount += 1;
+		}
+
+		if (!plRight.hasClass("pl-collapsed")) {
+			openSidebarsCount += 1;
+		}
+
+		// determine appropriate content class
+		if (openSidebarsCount === 0) {
+			contentClass = "pl-col-12";
+		} else if (openSidebarsCount === 1) {
+			contentClass = "pl-col-9";
+		} else {
+			contentClass = "pl-col-6";
+		}
+
+		// apply class to content
+		plContent.removeClass("pl-col-12 pl-col-9 pl-col-6")
+			.addClass(contentClass);
+	}
+	$(".toggle-sidebar-left").click(function () {
+		toggleSidebar("left");
+
+		return false;
+	});
+	$(".toggle-sidebar-right").click(function () {
+		toggleSidebar("right");
+
+		return false;
+	});
+});
 
 // global GNB
 jQuery(document).ready(function ($) {

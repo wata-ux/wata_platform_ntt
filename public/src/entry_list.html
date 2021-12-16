@@ -1,122 +1,177 @@
 @@include('./include/platform-header.html')
 
-<div class="mdk-drawer-layout js-mdk-drawer-layout">
-    @@include('./include/platform-topbar.html')
-    <div class="mdk-drawer-layout__content page-content">
-        @@include('./include/platform-tools.html')
-    </div>
-    <!-- drawer -->
-    <!-- <div class="navbar-toggler-box">
-        <button class="navbar-toggler d-block" type="button" data-toggle="sidebar">
-            <span class="material-icons">short_text</span>
-        </button>
-    </div> -->
-    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
-            @@include('./include/platform-side-menu.html')
-            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
-                <div class="tab-content">
-                    <div class="tab-pane sm-entry active" id="sm-entry">
-                        <div class="entry-inner">
-                            <div class="container-fluid d-flex flex-md-row align-items-center py-4">
-                                <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
-                                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
-                                        <h3 class="mb-0">출입관리</h3>
-                                        <p class="text-70 mb-0">출입관리 페이지입니다.</p>
+
+    <div class="pl-container">
+        <div class="pl-top">
+            @@include('./include/platform-topbar.html')
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
+                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
+                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                                <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button active" href="project_board.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">shop_2</i>
+                                        <span class="sidebar-menu-text">앱</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Info" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="pc_monitoring.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">security</i>
+                                        <span class="sidebar-menu-text">PC<br>모니터링</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="User" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="chart.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">bar_chart</i>
+                                        <span class="sidebar-menu-text">통계</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Sector" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="sector_list.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">space_dashboard</i>
+                                        <span class="sidebar-menu-text">지오펜스</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Event" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="event_list.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">local_mall</i>
+                                        <span class="sidebar-menu-text">이벤트</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item active" data-title="Entry" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="entry_list.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">camera_outdoor</i>
+                                        <span class="sidebar-menu-text">출입관리</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Accident" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="accident_landing.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">report_problem</i>
+                                        <span class="sidebar-menu-text">사고관리</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Info" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="info_landing.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">info</i>
+                                        <span class="sidebar-menu-text">정보</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="sm-entry">
+                                <div class="container-fluid d-flex flex-md-row align-items-center py-4">
+                                    <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+                                        <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                                            <h3 class="mb-0">출입관리</h3>
+                                            <p class="text-70 mb-0">출입관리 페이지입니다.</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="container-fluid">
-                                <ul class="info-panel info-link">
-                                    <li>
-                                        <a href="entry_total.html">
-                                            <p>인가</p>
+                                <div class="container-fluid">
+                                    <ul class="info-panel info-link">
+                                        <li>
+                                            <a href="entry_total.html">
+                                                <p>인가</p>
+                                                <div class="cell">
+                                                    <span class="material-icons">people</span>
+                                                    <em><strong>47</strong>명</em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="entry_total.html">
+                                                <p>출근</p>
+                                                <div class="cell">
+                                                    <span class="material-icons">how_to_reg</span>
+                                                    <em><strong>42</strong>명</em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="entry_total.html">
+                                                <p>지각</p>
+                                                <div class="cell">
+                                                    <span class="material-icons">schedule</span>
+                                                    <em><strong>1</strong>명</em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="entry_total.html">
+                                                <p>부재</p>
+                                                <div class="cell">
+                                                    <span class="material-icons">person_off</span>
+                                                    <em><strong>3</strong>명</em>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="info-panel none-link">
+                                        <li>
+                                            <p>출입현황</p>
                                             <div class="cell">
-                                                <span class="material-icons">people</span>
-                                                <em><strong>47</strong>명</em>
+                                                <span class="material-icons text-accent">expand_less</span>
+                                                <em><strong>89</strong>%</em>
                                             </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="entry_total.html">
-                                            <p>출근</p>
+                                        </li>
+                                        <li>
+                                            <p>평균 근무시간</p>
                                             <div class="cell">
-                                                <span class="material-icons">how_to_reg</span>
-                                                <em><strong>42</strong>명</em>
+                                                <span class="material-icons text-primary">expand_more</span>
+                                                <em><strong>8</strong>h <strong>13</strong>m</em>
                                             </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="entry_total.html">
-                                            <p>지각</p>
-                                            <div class="cell">
-                                                <span class="material-icons">schedule</span>
-                                                <em><strong>1</strong>명</em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="entry_total.html">
-                                            <p>부재</p>
-                                            <div class="cell">
-                                                <span class="material-icons">person_off</span>
-                                                <em><strong>3</strong>명</em>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="info-panel none-link">
-                                    <li>
-                                        <p>출입현황</p>
-                                        <div class="cell">
-                                            <span class="material-icons text-accent">expand_less</span>
-                                            <em><strong>89</strong>%</em>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p>평균 근무시간</p>
-                                        <div class="cell">
-                                            <span class="material-icons text-primary">expand_more</span>
-                                            <em><strong>8</strong>h <strong>13</strong>m</em>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="container-fluid d-none">
-                                <div class="user-info">
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2 text-100 font-weight-bolder">인가</dt>
-                                        <dd class="m-0"><a href="entry_total.html">47명</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">출근</dt>
-                                        <dd class="m-0"><a href="#n">42명</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">지각</dt>
-                                        <dd class="m-0"><a href="#n">1명</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">부재</dt>
-                                        <dd class="m-0"><a href="#n">3명</a></dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">출입현황</dt>
-                                        <dd class="m-0">89%</dd>
-                                    </dl>
-                                    <dl class="d-flex align-items-center px-16pt">
-                                        <dt class="flex mr-2">평균 근무시간</dt>
-                                        <dd class="m-0">6시간 56분</dd>
-                                    </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="container-fluid d-none">
+                                    <div class="user-info">
+                                        <dl class="d-flex align-items-center px-16pt">
+                                            <dt class="flex mr-2 text-100 font-weight-bolder">인가</dt>
+                                            <dd class="m-0"><a href="entry_total.html">47명</a></dd>
+                                        </dl>
+                                        <dl class="d-flex align-items-center px-16pt">
+                                            <dt class="flex mr-2">출근</dt>
+                                            <dd class="m-0"><a href="#n">42명</a></dd>
+                                        </dl>
+                                        <dl class="d-flex align-items-center px-16pt">
+                                            <dt class="flex mr-2">지각</dt>
+                                            <dd class="m-0"><a href="#n">1명</a></dd>
+                                        </dl>
+                                        <dl class="d-flex align-items-center px-16pt">
+                                            <dt class="flex mr-2">부재</dt>
+                                            <dd class="m-0"><a href="#n">3명</a></dd>
+                                        </dl>
+                                        <dl class="d-flex align-items-center px-16pt">
+                                            <dt class="flex mr-2">출입현황</dt>
+                                            <dd class="m-0">89%</dd>
+                                        </dl>
+                                        <dl class="d-flex align-items-center px-16pt">
+                                            <dt class="flex mr-2">평균 근무시간</dt>
+                                            <dd class="m-0">6시간 56분</dd>
+                                        </dl>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    @@include('./include/platform-tools.html')
+                </div>
+                <div class="pl-col-right" id="sidebar-right">
+                    @@include('./include/platform-right-menu.html')
+                </div>
+            </div>
         </div>
     </div>
-    <!-- // END drawer -->
-</div>
+
 
 @@include('./include/platform-footer.html')

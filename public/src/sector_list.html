@@ -1,184 +1,240 @@
 @@include('./include/platform-header.html')
 
-<!-- Drawer Layout -->
 
-<div class="mdk-drawer-layout js-mdk-drawer-layout">
-    @@include('./include/platform-topbar.html')
-    <div class="mdk-drawer-layout__content page-content">
-        @@include('./include/platform-tools.html')
-    </div>
-    <div class="mdk-drawer js-mdk-drawer layout-compact__drawer" id="default-drawer">
-        <div class="mdk-drawer__content js-sidebar-mini" data-layout="compact" data-opened>
-            @@include('./include/platform-side-menu.html')
-            <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
-                <div class="tab-content">
-                    <div class="tab-pane sm-sector active" id="sm-sector">
-                        <div class="sector-inner">
-                            <div class="container-fluid d-flex flex-md-row align-items-center py-4">
-                                <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
-                                    <div class="mb-24pt mb-sm-0 mr-sm-24pt">
-                                        <h3 class="mb-0">지오펜스</h3>
-                                        <p class="text-70 mb-0">지오펜스를 지정하고 관리할 수 있습니다.</p>
-                                    </div>
-                                </div>
-                                <div class="row" role="tablist">
-                                    <div class="col-auto">
-                                        <a href="sector_write.html" class="btn btn-outline-dark">신규 등록</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-4">
-                                <div class="form-group d-none">
-                                    <label class="form-label">프로젝트 리스트</label>
-                                    <select name="category" class="form-control custom-select">
-                                        <option value="vuejs">전체</option>
-                                        <option value="vuejs">건물 A</option>
-                                        <option value="vuejs">건물 B</option>
-                                    </select>
-                                </div>
-                                <div class="list-group row-list list-group-flush mb-4">
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center">
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="sector_board.html">지오펜스 A</a>
-                                                <div class="card-subtitle text-50"><span
-                                                        class="badge badge-accent">N</span> 2021.03.01</div>
-                                            </div>
-                                        </div>
-                                        <div class="custom-control custom-checkbox-toggle mx-3">
-                                            <input checked="" type="checkbox" id="switch01"
-                                                class="custom-control-input" checked="checked">
-                                            <label class="custom-control-label" for="switch01">active</label>
-                                        </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center">
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">지오펜스 B</a>
-                                                <div class="card-subtitle text-50">2020.11.21</div>
-                                            </div>
-                                        </div>
-                                        <div class="custom-control custom-checkbox-toggle mx-3">
-                                            <input checked="" type="checkbox" id="switch02"
-                                                class="custom-control-input" checked="checked">
-                                            <label class="custom-control-label" for="switch02">active</label>
-                                        </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                            </div>
+    <div class="pl-container">
+        <div class="pl-top">
+            @@include('./include/platform-topbar.html')
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
+                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
+                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                                <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button active" href="project_board.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">shop_2</i>
+                                        <span class="sidebar-menu-text">앱</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Info" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="pc_monitoring.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">security</i>
+                                        <span class="sidebar-menu-text">PC<br>모니터링</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="User" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="chart.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">bar_chart</i>
+                                        <span class="sidebar-menu-text">통계</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item active" data-title="Sector" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="sector_list.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">space_dashboard</i>
+                                        <span class="sidebar-menu-text">지오펜스</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Event" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="event_list.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">local_mall</i>
+                                        <span class="sidebar-menu-text">이벤트</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Entry" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="entry_list.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">camera_outdoor</i>
+                                        <span class="sidebar-menu-text">출입관리</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Accident" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="accident_landing.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">report_problem</i>
+                                        <span class="sidebar-menu-text">사고관리</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item" data-title="Info" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="info_landing.html">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">info</i>
+                                        <span class="sidebar-menu-text">정보</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="sm-sector">
+                                <div class="container-fluid d-flex flex-md-row align-items-center py-4">
+                                    <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+                                        <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                                            <h3 class="mb-0">지오펜스</h3>
+                                            <p class="text-70 mb-0">지오펜스를 지정하고 관리할 수 있습니다.</p>
                                         </div>
                                     </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center">
-                                            <div class="flex">
-                                                <a class="card-title" href="#n">지오펜스 C</a>
-                                                <div class="card-subtitle text-50">2021.01.07</div>
-                                            </div>
-                                        </div>
-                                        <div class="custom-control custom-checkbox-toggle mx-3">
-                                            <input checked="" type="checkbox" id="switch03"
-                                                class="custom-control-input" checked="checked">
-                                            <label class="custom-control-label" for="switch03">active</label>
-                                        </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center">
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">지오펜스 D</a>
-                                                <div class="card-subtitle text-50">2021.01.07</div>
-                                            </div>
-                                        </div>
-                                        <div class="custom-control custom-checkbox-toggle mx-3">
-                                            <input checked="" type="checkbox" id="switch04"
-                                                class="custom-control-input" checked="checked">
-                                            <label class="custom-control-label" for="switch04">active</label>
-                                        </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <div class="flex d-flex align-items-center">
-                                            <div class="flex list-els">
-                                                <a class="card-title" href="#n">지오펜스 E</a>
-                                                <div class="card-subtitle text-50">2021.01.07</div>
-                                            </div>
-                                        </div>
-                                        <div class="custom-control custom-checkbox-toggle mx-3">
-                                            <input checked="" type="checkbox" id="switch05"
-                                                class="custom-control-input" checked="checked">
-                                            <label class="custom-control-label" for="switch05">active</label>
-                                        </div>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                    class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                            </div>
+                                    <div class="row" role="tablist">
+                                        <div class="col-auto">
+                                            <a href="sector_write.html" class="btn btn-outline-dark">신규 등록</a>
                                         </div>
                                     </div>
                                 </div>
-                                <ul class="pagination justify-content-center pagination-xsm m-0">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                            <span>Prev</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Page 1">
-                                            <span>1</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Page 2">
-                                            <span>2</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span>Next</span>
-                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                                <div class="mb-4">
+                                    <div class="form-group d-none">
+                                        <label class="form-label">프로젝트 리스트</label>
+                                        <select name="category" class="form-control custom-select">
+                                            <option value="vuejs">전체</option>
+                                            <option value="vuejs">건물 A</option>
+                                            <option value="vuejs">건물 B</option>
+                                        </select>
+                                    </div>
+                                    <div class="list-group row-list list-group-flush mb-4">
+                                        <div class="list-group-item d-flex">
+                                            <div class="flex d-flex align-items-center">
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="sector_board.html">지오펜스 A</a>
+                                                    <div class="card-subtitle text-50"><span
+                                                            class="badge badge-accent">N</span> 2021.03.01</div>
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox-toggle mx-3">
+                                                <input checked="" type="checkbox" id="switch01"
+                                                    class="custom-control-input" checked="checked">
+                                                <label class="custom-control-label" for="switch01">active</label>
+                                            </div>
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                        class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item d-flex">
+                                            <div class="flex d-flex align-items-center">
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="#n">지오펜스 B</a>
+                                                    <div class="card-subtitle text-50">2020.11.21</div>
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox-toggle mx-3">
+                                                <input checked="" type="checkbox" id="switch02"
+                                                    class="custom-control-input" checked="checked">
+                                                <label class="custom-control-label" for="switch02">active</label>
+                                            </div>
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                        class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item d-flex">
+                                            <div class="flex d-flex align-items-center">
+                                                <div class="flex">
+                                                    <a class="card-title" href="#n">지오펜스 C</a>
+                                                    <div class="card-subtitle text-50">2021.01.07</div>
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox-toggle mx-3">
+                                                <input checked="" type="checkbox" id="switch03"
+                                                    class="custom-control-input" checked="checked">
+                                                <label class="custom-control-label" for="switch03">active</label>
+                                            </div>
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                        class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item d-flex">
+                                            <div class="flex d-flex align-items-center">
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="#n">지오펜스 D</a>
+                                                    <div class="card-subtitle text-50">2021.01.07</div>
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox-toggle mx-3">
+                                                <input checked="" type="checkbox" id="switch04"
+                                                    class="custom-control-input" checked="checked">
+                                                <label class="custom-control-label" for="switch04">active</label>
+                                            </div>
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                        class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item d-flex">
+                                            <div class="flex d-flex align-items-center">
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="#n">지오펜스 E</a>
+                                                    <div class="card-subtitle text-50">2021.01.07</div>
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox-toggle mx-3">
+                                                <input checked="" type="checkbox" id="switch05"
+                                                    class="custom-control-input" checked="checked">
+                                                <label class="custom-control-label" for="switch05">active</label>
+                                            </div>
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                                        class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="pagination justify-content-center pagination-xsm m-0">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                <span>Prev</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Page 1">
+                                                <span>1</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Page 2">
+                                                <span>2</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span>Next</span>
+                                                <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    @@include('./include/platform-tools.html')
+                </div>
+                <div class="pl-col-right" id="sidebar-right">
+                    @@include('./include/platform-right-menu.html')
+                </div>
+            </div>
         </div>
     </div>
-    <!-- // END drawer -->
-</div>
-
-<!-- // END Drawer Layout -->
 
 
 @@include('./include/platform-footer.html')
