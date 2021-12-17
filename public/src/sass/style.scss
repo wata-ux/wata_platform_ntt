@@ -10658,6 +10658,11 @@ xnugget info
                 height: 3rem;
                 margin-top: -1.25rem;
                 border-radius: 2px;
+                &.active{
+                    span{
+                        transform: rotate(180deg);
+                    }
+                }
             }
             .btn-col-left{
                 left: 0;

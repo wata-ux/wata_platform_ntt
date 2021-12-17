@@ -1,5 +1,8 @@
 // platform nav 
 jQuery(document).ready(function ($) {
+	$(".side-btn").click(function(){
+		$(this).toggleClass("active");
+	});
     $('.btn_layerpopup').on('click', function (e) {
         e.preventDefault();
         var el = $($(this).attr('href'));
