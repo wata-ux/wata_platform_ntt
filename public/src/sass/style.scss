@@ -10720,6 +10720,11 @@ xnugget info
                     span{
                         transform: rotate(90deg);
                     }
+                    &.active{
+                        span{
+                            transform: rotate(270deg);
+                        }
+                    }
                 }
             }
             .pl-col-right{
