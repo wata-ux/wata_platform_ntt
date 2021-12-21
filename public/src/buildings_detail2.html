@@ -206,9 +206,30 @@
                     <!-- edit tool -->
                     <div class="btn-top-holder">
                         <div class="btn-group ml-2 map-edit-tools">
-                            <button type="button" class="btn btn-white active"><i class="material-icons">highlight_alt</i></button>
-                            <button type="button" class="btn btn-white"><i class="material-icons">adjust</i></button>
-                            <button type="button" class="btn btn-white"><i class="material-icons">timeline</i></button>
+                            <div class="btn-group">
+                                <a href="#n" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="images/edit_tool_select_white.svg" class="mr-1" alt=""></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="#n" class="dropdown-item"><img src="images/edit_tool_select_black.svg" class="mr-2" alt="">포인트 선택</a>
+                                    <a href="#n" class="dropdown-item"><img src="images/edit_tool_select2_black.svg" class="mr-2" alt="">선택</a>
+                                    <a href="#n" class="dropdown-item"><img src="images/edit_tool_select3_black.svg" class="mr-2" alt="">그룹 선택</a>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="images/edit_tool_transform_white.svg" class="mr-1" alt=""></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="#n" class="dropdown-item"><img src="images/edit_tool_transform_black.svg" class="mr-2" alt="">변형</a>
+                                    <a href="#n" class="dropdown-item"><img src="images/edit_tool_transform2_black.svg" class="mr-2" alt="">그룹 변형</a>
+                                </div>
+                            </div>
+                            <a href="#n" class="btn btn-dark"><img src="images/edit_tool_location_white.svg" alt=""></a>
+                            <div class="btn-group">
+                                <a href="#n" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="images/edit_tool_cut_white.svg" class="mr-1" alt=""></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="#n" class="dropdown-item"><img src="images/edit_tool_cut_black.svg" class="mr-2" alt="">수집선 생성</a>
+                                    <a href="#n" class="dropdown-item"><img src="images/edit_tool_cut2_black.svg" class="mr-2" alt="">수집선 자르기</a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     @@include('./include/platform-tools-map.html')
