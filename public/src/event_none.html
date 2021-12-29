@@ -8,60 +8,7 @@
         <div class="pl-cover">
             <div class="pl-col-left" id="sidebar-left">
                 <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
-                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
-                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
-                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-                                <li class="sidebar-menu-item" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button active" href="project_board.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">shop_2</i>
-                                        <span class="sidebar-menu-text">앱</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="Info" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="pc_monitoring.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">security</i>
-                                        <span class="sidebar-menu-text">PC<br>모니터링</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="User" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="chart.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">bar_chart</i>
-                                        <span class="sidebar-menu-text">통계</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="Sector" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="sector_list.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">space_dashboard</i>
-                                        <span class="sidebar-menu-text">지오펜스</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item active" data-title="Event" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="event_list.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">local_mall</i>
-                                        <span class="sidebar-menu-text">이벤트</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="Entry" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="entry_list.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">camera_outdoor</i>
-                                        <span class="sidebar-menu-text">출입관리</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="Accident" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="accident_landing.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">report_problem</i>
-                                        <span class="sidebar-menu-text">사고관리</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="Info" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="info_landing.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">info</i>
-                                        <span class="sidebar-menu-text">정보</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    @@include('./include/platform-side-menu.html', {"activeProjects": "", "activeMonitoring": "", "activeGraph": "", "activeSector": "", "activeEvent": "active", "activeEntry": "", "activeAccident": "", "activeInfo": ""})
                     <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                         <div class="tab-content">
                             <div class="tab-pane active" id="sm-event">
