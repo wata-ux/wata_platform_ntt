@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>WATA</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+        
+    <link rel="icon" href="images/icon/favicon.svg">
+	<link rel="apple-touch-icon" href="images/icon/1x/wata_symbol_64dp.png">
+	<link rel="apple-touch-icon" sizes="96x96" href="images/icon/1x/wata_symbol_96dp.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="images/icon/2x/wata_symbol_64dp.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="images/icon/2x/wata_symbol_96dp.png">
+
+    <!-- Preloader -->
+    <link type="text/css" href="vendor/spinkit.css" rel="stylesheet" />
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="vendor/perfect-scrollbar.css" rel="stylesheet" />
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="css/material-icons.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="css/fontawesome.css" rel="stylesheet" />
+
+    <!-- Preloader -->
+    <link type="text/css" href="css/preloader.css" rel="stylesheet" />
+
+    <!-- App CSS -->
+    <link type="text/css" href="css/app.css" rel="stylesheet" />
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="css/flatpickr.css" rel="stylesheet" />
+    <link type="text/css" href="css/flatpickr-airbnb.css" rel="stylesheet" />
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="vendor/daterangepicker.css" rel="stylesheet" />
+
+    <!-- Quill Theme -->
+    <link type="text/css" href="css/quill.css" rel="stylesheet" />
+
+    <!-- Touchspin -->
+    <link type="text/css" href="css/bootstrap-touchspin.css" rel="stylesheet" />
+
+    <!-- Select2 -->
+    <link type="text/css" href="vendor/select2/select2.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/select2.css" rel="stylesheet" />
+
+     <!-- ion Range Slider -->
+     <link type="text/css" href="css/ion-rangeslider.css" rel="stylesheet" />
+
+     <!-- Dragula -->
+     <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
+
+    <!-- custom CSS -->
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=round -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=sharp -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=twotone -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
+    rel="stylesheet">
+
+</head>
+
+<body class="layout-mini-secondary layout-mini-secondary">
+
+    <!-- <div class="preloader">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div> -->
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+                    <!-- Brand -->
+                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
+                </a>
+                <div class="top-process">
+                    <div class="process-bar bd-process ps-1"></div>
+                    <div class="process-txt">
+                        <em>1/4</em>
+                    </div>
+                </div>
+        
+                <div class="d-flex flex justify-content-end align-items-center pr-4">
+                    <div class="form-group m-0 ml-4 form-lang">
+                        <select id="custom-select" class="custom-line">
+                            <option selected="">KOR</option>
+                            <option value="1">JPN</option>
+                            <option value="2">ENG</option>
+                        </select>
+                    </div>
+                    <div class="nav-item dropdown ml-4">
+                        <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                            <span class="avatar avatar-sm">
+                                <span class="avatar-title rounded-circle">SH</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item" href="#n">정보수정</a>
+                            <a class="dropdown-item" href="#n">멤버십</a>
+                            <a class="dropdown-item" href="#n">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
+                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
+                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                                <li class="sidebar-menu-item active" data-title="Maps" data-placement="right" data-container="body"
+                                    data-boundary="window">
+                                    <a class="sidebar-menu-button active" href="#sm-maps" data-toggle="tab" role="tab"
+                                        aria-controls="sm-maps">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">business</i>
+                                        <span class="sidebar-menu-text">공간</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="sm-maps">
+                                <div class="container-fluid d-flex py-4">
+                                    <div class="flex d-flex">
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-2">주소 검색</h3>
+                                            <ol class="breadcrumb p-0 mb-2">
+                                                <li class="breadcrumb-item"><a href="buildings_write_jp_address.html" class="text-primary">日本</a></li>
+                                                <li class="breadcrumb-item active">北海道</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <a href="buildings_write.html" class="material-icons">close</a>
+                                </div>
+                                <div class="container-fluid ">
+                                    <div class="form-group mb-32pt over-txt">
+                                        <label class="form-label text-50 essential" for="projectTitle">우편번호 검색</label>
+                                        <input type="text" class="form-line pr-6" id="projectTitle" placeholder="예)123-4567">
+                                        <a href="buildings_write_jp_address.html" class="btn btn-secondary btn-sm">검색</a>
+                                    </div>
+                                    <div class="address-wrap">
+                                        <ul class="place-name">
+                                            <li><a href="#n">北海道</a></li>
+                                            <li><a href="#n">東北</a></li>
+                                            <li><a href="#n">関東</a></li>
+                                            <li><a href="#n">信越・北陸</a></li>
+                                            <li><a href="#n">東海</a></li>
+                                            <li><a href="#n">近畿</a></li>
+                                            <li><a href="#n">中国</a></li>
+                                            <li><a href="#n">四国</a></li>
+                                            <li><a href="#n">九州・沖縄</a></li>
+                                        </ul>
+                                        <div class="place-cover">
+                                            <h6 class="mb-2">北海道</h6>
+                                            <ul class="place-list">
+                                                <li><a href="#n">北海道</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="place-cover">
+                                            <h6 class="mb-2">東北</h6>
+                                            <ul class="place-list">
+                                                <li><a href="#n">青森県</a></li>
+                                                <li><a href="#n">北海道</a></li>
+                                                <li><a href="#n">北海道</a></li>
+                                                <li><a href="#n">北海道</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <div class="address-wrap">
+                                        <div class="address-fullName">
+                                            <em class="">東京都新宿区愛住町5-26</em>
+                                            <p class="address-fullName2">とうきょうと しんじゅくく あいずみちょう 5 26</p>
+                                        </div>
+                                    </div>
+                                    <div class="my-32pt">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <a href="#n" class="btn btn-outline-secondary mr-8pt">처음으로</a>
+                                            <a href="#n" class="btn btn-accent ml-0">주소등록</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                        <!-- map zoom/out -->
+    <div class="btn-widget-holder">
+        <ul>
+            <li class="mb-3"><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="지도 회전" data-placement="left"
+                data-boundary="window"><i class="fas fa-globe"></i></a></li>
+            <li class="mb-3">
+                <div class="btn-group-vertical">
+                    <a href="#n" class="btn btn-white font-size-12pt" data-toggle="tooltip" data-title="2D 보기" data-placement="left"
+                    data-boundary="window">2D</a>
+                    <!-- <button type="button" class="btn btn-white font-size-12pt" data-toggle="tooltip" data-title="2.5D 보기" data-placement="left"
+                            data-boundary="window">2.5D</button> -->
+                    <a href="#layerPopup" class="btn btn-white font-size-12pt btn_layerpopup" data-toggle="tooltip" data-title="3D 보기" data-placement="left"
+                    data-boundary="window">3D</a>
+                </div>
+            </li>
+            <li class="mb-3">
+                <div class="btn-group-vertical">
+                    <a href="" class="btn btn-white" data-toggle="tooltip" data-title="확대" data-placement="left"
+                    data-boundary="window"><i class="fas fa-plus"></i></a>
+                    <a href=""  class="btn btn-white" data-toggle="tooltip" data-title="축소" data-placement="left"
+                    data-boundary="window"><i class="fas fa-minus"></i></a>
+                </div>
+            </li>
+            <li><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="현재위치" data-placement="left"
+                data-boundary="window"><i class="fas fa-crosshairs"></i></a></li>
+        </ul>
+    </div>
+    <!-- slide button -->
+    <a href="#n" class="side-btn btn-col-left toggle-sidebar-left"><span class="material-icons-outlined">chevron_left</span></a>
+    <!-- map container -->
+    <div id="map" style="width:100%;height:100%;"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(37.54537298405762, 127.2238266278939),
+            level: 1
+        };
+
+        var map = new kakao.maps.Map(container, options);
+        //var mapTypeControl = new kakao.maps.MapTypeControl();
+        //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+    </script>
+    <div class="layer-popup" id="layerPopup">
+        <a href="#n" class="btn_layerpopup btn_close_layer"><span class="material-icons">close</span></a>
+        <div class="layer-map">
+
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3-min.js"></script>
+    <script src="vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="vendor/popper.min.js"></script>
+    <script src="vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="vendor/material-design-kit.js"></script>
+
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+
+    <!-- Preloader -->
+    <script src="js/preloader.js"></script>
+
+    <!-- Range Slider -->
+    <script src="vendor/ion.rangeSlider.min.js"></script>
+    <script src="js/ion-rangeslider.js"></script>
+
+    <!-- Quill -->
+    <script src="vendor/quill.min.js"></script>
+    <script src="js/quill.js"></script>
+
+    <!-- Global Settings -->
+    <script src="js/settings.js"></script>
+
+    <!-- DateRangePicker -->
+    <script src="vendor/moment.min.js"></script>
+    <script src="vendor/moment-range.js"></script>
+
+    <!-- Chart.js -->
+    <script src="vendor/Chart.min.js"></script>
+    <script src="js/chartjs.js"></script>
+    <script src="js/chartjs-rounded-bar.js"></script>
+
+    <!-- Chart.js Samples -->
+    <script src="js/page.ecommerce.js"></script>
+
+    <!-- Flatpickr -->
+    <script src="vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="js/flatpickr.js"></script>
+
+    <script src="vendor/daterangepicker.js"></script>
+    <script src="js/daterangepicker.js"></script>
+
+    <!-- jQuery Mask Plugin -->
+    <script src="vendor/jquery.mask.min.js"></script>
+
+    <!-- modernizr.js -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Sidebar Mini JS -->
+    <script src="js/sidebar-mini.js"></script>
+    <script>
+        (function () {
+            'use strict';
+            // ENABLE sidebar menu tabs
+            $('.js-sidebar-mini-tabs [data-toggle="tab"]').on('click', function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+            $('.js-sidebar-mini-tabs').on('show.bs.tab', function (e) {
+                $('.js-sidebar-mini-tabs > .active').removeClass('active')
+                $(e.target).parent().addClass('active')
+            })
+        })()
+    </script>
+
+    <!-- Dragula -->
+    <script src="vendor/dragula/dragula.min.js"></script>
+
+    <!-- Drag & Drop Page -->
+    <script src="js/dragula.js"></script>
+
+    <!-- List.js -->
+    <script src="vendor/list.min.js"></script>
+    <script src="js/list.js"></script>
+
+    <!-- Tables -->
+    <script src="js/toggle-check-all.js"></script>
+    <script src="js/check-selected-row.js"></script>
+
+    <!-- Select2 -->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="js/select2.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
+    
+
+
+</body>
+
+</html>
+
+
