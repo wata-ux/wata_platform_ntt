@@ -7968,6 +7968,12 @@ dl.space-id{
                     background-size: 100%;
                 }
             }
+            &.lidar{
+                .poi-bg{
+                    background: url(../images/lidar_pin.svg) no-repeat center;
+                    background-size: 100%;
+                }
+            }
             &.poi-off{
                 .status{
                     background-color: #538ee5;
