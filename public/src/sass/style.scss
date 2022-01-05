@@ -5085,6 +5085,53 @@ a.btn-darken{
         }
     }
 }
+.alert-panel{
+    width: 100%;
+    .ap-inner{
+        display: flex;
+        flex-direction: row;
+    }
+    .ap-item{
+        display: flex;
+        flex: 1 1 0;
+        flex-direction: column;
+        align-items: center;
+        border-right: 1px solid $border-color;
+        &:last-of-type{
+            border: none;
+        }
+        span{
+            padding: .25rem 0;
+            color: var(--gray);
+        }
+        em{
+            font-style: normal;
+            color: $identity;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        &.item-people{
+            em{
+                color: #356AD1;
+            }
+        }
+        &.item-vehicle{
+            em{
+                color: #C64922;
+            }
+        }
+        &.item-bicycle{
+            em{
+                color: #19B000;
+            }
+        }
+        &.item-mobile{
+            em{
+                color: #EF59AC;
+            }
+        }
+    }
+}
 
 .add-filter{
     .filter-item-dropdown{
@@ -6521,10 +6568,10 @@ map options
         width: 300px;
     }
     .alert-white{
+        width: 350px;
         background-color: #fff;
         box-shadow: 0 2px 2px rgba(0,0,0,0.1);
     }
-
 }
 /* edit tool */
 .btn-top-holder {
