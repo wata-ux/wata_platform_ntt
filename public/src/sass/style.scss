@@ -6824,6 +6824,44 @@ map options
                 color: $identity;
             }
         }
+        .bundle{
+            display: flex;
+            .btn-group{
+                background-color: #333333;
+                border-radius: 0;
+                border-right: 1px solid rgba(255,255,255,0.05);
+                &:first-of-type{
+                    border-top-left-radius: .25rem;
+                    border-bottom-left-radius: .25rem;
+                }
+                &:last-of-type{
+                    border-top-right-radius: .25rem;
+                    border-bottom-right-radius: .25rem;
+                }
+                &:hover{
+                    background-color: #515962;
+                }
+                &:focus{
+                    background-color: #515962;
+                }
+            }
+            .btn-item{
+                display: flex;
+                flex: 1 1 auto;
+                padding: .5rem;
+                &.btn-current{
+                }
+                &.dropdown-toggle{
+                    padding-left: .25rem;
+                    &:after{
+                        color: #fff;
+                    }
+                }
+            }
+            .dropdown-menu{
+                margin-left: -40px;
+            }
+        }
     }
 }
 .btn-mid-holder{

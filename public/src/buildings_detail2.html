@@ -244,47 +244,66 @@
                     </div>
                     <!-- edit tool -->
                     <div class="btn-top-holder map-edit-tools">
-                        <div class="btn-group ml-2 map-edit-tools">
+                        <div class="bundle">
                             <div class="btn-group">
-                                <a href="#n" class="btn btn-black dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="images/edit_tools/tool_select_point_white.svg" class="mr-1" alt=""></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="#n" class="dropdown-item active"><img src="images/edit_tools/tool_select_point_selected.svg" class="mr-2" alt="">포인트 선택</a>
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_select_object.svg" class="mr-2" alt="">선택</a>
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_select_group.svg" class="mr-2" alt="">그룹 선택</a>
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_select_point_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-center">
+                                        <a href="#n" class="dropdown-item active"><img src="images/edit_tools/tool_select_point_selected.svg" class="mr-2" alt="">포인트 선택</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_select_object.svg" class="mr-2" alt="">선택</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_select_group.svg" class="mr-2" alt="">그룹 선택</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="btn-group">
-                                <a href="#n" class="btn btn-black dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="images/edit_tools/tool_transform_white.svg" class="mr-1" alt=""></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_transform.svg" class="mr-2" alt="">변형</a>
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_transform_group.svg" class="mr-2" alt="">그룹 변형</a>
-                                </div>
-                            </div>
-                            <a href="#n" class="btn btn-black"><img src="images/edit_tools/tool_poi_white.svg" alt=""></a>
-                            <div class="btn-group">
-                                <a href="#n" class="btn btn-black dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="images/edit_tools/tool_line_white.svg" class="mr-1" alt=""></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_line.svg" class="mr-2" alt="">수집선 생성</a>
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_line_cut.svg" class="mr-2" alt="">수집선 자르기</a>
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_transform_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-center">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_transform.svg" class="mr-2" alt="">변형</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_transform_group.svg" class="mr-2" alt="">그룹 변형</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="btn-group">
-                                <a href="#n" class="btn btn-black dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="images/edit_tools/tool_area_white.svg" class="mr-1" alt=""></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area.svg" class="mr-2" alt="">공간 생성</a>
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_edit.svg" class="mr-2" alt="">공간 편집</a>
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_rectangle.svg" class="mr-2" alt="">공간 생성(사각형)</a>
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_square.svg" class="mr-2" alt="">공간 생성(정사각형)</a>
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_poi_white.svg" alt=""></a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_line_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-center">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_line.svg" class="mr-2" alt="">수집선 생성</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_line_cut.svg" class="mr-2" alt="">수집선 자르기</a>
+                                    </div>
                                 </div>
                             </div>
-                            <a href="#n" class="btn btn-black"><img src="images/edit_tools/tool_sensors_white.svg" alt=""></a>
                             <div class="btn-group">
-                                <a href="#n" class="btn btn-black dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="images/edit_tools/tool_geofence_white.svg" class="mr-1" alt=""></a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence.svg" class="mr-2" alt="">지오펜스 생성</a>
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_edit.svg" class="mr-2" alt="">지오펜스 편집</a>
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_rectangle.svg" class="mr-2" alt="">지오펜스 생성(사각형)</a>
-                                    <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_square.svg" class="mr-2" alt="">지오펜스 생성(정사각형)</a>
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_area_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-center">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area.svg" class="mr-2" alt="">공간 생성</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_edit.svg" class="mr-2" alt="">공간 편집</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_rectangle.svg" class="mr-2" alt="">공간 생성(사각형)</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_square.svg" class="mr-2" alt="">공간 생성(정사각형)</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_sensors_white.svg" alt=""></a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item"><img src="images/edit_tools/tool_geofence_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence.svg" class="mr-2" alt="">지오펜스 생성</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_edit.svg" class="mr-2" alt="">지오펜스 편집</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_rectangle.svg" class="mr-2" alt="">지오펜스 생성(사각형)</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_square.svg" class="mr-2" alt="">지오펜스 생성(정사각형)</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
