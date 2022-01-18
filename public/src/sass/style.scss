@@ -10980,47 +10980,48 @@ xnugget info
 }
 .layout-mini-secondary{
     .sidebar-mini{
-        background-color: #363840;
-        .sidebar-menu{
-            padding: 1rem 0;
-        }
-        .sidebar-menu-item{
-            a.sidebar-menu-button{
-                .sidebar-menu-icon,
-                .sidebar-menu-text{
-                    color: rgba(255,255,255,0.3);
-                }
-            }
-            &:hover{
-                a.sidebar-menu-button{
-                    .sidebar-menu-icon,
-                    .sidebar-menu-text{
-                        color: rgba(255,255,255,0.6);
-                    }
-                }
-            }
-            &.active{
-                a.sidebar-menu-button{
-                    .sidebar-menu-icon,
-                    .sidebar-menu-text{
-                        color: #fff;
-                        text-shadow: 0 0 5px rgba(255,255,255,0.4);
-                    }
-                }
-            }
-        }
+        background-color: #fff;
+        border-right: 1px solid $border-color;
+        // .sidebar-menu{
+        //     padding: 1rem 0;
+        // }
+        // .sidebar-menu-item{
+        //     a.sidebar-menu-button{
+        //         .sidebar-menu-icon,
+        //         .sidebar-menu-text{
+        //             color: rgba(255,255,255,0.3);
+        //         }
+        //     }
+        //     &:hover{
+        //         a.sidebar-menu-button{
+        //             .sidebar-menu-icon,
+        //             .sidebar-menu-text{
+        //                 color: rgba(255,255,255,0.6);
+        //             }
+        //         }
+        //     }
+        //     &.active{
+        //         a.sidebar-menu-button{
+        //             .sidebar-menu-icon,
+        //             .sidebar-menu-text{
+        //                 color: #fff;
+        //                 text-shadow: 0 0 5px rgba(255,255,255,0.4);
+        //             }
+        //         }
+        //     }
+        // }
     }
-    .sidebar-left{
-        >.tab-content{
-            height: 100%;
-            border-right: 1px solid $border-color;
-            >.tab-pane{
-                padding-bottom: 10rem;
-                &.sm-maps{
-                    height: 100%;
-                    padding-bottom: 0;
-                }
-            }
-        }
-    }
+    // .sidebar-left{
+    //     >.tab-content{
+    //         height: 100%;
+    //         border-right: 1px solid $border-color;
+    //         >.tab-pane{
+    //             padding-bottom: 10rem;
+    //             &.sm-maps{
+    //                 height: 100%;
+    //                 padding-bottom: 0;
+    //             }
+    //         }
+    //     }
+    // }
 }
