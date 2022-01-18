@@ -6854,7 +6854,14 @@ map options
                 &.dropdown-toggle{
                     padding-left: .25rem;
                     &:after{
+                        position: relative;
                         color: #fff;
+                        @include transition(all, 0.1s, ease-in-out);
+                    }
+                    &:hover{
+                        &:after{
+                            margin-top: 5px;
+                        }
                     }
                 }
             }
@@ -7034,6 +7041,28 @@ dl.space-id{
     border-radius: .25rem;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+    &.context-dark{
+        background-color: #333333;
+        .context-menu{
+            &.type-row{
+                .nav{
+                    a{
+                        color: #999999;
+                        padding: .25rem;
+                        border: 1px solid transparent;
+                        &.active{
+                            background-color: inherit;
+                        }
+                        &:hover{
+                            background-color: rgba(0,0,0,0.2);
+                            border: 1px solid rgba(0,0,0,0.1);
+                            color: #f9f9f9;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .col-auto:first-of-type{
         background-color: #fbfbfb;
         box-shadow: 1px 0 2px rgba(0,0,0,0.05);
@@ -7158,7 +7187,6 @@ dl.space-id{
                     padding: .5rem;
                     i{
                         font-size: 1rem;
-                        color: #999;
                     }
                     > &:last-child{
                         border-bottom: none;
