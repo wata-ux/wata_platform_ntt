@@ -2654,7 +2654,6 @@ em.none-list{
     }
     .sidebar-depth-wrap{
         position: relative;
-        padding: 3rem;
         padding-bottom: 8rem;
         // @media only screen and (max-width: 768px){
         //     min-width: 960px;
@@ -7048,14 +7047,15 @@ dl.space-id{
                 .nav{
                     a{
                         color: #999999;
-                        padding: .25rem;
+                        padding: .25rem .75rem;
                         border: 1px solid transparent;
                         &.active{
                             background-color: inherit;
                         }
                         &:hover{
-                            background-color: #515962;
+                            background-color: #464B51;
                             color: #fff;
+                            border-radius: 0;
                         }
                     }
                 }
@@ -7182,7 +7182,6 @@ dl.space-id{
             .nav{
                 margin: .5rem 0;
                 a{
-                    margin: 0.125rem .5rem;
                     padding: .5rem;
                     i{
                         font-size: 1rem;
@@ -10847,6 +10846,11 @@ xnugget info
 
 .pl-container{
     height: 100vh;
+    &.chart-section{
+        .pl-cover .pl-col-left{
+            min-width: 64px;
+        }
+    }
     .pl-cover{
         overflow-x: hidden;
         display: flex;
@@ -10982,34 +10986,34 @@ xnugget info
     .sidebar-mini{
         background-color: #fff;
         border-right: 1px solid $border-color;
-        // .sidebar-menu{
-        //     padding: 1rem 0;
-        // }
-        // .sidebar-menu-item{
-        //     a.sidebar-menu-button{
-        //         .sidebar-menu-icon,
-        //         .sidebar-menu-text{
-        //             color: rgba(255,255,255,0.3);
-        //         }
-        //     }
-        //     &:hover{
-        //         a.sidebar-menu-button{
-        //             .sidebar-menu-icon,
-        //             .sidebar-menu-text{
-        //                 color: rgba(255,255,255,0.6);
-        //             }
-        //         }
-        //     }
-        //     &.active{
-        //         a.sidebar-menu-button{
-        //             .sidebar-menu-icon,
-        //             .sidebar-menu-text{
-        //                 color: #fff;
-        //                 text-shadow: 0 0 5px rgba(255,255,255,0.4);
-        //             }
-        //         }
-        //     }
-        // }
+        .sidebar-menu-dark{
+            padding: 1rem 0;
+            .sidebar-menu-item{
+                a.sidebar-menu-button{
+                    .sidebar-menu-icon,
+                    .sidebar-menu-text{
+                        color: rgba(255,255,255,0.3);
+                    }
+                }
+                &:hover{
+                    a.sidebar-menu-button{
+                        .sidebar-menu-icon,
+                        .sidebar-menu-text{
+                            color: rgba(255,255,255,0.6);
+                        }
+                    }
+                }
+                &.active{
+                    a.sidebar-menu-button{
+                        .sidebar-menu-icon,
+                        .sidebar-menu-text{
+                            color: #fff;
+                            text-shadow: 0 0 5px rgba(255,255,255,0.4);
+                        }
+                    }
+                }
+            }
+        }
     }
     .sidebar-left{
         >.tab-content{
