@@ -3,41 +3,47 @@
 
     <div class="pl-container">
         <div class="pl-top">
-            <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+            <div class="navbar" id="default-navbar" data-primary>
                     <!-- Brand -->
                 <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
                     data-title="대시보드로 이동" data-placement="right" data-boundary="window">
-                    <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
                 </a>
-                <div class="top-process">
-                    <div class="process-bar ps-2"></div>
-                    <div class="process-txt">
-                        <em>2/7</em>
-                    </div>
-                </div>
-        
-                <div class="d-flex flex justify-content-end align-items-center pr-4">
-                    <div class="form-group m-0 ml-4 form-lang">
-                        <select id="custom-select" class="custom-line">
-                            <option selected="">KOR</option>
-                            <option value="1">JPN</option>
-                            <option value="2">ENG</option>
-                        </select>
-                    </div>
-                    <div class="nav-item dropdown ml-4">
-                        <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-                            <span class="avatar avatar-sm">
-                                <span class="avatar-title rounded-circle">SH</span>
-                            </span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <div class="dropdown-header"><strong>Account</strong></div>
-                            <a class="dropdown-item" href="#n">정보수정</a>
-                            <a class="dropdown-item" href="#n">멤버십</a>
-                            <a class="dropdown-item" href="#n">Logout</a>
+                <h5 class="project-title">프로젝트명을 입력해 주세요</h5>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="custom-select" class="custom-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="#n">정보수정</a>
+                                <a class="dropdown-item" href="#n">멤버십</a>
+                                <a class="dropdown-item" href="#n">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="pl-cover">
@@ -55,159 +61,65 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                    <div class="sidebar sidebar-left flex sidebar-secondary">
                         <div class="tab-content">
-                            <div class="tab-pane active" id="sm-projects">
-                                <div class="container-fluid d-flex align-items-center py-4">
-                                    <div class="flex d-flex">
-                                        <div class="mr-24pt">
-                                            <h3 class="mb-0">공간 연결</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="container-fluid">
-                                    <!-- 연결된 데이터 없을때 -->
-                                    <em class="none-list mb-4">공간을 연결해 주세요.</em>
-                                    <!-- 연결된 데이터 있을때 -->
-                                    <div class="accordion js-accordion accordion--boxed mb-4 d-none" id="parent">
-                                        <div class="accordion__item">
-                                            <a href="#" class="accordion__toggle" data-toggle="collapse"
-                                                data-target="#course-toc-1" data-parent="#parent">
-                                                <span class="flex">스타트업캠퍼스 1동 <small class="text-danger">(5)</small></span>
-                                                <span
-                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                                            </a>
-                                            <div class="dropdown acc-del">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-100"><i
-                                                        class="material-icons">more_vert</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#n" class="dropdown-item text-primary">건물연결 해제</a>
-                                                </div>
-                                            </div>
-                                            <div class="accordion__menu collapse" id="course-toc-1">
-                                                <div class="accordion__menu-link">
-                                                    <span
-                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                        <i class="far fa-map"></i>
-                                                    </span>
-                                                    <p class="flex m-0">스타트업캠퍼스 1동 1층</p>
-                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                                </div>
-                                                <div class="accordion__menu-link">
-                                                    <span
-                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                        <i class="far fa-map"></i>
-                                                    </span>
-                                                    <p class="flex m-0">스타트업캠퍼스 1동 2층</p>
-                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                                </div>
-                                                <div class="accordion__menu-link">
-                                                    <span
-                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                        <i class="far fa-map"></i>
-                                                    </span>
-                                                    <p class="flex m-0">스타트업캠퍼스 1동 3층</p>
-                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                                </div>
-                                                <div class="accordion__menu-link">
-                                                    <span
-                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                        <i class="far fa-map"></i>
-                                                    </span>
-                                                    <p class="flex m-0">스타트업캠퍼스 1동 4층</p>
-                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                                </div>
-                                                <div class="accordion__menu-link">
-                                                    <span
-                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                        <i class="far fa-map"></i>
-                                                    </span>
-                                                    <p class="flex m-0">스타트업캠퍼스 1동 5층</p>
-                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion__item">
-                                            <a href="#" class="accordion__toggle" data-toggle="collapse"
-                                                data-target="#course-toc-2" data-parent="#parent">
-                                                <span class="flex">스타트업캠퍼스 2동 <small class="text-danger">(3)</small></span>
-                                                <span
-                                                    class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                                            </a>
-                                            <div class="dropdown acc-del">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-100"><i
-                                                        class="material-icons">more_vert</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="#n" class="dropdown-item text-primary">건물연결 해제</a>
-                                                </div>
-                                            </div>
-                                            <div class="accordion__menu collapse" id="course-toc-2">
-                                                <div class="accordion__menu-link">
-                                                    <span
-                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                        <i class="far fa-map"></i>
-                                                    </span>
-                                                    <p class="flex m-0">스타트업캠퍼스 2동 1층</p>
-                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                                </div>
-                                                <div class="accordion__menu-link">
-                                                    <span
-                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                        <i class="far fa-map"></i>
-                                                    </span>
-                                                    <p class="flex m-0">스타트업캠퍼스 2동 2층</p>
-                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                                </div>
-                                                <div class="accordion__menu-link">
-                                                    <span
-                                                        class="icon-holder icon-holder--small icon-holder--accent rounded-circle d-inline-flex icon--left">
-                                                        <i class="far fa-map"></i>
-                                                    </span>
-                                                    <p class="flex m-0">스타트업캠퍼스 2동 3층</p>
-                                                    <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <a href="buildings_write.html" class="btn-row-add" data-toggle="tooltip"
-                                            data-title="등록한 공간이 없을경우 새로운 건물을 등록해 보세요." data-placement="top"
-                                            data-boundary="window"><i class="material-icons">add</i> 새로운 공간 등록</a>
-                                        <a href="space_connection.html" class="btn-row-add ml-2" data-toggle="tooltip"
-                                            data-title="기존에 등록한 공간을 연결해 보세요." data-placement="top" data-boundary="window"><i
-                                                class="material-icons">insert_link</i> 공간 연결</a>
-                                        <!-- <a href="maps_write2.html" class="btn-add" data-toggle="tooltip" data-title="지도 등록" data-placement="left" data-boundary="window"><i class="material-icons">add</i></a> -->
-                                    </div>
-                                    <!-- <div class="form-group mb-32pt">
-                                        <ul class="list-wrap">
-                                            <li class="list-group-item d-flex align-items-center on">
-                                                <span class="icon-holder">
-                                                    <i class="material-icons icon-16pt">done</i>
-                                                </span>
-                                                <p class="m-0">스마트공장A동.map</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </li>
-                                            <li class="list-group-item d-flex align-items-center on">
-                                                <span class="icon-holder">
-                                                    <i class="material-icons icon-16pt">done</i>
-                                                </span>
-                                                <p class="m-0">스마트공장B동.map</p>
-                                                <a href="#n" class="close"><i class="material-icons">close</i></a>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <a href="project_write_depth.html" class="d-flex align-items-center">
-                                                    <span class="icon-holder">
-                                                        <i class="material-icons icon-16pt">file_upload</i>
-                                                    </span>
-                                                    <p class="m-0">지도 등록</p>
-                                                </a>
-                                            </li>
+                            <div class="tab-pane sm-maps active" id="sm-projects">
+                                <div class="d-flex flex-column h-100 bg-light">
+                                    <div class="row-tab">
+                                        <ul class="list-unstyled">
+                                            <li><a href="project_write.html">프로젝트 정보</a></li>
+                                            <li class="active"><a href="project_write2.html">건물 등록</a></li>
+                                            <li><a href="project_write3.html">평면도 등록</a></li>
+                                            <li><a href="project_write4.html">자산 등록</a></li>
                                         </ul>
-                                    </div> -->
-                                    <div class="my-32pt">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <a href="project_write.html" class="btn btn-outline-secondary mr-8pt">이전 단계</a>
-                                            <a href="project_write3.html" class="btn btn-outline-accent ml-0">저장 후 다음으로</a>
+                                    </div>
+                                    <div class="plf-floor-add">
+                                        <div class="btn-cell">
+                                            <a href="project_write2_add.html" class="add-item">
+                                                <span class="material-icons">import_export</span>
+                                                건물 가져오기
+                                            </a>
+                                            <a href="project_write2_new.html" class="add-item text-identity">
+                                                <span class="material-icons">add</span>
+                                                새 건물 등록
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="plf-floor-card p-4 position-relative" data-perfect-scrollbar>
+                                        <a href="project_write2_new.html" class="plf-area-card add-item">
+                                            <span class="material-icons">add</span>
+                                            <h5>건물 등록</h5>
+                                            <p>건물을 등록해 주세요</p>
+                                        </a>
+                                        <div class="plf-area-card active">
+                                            <div class="plf-area-top">
+                                                <h4>건물</h4>
+                                                <div class="left-cell">
+                                                    <div class="dropdown">
+                                                        <a href="#" data-toggle="dropdown" data-caret="false"
+                                                            class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                            <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="plf-area-content">
+                                                <p class="desc">대한민국, 경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pub-con">
+                                        <div class="pub-inner">
+                                            <div class="btn-wrap">
+                                                <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                                <a href="project_write3.html" class="btn btn-accent ml-0">저장</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -218,6 +130,63 @@
             </div>
             <div class="pl-col-group">
                 <div class="pl-col-mid" id="main-contents">
+                    <div class="alert-set-guide" style="max-width: 100%">
+                        <div class="alert fade show" role="alert">
+                            <div class="alert-header">
+                                <h4>프로젝트 설정 가이드</h4>
+                                <button type="button" class="alert-close" data-dismiss="alert" aria-label="Close">
+                                    <span class="material-icons" aria-hidden="true">close</span>
+                                </button>
+                            </div>
+                            <div class="alert-contents">
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex cmp-guide">
+                                        <input id="customCheck01" type="checkbox" class="custom-control-input" checked disabled>
+                                        <label for="customCheck01" class="custom-control-label">프로젝트 정보를 입력해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex cmp-guide">
+                                        <input id="customCheck02" type="checkbox" class="custom-control-input" checked disabled>
+                                        <label for="customCheck02" class="custom-control-label">위치를 수집할 대상 주소를 입력해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck03" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck03" class="custom-control-label">공간 정보를 입력해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck04" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck04" class="custom-control-label">평면도 이미지를 업로드해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck05" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck05" class="custom-control-label">지오펜스를 설정해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck06" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck06" class="custom-control-label">위치 정보 수집 경로를 등록해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck07" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck07" class="custom-control-label">사용자를 배정하세요</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="alert-footer">
+                                
+                            </div>
+                        </div>
+                    </div>
                     @@include('./include/platform-tools-map.html')
                 </div>
             </div>

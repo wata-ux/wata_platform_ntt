@@ -1,0 +1,478 @@
+@@include('./include/platform-header.html')
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                    <!-- Brand -->
+                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <h4 class="project-title text-impact">Editor</h4>
+                <ul class="location-list">
+                    <li>프로젝트</li>
+                    <li>건물</li>
+                    <li>평면도 1층</li>
+                    <li>1F</li>
+                </ul>
+                <a href="#n" class="btn-guide"><span class="material-icons">info</span> 가이드 보기</a>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left col-expand" id="sidebar-left">
+                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
+                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
+                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                                <li class="sidebar-menu-item active" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">topic</i>
+                                        <span class="sidebar-menu-text">프로젝트</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar sidebar-left flex sidebar-secondary" >
+                        <div class="tab-content">
+                            <div class="tab-pane sm-maps active" id="sm-projects">
+                                <div class="d-flex flex-column h-100">
+                                    <div class="plf-floor-add border-bottom-0">
+                                        <div class="d-flex align-items-sm-center py-3">
+                                            <div class="item-sort py-0">
+                                                <a href="#n" class="items active">전체</a>
+                                                <a href="#n" class="items">지오펜스</a>
+                                                <a href="#n" class="items">구역</a>
+                                                <a href="#n" class="items">수집선</a>
+                                                <a href="#n" class="items">측위장비</a>
+                                                <a href="#n" class="items">POI</a>
+                                            </div>
+                                        </div>
+                                        <div class="form-cell">
+                                            <input type="text" class="form-line">
+                                            <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
+                                        </div>
+                                        <div class="btn-cell d-none">
+                                            <a href="#n" class="add-item">
+                                                <span class="material-icons">location_on</span>
+                                                POI 가져오기
+                                            </a>
+                                            <a href="#n" class="add-item text-green">
+                                                <span class="material-icons">note_add</span>
+                                                자산 엑셀 업로드
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <table class="table table-nowrap mb-0 table-high">
+                                        <colgroup>
+                                            <col width="15%">
+                                            <col width="*">
+                                            <col width="15%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">
+                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">분류</a>
+                                                </th>
+                                                <th class="text-center">
+                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">오브젝트명</a>
+                                                </th>
+                                                <th class="text-center">옵션</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                    <div class="position-relative px-3" data-perfect-scrollbar>
+
+                                        <table class="table table-nowrap table-high">
+                                            <colgroup>
+                                                <col width="15%">
+                                                <col width="*">
+                                                <col width="15%">
+                                            </colgroup>
+                                            <tbody class="list" id="projects">
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex justify-content-center">
+                                                            <span class="material-icons-outlined">square</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>라이언사무실</td>
+                                                    <td>
+                                                        <div class="option-bundle">
+                                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="selected">
+                                                    <td>
+                                                        <div class="d-flex justify-content-center">
+                                                            <span class="material-icons-outlined">square</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>GF1FNZ1</td>
+                                                    <td>
+                                                        <div class="option-bundle">
+                                                            <a href="#n" class="text-20"><span class="material-icons-outlined">visibility_off</span></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex justify-content-center">
+                                                            <span class="material-icons-outlined">timeline</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>Line1</td>
+                                                    <td>
+                                                        <div class="option-bundle">
+                                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex justify-content-center">
+                                                            <span class="material-icons-outlined">local_cafe</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>Line1</td>
+                                                    <td>
+                                                        <div class="option-bundle">
+                                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex justify-content-center">
+                                                            <span class="material-icons-outlined">square</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>라이언사무실</td>
+                                                    <td>
+                                                        <div class="option-bundle">
+                                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex justify-content-center">
+                                                            <span class="material-icons-outlined">square</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>GF1FNZ1</td>
+                                                    <td>
+                                                        <div class="option-bundle">
+                                                            <a href="#n" class="text-20"><span class="material-icons-outlined">visibility_off</span></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex justify-content-center">
+                                                            <span class="material-icons-outlined">timeline</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>Line1</td>
+                                                    <td>
+                                                        <div class="option-bundle">
+                                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex justify-content-center">
+                                                            <span class="material-icons-outlined">local_cafe</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>Line1</td>
+                                                    <td>
+                                                        <div class="option-bundle">
+                                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex justify-content-center">
+                                                            <span class="material-icons-outlined">square</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>라이언사무실</td>
+                                                    <td>
+                                                        <div class="option-bundle">
+                                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex justify-content-center">
+                                                            <span class="material-icons-outlined">square</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>GF1FNZ1</td>
+                                                    <td>
+                                                        <div class="option-bundle">
+                                                            <a href="#n" class="text-20"><span class="material-icons-outlined">visibility_off</span></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex justify-content-center">
+                                                            <span class="material-icons-outlined">timeline</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>Line1</td>
+                                                    <td>
+                                                        <div class="option-bundle">
+                                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex justify-content-center">
+                                                            <span class="material-icons-outlined">local_cafe</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>Line1</td>
+                                                    <td>
+                                                        <div class="option-bundle">
+                                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar sidebar-left-sub" data-perfect-scrollbar>
+                        <div class="d-flex flex-column h-100">
+                            <div class="container-fluid border-bottom-1 mb-4 py-4">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="mb-0">측위장비 상세</h3>
+                                    <a href="#n" class="ml-auto"><span class="material-icons">close</span></a>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label essential" for="">오브젝트</label>
+                                    <input type="text" class="form-line" id="" value="UWB" disabled>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label essential" for="">타입</label>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" class="form-line" id="" value="Anchor" disabled>
+                                        <a href="#n" class="p-3"><span class="material-icons">wifi_tethering</span></a>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label essential" for="">장비명</label>
+                                    <input type="text" class="form-line" id="" value="UWB3" disabled>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label essential" for="">식별값(UUID / Serial No. / Mac Addr)</label>
+                                    <input type="text" class="form-line" id="" value="Csacqwc2d2asds d2d2" disabled>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label essential" for="">위치</label>
+                                    <input type="text" class="form-line" id="" value="14672854.412916198 / 14672854.412916198" disabled>
+                                </div>
+                                <div class="form-group mb-32pt">
+                                    <label class="form-label essential" for="">설명</label>
+                                    <div class="form-textarea">
+                                        Individuals and firms expend effort to find ways around specific commands of the law. Cambridge English Corpus 출처. Significant effort has been expended to
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pub-con">
+                                <div class="pub-inner">
+                                    <div class="btn-wrap">
+                                        <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                        <a href="project_write3.html" class="btn btn-accent ml-0">수정</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    <div class="btn-mid-holder-floor">
+                        <div class="floor-inner">
+                            <div class="swiper-container floor-item">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">B1</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor active">1F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">2F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">3F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">4F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">5F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">6F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">7F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">8F</a></div>
+
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">9F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">10F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">11F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">12F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">13F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">14F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">15F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">16F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">17F</a></div>
+
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">18F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">19F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">20F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">21F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">22F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">23F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">24F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">25F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">26F</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floor-button floor-button-next"><span class="material-icons">expand_more</span></div>
+                        <div class="floor-button floor-button-prev"><span class="material-icons">expand_less</span></div>
+                    </div>
+                    <!-- edit tool -->
+                    <div class="btn-top-holder map-edit-tools">
+                        <div class="bundle">
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_select_point_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-center">
+                                        <a href="#n" class="dropdown-item active"><img src="images/edit_tools/tool_select_point_selected.svg" class="mr-2" alt="">포인트 선택</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_select_object.svg" class="mr-2" alt="">선택</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_select_group.svg" class="mr-2" alt="">그룹 선택</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_transform_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-center">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_transform.svg" class="mr-2" alt="">변형</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_transform_group.svg" class="mr-2" alt="">그룹 변형</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_poi_white.svg" alt=""></a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_line_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-center">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_line.svg" class="mr-2" alt="">수집선 생성</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_line_cut.svg" class="mr-2" alt="">수집선 자르기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_area_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-center">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area.svg" class="mr-2" alt="">공간 생성</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_edit.svg" class="mr-2" alt="">공간 편집</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_rectangle.svg" class="mr-2" alt="">공간 생성(사각형)</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_square.svg" class="mr-2" alt="">공간 생성(정사각형)</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_sensors_white.svg" alt=""></a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item"><img src="images/edit_tools/tool_geofence_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence.svg" class="mr-2" alt="">지오펜스 생성</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_edit.svg" class="mr-2" alt="">지오펜스 편집</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_rectangle.svg" class="mr-2" alt="">지오펜스 생성(사각형)</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_square.svg" class="mr-2" alt="">지오펜스 생성(정사각형)</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_circle.svg" class="mr-2" alt="">지오펜스 생성(원형)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bundle">
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_undo_off.svg" alt=""></a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_redo_off.svg" alt=""></a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_save_off.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="context-wrap context-dark row" style="top: 30%; left: 42%;">
+                        <div class="context-menu type-row">
+                            <!-- 지도 클릭시 -->
+                            <div class="nav">
+                                <div class="btn-group dropend">
+                                    <a href="#n" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons icon--left" style="transform: scaleX(-1);">near_me</i> 선택</a>
+                                    <div class="dropdown-menu">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area.svg" class="mr-2" alt="">공간 생성</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_edit.svg" class="mr-2" alt="">공간 편집</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_rectangle.svg" class="mr-2" alt="">공간 생성(사각형)</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_square.svg" class="mr-2" alt="">공간 생성(정사각형)</a>
+                                    </div>
+                                </div>
+                                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">save</i> 저장</a>
+                                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">delete</i> 삭제</a>
+                            </div>
+                        </div>
+                    </div>
+                    @@include('./include/platform-tools-map.html')
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".floor-item", {
+            // allowTouchMove: false,
+            direction: "vertical",
+            // mousewheel: true,
+            slidesPerView: 10,
+            slidesPerGroup: 10,
+            spaceBetween: 0,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".floor-button-next",
+                prevEl: ".floor-button-prev",
+            },
+        });
+    </script>
+
+@@include('./include/platform-footer.html')
+

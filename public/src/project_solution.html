@@ -1,0 +1,185 @@
+@@include('./include/platform-header.html')
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+                    <!-- Brand -->
+                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
+                </a>
+                <div class="top-process">
+                    <div class="process-bar ps-6"></div>
+                    <div class="process-txt">
+                        <em>6/7</em>
+                    </div>
+                </div>
+        
+                <div class="d-flex flex justify-content-end align-items-center pr-4">
+                    <div class="form-group m-0 ml-4 form-lang">
+                        <select id="custom-select" class="custom-line">
+                            <option selected="">KOR</option>
+                            <option value="1">JPN</option>
+                            <option value="2">ENG</option>
+                        </select>
+                    </div>
+                    <div class="nav-item dropdown ml-4">
+                        <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                            <span class="avatar avatar-sm">
+                                <span class="avatar-title rounded-circle">SH</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item" href="#n">정보수정</a>
+                            <a class="dropdown-item" href="#n">멤버십</a>
+                            <a class="dropdown-item" href="#n">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
+                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
+                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                                <li class="sidebar-menu-item active" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
+                                    <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">topic</i>
+                                        <span class="sidebar-menu-text">프로젝트</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="sm-projects">
+                                <div class="container-fluid d-flex align-items-center py-4">
+                                    <div class="flex d-flex">
+                                        <div class="mr-24pt">
+                                            <h3 class="mb-0">솔루션 선택</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <div class="solution-list">
+                                        <div class="solution-card method">
+                                            <label for="sm-office" class="card-body d-flex flex-column m-0">
+                                                <!-- <div class="d-flex border-bottom mb-16pt pb-16pt"></div> -->
+                                                <div class="d-flex">
+                                                    <div
+                                                        class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                        <i class="fas fa-building"></i>
+                                                    </div>
+                                                    <div class="flex">
+                                                        <div class="card-title mb-8pt">스마트 오피스</div>
+                                                        <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
+                                                    </div>
+                                                </div>
+                                                <input id="sm-office" name="radio-stacked" type="radio"
+                                                    class="custom-control-input">
+                                                <div class="custom-control custom-radio d-none">
+                                                    <label for="sm-office" class="custom-control-label">Smart Office</label>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="solution-card method">
+                                            <label for="sm-store" class="card-body d-flex flex-column m-0">
+                                                <div class="d-flex">
+                                                    <div
+                                                        class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                        <i class="fas fa-store"></i>
+                                                    </div>
+                                                    <div class="flex">
+                                                        <div class="card-title mb-8pt">스마트 리테일</div>
+                                                        <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
+                                                    </div>
+                                                </div>
+                                                <input id="sm-store" name="radio-stacked" type="radio"
+                                                    class="custom-control-input">
+                                            </label>
+                                        </div>
+                                        <div class="solution-card method active">
+                                            <label for="sm-factory" class="card-body d-flex flex-column m-0">
+                                                <div class="d-flex">
+                                                    <div
+                                                        class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                        <i class="fas fa-city"></i>
+                                                    </div>
+                                                    <div class="flex">
+                                                        <div class="card-title mb-8pt">스마트 팩토리</div>
+                                                        <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
+                                                    </div>
+                                                </div>
+                                                <input id="sm-factory" name="radio-stacked" type="radio"
+                                                    class="custom-control-input">
+                                            </label>
+                                        </div>
+                                        <div class="solution-card method">
+                                            <label for="sm-hospoital" class="card-body d-flex flex-column m-0">
+                                                <div class="d-flex">
+                                                    <div
+                                                        class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                        <i class="fas fa-hospital-alt"></i>
+                                                    </div>
+                                                    <div class="flex">
+                                                        <div class="card-title mb-8pt">스마트 병원</div>
+                                                        <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
+                                                    </div>
+                                                </div>
+                                                <input id="sm-hospoital" name="radio-stacked" type="radio"
+                                                    class="custom-control-input">
+                                            </label>
+                                        </div>
+    
+                                        
+                                        <div class="solution-card method">
+                                            <label for="sm-control" class="card-body d-flex flex-column m-0">
+                                                <!-- <div class="d-flex border-bottom mb-16pt pb-16pt"></div> -->
+                                                <div class="d-flex">
+                                                    <div
+                                                        class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+                                                        <i class="fas fa-hard-hat"></i>
+                                                    </div>
+                                                    <div class="flex">
+                                                        <div class="card-title mb-8pt">스마트 건설</div>
+                                                        <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
+                                                    </div>
+                                                </div>
+                                                <input id="sm-control" name="radio-stacked" type="radio"
+                                                    class="custom-control-input">
+                                                <div class="custom-control custom-radio d-none">
+                                                    <label for="sm-office" class="custom-control-label">Smart
+                                                        Control</label>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="my-32pt">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <a href="project_write2.html" class="btn btn-outline-secondary mr-8pt">이전 단계</a>
+                                            <a href="project_done.html" class="btn btn-outline-accent ml-0">저장 후 등록</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    @@include('./include/platform-tools-map.html')
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@@include('./include/platform-footer.html')
+
+

@@ -3,41 +3,47 @@
 
     <div class="pl-container">
         <div class="pl-top">
-            <div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
+            <div class="navbar" id="default-navbar" data-primary>
                     <!-- Brand -->
                 <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
                     data-title="대시보드로 이동" data-placement="right" data-boundary="window">
-                    <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
                 </a>
-                <div class="top-process">
-                    <div class="process-bar ps-6"></div>
-                    <div class="process-txt">
-                        <em>6/7</em>
-                    </div>
-                </div>
-        
-                <div class="d-flex flex justify-content-end align-items-center pr-4">
-                    <div class="form-group m-0 ml-4 form-lang">
-                        <select id="custom-select" class="custom-line">
-                            <option selected="">KOR</option>
-                            <option value="1">JPN</option>
-                            <option value="2">ENG</option>
-                        </select>
-                    </div>
-                    <div class="nav-item dropdown ml-4">
-                        <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-                            <span class="avatar avatar-sm">
-                                <span class="avatar-title rounded-circle">SH</span>
-                            </span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <div class="dropdown-header"><strong>Account</strong></div>
-                            <a class="dropdown-item" href="#n">정보수정</a>
-                            <a class="dropdown-item" href="#n">멤버십</a>
-                            <a class="dropdown-item" href="#n">Logout</a>
+                <h5 class="project-title">프로젝트명을 입력해 주세요</h5>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="custom-select" class="custom-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="#n">정보수정</a>
+                                <a class="dropdown-item" href="#n">멤버십</a>
+                                <a class="dropdown-item" href="#n">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="pl-cover">
@@ -55,114 +61,212 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
+                    <div class="sidebar sidebar-left flex sidebar-secondary">
                         <div class="tab-content">
-                            <div class="tab-pane active" id="sm-projects">
-                                <div class="container-fluid d-flex align-items-center py-4">
-                                    <div class="flex d-flex">
-                                        <div class="mr-24pt">
-                                            <h3 class="mb-0">솔루션 선택</h3>
+                            <div class="tab-pane sm-maps active" id="sm-projects">
+                                <div class="d-flex flex-column h-100 bg-light">
+                                    <div class="row-tab">
+                                        <ul class="list-unstyled">
+                                            <li><a href="project_write.html">프로젝트 정보</a></li>
+                                            <li><a href="project_write2.html">건물 등록</a></li>
+                                            <li class="active"><a href="project_write3.html">평면도 등록</a></li>
+                                            <li><a href="project_write4.html">자산 등록</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="plf-floor-add">
+                                        <div class="form-cell">
+                                            <select name="category" class="form-line">
+                                                <option value="">평면도 등록 공간</option>
+                                                <option value="">option1</option>
+                                                <option value="">option2</option>
+                                            </select>
+                                        </div>
+                                        <div class="btn-cell">
+                                            <a href="project_write3_new.html" class="add-item text-identity">
+                                                <span class="material-icons">add</span>
+                                                평면도 등록
+                                            </a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="container-fluid">
-                                    <div class="solution-list">
-                                        <div class="solution-card method">
-                                            <label for="sm-office" class="card-body d-flex flex-column m-0">
-                                                <!-- <div class="d-flex border-bottom mb-16pt pb-16pt"></div> -->
-                                                <div class="d-flex">
-                                                    <div
-                                                        class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                        <i class="fas fa-building"></i>
-                                                    </div>
-                                                    <div class="flex">
-                                                        <div class="card-title mb-8pt">스마트 오피스</div>
-                                                        <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
-                                                    </div>
-                                                </div>
-                                                <input id="sm-office" name="radio-stacked" type="radio"
-                                                    class="custom-control-input">
-                                                <div class="custom-control custom-radio d-none">
-                                                    <label for="sm-office" class="custom-control-label">Smart Office</label>
-                                                </div>
-                                            </label>
-                                        </div>
-                                        <div class="solution-card method">
-                                            <label for="sm-store" class="card-body d-flex flex-column m-0">
-                                                <div class="d-flex">
-                                                    <div
-                                                        class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                        <i class="fas fa-store"></i>
-                                                    </div>
-                                                    <div class="flex">
-                                                        <div class="card-title mb-8pt">스마트 리테일</div>
-                                                        <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
-                                                    </div>
-                                                </div>
-                                                <input id="sm-store" name="radio-stacked" type="radio"
-                                                    class="custom-control-input">
-                                            </label>
-                                        </div>
-                                        <div class="solution-card method active">
-                                            <label for="sm-factory" class="card-body d-flex flex-column m-0">
-                                                <div class="d-flex">
-                                                    <div
-                                                        class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                        <i class="fas fa-city"></i>
-                                                    </div>
-                                                    <div class="flex">
-                                                        <div class="card-title mb-8pt">스마트 팩토리</div>
-                                                        <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
-                                                    </div>
-                                                </div>
-                                                <input id="sm-factory" name="radio-stacked" type="radio"
-                                                    class="custom-control-input">
-                                            </label>
-                                        </div>
-                                        <div class="solution-card method">
-                                            <label for="sm-hospoital" class="card-body d-flex flex-column m-0">
-                                                <div class="d-flex">
-                                                    <div
-                                                        class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                        <i class="fas fa-hospital-alt"></i>
-                                                    </div>
-                                                    <div class="flex">
-                                                        <div class="card-title mb-8pt">스마트 병원</div>
-                                                        <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
-                                                    </div>
-                                                </div>
-                                                <input id="sm-hospoital" name="radio-stacked" type="radio"
-                                                    class="custom-control-input">
-                                            </label>
-                                        </div>
-    
+
+                                    <div class="plf-floor-card p-4 position-relative" data-perfect-scrollbar>
                                         
-                                        <div class="solution-card method">
-                                            <label for="sm-control" class="card-body d-flex flex-column m-0">
-                                                <!-- <div class="d-flex border-bottom mb-16pt pb-16pt"></div> -->
-                                                <div class="d-flex">
-                                                    <div
-                                                        class="rounded-circle w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                                        <i class="fas fa-hard-hat"></i>
-                                                    </div>
-                                                    <div class="flex">
-                                                        <div class="card-title mb-8pt">스마트 건설</div>
-                                                        <p class="m-0 text-70">업무 효율성을 높이고 업무 공간을 관리하는 솔루션</p>
+                                        <a href="project_write3_new.html" class="plf-area-card add-item">
+                                            <span class="material-icons">add</span>
+                                            <h5>평면도 등록</h5>
+                                            <p>평면도를 등록해 주세요</p>
+                                        </a>
+
+                                        <div class="plf-area-card active">
+                                            <div class="plf-area-top">
+                                                <span class="material-icons-outlined mr-1">upload_file</span>
+                                                <h4>공간명</h4>
+                                                <div class="left-cell">
+                                                    <span class="floor-num">1F</span>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-toggle="dropdown" data-caret="false"
+                                                            class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                            <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <input id="sm-control" name="radio-stacked" type="radio"
-                                                    class="custom-control-input">
-                                                <div class="custom-control custom-radio d-none">
-                                                    <label for="sm-office" class="custom-control-label">Smart
-                                                        Control</label>
+                                            </div>
+                                            <div class="plf-area-content">
+                                                <ul class="plf-floor-card-info">
+                                                    <li>
+                                                        <span>POI</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                    <li>
+                                                        <span>지오펜스</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                    <li>
+                                                        <span>측위장비</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                    <li>
+                                                        <span>자원</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                </ul>
+                                                <div class="d-flex justify-content-end">
+                                                    <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm" title="새창열림"><span class="material-icons-outlined">open_in_browser</span> 지도 편집</a>
                                                 </div>
-                                            </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="plf-area-card">
+                                            <div class="plf-area-top">
+                                                <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
+                                                <h4>공간명</h4>
+                                                <div class="left-cell">
+                                                    <span class="floor-num">B1F</span>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-toggle="dropdown" data-caret="false"
+                                                            class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                            <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="plf-area-content">
+                                                <ul class="plf-floor-card-info">
+                                                    <li>
+                                                        <span>POI</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                    <li>
+                                                        <span>지오펜스</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                    <li>
+                                                        <span>측위장비</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                    <li>
+                                                        <span>자원</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                </ul>
+                                                <div class="d-flex justify-content-end">
+                                                    <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm" title="새창열림"><span class="material-icons-outlined">open_in_browser</span> 지도 편집</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="plf-area-card">
+                                            <div class="plf-area-top">
+                                                <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
+                                                <h4>공간명</h4>
+                                                <div class="left-cell">
+                                                    <span class="floor-num">B1F</span>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-toggle="dropdown" data-caret="false"
+                                                            class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                            <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="plf-area-content">
+                                                <ul class="plf-floor-card-info">
+                                                    <li>
+                                                        <span>POI</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                    <li>
+                                                        <span>지오펜스</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                    <li>
+                                                        <span>측위장비</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                    <li>
+                                                        <span>자원</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                </ul>
+                                                <div class="d-flex justify-content-end">
+                                                    <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm" title="새창열림"><span class="material-icons-outlined">open_in_browser</span> 지도 편집</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="plf-area-card">
+                                            <div class="plf-area-top">
+                                                <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
+                                                <h4>공간명</h4>
+                                                <div class="left-cell">
+                                                    <span class="floor-num">B1F</span>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-toggle="dropdown" data-caret="false"
+                                                            class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                            <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="plf-area-content">
+                                                <ul class="plf-floor-card-info">
+                                                    <li>
+                                                        <span>POI</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                    <li>
+                                                        <span>지오펜스</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                    <li>
+                                                        <span>측위장비</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                    <li>
+                                                        <span>자원</span>
+                                                        <em>20</em>
+                                                    </li>
+                                                </ul>
+                                                <div class="d-flex justify-content-end">
+                                                    <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm" title="새창열림"><span class="material-icons-outlined">open_in_browser</span> 지도 편집</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="my-32pt">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <a href="project_write2.html" class="btn btn-outline-secondary mr-8pt">이전 단계</a>
-                                            <a href="project_done.html" class="btn btn-outline-accent ml-0">저장 후 등록</a>
+                                    <div class="pub-con">
+                                        <div class="pub-inner">
+                                            <div class="btn-wrap">
+                                                <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                                <a href="project_write3.html" class="btn btn-accent ml-0">저장</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -181,5 +285,4 @@
 
 
 @@include('./include/platform-footer.html')
-
 
