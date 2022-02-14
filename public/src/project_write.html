@@ -137,7 +137,7 @@
                                     <div class="pub-con">
                                         <div class="pub-inner">
                                             <div class="btn-wrap">
-                                                <a href="home.html" class="btn btn-light mr-4">취소</a>
+                                                <a href="#n" class="btn btn-light mr-4" data-toggle="modal" data-target="#suspendAccess">취소</a>
                                                 <a href="project_write2.html" class="btn btn-accent ml-0">저장</a>
                                             </div>
                                         </div>
@@ -193,5 +193,28 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="suspendAccess" tabindex="-1" aria-labelledby="suspendAccessLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="suspendAccessLabel">등록 취소</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                        <p class="m-0">화면 이동시 작성중인 정보는 저장되지 않습니다.<br>
+                            진행중인 내용을 취소하고 화면을 이동하시겠습니까?</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">취소</button>
+                <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button>
+            </div>
+            </div>
+        </div>
+    </div>
 
 @@include('./include/platform-footer.html')

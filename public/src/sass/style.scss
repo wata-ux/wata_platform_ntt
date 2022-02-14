@@ -756,6 +756,10 @@ ul.signin-help {
                 word-break: normal;
             }
         }
+        p{
+            font-size: 1rem;
+            color: #333;
+        }
     }
     .search-form{
         border: 1px solid $border-color;
@@ -7072,7 +7076,6 @@ dl.space-id{
     z-index: 3;
     background-color: #fff;
     border-radius: .25rem;
-    overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
     &.context-dark{
         background-color: #333333;
@@ -11435,7 +11438,7 @@ a.btn-ico-sm{
         display: flex;
         align-items: center;
         border-bottom: 1px solid $border-color;
-        padding: 1.5rem;
+        padding: 1.25rem;
         h4{
             margin: 0;
         }
