@@ -204,10 +204,6 @@ a {
     text-decoration: none
 }
 
-[dir] a {
-    background-color: transparent
-}
-
 a:hover {
     color: rgba(6, 7, 8, .7);
     text-decoration: underline
@@ -2589,7 +2585,6 @@ pre code {
 
 .table {
     width: 100%;
-    color: #272c33
 }
 
 [dir] .table {
@@ -2603,7 +2598,6 @@ pre code {
 
 [dir] .table td,
 [dir] .table th {
-    padding: .75rem 1rem;
     border-top: 1px solid #e9edf2
 }
 
@@ -32319,8 +32313,6 @@ body {
 .card-title {
     font-size: 1rem;
     font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', Exo\ 2, Helvetica Neue, Arial, sans-serif;
-    font-weight: 600;
-    color: #303956;
     line-height: 1.25
 }
 
@@ -32831,9 +32823,6 @@ body {
     font-size: .8125rem
 }
 
-[dir] .table thead th {
-    padding: .5rem .75rem
-}
 
 .table tbody td {
     line-height: 1.5

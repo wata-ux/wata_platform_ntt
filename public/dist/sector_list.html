@@ -80,6 +80,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
     rel="stylesheet">
 
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 </head>
 
 <body class="layout-mini-secondary layout-mini-secondary">
@@ -582,68 +583,79 @@
         <div class="pl-cover">
             <div class="pl-col-left" id="sidebar-left">
                 <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
-                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
-    <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
-
-        <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-            <li class="sidebar-menu-item  " data-title="PC Monitoring" data-placement="right" data-container="body" data-boundary="window">
-                <a class="sidebar-menu-button" href="pc_monitoring.html">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">insert_chart_outlined</i>
-                    <span class="sidebar-menu-text">PC<br>모니터링</span>
+                    <div class="side-navbar expander" id="side-navbar">
+    <nav class="nav-container">
+        <div class="nav-inner">
+            <div class="nav__list">
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="모니터링" data-placement="right" data-boundary="window">
+                    <span class="material-icons">insert_chart_outlined</span>
+                    <span class="nav_name">모니터링</span>
                 </a>
-            </li>
-            <li class="sidebar-menu-item " data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
-                <a class="sidebar-menu-button" href="project_board.html">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">grid_view</i>
-                    <span class="sidebar-menu-text">프로젝트</span>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="프로젝트" data-placement="right" data-boundary="window">
+                    <span class="material-icons">grid_view</span>
+                    <span class="nav_name">프로젝트</span>
                 </a>
-            </li>
-
-
-            <li class="sidebar-menu-item " data-title="Graph" data-placement="right" data-container="body" data-boundary="window">
-                <a class="sidebar-menu-button" href="chart.html">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">bar_chart</i>
-                    <span class="sidebar-menu-text">통계</span>
+                <a href="#" class="nav__link @@activeBuilding" data-toggle="tooltip"
+                data-title="건물" data-placement="right" data-boundary="window">
+                <span class="material-icons-outlined">space_dashboard</span>
+                    <span class="nav_name">건물</span>
                 </a>
-            </li>
 
-            <li class="sidebar-menu-item active" data-title="Sector" data-placement="right" data-container="body" data-boundary="window">
-                <a class="sidebar-menu-button" href="sector_list.html">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">space_dashboard</i>
-                    <span class="sidebar-menu-text">지오펜스</span>
+                <div href="#" class="nav__link @@activeBuilding collapse-item d-none" data-toggle="tooltip"
+                data-title="건물" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">space_dashboard</span>
+                    <span class="nav_name">건물</span>
+
+                    <span class="material-icons collapse__link">expand_more</span>
+
+                    <div class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Data</a>
+                        <a href="#" class="collapse__sublink">Group</a>
+                        <a href="#" class="collapse__sublink">Members</a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link @@activeUser" data-toggle="tooltip"
+                data-title="사용자" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">person_outline</span>
+                    <span class="nav_name">사용자</span>
                 </a>
-            </li>
 
-            <li class="sidebar-menu-item " data-title="Event" data-placement="right" data-container="body" data-boundary="window">
-                <a class="sidebar-menu-button" href="event_list.html">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">local_mall</i>
-                    <span class="sidebar-menu-text">이벤트</span>
+                <a href="#" class="nav__link @@activeAssets" data-toggle="tooltip"
+                data-title="자산" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">category</span>
+                    <span class="nav_name">자산</span>
                 </a>
-            </li>
 
-            <li class="sidebar-menu-item " data-title="Entry" data-placement="right" data-container="body" data-boundary="window">
-                <a class="sidebar-menu-button" href="entry_list.html">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">camera_outdoor</i>
-                    <span class="sidebar-menu-text">출입관리</span>
+                <div href="#" class="nav__link @@activeAssets collapse-item d-none" data-toggle="tooltip"
+                data-title="자산" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">category</span>
+                    <span class="nav_name">자산</span>
+
+                    <span class="material-icons collapse__link">expand_more</span>
+
+                    <div class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Data</a>
+                        <a href="#" class="collapse__sublink">Group</a>
+                        <a href="#" class="collapse__sublink">Members</a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="이벤트" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">event_note</span>
+                    <span class="nav_name">이벤트</span>
                 </a>
-            </li>
-
-            <li class="sidebar-menu-item " data-title="Accident" data-placement="right" data-container="body" data-boundary="window">
-                <a class="sidebar-menu-button" href="accident_landing.html">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">report_problem</i>
-                    <span class="sidebar-menu-text">사고관리</span>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="사고" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">warning_amber</span>
+                    <span class="nav_name">사고</span>
                 </a>
-            </li>
-
-            <li class="sidebar-menu-item " data-title="Info" data-placement="right" data-container="body" data-boundary="window">
-                <a class="sidebar-menu-button" href="info_landing.html">
-                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">info</i>
-                    <span class="sidebar-menu-text">정보</span>
-                </a>
-            </li>
-        </ul>
-
-    </div>
+            </div>
+        </div>
+    </nav>
 </div>
                     <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
                         <div class="tab-content">
@@ -1553,7 +1565,6 @@
     
     <!-- jQuery -->
     <script src="js/jquery-1.11.3-min.js"></script>
-    <script src="vendor/jquery.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="vendor/popper.min.js"></script>
@@ -1588,14 +1599,6 @@
     <!-- DateRangePicker -->
     <script src="vendor/moment.min.js"></script>
     <script src="vendor/moment-range.js"></script>
-
-    <!-- Chart.js -->
-    <script src="vendor/Chart.min.js"></script>
-    <script src="js/chartjs.js"></script>
-    <script src="js/chartjs-rounded-bar.js"></script>
-
-    <!-- Chart.js Samples -->
-    <script src="js/page.ecommerce.js"></script>
 
     <!-- Flatpickr -->
     <script src="vendor/flatpickr/flatpickr.min.js"></script>
@@ -1644,12 +1647,27 @@
     <!-- Select2 -->
     <script src="vendor/select2/select2.min.js"></script>
     <script src="js/select2.js"></script>
-
-    <script src="js/custom.js"></script>
     <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
     
-
-
+    <script src="js/custom.js"></script>
+    <script src="js/side-menu.js"></script>
+    <script src="js/jquery.overscroll.min.js"></script>
+    <script>
+        $('.custom-scroll').overscroll({
+            direction: 'horizontal',
+            showThumbs: false,
+            scrollDelta: 5,
+            whiteDelta: 5
+        });
+    </script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function($){
+            $(window).on("load",function(){
+                $(".custom-scroll-bar").mCustomScrollbar({theme:"minimal-dark"});
+            });
+        })(jQuery);
+    </script>
 </body>
 
 </html>

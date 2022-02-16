@@ -4,12 +4,13 @@
     <div class="pl-container">
         <div class="pl-top">
             <div class="navbar" id="default-navbar" data-primary>
-                    <!-- Brand -->
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
                 <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
                     data-title="대시보드로 이동" data-placement="right" data-boundary="window">
                     <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
                 </a>
-                <h5 class="project-title">프로젝트명을 입력해 주세요</h5>
+                <h4 class="project-title">프로젝트명을 입력해 주세요</h4>
                 <ul class="top-menu">
                     <li>
                         <div class="form-group m-0 ml-4 form-lang">
@@ -48,227 +49,210 @@
         </div>
         <div class="pl-cover">
             <div class="pl-col-left" id="sidebar-left">
-                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
-                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
-                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
-                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-                                <li class="sidebar-menu-item active" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">topic</i>
-                                        <span class="sidebar-menu-text">프로젝트</span>
-                                    </a>
-                                </li>
+                @@include('./include/platform-side-menu.html', {"activeMonitoring": "active", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
+                <div class="side-contents">
+                    <div class="d-flex flex-column h-100 bg-light">
+                        <div class="row-tab">
+                            <ul class="list-unstyled custom-scroll">
+                                <li><a href="project_write.html">프로젝트 정보</a></li>
+                                <li><a href="project_write2.html">건물 등록</a></li>
+                                <li class="active"><a href="project_write3.html">평면도 등록</a></li>
+                                <li><a href="project_write4.html">자산 등록</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="sidebar sidebar-left flex sidebar-secondary">
-                        <div class="tab-content">
-                            <div class="tab-pane sm-maps active" id="sm-projects">
-                                <div class="d-flex flex-column h-100 bg-light">
-                                    <div class="row-tab">
-                                        <ul class="list-unstyled">
-                                            <li><a href="project_write.html">프로젝트 정보</a></li>
-                                            <li><a href="project_write2.html">건물 등록</a></li>
-                                            <li class="active"><a href="project_write3.html">평면도 등록</a></li>
-                                            <li><a href="project_write4.html">자산 등록</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="plf-floor-add">
-                                        <div class="form-cell">
-                                            <select name="category" class="form-line">
-                                                <option value="">평면도 등록 공간</option>
-                                                <option value="">option1</option>
-                                                <option value="">option2</option>
-                                            </select>
-                                        </div>
-                                        <div class="btn-cell">
-                                            <a href="project_write3_new.html" class="add-item text-identity">
-                                                <span class="material-icons">add</span>
-                                                평면도 등록
-                                            </a>
-                                        </div>
-                                    </div>
+                        <div class="plf-floor-add">
+                            <div class="form-cell">
+                                <select name="category" class="form-line">
+                                    <option value="">평면도 등록 공간</option>
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                </select>
+                            </div>
+                            <div class="btn-cell">
+                                <a href="project_write3_new.html" class="add-item text-identity">
+                                    <span class="material-icons">add</span>
+                                    평면도 등록
+                                </a>
+                            </div>
+                        </div>
 
-                                    <div class="plf-floor-card p-4 position-relative" data-perfect-scrollbar>
-                                        
-                                        <a href="project_write3_new.html" class="plf-area-card add-item">
-                                            <span class="material-icons">add</span>
-                                            <h5>평면도 등록</h5>
-                                            <p>평면도를 등록해 주세요</p>
-                                        </a>
+                        <div class="plf-floor-card p-4 position-relative" data-perfect-scrollbar>
+                            
+                            <a href="project_write3_new.html" class="plf-area-card add-item">
+                                <span class="material-icons">add</span>
+                                <h5>평면도 등록</h5>
+                                <p>평면도를 등록해 주세요</p>
+                            </a>
 
-                                        <div class="plf-area-card active">
-                                            <div class="plf-area-top">
-                                                <span class="material-icons-outlined mr-1">upload_file</span>
-                                                <h4>공간명</h4>
-                                                <div class="left-cell">
-                                                    <span class="floor-num">1F</span>
-                                                    <div class="dropdown">
-                                                        <a href="#" data-toggle="dropdown" data-caret="false"
-                                                            class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
-                                                            <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="plf-area-content">
-                                                <ul class="plf-floor-card-info">
-                                                    <li>
-                                                        <span>POI</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                    <li>
-                                                        <span>지오펜스</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                    <li>
-                                                        <span>측위장비</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                    <li>
-                                                        <span>자원</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                </ul>
-                                                <div class="d-flex justify-content-end">
-                                                    <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm" title="새창열림"><span class="material-icons-outlined">open_in_browser</span> 지도 편집</a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="plf-area-card">
-                                            <div class="plf-area-top">
-                                                <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
-                                                <h4>공간명</h4>
-                                                <div class="left-cell">
-                                                    <span class="floor-num">B1F</span>
-                                                    <div class="dropdown">
-                                                        <a href="#" data-toggle="dropdown" data-caret="false"
-                                                            class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
-                                                            <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="plf-area-content">
-                                                <ul class="plf-floor-card-info">
-                                                    <li>
-                                                        <span>POI</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                    <li>
-                                                        <span>지오펜스</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                    <li>
-                                                        <span>측위장비</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                    <li>
-                                                        <span>자원</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                </ul>
-                                                <div class="d-flex justify-content-end">
-                                                    <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm" title="새창열림"><span class="material-icons-outlined">open_in_browser</span> 지도 편집</a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="plf-area-card">
-                                            <div class="plf-area-top">
-                                                <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
-                                                <h4>공간명</h4>
-                                                <div class="left-cell">
-                                                    <span class="floor-num">B1F</span>
-                                                    <div class="dropdown">
-                                                        <a href="#" data-toggle="dropdown" data-caret="false"
-                                                            class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
-                                                            <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="plf-area-content">
-                                                <ul class="plf-floor-card-info">
-                                                    <li>
-                                                        <span>POI</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                    <li>
-                                                        <span>지오펜스</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                    <li>
-                                                        <span>측위장비</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                    <li>
-                                                        <span>자원</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                </ul>
-                                                <div class="d-flex justify-content-end">
-                                                    <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm" title="새창열림"><span class="material-icons-outlined">open_in_browser</span> 지도 편집</a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="plf-area-card">
-                                            <div class="plf-area-top">
-                                                <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
-                                                <h4>공간명</h4>
-                                                <div class="left-cell">
-                                                    <span class="floor-num">B1F</span>
-                                                    <div class="dropdown">
-                                                        <a href="#" data-toggle="dropdown" data-caret="false"
-                                                            class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
-                                                            <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="plf-area-content">
-                                                <ul class="plf-floor-card-info">
-                                                    <li>
-                                                        <span>POI</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                    <li>
-                                                        <span>지오펜스</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                    <li>
-                                                        <span>측위장비</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                    <li>
-                                                        <span>자원</span>
-                                                        <em>20</em>
-                                                    </li>
-                                                </ul>
-                                                <div class="d-flex justify-content-end">
-                                                    <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm" title="새창열림"><span class="material-icons-outlined">open_in_browser</span> 지도 편집</a>
-                                                </div>
+                            <div class="plf-area-card active">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined mr-1">upload_file</span>
+                                    <h4>공간명</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">1F</span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="pub-con">
-                                        <div class="pub-inner">
-                                            <div class="btn-wrap">
-                                                <a href="project_write.html" class="btn btn-light mr-4">취소</a>
-                                                <a href="project_write3.html" class="btn btn-accent ml-0">저장</a>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <span>POI</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span>지오펜스</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span>측위장비</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span>자원</span>
+                                            <em>20</em>
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm" title="새창열림"><span class="material-icons-outlined">open_in_browser</span> 지도 편집</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
+                                    <h4>공간명</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">B1F</span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <span>POI</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span>지오펜스</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span>측위장비</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span>자원</span>
+                                            <em>20</em>
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm" title="새창열림"><span class="material-icons-outlined">open_in_browser</span> 지도 편집</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
+                                    <h4>공간명</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">B1F</span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <span>POI</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span>지오펜스</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span>측위장비</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span>자원</span>
+                                            <em>20</em>
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm" title="새창열림"><span class="material-icons-outlined">open_in_browser</span> 지도 편집</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
+                                    <h4>공간명</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">B1F</span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <span>POI</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span>지오펜스</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span>측위장비</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span>자원</span>
+                                            <em>20</em>
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm" title="새창열림"><span class="material-icons-outlined">open_in_browser</span> 지도 편집</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pub-con">
+                            <div class="pub-inner">
+                                <div class="btn-wrap">
+                                    <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">저장</a>
                                 </div>
                             </div>
                         </div>

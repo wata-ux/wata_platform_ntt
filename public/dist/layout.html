@@ -80,6 +80,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
     rel="stylesheet">
 
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 </head>
 
 <body class="layout-mini-secondary layout-mini-secondary">
@@ -98,870 +99,445 @@
 
     <div class="pl-container">
         <div class="pl-top">
-            <!-- Header -->
-<div class="navbar navbar-expand navbar-light" id="default-navbar" data-primary>
-    <!-- Brand -->
-    <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
-        data-title="대시보드로 이동" data-placement="right" data-boundary="window">
-        <span class="avatar avatar-sm "><img src="images/logo/symbol.svg" class="img-fluid" alt="logo" /></span>
-    </a>
-    <!-- history / live -->
-    <div class="nav-search">
-        <select name="" id="">
-            <option value="">POI</option>
-            <option value="">센서</option>
-            <option value="">장소</option>
-        </select>
-        <input type="text" placeholder="검색어를 입력해 주세요." id="searchSample02">
-        <button type="button"><i class="fas fa-search"></i></button>
-    </div>
-    <div class="filter-cell filter-area d-flex align-items-center">
-        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-            <strong>지오펜스</strong>
-        </a>
-        <div class="filter-item-dropdown" data-perfect-scrollbar>
-            <div class="dropdown-header"><strong>건물A동</strong></div>
-            <div class="dropdown-item">
-                <div class="custom-control custom-checkbox">
-                    <input id="customCheck01"
-                        type="checkbox"
-                        class="custom-control-input">
-                    <label for="customCheck01"
-                        class="custom-control-label">지오펜스A</label>
-                </div>
-            </div>
-            <div class="dropdown-item">
-                <div class="custom-control custom-checkbox">
-                    <input id="customCheck02"
-                        type="checkbox"
-                        class="custom-control-input">
-                    <label for="customCheck02"
-                        class="custom-control-label">지오펜스B</label>
-                </div>
-            </div>
-            <div class="dropdown-divider"></div>
-            <div class="dropdown-header"><strong>건물B동</strong></div>
-            <div class="dropdown-item">
-                <div class="custom-control custom-checkbox">
-                    <input id="customCheck03"
-                        type="checkbox"
-                        class="custom-control-input">
-                    <label for="customCheck03"
-                        class="custom-control-label">지오펜스C</label>
-                </div>
-            </div>
-            <div class="dropdown-item">
-                <div class="custom-control custom-checkbox">
-                    <input id="customCheck04"
-                        type="checkbox"
-                        class="custom-control-input">
-                    <label for="customCheck04"
-                        class="custom-control-label">지오펜스D</label>
-                </div>
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <h4 class="project-title">프로젝트명을 입력해 주세요</h4>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="custom-select" class="custom-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="#n">정보수정</a>
+                                <a class="dropdown-item" href="#n">멤버십</a>
+                                <a class="dropdown-item" href="#n">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="filter-cell filter-area d-flex align-items-center">
-        <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-            <strong>구역선택</strong>
-        </a>
-        <div class="filter-item-dropdown" data-perfect-scrollbar>
-            <div class="dropdown-header"><strong>건물 A동</strong></div>
-            <a href="#n" class="dropdown-item">전체구역</a>
-            <div class="dropdown-divider"></div>
-            <div class="dropdown-header"><strong>문화콘텐츠 컴플렉스</strong></div>
-            <a href="#n" class="dropdown-item">1층 주차장</a>
-            <a href="#n" class="dropdown-item">1층 로비</a>
-            <div class="dropdown-divider"></div>
-            <div class="dropdown-header"><strong>영상후반작업시설</strong></div>
-            <a href="#n" class="dropdown-item">4층 전체</a>
-            <a href="#n" class="dropdown-item">교육실</a>
-            <a href="#n" class="dropdown-item">회의실</a>
-            <div class="dropdown-divider"></div>
-            <div class="dropdown-header"><strong>사용자 정의</strong></div>
-            <a href="#n" class="dropdown-item">관리구역 A</a>
-            <a href="#n" class="dropdown-item">관리구역 B</a>
-        </div>
-    </div>
-    <div id="filter-bar">
-        <a href="#0" class="cd-filter-trigger"><i class="material-icons">tune</i>필터</a>
-        <div class="status-map align-items-center justify-content-center">
-            <div class="tabBox mapStauts01 status-con">
-                <div class="filter-cell filter-list d-flex align-items-center">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <strong><span>기간</span> 2021.04.05~2021.04.31</strong>
-                    </a>
-                    <div class="filter-item-dropdown date-pick" style="width: 350px;">
-                        <div class="dropdown-body pt-8pt">
-                            <div class="form-group">
-                                <input type="hidden" data-toggle="flatpickr" data-flatpickr-mode="range"
-                                    data-flatpickr-inline="true" value="2021-01-01 to 2021-01-31">
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-2">
-                            <a href="#n" class="btn btn-outline-secondary">확인</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="filter-cell filter-list d-flex align-items-center">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <strong>시간선택</strong>
-                    </a>
-                    <div class="filter-item-dropdown" style="width: 250px;">
-                        <div class="dropdown-header"><strong>시작시간</strong></div>
-                        <div class="dropdown-body mb-4">
-                            <div class="form-row">
-                                <div class="col-lg-4">
-                                    <select class="form-line" name="" id="">
-                                        <option value="">AM</option>
-                                        <option value="">PM</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4">
-                                    <select class="form-line" name="" id="">
-                                        <option value="">01</option>
-                                        <option value="">02</option>
-                                        <option value="">03</option>
-                                        <option value="">04</option>
-                                        <option value="">05</option>
-                                        <option value="">06</option>
-                                        <option value="">07</option>
-                                        <option value="">08</option>
-                                        <option value="">09</option>
-                                        <option value="">10</option>
-                                        <option value="">11</option>
-                                        <option value="">12</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4">
-                                    <select class="form-line" name="" id="">
-                                        <option value="">00</option>
-                                        <option value="">10</option>
-                                        <option value="">20</option>
-                                        <option value="">30</option>
-                                        <option value="">40</option>
-                                        <option value="">50</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-header"><strong>종료시간</strong></div>
-                        <div class="dropdown-body mb-4">
-                            <div class="form-row">
-                                <div class="col-lg-4">
-                                    <select class="form-line" name="" id="">
-                                        <option value="">AM</option>
-                                        <option value="">PM</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4">
-                                    <select class="form-line" name="" id="">
-                                        <option value="">01</option>
-                                        <option value="">02</option>
-                                        <option value="">03</option>
-                                        <option value="">04</option>
-                                        <option value="">05</option>
-                                        <option value="">06</option>
-                                        <option value="">07</option>
-                                        <option value="">08</option>
-                                        <option value="">09</option>
-                                        <option value="">10</option>
-                                        <option value="">11</option>
-                                        <option value="">12</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4">
-                                    <select class="form-line" name="" id="">
-                                        <option value="">00</option>
-                                        <option value="">10</option>
-                                        <option value="">20</option>
-                                        <option value="">30</option>
-                                        <option value="">40</option>
-                                        <option value="">50</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-2">
-                            <a href="#n" class="btn btn-outline-secondary">확인</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="filter-cell filter-list d-flex align-items-center">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <strong>연령대</strong>
-                    </a>
-                    <div class="filter-item-dropdown" style="width: 300px;">
-                        <div class="dropdown-body my-2">
-                            <div class="flex" style="max-width: 100%">
-                                <input id="userAge" type="text" data-toggle="ion-rangeslider" data-min="0"
-                                    data-max="100" data-from="20" data-to="50" data-type="double" data-grid="true">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="filter-cell filter-list d-flex align-items-center">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <strong>성별</strong>
-                    </a>
-                    <div class="filter-item-dropdown">
-                        <div class="dropdown-body my-2">
-                            <div class="form-check custom-checkbox">
-                                <input class="custom-control-input" type="radio" name="navBarGenderVal" value=""
-                                    id="navBarGenderAll" checked>
-                                <label class="custom-control-label" for="navBarGenderAll">전체</label>
-                            </div>
-                            <div class="form-check custom-checkbox mt-12pt">
-                                <input class="custom-control-input" type="radio" name="navBarGenderVal" value="1"
-                                    id="navBarGenderMale">
-                                <label class="custom-control-label" for="navBarGenderMale">남</label>
-                            </div>
-                            <div class="form-check custom-checkbox mt-12pt">
-                                <input class="custom-control-input" type="radio" name="navBarGenderVal" value="2"
-                                    id="navBarGenderFeMale">
-                                <label class="custom-control-label" for="navBarGenderFeMale">여</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="filter-cell filter-list d-flex align-items-center">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <strong>휴대폰 종류</strong>
-                    </a>
-                    <div class="filter-item-dropdown">
-                        <div class="dropdown-body my-2">
-                            <div class="form-check custom-checkbox">
-                                <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal" value=""
-                                    id="deviceTypeAll" checked>
-                                <label class="custom-control-label" for="deviceTypeAll">전체</label>
-                            </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="side-navbar expander" id="side-navbar">
+    <nav class="nav-container">
+        <div class="nav-inner">
+            <div class="nav__list">
+                <a href="#" class="nav__link active" data-toggle="tooltip"
+                data-title="모니터링" data-placement="right" data-boundary="window">
+                    <span class="material-icons">insert_chart_outlined</span>
+                    <span class="nav_name">모니터링</span>
+                </a>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="프로젝트" data-placement="right" data-boundary="window">
+                    <span class="material-icons">grid_view</span>
+                    <span class="nav_name">프로젝트</span>
+                </a>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="건물" data-placement="right" data-boundary="window">
+                <span class="material-icons-outlined">space_dashboard</span>
+                    <span class="nav_name">건물</span>
+                </a>
 
-                            <div class="form-check custom-checkbox mt-12pt">
-                                <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal" value="1"
-                                    id="deviceTypeAos">
-                                <label class="custom-control-label" for="deviceTypeAos">Android</label>
-                            </div>
-                            <div class="form-check custom-checkbox mt-12pt">
-                                <input class="custom-control-input" type="radio" name="navBarDeviceTypeVal" value="2"
-                                    id="deviceTypeIos">
-                                <label class="custom-control-label" for="deviceTypeIos">iOS</label>
-                            </div>
-                        </div>
+                <div href="#" class="nav__link  collapse-item d-none" data-toggle="tooltip"
+                data-title="건물" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">space_dashboard</span>
+                    <span class="nav_name">건물</span>
+
+                    <span class="material-icons collapse__link">expand_more</span>
+
+                    <div class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Data</a>
+                        <a href="#" class="collapse__sublink">Group</a>
+                        <a href="#" class="collapse__sublink">Members</a>
                     </div>
                 </div>
-                <div class="filter-cell filter-list d-flex align-items-center">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle filter-select">
-                        <strong>체류시간(m)</strong>
-                    </a>
-                    <div class="filter-item-dropdown" style="width: 300px;">
-                        <div class="dropdown-body my-2">
-                            <div class="flex" style="max-width: 100%">
-                                <input id="userStay" type="text" data-toggle="ion-rangeslider" data-min="0"
-                                    data-max="100" data-from="20" data-to="50" data-type="double" data-grid="true">
-                            </div>
-                        </div>
+
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="사용자" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">person_outline</span>
+                    <span class="nav_name">사용자</span>
+                </a>
+
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="자산" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">category</span>
+                    <span class="nav_name">자산</span>
+                </a>
+
+                <div href="#" class="nav__link  collapse-item d-none" data-toggle="tooltip"
+                data-title="자산" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">category</span>
+                    <span class="nav_name">자산</span>
+
+                    <span class="material-icons collapse__link">expand_more</span>
+
+                    <div class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Data</a>
+                        <a href="#" class="collapse__sublink">Group</a>
+                        <a href="#" class="collapse__sublink">Members</a>
                     </div>
                 </div>
-                <div class="filter-btn-cell d-flex flex justify-content-end align-items-center">
-                    <a href="#n" class=""><i class="material-icons mr-1">done</i> 설정</a>
-                    <a href="#n" class="is-loading is-loading-sm">Button</a>
-                </div>
+
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="이벤트" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">event_note</span>
+                    <span class="nav_name">이벤트</span>
+                </a>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="사고" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">warning_amber</span>
+                    <span class="nav_name">사고</span>
+                </a>
             </div>
-            <div class="tabBox mapStauts02 status-con active">
-                <span class="d-flex align-items-center mr-4 pl-3">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
-                    </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">전체 이용객 수</span>
-                        <strong class="navbar-text-100">117명<span class="liveUser liveUser-up">2명 증가</span></strong>
-                    </small>
-                </span>
-                <span class="d-flex align-items-center mr-4">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar"><i class="material-icons">trending_up</i></span>
-                    </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">구역별 이용객 수</span>
-                        <strong class="navbar-text-100">11명<span class="liveUser liveUser-down">5명 감소</span></strong>
-                    </small>
-                </span>
-                <span class="d-none align-items-center mr-4">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar"><i class="material-icons">access_time</i></span>
-                    </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">사용자 체류시간</span>
-                        <strong class="navbar-text-100">10분</strong>
-                    </small>
-                </span>
-                <span class="d-none align-items-center mr-4">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar"><i class="material-icons">track_changes</i></span>
-                    </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">구역별 방문 순위</span>
-                        <strong class="navbar-text-100">미디어회의실</strong>
-                    </small>
-                </span>
-                <span class="d-none align-items-center mr-4">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar"><i
-                                class="material-icons">notification_important</i></span>
-                    </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">사고발생 건 수</span>
-                        <strong class="navbar-text-100">0건</strong>
-                    </small>
-                </span>
-                <span class="d-none align-items-center tip-box mr-4">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar bg-level_4"><i
-                                class="material-icons">thermostat</i></span>
-                    </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">현재온도</span>
-                        <strong class="navbar-text-100"><span class="txt-level_4">32˚</span>/29˚</strong>
-                    </small>
-                    <div class="filter-tooltip">
-                        <div class="tooltip-header">
-                            <h6>현재온도</h6>
-                            <a href="#n" class="btn-setting"><i class="material-icons">settings</i></a>
+        </div>
+    </nav>
+</div>
+                <div class="side-contents sm-projects" data-perfect-scrollbar>
+                    <div class="container-fluid py-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="flex d-flex flex-sm-row align-items-center mb-0">
+                                <div class="mr-24pt">
+                                    <h3 class="mb-0">프로젝트 A</h3>
+                                </div>
+                            </div>
+                            <div class="row" role="tablist">
+                                <div class="col-auto">
+                                    <div class="dropdown">
+                                        <a href="project_list.html" data-toggle="dropdown" data-caret="false"
+                                            class="text-muted"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item">복사</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#n" class="dropdown-item text-primary">수정</a>
+                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tooltip-body">
-                            <em class="txt-level_4">32˚</em>
-                            <span class="defualt-value">
-                                <span class="name">적정온도</span>
-                                <strong class="value">29˚</strong>
-                            </span>
-                        </div>
-                        <div class="level-list">
-                            <ul class="step4">
-                                <li class="level-item01">좋음<span class="item-bar"></span></li>
-                                <li class="level-item02">보통<span class="item-bar"></span></li>
-                                <li class="level-item03">경계<span class="item-bar"></span></li>
-                                <li class="level-item04 current">위험<span class="item-bar"></span></li>
-                            </ul>
-                            <!-- <div class="level-bar"></div> -->
+                        <div class="board-title">
+                            <p>discription</p>
                         </div>
                     </div>
-                    <div class="filter-tooltip d-none">
-                        <div class="tooltip-header">
-                            <h6>온도 설정 <span>(단위 : ˚ )</span></h6>
-                            <a href="#n" class="btn-setting"><i class="material-icons">close</i></a>
+                    <div class="container-fluid">
+                        <div class="row align-items-center mb-4">
+                            <div class="col-auto">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar avatar-xs">
+                                        <span class="avatar-title rounded-circle">SH</span>
+                                    </div>
+                                    <strong class="flex ml-1">SH Jeong</strong>
+                                </div>
+                            </div>
+                            <div class="col text-right">
+                                <select class="form-none" name="" id="" disabled>
+                                    <option value="">스마트 팩토리</option>
+                                    <option value="">스마트 리테일</option>
+                                    <option value="">스마트 빌딩</option>
+                                    <option value="">스마트 뱡원</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="tooltip-body">
-                            <div class="body-inner">
-                                <div class="cell">
-                                    <label class="set-name" for="temperature">기본 :</label>
-                                    <div class="set-value">
-                                        <input type="number" class="form-control" id="temperature" placeholder="온도입력">
+                    </div>
+                    <div class="container-fluid">
+                        <em class="none-list mb-4">등록한 건물이 없습니다.</em>
+                        <div class="list-group block-list dragula-list mb-4" data-toggle="dragula">
+                            <div class="list-group-item d-flex active">
+                                <div class="flex d-flex align-items-center mr-16pt">
+                                    <div class="flex">
+                                        <a class="card-title" href="#n">건물 A</a>
+                                        <div class="card-subtitle text-50"><span
+                                                class="badge badge-accent">배포중</span> 2021.01.07</div>
                                     </div>
                                 </div>
-                                <div class="cell">
-                                    <label class="set-name txt-level_1" for="temperature">좋음 :</label>
-                                    <div class="set-value">
-                                        <input type="number" class="form-control" id="temperature" placeholder="온도입력">
+                                <!-- <a href="#" class="circle-pin active"><i class="material-icons">push_pin</i></a> -->
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                            class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
                                     </div>
                                 </div>
-                                <div class="cell">
-                                    <label class="set-name txt-level_2" for="temperature">보통 :</label>
-                                    <div class="set-value">
-                                        <input type="number" class="form-control" id="temperature" placeholder="온도입력">
+                            </div>
+                            <div class="list-group-item d-flex disabled">
+                                <div class="flex d-flex align-items-center mr-16pt">
+                                    <div class="flex">
+                                        <a class="card-title" href="#n">건물 B</a>
+                                        <div class="card-subtitle text-50"><span
+                                                class="badge badge-secondary">수정중</span> 2021.01.07</div>
                                     </div>
                                 </div>
-                                <div class="cell">
-                                    <label class="set-name txt-level_3" for="temperature">나쁨 :</label>
-                                    <div class="set-value">
-                                        <input type="number" class="form-control" id="temperature" placeholder="온도입력">
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                            class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
                                     </div>
                                 </div>
-                                <div class="cell">
-                                    <label class="set-name txt-level_4" for="temperature">위험 :</label>
-                                    <div class="set-value">
-                                        <input type="number" class="form-control" id="temperature" placeholder="온도입력">
+                            </div>
+                            <div class="list-group-item d-flex">
+                                <div class="flex d-flex align-items-center mr-16pt">
+                                    <div class="flex">
+                                        <a class="card-title" href="#n">건물 C</a>
+                                        <div class="card-subtitle text-50"><span
+                                                class="badge badge-accent">배포중</span> 2021.01.07</div>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
+                                            class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#n" class="dropdown-item text-primary">수정</a>
+                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-center">
-                            <a href="#n" class="btn btn-link text-accent">온도 설정 완료</a>
+                            <a href="buildings_write.html" class="btn-row-add"><i class="material-icons">add</i>
+                                공간 추가</a>
                         </div>
-                    </div>
-                </span>
-                <span class="d-none align-items-center tip-box mr-4">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar bg-level_2"><i
-                                class="material-icons">water_drop</i></span>
-                    </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">현재습도</span>
-                        <strong class="navbar-text-100"><span class="txt-level_2">21˚</span>/26˚</strong>
-                    </small>
-                    <div class="filter-tooltip">
-                        <div class="tooltip-header">
-                            <h6>현재습도</h6>
-                            <a href="#n" class="btn-setting"><i class="material-icons">settings</i></a>
+                        <ul class="pagination justify-content-center pagination-xsm m-0 d-none">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                    <span>Prev</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Page 1">
+                                    <span>1</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Page 2">
+                                    <span>2</span>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span>Next</span>
+                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="contents-tab nav mb-4 the-num02 d-none" role="tablist">
+                            <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                                <span class="menu-cover"><span>공간</span></span>
+                            </a>
+                            <!-- <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                <span class="menu-cover"><span>앱키</span></span>
+                            </a> -->
+                            <a href="#tab03" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                <span class="menu-cover"><span>통계</span></span>
+                            </a>
+                            <!-- <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                <span class="menu-cover"><span>팀관리</span></span>
+                            </a> -->
                         </div>
-                        <div class="tooltip-body">
-                            <em class="txt-level_2">21˚</em>
-                            <span class="defualt-value">
-                                <span class="name">적정습도</span>
-                                <strong class="value">29˚</strong>
-                            </span>
-                        </div>
-
-
-                        <div class="level-list">
-                            <ul class="step4">
-                                <li class="level-item01">좋음<span class="item-bar"></span></li>
-                                <li class="level-item02 current">보통<span class="item-bar"></span></li>
-                                <li class="level-item03">경계<span class="item-bar"></span></li>
-                                <li class="level-item04">위험<span class="item-bar"></span></li>
-                            </ul>
-                            <!-- <div class="level-bar"></div> -->
-                        </div>
-                    </div>
-                </span>
-                <span class="d-none align-items-center tip-box mr-4">
-                    <span class="avatar mr-12pt">
-                        <span class="avatar-title navbar-avatar bg-level_3"><i class="fas fa-radiation-alt"></i></span>
-                    </span>
-                    <small class="flex d-flex flex-column">
-                        <span class="navbar-text-50">유해가스</span>
-                        <strong class="navbar-text-100 txt-level_3">경계</strong>
-                    </small>
-                    <div class="filter-tooltip">
-                        <div class="tooltip-header">
-                            <h6>유해가스</h6>
-                            <a href="#n" class="btn-setting"><i class="material-icons">settings</i></a>
-                        </div>
-                        <div class="tooltip-body">
-                            <em class="txt-level_3">경계</em>
-                        </div>
-                        <div class="level-list">
-                            <ul class="step4">
-                                <li class="level-item01">좋음<span class="item-bar"></span></li>
-                                <li class="level-item02">보통<span class="item-bar"></span></li>
-                                <li class="level-item03 current">경계<span class="item-bar"></span></li>
-                                <li class="level-item04">위험<span class="item-bar"></span></li>
-                            </ul>
-                            <div class="level-bar d-none"></div>
-                        </div>
-                    </div>
-                </span>
-                <div class="filter-btn-cell d-none flex justify-content-end align-items-center">
-                    <a href="#n" class=""><i class="material-icons mr-1">autorenew</i> 새로고침</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="d-flex flex justify-content-end align-items-center pr-4">
-        <div class="form-group m-0 ml-4 form-lang">
-            <select id="custom-select" class="custom-line">
-                <option selected="">KOR</option>
-                <option value="1">JPN</option>
-                <option value="2">ENG</option>
-            </select>
-        </div>
-        <div class="nav-item dropdown ml-4">
-            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-                <span class="avatar avatar-sm">
-                    <span class="avatar-title rounded-circle">SH</span>
-                </span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-header"><strong>계정메뉴</strong></div>
-                <a class="dropdown-item" href="my_account.html">정보수정</a>
-                <a class="dropdown-item" href="login.html">로그아웃</a>
-            </div>
-        </div>
-    </div>
-</div>
-        </div>
-        <div class="pl-cover">
-            <div class="pl-col-left" id="sidebar-left">
-                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
-                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
-                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
-                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-                                <li class="sidebar-menu-item active" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button active" href="project_board.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">shop_2</i>
-                                        <span class="sidebar-menu-text">앱</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="Info" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="pc_monitoring.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">security</i>
-                                        <span class="sidebar-menu-text">PC<br>모니터링</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="User" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="chart.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">bar_chart</i>
-                                        <span class="sidebar-menu-text">통계</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="Sector" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="sector_list.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">space_dashboard</i>
-                                        <span class="sidebar-menu-text">지오펜스</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="Event" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="event_list.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">local_mall</i>
-                                        <span class="sidebar-menu-text">이벤트</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="Entry" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="entry_list.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">camera_outdoor</i>
-                                        <span class="sidebar-menu-text">출입관리</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="Accident" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="accident_landing.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">report_problem</i>
-                                        <span class="sidebar-menu-text">사고관리</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item" data-title="Info" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="info_landing.html">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">info</i>
-                                        <span class="sidebar-menu-text">정보</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="sidebar sidebar-left flex sidebar-secondary" data-perfect-scrollbar>
-                        <div class="tab-content">
-                            <div class="tab-pane sm-projects active" id="sm-projects">
-                                <div class="project-inner">
-                                    <div class="container-fluid py-4">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="flex d-flex flex-sm-row align-items-center mb-0">
-                                                <div class="mr-24pt">
-                                                    <h3 class="mb-0">프로젝트 A</h3>
-                                                </div>
-                                            </div>
-                                            <div class="row" role="tablist">
-                                                <div class="col-auto">
-                                                    <div class="dropdown">
-                                                        <a href="project_list.html" data-toggle="dropdown" data-caret="false"
-                                                            class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a href="#n" class="dropdown-item">복사</a>
-                                                            <div class="dropdown-divider"></div>
-                                                            <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                            <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                        <div class="tab-content d-none">
+                            <div id="tab01" class="tab-pane active" role="tabpanel">
+                                <em class="none-list mb-4">등록한 건물이 없습니다.</em>
+                                <div class="list-group block-list dragula-list mb-4" data-toggle="dragula">
+                                    <div class="list-group-item d-flex active">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">건물 A</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-accent">배포중</span> 2021.01.07</div>
                                             </div>
                                         </div>
-                                        <div class="board-title">
-                                            <p>discription</p>
-                                        </div>
-                                    </div>
-                                    <div class="container-fluid">
-                                        <div class="row align-items-center mb-4">
-                                            <div class="col-auto">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar avatar-xs">
-                                                        <span class="avatar-title rounded-circle">SH</span>
-                                                    </div>
-                                                    <strong class="flex ml-1">SH Jeong</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col text-right">
-                                                <select class="form-none" name="" id="" disabled>
-                                                    <option value="">스마트 팩토리</option>
-                                                    <option value="">스마트 리테일</option>
-                                                    <option value="">스마트 빌딩</option>
-                                                    <option value="">스마트 뱡원</option>
-                                                </select>
+                                        <!-- <a href="#" class="circle-pin active"><i class="material-icons">push_pin</i></a> -->
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="container-fluid">
-                                        <em class="none-list mb-4">등록한 건물이 없습니다.</em>
-                                        <div class="list-group block-list dragula-list mb-4" data-toggle="dragula">
-                                            <div class="list-group-item d-flex active">
-                                                <div class="flex d-flex align-items-center mr-16pt">
-                                                    <div class="flex">
-                                                        <a class="card-title" href="#n">건물 A</a>
-                                                        <div class="card-subtitle text-50"><span
-                                                                class="badge badge-accent">배포중</span> 2021.01.07</div>
-                                                    </div>
-                                                </div>
-                                                <!-- <a href="#" class="circle-pin active"><i class="material-icons">push_pin</i></a> -->
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                            class="material-icons">more_vert</i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="list-group-item d-flex disabled">
-                                                <div class="flex d-flex align-items-center mr-16pt">
-                                                    <div class="flex">
-                                                        <a class="card-title" href="#n">건물 B</a>
-                                                        <div class="card-subtitle text-50"><span
-                                                                class="badge badge-secondary">수정중</span> 2021.01.07</div>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                            class="material-icons">more_vert</i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="list-group-item d-flex">
-                                                <div class="flex d-flex align-items-center mr-16pt">
-                                                    <div class="flex">
-                                                        <a class="card-title" href="#n">건물 C</a>
-                                                        <div class="card-subtitle text-50"><span
-                                                                class="badge badge-accent">배포중</span> 2021.01.07</div>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i
-                                                            class="material-icons">more_vert</i></a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                        <a href="#n" class="dropdown-item text-danger">연결해제</a>
-                                                    </div>
+                                    <div class="list-group-item d-flex disabled">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">건물 B</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-secondary">수정중</span> 2021.01.07
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <a href="buildings_write.html" class="btn-row-add"><i class="material-icons">add</i>
-                                                공간 추가</a>
-                                        </div>
-                                        <ul class="pagination justify-content-center pagination-xsm m-0 d-none">
-                                            <li class="page-item disabled">
-                                                <a class="page-link" href="#" aria-label="Previous">
-                                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                                    <span>Prev</span>
-                                                </a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Page 1">
-                                                    <span>1</span>
-                                                </a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Page 2">
-                                                    <span>2</span>
-                                                </a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Next">
-                                                    <span>Next</span>
-                                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <div class="contents-tab nav mb-4 the-num02 d-none" role="tablist">
-                                            <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
-                                                <span class="menu-cover"><span>공간</span></span>
-                                            </a>
-                                            <!-- <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                                <span class="menu-cover"><span>앱키</span></span>
-                                            </a> -->
-                                            <a href="#tab03" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                                <span class="menu-cover"><span>통계</span></span>
-                                            </a>
-                                            <!-- <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                                <span class="menu-cover"><span>팀관리</span></span>
-                                            </a> -->
-                                        </div>
-                                        <div class="tab-content d-none">
-                                            <div id="tab01" class="tab-pane active" role="tabpanel">
-                                                <em class="none-list mb-4">등록한 건물이 없습니다.</em>
-                                                <div class="list-group block-list dragula-list mb-4" data-toggle="dragula">
-                                                    <div class="list-group-item d-flex active">
-                                                        <div class="flex d-flex align-items-center mr-16pt">
-                                                            <div class="flex">
-                                                                <a class="card-title" href="#n">건물 A</a>
-                                                                <div class="card-subtitle text-50"><span
-                                                                        class="badge badge-accent">배포중</span> 2021.01.07</div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- <a href="#" class="circle-pin active"><i class="material-icons">push_pin</i></a> -->
-                                                        <div class="dropdown">
-                                                            <a href="#" data-toggle="dropdown" data-caret="false"
-                                                                class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-group-item d-flex disabled">
-                                                        <div class="flex d-flex align-items-center mr-16pt">
-                                                            <div class="flex">
-                                                                <a class="card-title" href="#n">건물 B</a>
-                                                                <div class="card-subtitle text-50"><span
-                                                                        class="badge badge-secondary">수정중</span> 2021.01.07
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="dropdown">
-                                                            <a href="#" data-toggle="dropdown" data-caret="false"
-                                                                class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-group-item d-flex">
-                                                        <div class="flex d-flex align-items-center mr-16pt">
-                                                            <div class="flex">
-                                                                <a class="card-title" href="#n">건물 C</a>
-                                                                <div class="card-subtitle text-50"><span
-                                                                        class="badge badge-accent">배포중</span> 2021.01.07</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="dropdown">
-                                                            <a href="#" data-toggle="dropdown" data-caret="false"
-                                                                class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex align-items-center justify-content-center">
-                                                    <a href="buildings_write.html" class="btn-row-add"><i
-                                                            class="material-icons">add</i> 공간 추가</a>
-                                                </div>
-                                                <ul class="pagination justify-content-center pagination-xsm m-0 d-none">
-                                                    <li class="page-item disabled">
-                                                        <a class="page-link" href="#" aria-label="Previous">
-                                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                                            <span>Prev</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="Page 1">
-                                                            <span>1</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="Page 2">
-                                                            <span>2</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="Next">
-                                                            <span>Next</span>
-                                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
                                             </div>
-                                            <!-- <div id="tab02" class="tab-pane" role="tabpanel">2
-                                            </div> -->
-                                            <div id="tab03" class="tab-pane" role="tabpanel">
-                                                <em class="none-list mb-4 d-none">등록한 데이터가 없습니다.</em>
-                                                <div class="list-card">
-                                                    <a href="project_board_graph.html" class="card-cover">
-                                                        <div class="media-left mr-12pt">
-                                                            <div class="avatar">
-                                                                <span class="material-icons-round">area_chart</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <h5>통계</h5>
-                                                            <p>프로젝트의 모든 통계 데이터를 확인하실 수 있습니다.</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="list-card">
-                                                    <a href="project_board_data.html" class="card-cover">
-                                                        <div class="media-left mr-12pt">
-                                                            <div class="avatar">
-                                                                <span class="material-icons-round">notes</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <h5>데이터</h5>
-                                                            <p>프로젝트의 모든 데이터를 확인하실 수 있습니다.</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-        
-        
-        
-                                                <div class="list-group block-list mb-4 d-none">
-                                                    <div class="list-group-item d-flex js-cd-panel-trigger active"
-                                                        data-panel="main">
-                                                        <div class="flex d-flex align-items-center mr-16pt">
-                                                            <div class="flex">
-                                                                <div class="card-title">방문객</div>
-                                                                <p class="card-subtitle text-50 d-flex align-items-center">
-                                                                    31.5%
-                                                                    <i
-                                                                        class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <!-- <a href="#" class="circle-pin active"><i class="material-icons">push_pin</i></a> -->
-                                                        <div class="dropdown">
-                                                            <a href="#" data-toggle="dropdown" data-caret="false"
-                                                                class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-group-item d-flex js-cd-panel-trigger" data-panel="main">
-                                                        <div class="flex d-flex align-items-center mr-16pt">
-                                                            <div class="flex">
-                                                                <div class="card-title">체류시간</div>
-                                                                <p class="card-subtitle text-50 d-flex align-items-center">
-                                                                    51.5%
-                                                                    <i
-                                                                        class="material-icons text-primary ml-4pt icon-16pt">keyboard_arrow_down</i>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="dropdown">
-                                                            <a href="#" data-toggle="dropdown" data-caret="false"
-                                                                class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a href="#n" class="dropdown-item text-primary">수정</a>
-                                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <a href="project_board_graph.html" class="btn-row-add mb-4 d-none"><i
-                                                        class="material-icons">add</i> 새로운 그래프 추가</a>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="flex">
+                                                <a class="card-title" href="#n">건물 C</a>
+                                                <div class="card-subtitle text-50"><span
+                                                        class="badge badge-accent">배포중</span> 2021.01.07</div>
                                             </div>
-                                            <!-- <div id="tab04" class="tab-pane" role="tabpanel">4
-                                            </div> -->
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <a href="buildings_write.html" class="btn-row-add"><i
+                                            class="material-icons">add</i> 공간 추가</a>
+                                </div>
+                                <ul class="pagination justify-content-center pagination-xsm m-0 d-none">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                            <span>Prev</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 1">
+                                            <span>1</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Page 2">
+                                            <span>2</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span>Next</span>
+                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
+                            <!-- <div id="tab02" class="tab-pane" role="tabpanel">2
+                            </div> -->
+                            <div id="tab03" class="tab-pane" role="tabpanel">
+                                <em class="none-list mb-4 d-none">등록한 데이터가 없습니다.</em>
+                                <div class="list-card">
+                                    <a href="project_board_graph.html" class="card-cover">
+                                        <div class="media-left mr-12pt">
+                                            <div class="avatar">
+                                                <span class="material-icons-round">area_chart</span>
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5>통계</h5>
+                                            <p>프로젝트의 모든 통계 데이터를 확인하실 수 있습니다.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="list-card">
+                                    <a href="project_board_data.html" class="card-cover">
+                                        <div class="media-left mr-12pt">
+                                            <div class="avatar">
+                                                <span class="material-icons-round">notes</span>
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5>데이터</h5>
+                                            <p>프로젝트의 모든 데이터를 확인하실 수 있습니다.</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+
+
+                                <div class="list-group block-list mb-4 d-none">
+                                    <div class="list-group-item d-flex js-cd-panel-trigger active"
+                                        data-panel="main">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="flex">
+                                                <div class="card-title">방문객</div>
+                                                <p class="card-subtitle text-50 d-flex align-items-center">
+                                                    31.5%
+                                                    <i
+                                                        class="material-icons text-accent ml-4pt icon-16pt">keyboard_arrow_up</i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- <a href="#" class="circle-pin active"><i class="material-icons">push_pin</i></a> -->
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex js-cd-panel-trigger" data-panel="main">
+                                        <div class="flex d-flex align-items-center mr-16pt">
+                                            <div class="flex">
+                                                <div class="card-title">체류시간</div>
+                                                <p class="card-subtitle text-50 d-flex align-items-center">
+                                                    51.5%
+                                                    <i
+                                                        class="material-icons text-primary ml-4pt icon-16pt">keyboard_arrow_down</i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item text-primary">수정</a>
+                                                <a href="#n" class="dropdown-item text-danger">연결해제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="project_board_graph.html" class="btn-row-add mb-4 d-none"><i
+                                        class="material-icons">add</i> 새로운 그래프 추가</a>
+                            </div>
+                            <!-- <div id="tab04" class="tab-pane" role="tabpanel">4
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="pl-col-group">
+            <div class="pl-col-group" id="body-pd">
                 <div class="pl-col-mid" id="main-contents">
                         <!-- history / live -->
     <div class="btn-mid-holder">
@@ -1706,7 +1282,6 @@
     
     <!-- jQuery -->
     <script src="js/jquery-1.11.3-min.js"></script>
-    <script src="vendor/jquery.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="vendor/popper.min.js"></script>
@@ -1741,14 +1316,6 @@
     <!-- DateRangePicker -->
     <script src="vendor/moment.min.js"></script>
     <script src="vendor/moment-range.js"></script>
-
-    <!-- Chart.js -->
-    <script src="vendor/Chart.min.js"></script>
-    <script src="js/chartjs.js"></script>
-    <script src="js/chartjs-rounded-bar.js"></script>
-
-    <!-- Chart.js Samples -->
-    <script src="js/page.ecommerce.js"></script>
 
     <!-- Flatpickr -->
     <script src="vendor/flatpickr/flatpickr.min.js"></script>
@@ -1797,12 +1364,27 @@
     <!-- Select2 -->
     <script src="vendor/select2/select2.min.js"></script>
     <script src="js/select2.js"></script>
-
-    <script src="js/custom.js"></script>
     <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
     
-
-
+    <script src="js/custom.js"></script>
+    <script src="js/side-menu.js"></script>
+    <script src="js/jquery.overscroll.min.js"></script>
+    <script>
+        $('.custom-scroll').overscroll({
+            direction: 'horizontal',
+            showThumbs: false,
+            scrollDelta: 5,
+            whiteDelta: 5
+        });
+    </script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function($){
+            $(window).on("load",function(){
+                $(".custom-scroll-bar").mCustomScrollbar({theme:"minimal-dark"});
+            });
+        })(jQuery);
+    </script>
 </body>
 
 </html>

@@ -4,12 +4,13 @@
     <div class="pl-container">
         <div class="pl-top">
             <div class="navbar" id="default-navbar" data-primary>
-                    <!-- Brand -->
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
                 <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
                     data-title="대시보드로 이동" data-placement="right" data-boundary="window">
                     <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
                 </a>
-                <h5 class="project-title">프로젝트명을 입력해 주세요</h5>
+                <h4 class="project-title">프로젝트명을 입력해 주세요</h4>
                 <ul class="top-menu">
                     <li>
                         <div class="form-group m-0 ml-4 form-lang">
@@ -48,105 +49,88 @@
         </div>
         <div class="pl-cover">
             <div class="pl-col-left" id="sidebar-left">
-                <div class="mdk-drawer__content js-sidebar-mini" data-layout="mini-secondary">
-                    <div class="sidebar sidebar-mini sidebar-left d-flex flex-column">
-                        <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
-                            <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
-                                <li class="sidebar-menu-item active" data-title="Projects" data-placement="right" data-container="body" data-boundary="window">
-                                    <a class="sidebar-menu-button" href="#sm-projects" data-toggle="tab" role="tab" aria-controls="sm-projects">
-                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons-outlined">topic</i>
-                                        <span class="sidebar-menu-text">프로젝트</span>
-                                    </a>
-                                </li>
+                @@include('./include/platform-side-menu.html', {"activeMonitoring": "active", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
+                <div class="side-contents">
+                    <div class="d-flex flex-column h-100">
+                        <div class="row-tab">
+                            <ul class="list-unstyled custom-scroll">
+                                <li><a href="project_write.html">프로젝트 정보</a></li>
+                                <li><a href="project_write2.html">건물 등록</a></li>
+                                <li><a href="project_write3.html">평면도 등록</a></li>
+                                <li class="active"><a href="project_write4.html">자산 등록</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="sidebar sidebar-left flex sidebar-secondary">
-                        <div class="tab-content">
-                            <div class="tab-pane sm-maps active" id="sm-projects">
-                                <div class="d-flex flex-column h-100">
-                                    <div class="row-tab">
-                                        <ul class="list-unstyled">
-                                            <li><a href="project_write.html">프로젝트 정보</a></li>
-                                            <li><a href="project_write2.html">건물 등록</a></li>
-                                            <li><a href="project_write3.html">평면도 등록</a></li>
-                                            <li class="active"><a href="project_write4.html">자산 등록</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="plf-floor-add border-bottom-0">
-                                        <div class="btn-cell">
-                                            <a href="project_write3_new.html" class="add-item text-green">
-                                                <span class="material-icons">note_add</span>
-                                                엑셀 업로드
-                                            </a>
-                                            <a href="project_write4_new.html" class="add-item text-identity">
-                                                <span class="material-icons">add</span>
-                                                자산 등록
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <table class="table table-nowrap mb-0 table-high">
-                                        <colgroup>
-                                            <col width="15%">
-                                            <col width="*">
-                                            <col width="15%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th class="text-center">자산ID</th>
-                                                <th class="text-center">자산명</th>
-                                                <th class="text-center">유형</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-                                    <div class="position-relative px-3" data-perfect-scrollbar>
-                                        <table class="table table-nowrap table-high">
-                                            <colgroup>
-                                                <col width="15%">
-                                                <col width="*">
-                                                <col width="15%">
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <td>NT0000</td>
-                                                    <td>Ryan</td>
-                                                    <td class="text-center">인적자산</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>NT0000</td>
-                                                    <td>Main battery</td>
-                                                    <td class="text-center">배터리</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>NT0000</td>
-                                                    <td>Main battery</td>
-                                                    <td class="text-center">배터리</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>NT0000</td>
-                                                    <td>Sensor</td>
-                                                    <td class="text-center">센서</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>NT0000</td>
-                                                    <td>Sensor</td>
-                                                    <td class="text-center">센서</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="empty-state border-top-0 d-none">
-                                            <em class="empty-txt mb-4">자산을 등록해 주세요</em>
-                                            <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
-                                        </div>
-                                    </div>
-                                    <div class="pub-con">
-                                        <div class="pub-inner">
-                                            <div class="btn-wrap">
-                                                <a href="project_write.html" class="btn btn-light mr-4">취소</a>
-                                                <a href="project_write3.html" class="btn btn-accent ml-0">저장</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="plf-floor-add border-bottom-0">
+                            <div class="btn-cell">
+                                <a href="#n" class="add-item text-green">
+                                    <span class="material-icons">note_add</span>
+                                    엑셀 업로드
+                                </a>
+                                <a href="project_write4_new.html" class="add-item text-identity">
+                                    <span class="material-icons">add</span>
+                                    자산 등록
+                                </a>
+                            </div>
+                        </div>
+                        <table class="table table-nowrap mb-0 table-high">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="*">
+                                <col width="15%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center">자산ID</th>
+                                    <th class="text-center">자산명</th>
+                                    <th class="text-center">유형</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="position-relative px-3" data-perfect-scrollbar>
+                            <table class="table table-nowrap table-high">
+                                <colgroup>
+                                    <col width="15%">
+                                    <col width="*">
+                                    <col width="15%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Ryan</td>
+                                        <td class="text-center">인적자산</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">배터리</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">배터리</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">센서</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">센서</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="empty-state border-top-0 d-none">
+                                <em class="empty-txt mb-4">자산을 등록해 주세요</em>
+                                <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
+                            </div>
+                        </div>
+                        <div class="pub-con">
+                            <div class="pub-inner">
+                                <div class="btn-wrap">
+                                    <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">저장</a>
                                 </div>
                             </div>
                         </div>
