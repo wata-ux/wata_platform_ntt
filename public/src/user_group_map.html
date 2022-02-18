@@ -10,11 +10,30 @@
                     data-title="대시보드로 이동" data-placement="right" data-boundary="window">
                     <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
                 </a>
-                <h4 class="project-title">프로젝트명을 입력해 주세요</h4>
+                <div class="project-select">
+                    <select class="form-line">
+                        <option value="">프로젝트를 선택해 주세요</option>
+                        <option value="">프로젝트A</option>
+                        <option value="">프로젝트B</option>
+                        <option value="">프로젝트C</option>
+                    </select>
+                </div>
                 <ul class="top-menu">
                     <li>
+                        <div class="btn-ico-group">
+                            <a href="user_group_table.html" class="btn-ico-sm">
+                                <span class="icon material-icons">table_rows</span>
+                                <span class="text"><span>Table View</span></span>
+                            </a>
+                            <a href="user_group_map.html" class="btn-ico-sm active">
+                                <span class="icon material-icons">map</span>
+                                <span class="text"><span>Map View</span></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
                         <div class="form-group m-0 ml-4 form-lang">
-                            <select id="custom-select" class="custom-line">
+                            <select id="" class="custom-line">
                                 <option selected="">KOR</option>
                                 <option value="1">JPN</option>
                                 <option value="2">ENG</option>
@@ -48,28 +67,77 @@
         </div>
         <div class="pl-cover">
             <div class="pl-col-left" id="sidebar-left">
-                @@include('./include/platform-side-menu.html', {"activeMonitoring": "active", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
+                @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "", "activeBuilding": "", "activeUser": "active", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
                 <div class="side-contents">
-                    <div class="d-flex flex-column h-100 bg-light">
-                        <div class="row-tab">
-                            <ul class="list-unstyled custom-scroll">
-                                <li><a href="project_write.html">프로젝트 정보</a></li>
-                                <li class="active"><a href="project_write2.html">건물 등록</a></li>
-                                <li><a href="project_write3.html">평면도 등록</a></li>
-                                <li><a href="project_write4.html">자산 등록</a></li>
-                            </ul>
-                        </div>
-                        <div class="plf-floor-add">
-                            <div class="btn-cell">
-                                <a href="project_write2_add.html" class="btn-add-item">
-                                    <span class="material-icons">import_export</span>
-                                    건물 가져오기
-                                </a>
-                                <a href="project_write2_new.html" class="btn-add-item text-identity">
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 py-4">
+                            <div class="d-flex align-items-center">
+                                <h3 class="mb-0">사용자 그룹</h3>
+                                <a href="project_write2_new.html" class="btn-add-item text-identity ml-auto p-0">
                                     <span class="material-icons">add</span>
-                                    새 건물 등록
+                                    그룹추가
                                 </a>
                             </div>
+                        </div>
+                        <div class="container-fluid py-4">
+                            <div class="serch-box mb-4">
+                                <input type="text" class="form-line" placeholder="사용자명을 입력해 주세요">
+                                <a href="#n"><span class="material-icons">search</span></a>
+                            </div>
+                            <table class="table mb-0 table-high table-center">
+                                <colgroup>
+                                    <col width="*">
+                                    <col width="10%">
+                                    <col width="30%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">그룹</th>
+                                        <th class="text-center">사용자</th>
+                                        <th class="text-center">층/지오펜스</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Security</td>
+                                        <td>4</td>
+                                        <td>
+                                            <a href="#n" class="btn-ico-sm">
+                                                <span class="icon material-icons">link</span>
+                                                <span class="text"><span>1층 쇼핑몰</span></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>A Store Event Manager</td>
+                                        <td>4</td>
+                                        <td>
+                                            <a href="#n" class="btn-ico-sm">
+                                                <span class="icon material-icons">link</span>
+                                                <span class="text">
+                                                    <span>1층 쇼핑몰</span>
+                                                    <span class="gp-id">1FGF1FNZ1</span>
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>A Store Event Manager</td>
+                                        <td>4</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">Beacon</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <div class="plf-floor-card p-4 position-relative" data-perfect-scrollbar>
                             <a href="project_write2_new.html" class="plf-area-card add-item">

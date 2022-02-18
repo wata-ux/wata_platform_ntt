@@ -116,6 +116,18 @@
                 </div>
                 <ul class="top-menu">
                     <li>
+                        <div class="btn-ico-group">
+                            <a href="user_group_table.html" class="btn-ico-sm active">
+                                <span class="icon material-icons">table_rows</span>
+                                <span class="text"><span>Table View</span></span>
+                            </a>
+                            <a href="user_group_map.html" class="btn-ico-sm">
+                                <span class="icon material-icons">map</span>
+                                <span class="text"><span>Map View</span></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
                         <div class="form-group m-0 ml-4 form-lang">
                             <select id="" class="custom-line">
                                 <option selected="">KOR</option>
@@ -160,7 +172,7 @@
                     <span class="material-icons">insert_chart_outlined</span>
                     <span class="nav_name">모니터링</span>
                 </a>
-                <a href="home.html" class="nav__link active" data-toggle="tooltip"
+                <a href="home.html" class="nav__link " data-toggle="tooltip"
                 data-title="프로젝트" data-placement="right" data-boundary="window">
                     <span class="material-icons">grid_view</span>
                     <span class="nav_name">프로젝트</span>
@@ -171,7 +183,7 @@
                     <span class="nav_name">건물</span>
                 </a>
 
-                <div href="#" class="nav__link  collapse-item" data-toggle="tooltip"
+                <div href="#" class="nav__link active collapse-item" data-toggle="tooltip"
                 data-title="사용자" data-placement="right" data-boundary="window">
                     <span class="material-icons-outlined">person_outline</span>
                     <span class="nav_name">사용자</span>
@@ -224,239 +236,238 @@
                 <div class="pl-col-mid" id="main-contents" data-perfect-scrollbar>
                     <div class="contents-section">
                         <div class="cell">
-        
                             <div class="d-flex flex-row align-items-center mb-4">
                                 <div class="flex">
-                                    <h3 class="d-flex align-items-center mb-0">최근 프로젝트 목록</h3>
+                                    <h3 class="d-flex align-items-center mb-0">사용자 그룹</h3>
                                 </div>
                             </div>
-                            <div class="row card-group-row">
-                                <div class="col-3 card-group-row__col">
-                                    <a href="#n" class="card card-latest">
-                                        <div class="card-caption">
-                                            <span class="material-icons cp-icon">factory</span>
-                                            <h5 class="m-0">Factory</h5>
-                                        </div>
-                                        <div class="card-title">
-                                            <h4 class="mb-2">Smart Factory Project</h4>
-                                            <p>경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
-                                        </div>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <span>공간</span>
-                                                <em>4</em>
-                                            </li>
-                                            <li>
-                                                <span>공간</span>
-                                                <em>20</em>
-                                            </li>
-                                            <li>
-                                                <span>공간</span>
-                                                <em>20</em>
-                                            </li>
-                                        </ul>
-                                    </a>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="serch-box">
+                                    <input type="text" class="form-line" placeholder="사용자명을 입력해 주세요">
+                                    <a href="#n"><span class="material-icons">search</span></a>
                                 </div>
-                                <div class="col-3 card-group-row__col">
-                                    <a href="#n" class="card card-latest">
-                                        <div class="card-caption">
-                                            <span class="material-icons cp-icon">factory</span>
-                                            <h5 class="m-0">Retail</h5>
-                                            <small class="ml-auto">편집중</small>
-                                        </div>
-                                        <div class="card-title">
-                                            <h4 class="mb-2">Smart Factory Project</h4>
-                                            <p>Smart Retail Project</p>
-                                        </div>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <span>공간</span>
-                                                <em>4</em>
-                                            </li>
-                                            <li>
-                                                <span>공간</span>
-                                                <em>20</em>
-                                            </li>
-                                            <li>
-                                                <span>공간</span>
-                                                <em>20</em>
-                                            </li>
-                                        </ul>
-                                    </a>
-                                </div>
-                                <div class="col-3 card-group-row__col">
-                                    <a href="#n" class="card card-latest">
-                                        <div class="card-caption">
-                                            <span class="material-icons cp-icon">factory</span>
-                                            <h5 class="m-0">Office</h5>
-                                            <small class="ml-auto">편집중</small>
-                                        </div>
-                                        <div class="card-title">
-                                            <h4 class="mb-2">Smart Factory Project</h4>
-                                            <p>주소</p>
-                                        </div>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <span>공간</span>
-                                                <em>4</em>
-                                            </li>
-                                            <li>
-                                                <span>공간</span>
-                                                <em>20</em>
-                                            </li>
-                                            <li>
-                                                <span>공간</span>
-                                                <em>20</em>
-                                            </li>
-                                        </ul>
-                                    </a>
-                                </div>
-                                <div class="col-3 card-group-row__col">
-                                    <a href="project_write.html" class="card card-latest add-project">
+                                <div class="btn-cell ml-auto">
+                                    <a href="project_write4_new.html" class="btn-add-item text-identity" data-toggle="modal" data-target="#addUserGroup">
                                         <span class="material-icons">add</span>
-                                        새 프로젝트 추가
+                                        사용자 추가
                                     </a>
                                 </div>
                             </div>
-                            <div class="empty-state d-none">
-                                <p class="empty-icon m-0"><i class="far fa-map"></i></p>
-                                <em class="empty-txt m-0">아직 등록한 프로젝트가 없습니다.</em>
-                                <!-- <a href="#n" class="btn btn-link">새로운 프로젝트 생성</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contents-section">
-                        <div class="cell">
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <div class="flex">
-                                    <h3 class="d-flex align-items-center mb-0 ">프로젝트 목록</h3>
-                                </div>
-                            </div> 
-                            <table class="table mb-4 table-nowrap table-center">
-                                <colgroup>
-                                    <col width="*">
-                                    <col width="13%">
-                                    <col width="13%">
-                                    <col width="13%">
-                                    <col width="5%">
-                                </colgroup>
+                            <table class="table mb-4 table-center table-higher">
                                 <thead>
                                     <tr>
+                                        <th>그룹</th>
+                                        <th>사용자</th>
                                         <th>프로젝트</th>
-                                        <th>유형</th>
-                                        <th>최근 수정일</th>
-                                        <th>생성일</th>
-                                        <th></th>
+                                        <th>엑세스</th>
+                                        <th>설명</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center mr-16pt">
-                                                <div href="#n" class="icon-thumb mr-12pt">
-                                                    <span class="material-icons">factory</span>
-                                                </div>
-                                                <div class="flex list-els">
-                                                    <a class="card-title" href="buildings_board.html"><h4 class="m-0">Smart Factory Project</h4></a>
-                                                    <p class="d-flex m-0">경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Factory</td>
-                                        <td>2021.01.10</td>
-                                        <td>2021.01.10</td>
-                                        <td class="text-right">
-                                            <div class="dropdown">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                                </div>
+                                        <td colspan="5">
+                                            <div class="text-center py-4">
+                                                <span class="material-icons-outlined text-50 font-size-32pt">info</span>
+                                                <p class="m-0 text-50">아직 그룹이 없습니다.</p>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center mr-16pt">
-                                                <a href="#n" class="icon-thumb mr-12pt">
-                                                    <span class="material-icons">store</span>
-                                                </a>
-                                                <div class="flex list-els">
-                                                    <a class="card-title" href="buildings_board.html"><h4 class="m-0">Smart Retail Project</h4></a>
-                                                    <p class="d-flex m-0">경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
-                                                </div>
-                                            </div>
+                                        <td>Security</td>
+                                        <td>4</td>
+                                        <td></td>
+                                        <td class="text-left">
+                                            <a href="#n" class="btn-ico-sm">
+                                                <span class="icon material-icons">link</span>
+                                                <span class="text"><span>1층 쇼핑몰</span></span>
+                                            </a>
                                         </td>
-                                        <td>Retail</td>
-                                        <td>2021.01.10</td>
-                                        <td>2021.01.10</td>
-                                        <td class="text-right">
-                                            <div class="dropdown">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td class="text-left">보안관리팀</td>
                                     </tr>
                                     <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center mr-16pt">
-                                                <a href="#n" class="icon-thumb mr-12pt">
-                                                    <img src="images/slider01.jpg" alt="">
-                                                </a>
-                                                <div class="flex list-els">
-                                                    <a class="card-title" href="buildings_board.html"><h4 class="m-0">Smart Office Project</h4></a>
-                                                    <p class="d-flex m-0">경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
-                                                </div>
-                                            </div>
+                                        <td>A Store Event Manager</td>
+                                        <td>4</td>
+                                        <td>Hanam startfield Project</td>
+                                        <td class="text-left">
+                                            <a href="#n" class="btn-ico-sm">
+                                                <span class="icon material-icons">link</span>
+                                                <span class="text">
+                                                    <span>1층 쇼핑몰</span>
+                                                    <span class="gp-id">1FGF1FNZ1</span>
+                                                </span>
+                                            </a>
                                         </td>
-                                        <td>Office</td>
-                                        <td>2021.01.10</td>
-                                        <td>2021.01.10</td>
-                                        <td class="text-right">
-                                            <div class="dropdown">
-                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
-                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
-                                                </div>
-                                            </div>
+                                        <td class="text-left">그룹 설명</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Security</td>
+                                        <td>4</td>
+                                        <td>Hanam startfield Project</td>
+                                        <td class="text-left">
+                                            <a href="#n" class="btn-ico-sm">
+                                                <span class="icon material-icons">link</span>
+                                                <span class="text"><span>B1층 푸드코트</span></span>
+                                            </a>
+                                            <a href="#n" class="btn-ico-sm">
+                                                <span class="icon material-icons">link</span>
+                                                <span class="text"><span>1층 쇼핑몰</span></span>
+                                            </a>
                                         </td>
+                                        <td class="text-left">그룹 설명</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="pagination align-items-center justify-content-center">
-                                <a class="page-link btn-prev" href="#" aria-label="Previous">
-                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                    <span>이전</span>
-                                </a>
-                                <div class="d-flex align-items-center justify-content-center px-3">
-                                    <select name="" id="" class="form-line">
-                                        <option value="">1</option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
-                                        <option value="">4</option>
-                                    </select>
-                                    <em>1</em>
+                            <div class="pagination-group">
+                                <div class="pagination align-items-center justify-content-center flex">
+                                    <a class="page-link btn-prev" href="#" aria-label="Previous">
+                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                        <span>이전</span>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center px-3">
+                                        <select name="" id="" class="form-line">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                        </select>
+                                        <em>1</em>
+                                    </div>
+                                    <a class="page-link btn-next" href="#" aria-label="Next">
+                                        <span>다음</span>
+                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                    </a>
                                 </div>
-                                <a class="page-link btn-next" href="#" aria-label="Next">
-                                    <span>다음</span>
-                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                </a>
+                                <div class="d-flex view-page">
+                                    <select name="" id="" class="form-line">
+                                        <option value="">10개씩 보기</option>
+                                        <option value="">20개씩 보기</option>
+                                        <option value="">30개씩 보기</option>
+                                        <option value="">40개씩 보기</option>
+                                        <option value="">50개씩 보기</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="empty-state d-none">
-                                <p class="empty-icon m-0"><i class="far fa-building"></i></p>
-                                <em class="empty-txt mb-4">아직 등록한 건물이 없습니다.</em>
-                                <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
-                            </div>
-                        </div>  
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+<!-- Modal -->
+<div class="modal fade" id="addUserGroup" tabindex="-1" aria-labelledby="addUserGroupLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered col-wide-6">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="addUserGroupLabel">사용자 추가</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label essential" for="">그룹명</label>
+                    <input type="email" class="form-line" id="" placeholder="그룹명을 입력해주세요">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="">프로젝트</label>
+                    <select id="" class="form-line" data-toggle="select" multiple >
+                        <option>프로젝트5</option>
+                        <option>프로젝트4</option>
+                        <option>프로젝트3</option>
+                        <option>프로젝트2</option>
+                        <option>프로젝트1</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="">사용자</label>
+                    <div class="serch-box">
+                        <input type="text" class="form-line" placeholder="사용자명을 입력해 주세요">
+                        <a href="#n"><span class="material-icons">search</span></a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="">추가된 사용자</label>
+                    <small class="text-identity">16</small>
+                    <table class="table mb-4 table-nowrap table-center table-high">
+                        <colgroup>
+                            <col width="5%">
+                            <col width="*">
+                            <col width="*">
+                            <col width="*">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>사용자</th>
+                                <th>이메일</th>
+                                <th>등록일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#n" class="text-identity"><span class="material-icons">remove_circle</span></a></td>
+                                <td>user</td>
+                                <td>user@watanow.com</td>
+                                <td>2021.09.01</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#n" class="text-identity"><span class="material-icons">remove_circle</span></a></td>
+                                <td>user</td>
+                                <td>user@watanow.com</td>
+                                <td>2021.09.01</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#n" class="text-identity"><span class="material-icons">remove_circle</span></a></td>
+                                <td>user</td>
+                                <td>user@watanow.com</td>
+                                <td>2021.09.01</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#n" class="text-identity"><span class="material-icons">remove_circle</span></a></td>
+                                <td>user</td>
+                                <td>user@watanow.com</td>
+                                <td>2021.09.01</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#n" class="text-identity"><span class="material-icons">remove_circle</span></a></td>
+                                <td>user</td>
+                                <td>user@watanow.com</td>
+                                <td>2021.09.01</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination align-items-center justify-content-center flex">
+                        <a class="page-link btn-prev" href="#" aria-label="Previous">
+                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                            <span>이전</span>
+                        </a>
+                        <div class="d-flex align-items-center justify-content-center px-3">
+                            <select name="" id="" class="form-line">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                            <em>1</em>
+                        </div>
+                        <a class="page-link btn-next" href="#" aria-label="Next">
+                            <span>다음</span>
+                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">취소</button>
+                <button type="button" class="btn btn-accent" data-dismiss="modal">그룹 추가</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

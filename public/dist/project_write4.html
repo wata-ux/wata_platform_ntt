@@ -134,9 +134,8 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <div class="dropdown-header"><strong>Account</strong></div>
-                                <a class="dropdown-item" href="#n">정보수정</a>
-                                <a class="dropdown-item" href="#n">멤버십</a>
-                                <a class="dropdown-item" href="#n">Logout</a>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
                             </div>
                         </div>
                     </li>
@@ -154,7 +153,7 @@
                     <span class="material-icons">insert_chart_outlined</span>
                     <span class="nav_name">모니터링</span>
                 </a>
-                <a href="#" class="nav__link " data-toggle="tooltip"
+                <a href="home.html" class="nav__link " data-toggle="tooltip"
                 data-title="프로젝트" data-placement="right" data-boundary="window">
                     <span class="material-icons">grid_view</span>
                     <span class="nav_name">프로젝트</span>
@@ -165,25 +164,19 @@
                     <span class="nav_name">건물</span>
                 </a>
 
-                <div href="#" class="nav__link  collapse-item d-none" data-toggle="tooltip"
-                data-title="건물" data-placement="right" data-boundary="window">
-                    <span class="material-icons-outlined">space_dashboard</span>
-                    <span class="nav_name">건물</span>
+                <div href="#" class="nav__link  collapse-item" data-toggle="tooltip"
+                data-title="사용자" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">person_outline</span>
+                    <span class="nav_name">사용자</span>
 
                     <span class="material-icons collapse__link">expand_more</span>
 
                     <div class="collapse__menu">
-                        <a href="#" class="collapse__sublink">Data</a>
-                        <a href="#" class="collapse__sublink">Group</a>
-                        <a href="#" class="collapse__sublink">Members</a>
+                        <a href="user_table.html" class="collapse__sublink">사용자</a>
+                        <a href="user_group_table.html" class="collapse__sublink">사용자 그룹</a>
                     </div>
                 </div>
 
-                <a href="#" class="nav__link " data-toggle="tooltip"
-                data-title="사용자" data-placement="right" data-boundary="window">
-                    <span class="material-icons-outlined">person_outline</span>
-                    <span class="nav_name">사용자</span>
-                </a>
 
                 <a href="#" class="nav__link " data-toggle="tooltip"
                 data-title="자산" data-placement="right" data-boundary="window">
@@ -231,11 +224,11 @@
                         </div>
                         <div class="plf-floor-add border-bottom-0">
                             <div class="btn-cell">
-                                <a href="#n" class="add-item text-green">
+                                <a href="#n" class="btn-add-item text-green">
                                     <span class="material-icons">note_add</span>
                                     엑셀 업로드
                                 </a>
-                                <a href="project_write4_new.html" class="add-item text-identity">
+                                <a href="project_write4_new.html" class="btn-add-item text-identity">
                                     <span class="material-icons">add</span>
                                     자산 등록
                                 </a>
@@ -249,9 +242,9 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th class="text-center">자산ID</th>
+                                    <th class="text-center pl-4">자산ID</th>
                                     <th class="text-center">자산명</th>
-                                    <th class="text-center">유형</th>
+                                    <th class="text-center pr-4">유형</th>
                                 </tr>
                             </thead>
                         </table>
@@ -266,27 +259,27 @@
                                     <tr>
                                         <td>NT0000</td>
                                         <td>Ryan</td>
-                                        <td class="text-center">인적자산</td>
+                                        <td class="text-center">Tag</td>
                                     </tr>
                                     <tr>
                                         <td>NT0000</td>
                                         <td>Main battery</td>
-                                        <td class="text-center">배터리</td>
+                                        <td class="text-center">Tag</td>
                                     </tr>
                                     <tr>
                                         <td>NT0000</td>
                                         <td>Main battery</td>
-                                        <td class="text-center">배터리</td>
+                                        <td class="text-center">Beacon</td>
                                     </tr>
                                     <tr>
                                         <td>NT0000</td>
                                         <td>Sensor</td>
-                                        <td class="text-center">센서</td>
+                                        <td class="text-center">Tag</td>
                                     </tr>
                                     <tr>
                                         <td>NT0000</td>
                                         <td>Sensor</td>
-                                        <td class="text-center">센서</td>
+                                        <td class="text-center">Beacon</td>
                                     </tr>
                                 </tbody>
                             </table>

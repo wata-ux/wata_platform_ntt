@@ -1,168 +1,108 @@
-@@include('./include/header.html')
+@@include('./include/platform-header.html')
 
-<main class="dashboard-main">
-    <nav class="dashboard-nav">
-        <a href="home.html" class="navbar-brand mr-16pt">
-            <img src="images/logo/logo.svg" alt="logo" class="img-fluid" />
-        </a>
-        <div class="top-menu-cover">
-            <div class="top-menu">
-                <a href="login.html" class="menu-item text-primary">Sign in</a>
-                <a href="#n" class="menu-item"><span class="material-icons icon--left">code_off</span>Developers</a>
-            </div>
-        </div>
-    </nav>
-    <div class="dashboard-body">
-        <aside class="side-nav sidebar sidebar-light sidebar-light-dodger-blue sidebar-left">
-            <ul class="sidebar-menu">
 
-                <li class="sidebar-menu-item">
-                    <a class="sidebar-menu-button" href="home.html">
-                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">topic</span>
-                        <span class="sidebar-menu-text">프로젝트</span>
-                    </a>
-                </li>
-                <li class="sidebar-menu-item ">
-                    <a class="sidebar-menu-button" data-toggle="collapse" href="#space_menu">
-                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">map</span>
-                        공간
-                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                    </a>
-                    <ul class="sidebar-submenu collapse sm-indent" id="space_menu">
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="space.html">
-                                <span class="sidebar-menu-text">사용자 정의</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-menu-item">
-                    <a class="sidebar-menu-button" data-toggle="collapse" href="#group_menu">
-                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">groups</span>
-                        그룹설정
-                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                    </a>
-                    <ul class="sidebar-submenu collapse sm-indent" id="group_menu">
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="user.html">
-                                <span class="sidebar-menu-text">사용자</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="my_groups.html">
-                                <span class="sidebar-menu-text">그룹</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-menu-item active open">
-                    <a class="sidebar-menu-button" data-toggle="collapse" href="#account_menu">
-                        <span class="material-icons-outlined sidebar-menu-icon sidebar-menu-icon--left">account_circle</span>
-                        계정
-                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                    </a>
-                    <ul class="sidebar-submenu collapse sm-indent show" id="account_menu">
-                        <li class="sidebar-menu-item active">
-                            <a class="sidebar-menu-button" href="my_profile.html">
-                                <span class="sidebar-menu-text">프로필</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="my_account.html">
-                                <span class="sidebar-menu-text">보안</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </aside>
-        <div class="contents" data-perfect-scrollbar>
-            <div class="current-location">
-                <a href="home.html" class="btn-location-home">
-                    <span class="material-icons">home</span>
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
                 </a>
-                <div class="filter-cell location-depth">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle location-list">
-                        <strong>계정</strong>
-                    </a>
-                    <div class="filter-item-dropdown" data-perfect-scrollbar>
-                        <a href="home.html" class="dropdown-item">프로젝트</a>
-                        <a href="space.html" class="dropdown-item">공간</a>
-                        <a href="user.html" class="dropdown-item">그룹설정</a>
-                        <a href="my_account.html" class="dropdown-item active">계정</a>
-                    </div>
+                <div class="project-select">
+                    <select class="form-line">
+                        <option value="">프로젝트를 선택해 주세요</option>
+                        <option value="">프로젝트A</option>
+                        <option value="">프로젝트B</option>
+                        <option value="">프로젝트C</option>
+                    </select>
                 </div>
-                <div class="filter-cell location-depth">
-                    <a href="javascript:void(0)" class="filter-dropdown-toggle location-list">
-                        <strong>프로필</strong>
-                    </a>
-                    <div class="filter-item-dropdown" data-perfect-scrollbar>
-                        <a href="my_profile.html" class="dropdown-item active">프로필</a>
-                        <a href="my_account.html" class="dropdown-item">보안</a>
-                    </div>
-                </div>
-            </div>
-            <div class="contents-section account-wrap">
-                <div class="cell">
-                    <div class="row align-items-start">
-                        <div class="col-md-5">
-                            <div class="avatar-box">
-                                <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-5 sort-wrap">
-                                    <div class="flex title-row">
-                                        <h3 class="mb-0">내프로필</h3>
-                                    </div>
-                                </div>
-                                <div class="text-center">
-                                    <div class="avatar avatar-xxxl mb-4">
-                                        <!-- <img src="images/icon/wata_symbol.png" alt="Avatar" class="avatar-img rounded-circle"> -->
-                                        <span class="avatar-title rounded-circle">JY</span>
-                                    </div>
-                                    <p class="text-50 font-size-12pt text-center">권장 이미지 크기는 200x200 픽셀입니다.</p>
-                                    <div class="button-wrapper">
-                                        <label for="avatarUpload" class="btn btn-outline-secondary btn-rounded m-0">Upload File</label>
-                                        <input type="file" name="" id="avatarUpload" class="upload-box" placeholder="Upload File">
-                                    </div>
-                                </div>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="" class="custom-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
                             </div>
                         </div>
-                        <div class="col-md-7">
-                            <div class="mb-5">
-                                <h5 class="mb-4">기본 정보</h5>
-                                <div class="form-group mb-32pt border-bottom-1">
-                                    <label class="form-label text-50" for="accountEmail">이메일</label>
-                                    <p class="py-2 m-0 font-size-16pt font-weight-bold">jeayong.lee@samsung.com</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents" data-perfect-scrollbar>
+                    <div class="contents-section account-wrap">
+                        <div class="cell">
+                            <div class="row">
+                                <div class="col-md-4 d-flex flex-column p-5">
+                                    <div class="avatar-box">
+                                        <div class="avatar avatar-xxxl mb-4">
+                                            <!-- <img src="images/icon/wata_symbol.png" alt="Avatar" class="avatar-img rounded-circle"> -->
+                                            <span class="avatar-title rounded-circle">JY</span>
+                                        </div>
+                                    </div>
+                                    <div class="nav-profile">
+                                        <div class="d-flex flex-column">
+                                            <a href="#n" class="active">내 프로필</a>
+                                            <a href="#n">비밀번호 변경</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group mb-32pt border-bottom-1">
-                                    <label class="form-label text-50" for="accountName">이름</label>
-                                    <p class="py-2 m-0 font-size-16pt font-weight-bold">이재용</p>
-                                </div>
-                            </div>
-                            <div class="mb-5">
-                                <h5 class="mb-4">소속 정보</h5>
-                                <div class="form-group mb-32pt border-bottom-1">
-                                    <label class="form-label text-50" for="accountCompany">회사명</label>
-                                    <p class="py-2 m-0 font-size-16pt font-weight-bold">삼성그룹</p>
-                                </div>
-                                <div class="form-group mb-32pt border-bottom-1">
-                                    <label class="form-label text-50" for="accountName">부서명</label>
-                                    <p class="py-2 m-0 font-size-16pt font-weight-bold">경영</p>
-                                </div>
-                                <div class="form-group mb-32pt border-bottom-1">
-                                    <label class="form-label text-50" for="accountName">유형</label>
-                                    <p class="py-2 m-0 font-size-16pt font-weight-bold">유형</p>
-                                </div>
-                                <div class="form-group mb-32pt border-bottom-1">
-                                    <label class="form-label text-50" for="accountName">규모</label>
-                                    <p class="py-2 m-0 font-size-16pt font-weight-bold">규모</p>
-                                </div>
-                                <div class="form-group mb-32pt border-bottom-1">
-                                    <label class="form-label text-50" for="accountName">분야</label>
-                                    <p class="py-2 m-0 font-size-16pt font-weight-bold">분야</p>
-                                </div>
-                            </div>
-                            <div class="my-32pt">
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <a href="my_profile_modify.html" class="btn btn-accent ml-0">프로필 편집</a>
+                                <div class="col-md-8 d-flex flex-column p-5 border-left-1">
+                                    <h3 class="mb-5">내 프로필</h3>
+                                    <div class="mb-4">
+                                        <h4 class="mb-4">기본 정보</h4>
+                                        <div class="form-group mb-32pt">
+                                            <label class="form-label" for="">이메일</label>
+                                            <input type="text" class="form-line" value="uer@watanow.com" disabled>
+                                        </div>
+                                        <div class="form-group mb-32pt">
+                                            <label class="form-label" for="">이름</label>
+                                            <input type="text" class="form-line" value="라이언" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h5 class="mb-4">소속</h5>
+                                        <div class="form-group mb-32pt">
+                                            <label class="form-label" for="">회사</label>
+                                            <input type="text" class="form-line" value="와따" disabled>
+                                        </div>
+                                        <div class="form-group mb-32pt">
+                                            <label class="form-label" for="">부서</label>
+                                            <input type="text" class="form-line" value="UX" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a href="my_profile_modify.html" class="btn btn-accent py-3 font-size-14pt w-25">프로필 편집</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -171,9 +111,40 @@
             </div>
         </div>
     </div>
-</main>
+
+<!-- Modal -->
+<div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="saddUserLabel">사용자 추가</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="material-icons">clear</i></span>
+            </button>
+        </div>
+
+        <div class="modal-body">
+            <div class="form-group mb-32pt">
+                <label class="form-label essential" for="">이메일</label>
+                <input type="email" class="form-line" id="" placeholder="이메일을 입력해주세요">
+            </div>
+            <div class="form-group mb-32pt">
+                <label class="form-label essential" for="">사용자 그룹</label>
+                <select name="category" class="form-line">
+                    <option value="">사용자 그룹을 선택해주세요</option>
+                    <option value="">그룹A</option>
+                    <option value="">그룹B</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-link" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button>
+        </div>
+        </div>
+    </div>
+</div>
 
 
-
-
-@@include('./include/footer.html')
+@@include('./include/platform-footer.html')

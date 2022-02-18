@@ -106,11 +106,30 @@
                     data-title="대시보드로 이동" data-placement="right" data-boundary="window">
                     <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
                 </a>
-                <h4 class="project-title">프로젝트명을 입력해 주세요</h4>
+                <div class="project-select">
+                    <select class="form-line">
+                        <option value="">프로젝트를 선택해 주세요</option>
+                        <option value="">프로젝트A</option>
+                        <option value="">프로젝트B</option>
+                        <option value="">프로젝트C</option>
+                    </select>
+                </div>
                 <ul class="top-menu">
                     <li>
+                        <div class="btn-ico-group">
+                            <a href="user_group_table.html" class="btn-ico-sm">
+                                <span class="icon material-icons">table_rows</span>
+                                <span class="text"><span>Table View</span></span>
+                            </a>
+                            <a href="user_group_map.html" class="btn-ico-sm active">
+                                <span class="icon material-icons">map</span>
+                                <span class="text"><span>Map View</span></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
                         <div class="form-group m-0 ml-4 form-lang">
-                            <select id="custom-select" class="custom-line">
+                            <select id="" class="custom-line">
                                 <option selected="">KOR</option>
                                 <option value="1">JPN</option>
                                 <option value="2">ENG</option>
@@ -148,7 +167,7 @@
     <nav class="nav-container">
         <div class="nav-inner">
             <div class="nav__list">
-                <a href="#" class="nav__link active" data-toggle="tooltip"
+                <a href="#" class="nav__link " data-toggle="tooltip"
                 data-title="모니터링" data-placement="right" data-boundary="window">
                     <span class="material-icons">insert_chart_outlined</span>
                     <span class="nav_name">모니터링</span>
@@ -164,7 +183,7 @@
                     <span class="nav_name">건물</span>
                 </a>
 
-                <div href="#" class="nav__link  collapse-item" data-toggle="tooltip"
+                <div href="#" class="nav__link active collapse-item" data-toggle="tooltip"
                 data-title="사용자" data-placement="right" data-boundary="window">
                     <span class="material-icons-outlined">person_outline</span>
                     <span class="nav_name">사용자</span>
@@ -212,45 +231,102 @@
         </div>
     </nav>
 </div>
-                <div class="side-contents" data-perfect-scrollbar>
+                <div class="side-contents">
                     <div class="d-flex flex-column h-100">
-                        <div class="container-fluid border-bottom-1 mb-4 py-4">
+                        <div class="container-fluid border-bottom-1 py-4">
                             <div class="d-flex align-items-center">
-                                <a href="project_write3.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
-                                <h3 class="mb-0">평면도 등록</h3>
+                                <h3 class="mb-0">사용자 그룹</h3>
+                                <a href="project_write2_new.html" class="btn-add-item text-identity ml-auto p-0">
+                                    <span class="material-icons">add</span>
+                                    그룹추가
+                                </a>
                             </div>
                         </div>
-                        <div class="container-fluid">
-                            <div class="form-group mb-32pt">
-                                <label class="form-label" for="">평면도 등록 건물</label>
-                                <input type="text" class="form-line" id="" placeholder="평면도 등록 공간명" disabled>
+                        <div class="container-fluid py-4">
+                            <div class="serch-box mb-4">
+                                <input type="text" class="form-line" placeholder="사용자명을 입력해 주세요">
+                                <a href="#n"><span class="material-icons">search</span></a>
                             </div>
-                            <div class="form-group mb-32pt">
-                                <label class="form-label essential" for="">평면도명</label>
-                                <input type="text" class="form-line" id="" placeholder="평면도명을 입력해 주세요">
-                            </div>
-                            <div class="form-group mb-32pt">
-                                <label class="form-label essential" for="">층</label>
-                                <input type="text" class="form-line" id="" placeholder="층을 입력해 주세요">
-                            </div>
-
-
-                            <!-- 파일 첨부 전 -->
-                            <div class="form-group mb-32pt over-txt">
-                                <label class="form-label essential" for="">평면도 이미지</label>
-                                <input type="text" class="form-line" id="" placeholder="">
-                                <div class="btn-abs btn-file-att">
-                                    <label class="btn-light btn-sm m-0" for="fileAtt">파일 선택</label>
-                                    <input type="file" id="fileAtt">
+                            <table class="table mb-0 table-high table-center">
+                                <colgroup>
+                                    <col width="*">
+                                    <col width="10%">
+                                    <col width="30%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">그룹</th>
+                                        <th class="text-center">사용자</th>
+                                        <th class="text-center">층/지오펜스</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Security</td>
+                                        <td>4</td>
+                                        <td>
+                                            <a href="#n" class="btn-ico-sm">
+                                                <span class="icon material-icons">link</span>
+                                                <span class="text"><span>1층 쇼핑몰</span></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>A Store Event Manager</td>
+                                        <td>4</td>
+                                        <td>
+                                            <a href="#n" class="btn-ico-sm">
+                                                <span class="icon material-icons">link</span>
+                                                <span class="text">
+                                                    <span>1층 쇼핑몰</span>
+                                                    <span class="gp-id">1FGF1FNZ1</span>
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>A Store Event Manager</td>
+                                        <td>4</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">Beacon</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="plf-floor-card p-4 position-relative" data-perfect-scrollbar>
+                            <a href="project_write2_new.html" class="plf-area-card add-item">
+                                <span class="material-icons">add</span>
+                                <h5>건물 등록</h5>
+                                <p>건물을 등록해 주세요</p>
+                            </a>
+                            <div class="plf-area-card active">
+                                <div class="plf-area-top">
+                                    <h4>건물</h4>
+                                    <div class="left-cell">
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- 파일 첨부 후 -->
-                            <div class="form-group mb-32pt over-txt">
-                                <label class="form-label essential" for="">평면도 이미지</label>
-                                <input type="text" class="form-line" id="" placeholder="">
-                                <div class="btn-abs">
-                                    <a href="#n" class="btn-light btn-sm">조정</a>
-                                    <a href="#n"><span class="material-icons ml-2">close</span></a>
+                                <div class="plf-area-content">
+                                    <p class="desc">대한민국, 경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                    <div class="d-flex align-items-center">
+                                        <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -258,7 +334,7 @@
                             <div class="pub-inner">
                                 <div class="btn-wrap">
                                     <a href="project_write.html" class="btn btn-light mr-4">취소</a>
-                                    <a href="project_write3.html" class="btn btn-accent ml-0">등록</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">저장</a>
                                 </div>
                             </div>
                         </div>
@@ -267,6 +343,63 @@
             </div>
             <div class="pl-col-group">
                 <div class="pl-col-mid" id="main-contents">
+                    <div class="alert-set-guide" style="max-width: 100%">
+                        <div class="alert fade show" role="alert">
+                            <div class="alert-header">
+                                <h4>프로젝트 설정 가이드</h4>
+                                <button type="button" class="alert-close" data-dismiss="alert" aria-label="Close">
+                                    <span class="material-icons" aria-hidden="true">close</span>
+                                </button>
+                            </div>
+                            <div class="alert-contents">
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex cmp-guide">
+                                        <input id="customCheck01" type="checkbox" class="custom-control-input" checked disabled>
+                                        <label for="customCheck01" class="custom-control-label">프로젝트 정보를 입력해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex cmp-guide">
+                                        <input id="customCheck02" type="checkbox" class="custom-control-input" checked disabled>
+                                        <label for="customCheck02" class="custom-control-label">위치를 수집할 대상 주소를 입력해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck03" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck03" class="custom-control-label">공간 정보를 입력해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck04" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck04" class="custom-control-label">평면도 이미지를 업로드해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck05" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck05" class="custom-control-label">지오펜스를 설정해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck06" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck06" class="custom-control-label">위치 정보 수집 경로를 등록해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck07" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck07" class="custom-control-label">사용자를 배정하세요</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="alert-footer">
+                                
+                            </div>
+                        </div>
+                    </div>
                         <!-- map zoom/out -->
     <div class="btn-widget-holder">
         <ul>
