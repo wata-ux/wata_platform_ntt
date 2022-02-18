@@ -676,6 +676,9 @@ select.form-line{
         height: 100%;
         object-fit: cover;
     }
+    &:hover{
+        color: darken($identity, 10%);
+    }
 }
 
 
@@ -10494,11 +10497,77 @@ xnugget info
                 right: 0;
                 box-shadow: -5px 0 5px rgba(0, 0, 0, 0.05);
             }
+            .col-header{
+                background-color: #fff;
+                margin-left: -.625rem;
+                margin-right: -.625rem;
+                margin-top: -.625rem;
+                padding: 2rem;
+                border-bottom: 1px solid $border-color;
+                .inner{
+                    max-width: 1440px;
+                    margin: 0 auto;
+                }
+                .col-cell{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                }
+                .col-desc{
+                    margin-left: 5.75rem;
+                    max-width: 500px;
+                }
+                .icon-thumb{
+                    width: 5rem;
+                    height: 5rem;
+                    span{
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .col-list{
+                padding: 2rem;
+                margin-left: -.625rem;
+                margin-right: -.625rem;
+                .plf-floor-card{
+                    max-width: 1440px;
+                    margin: 0 auto;
+                    .plf-area-card{
+                        padding: 1.5rem;
+                        .plf-floor-card-info{
+                            border-top: none;
+                            align-items: center;
+                            li{
+                                border-left: 1px solid $border-color;
+                                &:first-child{
+                                    border-left: none;
+                                }
+                                .icon{
+                                    font-size: 1.125rem;
+                                    color: rgba(51,51,51,0.4);
+                                }
+                                .thumb{
+                                    max-width: 200px;
+                                    border: 1px solid $border-color;
+                                    overflow: hidden;
+                                    border-radius: .25rem;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         .pl-col-right{
             flex-grow: 1;
             min-width: 400px;
             background-color: #F8F9FB;
+            border-left: 1px solid $border-color;
             .cd-panel__content{
                 padding-bottom: 6rem;
                 padding-right: .625rem;
@@ -10701,6 +10770,7 @@ xnugget info
                 align-items: center;
                 .floor-num{
                     margin-right: .5rem;
+                    font-weight: 500;
                 }
             }
         }
