@@ -1,0 +1,303 @@
+@@include('./include/platform-header.html')
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <div class="project-select">
+                    <select class="form-line">
+                        <option value="">프로젝트를 선택해 주세요</option>
+                        <option value="">프로젝트A</option>
+                        <option value="">프로젝트B</option>
+                        <option value="">프로젝트C</option>
+                    </select>
+                </div>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="" class="custom-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "active", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents" data-perfect-scrollbar>
+                    <div class="contents-section">
+                        <div class="cell">
+        
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <div class="flex">
+                                    <h3 class="d-flex align-items-center mb-0">최근 프로젝트 목록</h3>
+                                </div>
+                            </div>
+                            <div class="row card-group-row">
+                                <div class="col-3 card-group-row__col">
+                                    <a href="#n" class="card card-latest">
+                                        <div class="card-caption">
+                                            <span class="material-icons cp-icon">factory</span>
+                                            <h5 class="m-0">Factory</h5>
+                                        </div>
+                                        <div class="card-title">
+                                            <h4 class="mb-2">Smart Factory Project</h4>
+                                            <p>경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                        </div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <span>공간</span>
+                                                <em>4</em>
+                                            </li>
+                                            <li>
+                                                <span>공간</span>
+                                                <em>20</em>
+                                            </li>
+                                            <li>
+                                                <span>공간</span>
+                                                <em>20</em>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </div>
+                                <div class="col-3 card-group-row__col">
+                                    <a href="#n" class="card card-latest">
+                                        <div class="card-caption">
+                                            <span class="material-icons cp-icon">factory</span>
+                                            <h5 class="m-0">Retail</h5>
+                                            <small class="ml-auto">편집중</small>
+                                        </div>
+                                        <div class="card-title">
+                                            <h4 class="mb-2">Smart Factory Project</h4>
+                                            <p>Smart Retail Project</p>
+                                        </div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <span>공간</span>
+                                                <em>4</em>
+                                            </li>
+                                            <li>
+                                                <span>공간</span>
+                                                <em>20</em>
+                                            </li>
+                                            <li>
+                                                <span>공간</span>
+                                                <em>20</em>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </div>
+                                <div class="col-3 card-group-row__col">
+                                    <a href="#n" class="card card-latest">
+                                        <div class="card-caption">
+                                            <span class="material-icons cp-icon">factory</span>
+                                            <h5 class="m-0">Office</h5>
+                                            <small class="ml-auto">편집중</small>
+                                        </div>
+                                        <div class="card-title">
+                                            <h4 class="mb-2">Smart Factory Project</h4>
+                                            <p>주소</p>
+                                        </div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <span>공간</span>
+                                                <em>4</em>
+                                            </li>
+                                            <li>
+                                                <span>공간</span>
+                                                <em>20</em>
+                                            </li>
+                                            <li>
+                                                <span>공간</span>
+                                                <em>20</em>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </div>
+                                <div class="col-3 card-group-row__col">
+                                    <a href="project_write.html" class="card card-latest add-project">
+                                        <span class="material-icons">add</span>
+                                        새 프로젝트 추가
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="empty-state d-none">
+                                <p class="empty-icon m-0"><i class="far fa-map"></i></p>
+                                <em class="empty-txt m-0">아직 등록한 프로젝트가 없습니다.</em>
+                                <!-- <a href="#n" class="btn btn-link">새로운 프로젝트 생성</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contents-section">
+                        <div class="cell">
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <div class="flex">
+                                    <h3 class="d-flex align-items-center mb-0 ">프로젝트 목록</h3>
+                                </div>
+                            </div> 
+                            <table class="table mb-4 table-nowrap table-center">
+                                <colgroup>
+                                    <col width="*">
+                                    <col width="13%">
+                                    <col width="13%">
+                                    <col width="13%">
+                                    <col width="5%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>프로젝트</th>
+                                        <th>유형</th>
+                                        <th>최근 수정일</th>
+                                        <th>생성일</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center mr-16pt">
+                                                <div href="#n" class="icon-thumb mr-12pt">
+                                                    <span class="material-icons">factory</span>
+                                                </div>
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="buildings_board.html"><h4 class="m-0">Smart Factory Project</h4></a>
+                                                    <p class="d-flex m-0">경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Factory</td>
+                                        <td>2021.01.10</td>
+                                        <td>2021.01.10</td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center mr-16pt">
+                                                <a href="#n" class="icon-thumb mr-12pt">
+                                                    <span class="material-icons">store</span>
+                                                </a>
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="buildings_board.html"><h4 class="m-0">Smart Retail Project</h4></a>
+                                                    <p class="d-flex m-0">경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Retail</td>
+                                        <td>2021.01.10</td>
+                                        <td>2021.01.10</td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center mr-16pt">
+                                                <a href="#n" class="icon-thumb mr-12pt">
+                                                    <img src="images/slider01.jpg" alt="">
+                                                </a>
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="buildings_board.html"><h4 class="m-0">Smart Office Project</h4></a>
+                                                    <p class="d-flex m-0">경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Office</td>
+                                        <td>2021.01.10</td>
+                                        <td>2021.01.10</td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pagination align-items-center justify-content-center">
+                                <a class="page-link btn-prev" href="#" aria-label="Previous">
+                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                    <span>이전</span>
+                                </a>
+                                <div class="d-flex align-items-center justify-content-center px-3">
+                                    <select name="" id="" class="form-line">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                    </select>
+                                    <em>1</em>
+                                </div>
+                                <a class="page-link btn-next" href="#" aria-label="Next">
+                                    <span>다음</span>
+                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                </a>
+                            </div>
+                            <div class="empty-state d-none">
+                                <p class="empty-icon m-0"><i class="far fa-building"></i></p>
+                                <em class="empty-txt mb-4">아직 등록한 건물이 없습니다.</em>
+                                <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
+                            </div>
+                        </div>  
+                    </div>
+                    <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span class="material-icons-outlined">chevron_right</span></a>
+                </div>
+                <div class="pl-col-right" id="sidebar-right">
+                    @@include('./include/platform-right-menu.html')
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@@include('./include/platform-footer.html')

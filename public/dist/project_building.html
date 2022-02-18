@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>WATA</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+        
+    <link rel="icon" href="images/icon/favicon.svg">
+	<link rel="apple-touch-icon" href="images/icon/1x/wata_symbol_64dp.png">
+	<link rel="apple-touch-icon" sizes="96x96" href="images/icon/1x/wata_symbol_96dp.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="images/icon/2x/wata_symbol_64dp.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="images/icon/2x/wata_symbol_96dp.png">
+
+    <!-- Preloader -->
+    <link type="text/css" href="vendor/spinkit.css" rel="stylesheet" />
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="vendor/perfect-scrollbar.css" rel="stylesheet" />
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="css/material-icons.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="css/fontawesome.css" rel="stylesheet" />
+
+    <!-- Preloader -->
+    <link type="text/css" href="css/preloader.css" rel="stylesheet" />
+
+    <!-- App CSS -->
+    <link type="text/css" href="css/app.css" rel="stylesheet" />
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="css/flatpickr.css" rel="stylesheet" />
+    <link type="text/css" href="css/flatpickr-airbnb.css" rel="stylesheet" />
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="vendor/daterangepicker.css" rel="stylesheet" />
+
+    <!-- Quill Theme -->
+    <link type="text/css" href="css/quill.css" rel="stylesheet" />
+
+    <!-- Touchspin -->
+    <link type="text/css" href="css/bootstrap-touchspin.css" rel="stylesheet" />
+
+    <!-- Select2 -->
+    <link type="text/css" href="vendor/select2/select2.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/select2.css" rel="stylesheet" />
+
+     <!-- ion Range Slider -->
+     <link type="text/css" href="css/ion-rangeslider.css" rel="stylesheet" />
+
+     <!-- Dragula -->
+     <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
+
+    <!-- custom CSS -->
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=round -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=sharp -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=twotone -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+</head>
+
+<body class="layout-mini-secondary layout-mini-secondary">
+
+    <!-- <div class="preloader">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div> -->
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <div class="project-select">
+                    <select class="form-line">
+                        <option value="">프로젝트를 선택해 주세요</option>
+                        <option value="">프로젝트A</option>
+                        <option value="">프로젝트B</option>
+                        <option value="">프로젝트C</option>
+                    </select>
+                </div>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="" class="custom-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="side-navbar expander" id="side-navbar">
+    <nav class="nav-container">
+        <div class="nav-inner">
+            <div class="nav__list">
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="모니터링" data-placement="right" data-boundary="window">
+                    <span class="material-icons">insert_chart_outlined</span>
+                    <span class="nav_name">모니터링</span>
+                </a>
+                <a href="project_dashboard.html" class="nav__link active" data-toggle="tooltip"
+                data-title="프로젝트" data-placement="right" data-boundary="window">
+                    <span class="material-icons">grid_view</span>
+                    <span class="nav_name">프로젝트</span>
+                </a>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="건물" data-placement="right" data-boundary="window">
+                <span class="material-icons-outlined">space_dashboard</span>
+                    <span class="nav_name">건물</span>
+                </a>
+
+                <div href="#" class="nav__link  collapse-item" data-toggle="tooltip"
+                data-title="사용자" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">person_outline</span>
+                    <span class="nav_name">사용자</span>
+
+                    <span class="material-icons collapse__link">expand_more</span>
+
+                    <div class="collapse__menu">
+                        <a href="user_table.html" class="collapse__sublink">사용자</a>
+                        <a href="user_group_table.html" class="collapse__sublink">사용자 그룹</a>
+                    </div>
+                </div>
+
+
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="자산" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">category</span>
+                    <span class="nav_name">자산</span>
+                </a>
+
+                <div href="#" class="nav__link  collapse-item d-none" data-toggle="tooltip"
+                data-title="자산" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">category</span>
+                    <span class="nav_name">자산</span>
+
+                    <span class="material-icons collapse__link">expand_more</span>
+
+                    <div class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Data</a>
+                        <a href="#" class="collapse__sublink">Group</a>
+                        <a href="#" class="collapse__sublink">Members</a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="이벤트" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">event_note</span>
+                    <span class="nav_name">이벤트</span>
+                </a>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="사고" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">warning_amber</span>
+                    <span class="nav_name">사고</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents" data-perfect-scrollbar>
+                    <div class="contents-section">
+                        <div class="cell">
+        
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <div class="flex">
+                                    <h3 class="d-flex align-items-center mb-0">최근 프로젝트 목록</h3>
+                                </div>
+                            </div>
+                            <div class="row card-group-row">
+                                <div class="col-3 card-group-row__col">
+                                    <a href="#n" class="card card-latest">
+                                        <div class="card-caption">
+                                            <span class="material-icons cp-icon">factory</span>
+                                            <h5 class="m-0">Factory</h5>
+                                        </div>
+                                        <div class="card-title">
+                                            <h4 class="mb-2">Smart Factory Project</h4>
+                                            <p>경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                        </div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <span>공간</span>
+                                                <em>4</em>
+                                            </li>
+                                            <li>
+                                                <span>공간</span>
+                                                <em>20</em>
+                                            </li>
+                                            <li>
+                                                <span>공간</span>
+                                                <em>20</em>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </div>
+                                <div class="col-3 card-group-row__col">
+                                    <a href="#n" class="card card-latest">
+                                        <div class="card-caption">
+                                            <span class="material-icons cp-icon">factory</span>
+                                            <h5 class="m-0">Retail</h5>
+                                            <small class="ml-auto">편집중</small>
+                                        </div>
+                                        <div class="card-title">
+                                            <h4 class="mb-2">Smart Factory Project</h4>
+                                            <p>Smart Retail Project</p>
+                                        </div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <span>공간</span>
+                                                <em>4</em>
+                                            </li>
+                                            <li>
+                                                <span>공간</span>
+                                                <em>20</em>
+                                            </li>
+                                            <li>
+                                                <span>공간</span>
+                                                <em>20</em>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </div>
+                                <div class="col-3 card-group-row__col">
+                                    <a href="#n" class="card card-latest">
+                                        <div class="card-caption">
+                                            <span class="material-icons cp-icon">factory</span>
+                                            <h5 class="m-0">Office</h5>
+                                            <small class="ml-auto">편집중</small>
+                                        </div>
+                                        <div class="card-title">
+                                            <h4 class="mb-2">Smart Factory Project</h4>
+                                            <p>주소</p>
+                                        </div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <span>공간</span>
+                                                <em>4</em>
+                                            </li>
+                                            <li>
+                                                <span>공간</span>
+                                                <em>20</em>
+                                            </li>
+                                            <li>
+                                                <span>공간</span>
+                                                <em>20</em>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </div>
+                                <div class="col-3 card-group-row__col">
+                                    <a href="project_write.html" class="card card-latest add-project">
+                                        <span class="material-icons">add</span>
+                                        새 프로젝트 추가
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="empty-state d-none">
+                                <p class="empty-icon m-0"><i class="far fa-map"></i></p>
+                                <em class="empty-txt m-0">아직 등록한 프로젝트가 없습니다.</em>
+                                <!-- <a href="#n" class="btn btn-link">새로운 프로젝트 생성</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contents-section">
+                        <div class="cell">
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <div class="flex">
+                                    <h3 class="d-flex align-items-center mb-0 ">프로젝트 목록</h3>
+                                </div>
+                            </div> 
+                            <table class="table mb-4 table-nowrap table-center">
+                                <colgroup>
+                                    <col width="*">
+                                    <col width="13%">
+                                    <col width="13%">
+                                    <col width="13%">
+                                    <col width="5%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>프로젝트</th>
+                                        <th>유형</th>
+                                        <th>최근 수정일</th>
+                                        <th>생성일</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center mr-16pt">
+                                                <div href="#n" class="icon-thumb mr-12pt">
+                                                    <span class="material-icons">factory</span>
+                                                </div>
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="buildings_board.html"><h4 class="m-0">Smart Factory Project</h4></a>
+                                                    <p class="d-flex m-0">경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Factory</td>
+                                        <td>2021.01.10</td>
+                                        <td>2021.01.10</td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center mr-16pt">
+                                                <a href="#n" class="icon-thumb mr-12pt">
+                                                    <span class="material-icons">store</span>
+                                                </a>
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="buildings_board.html"><h4 class="m-0">Smart Retail Project</h4></a>
+                                                    <p class="d-flex m-0">경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Retail</td>
+                                        <td>2021.01.10</td>
+                                        <td>2021.01.10</td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center mr-16pt">
+                                                <a href="#n" class="icon-thumb mr-12pt">
+                                                    <img src="images/slider01.jpg" alt="">
+                                                </a>
+                                                <div class="flex list-els">
+                                                    <a class="card-title" href="buildings_board.html"><h4 class="m-0">Smart Office Project</h4></a>
+                                                    <p class="d-flex m-0">경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Office</td>
+                                        <td>2021.01.10</td>
+                                        <td>2021.01.10</td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="buildings_write.html" class="dropdown-item text-primary">수정</a>
+                                                    <a href="#n" class="dropdown-item text-danger">삭제</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pagination align-items-center justify-content-center">
+                                <a class="page-link btn-prev" href="#" aria-label="Previous">
+                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                    <span>이전</span>
+                                </a>
+                                <div class="d-flex align-items-center justify-content-center px-3">
+                                    <select name="" id="" class="form-line">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                    </select>
+                                    <em>1</em>
+                                </div>
+                                <a class="page-link btn-next" href="#" aria-label="Next">
+                                    <span>다음</span>
+                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                </a>
+                            </div>
+                            <div class="empty-state d-none">
+                                <p class="empty-icon m-0"><i class="far fa-building"></i></p>
+                                <em class="empty-txt mb-4">아직 등록한 건물이 없습니다.</em>
+                                <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
+                            </div>
+                        </div>  
+                    </div>
+                    <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span class="material-icons-outlined">chevron_right</span></a>
+                </div>
+                <div class="pl-col-right" id="sidebar-right">
+                    <div class="cd-panel__container">
+    <div class="cd-panel__content" data-perfect-scrollbar>
+        <div class="cd-panel__title">
+            <h3 class="mb-0">NTT팩토리 3F</h3>
+            <p class="text-50 m-0">2021-07-01 13:00:00 기준</p>
+        </div>
+        <div class="accordion js-accordion list-group-flush" id="parent">
+            <div class="accordion__item open">
+                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                    data-target="#panel01" data-parent="#parent">
+                    <span class="flex d-flex align-items-center">
+                        <!-- <span class="material-icons-outlined icon--left">watch_later</span> -->
+                        실시간 집계
+                    </span>
+                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                </a>
+                <div class="accordion__menu collapse show" id="panel01">
+                    <div class="inner">
+                        <div class="accordion__menu-link px-0 state-up">
+                            <div class="visitor-group visitor-type2">
+                                <ul class="visitor-list">
+                                    <li>사용자<span>20</span></li>
+                                    <li>물류<span>5</span></li>
+                                    <li>자산<span>5</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion__menu-link state-up active">
+                            <div class="panel-list">
+                                <a href="#n" class="w-100">
+                                    <h6>A구역 <span class="d-flex badge badge-mg lv-09 ml-auto">41</span></h6>
+                                    <ul>
+                                        <li>인원 <span>32</span></li>
+                                        <li>물류 <span>4</span></li>
+                                        <li>자산 <span>5</span></li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="accordion__menu-link state-up">
+                            <div class="panel-list">
+                                <a href="#n" class="w-100">
+                                    <h6>B구역 <span class="d-flex badge badge-mg lv-03 ml-auto">15</span></h6>
+                                    <ul>
+                                        <li>인원 <span>13</span></li>
+                                        <li>물류 <span>2</span></li>
+                                        <li>자산 <span>0</span></li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="accordion__menu-link state-up">
+                            <div class="panel-list">
+                                <a href="#n" class="w-100">
+                                    <h6>C구역 <span class="d-flex badge badge-mg lv-05 ml-auto">21</span></h6>
+                                    <ul>
+                                        <li>인원 <span>15</span></li>
+                                        <li>물류 <span>4</span></li>
+                                        <li>자산 <span>2</span></li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="accordion__menu-link state-up">
+                            <div class="panel-list">
+                                <a href="#n" class="w-100">
+                                    <h6>D구역 <span class="d-flex badge badge-mg lv-10 ml-auto">44</span></h6>
+                                    <ul>
+                                        <li>인원 <span>29</span></li>
+                                        <li>물류 <span>7</span></li>
+                                        <li>자산 <span>8</span></li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="legendary">
+                            <h6>범례</h6>
+                            <div class="level-list">
+                                <ul class="step4">
+                                    <li class="text-left">원활</li>
+                                    <li></li>
+                                    <li></li>
+                                    <li class="text-right">혼잡</li>
+                                </ul>
+                                <div class="level-bar color-num2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion__item open">
+                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                    data-target="#panel04" data-parent="#parent">
+                    <span class="flex d-flex align-items-center">
+                        <!-- <span class="material-icons-outlined icon--left">emoji_events</span> -->
+                        실시간 혼잡구역</span>
+                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                </a>
+                <div class="accordion__menu collapse more-cover ac-item02 show" id="panel04">
+                    <div class="inner">
+                        <div class="accordion__menu-link">
+                            <a href="#n" class="d-flex align-items-center w-100">
+                                <p class="d-flex m-0">개발 부서 구역</p>
+                                <span class="d-flex badge badge-accent ml-auto">혼잡</span>
+                            </a>
+                        </div>
+                        <div class="accordion__menu-link">
+                            <a href="#n" class="d-flex align-items-center w-100">
+                                <p class="d-flex m-0">디자인 부서 구역</p>
+                                <span class="d-flex badge badge-success ml-auto">여유</span>
+                            </a>
+                        </div>
+                        <div class="accordion__menu-link">
+                            <a href="#n" class="d-flex align-items-center w-100">
+                                <p class="d-flex m-0">마케팅 부서 구역</p>
+                                <span class="d-flex badge badge-accent-yellow ml-auto">보통</span>
+                            </a>
+                        </div>
+                        <div class="accordion__menu-link active">
+                            <a href="#n" class="d-flex align-items-center w-100">
+                                <p class="d-flex m-0">기획팀 부서 구역</p>
+                                <span class="d-flex badge badge-success ml-auto">여유</span>
+                            </a>
+                        </div>
+                        <div class="accordion__menu-link">
+                            <a href="#n" class="d-flex align-items-center w-100">
+                                <p class="d-flex m-0">경영지원 부서 구역</p>
+                                <span class="d-flex badge badge-success ml-auto">여유</span>
+                            </a>
+                        </div>
+                        <div class="accordion__menu-link">
+                            <a href="#n" class="d-flex align-items-center w-100">
+                                <p class="d-flex m-0">글로벌 비즈니스 부서 구역</p>
+                                <span class="d-flex badge badge-success ml-auto">여유</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center more-btn-cover">
+                        <button type="button" class="btn btn-link text-secondary btn-more"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion__item open">
+                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                    data-target="#panel02" data-parent="#parent">
+                    <span class="flex d-flex align-items-center">
+                        <!-- <span class="material-icons-outlined icon--left">flag</span> -->
+                        알림
+                    </span>
+                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                </a>
+                <div class="accordion__menu collapse show" id="panel02">
+                    <div class="accordion__menu-link state-up">
+                        <a href="#n" class="d-flex align-items-center flex-row w-100">
+                            <span
+                                class="material-icons-outlined text-accent mr-1 font-size-16pt">info</span>
+                            <p class="d-flex m-0 text-accent pr-4">개발 부서 구역 '비인가 출입' 1명</p>
+                            <span class="d-flex text-50 ml-auto">2021.07.05</span>
+                        </a>
+                    </div>
+                    <div class="accordion__menu-link state-up">
+                        <a href="#n" class="d-flex align-items-center flex-row w-100">
+                            <span
+                                class="material-icons-outlined text-accent mr-1 font-size-16pt">info</span>
+                            <p class="d-flex m-0 text-accent pr-4">개발 부서 구역 '비인가 출입' 1명</p>
+                            <span class="d-flex text-50 ml-auto">2021.07.05</span>
+                        </a>
+                    </div>
+                    <div class="accordion__menu-link state-up">
+                        <a href="#n" class="d-flex align-items-center flex-row w-100">
+                            <span
+                                class="material-icons-outlined text-accent mr-1 font-size-16pt">info</span>
+                            <p class="d-flex m-0 text-accent pr-4">개발 부서 구역 '비인가 출입' 1명</p>
+                            <span class="d-flex text-50 ml-auto">2021.07.05</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+            <a href="chart.html" class="btn btn-accent ml-0">통계 자세히보기</a>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3-min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="vendor/popper.min.js"></script>
+    <script src="vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="vendor/material-design-kit.js"></script>
+
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+
+    <!-- Preloader -->
+    <script src="js/preloader.js"></script>
+
+    <!-- Range Slider -->
+    <script src="vendor/ion.rangeSlider.min.js"></script>
+    <script src="js/ion-rangeslider.js"></script>
+
+    <!-- Quill -->
+    <script src="vendor/quill.min.js"></script>
+    <script src="js/quill.js"></script>
+
+    <!-- Global Settings -->
+    <script src="js/settings.js"></script>
+
+    <!-- DateRangePicker -->
+    <script src="vendor/moment.min.js"></script>
+    <script src="vendor/moment-range.js"></script>
+
+    <!-- Flatpickr -->
+    <script src="vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="js/flatpickr.js"></script>
+
+    <script src="vendor/daterangepicker.js"></script>
+    <script src="js/daterangepicker.js"></script>
+
+    <!-- jQuery Mask Plugin -->
+    <script src="vendor/jquery.mask.min.js"></script>
+
+    <!-- modernizr.js -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Sidebar Mini JS -->
+    <script src="js/sidebar-mini.js"></script>
+    <script>
+        (function () {
+            'use strict';
+            // ENABLE sidebar menu tabs
+            $('.js-sidebar-mini-tabs [data-toggle="tab"]').on('click', function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+            $('.js-sidebar-mini-tabs').on('show.bs.tab', function (e) {
+                $('.js-sidebar-mini-tabs > .active').removeClass('active')
+                $(e.target).parent().addClass('active')
+            })
+        })()
+    </script>
+
+    <!-- Dragula -->
+    <script src="vendor/dragula/dragula.min.js"></script>
+
+    <!-- Drag & Drop Page -->
+    <script src="js/dragula.js"></script>
+
+    <!-- List.js -->
+    <script src="vendor/list.min.js"></script>
+    <script src="js/list.js"></script>
+
+    <!-- Tables -->
+    <script src="js/toggle-check-all.js"></script>
+    <script src="js/check-selected-row.js"></script>
+
+    <!-- Select2 -->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
+    
+    <script src="js/custom.js"></script>
+    <script src="js/side-menu.js"></script>
+    <script src="js/jquery.overscroll.min.js"></script>
+    <script>
+        $('.custom-scroll').overscroll({
+            direction: 'horizontal',
+            showThumbs: false,
+            scrollDelta: 5,
+            whiteDelta: 5
+        });
+    </script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function($){
+            $(window).on("load",function(){
+                $(".custom-scroll-bar").mCustomScrollbar({theme:"minimal-dark"});
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>

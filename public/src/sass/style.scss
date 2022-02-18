@@ -7822,7 +7822,7 @@ dl.space-id{
     position: relative;
     width: 400px;
     height: 100%;
-    background-color: #f2f4f7;
+    background-color: #fff;
     -webkit-transition: -webkit-transform 0.3s 0.3s;
     transition: -webkit-transform 0.3s 0.3s;
     transition: transform 0.3s 0.3s;
@@ -10472,7 +10472,7 @@ xnugget info
                 position: absolute;
                 top: 50%;
                 z-index: 3;
-                background-color: #f2f4f7;
+                background-color: #fff;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -10498,7 +10498,7 @@ xnugget info
         .pl-col-right{
             flex-grow: 1;
             min-width: 400px;
-            background-color: #f2f4f7;
+            background-color: #F8F9FB;
             .cd-panel__content{
                 padding-bottom: 6rem;
                 padding-right: .625rem;
