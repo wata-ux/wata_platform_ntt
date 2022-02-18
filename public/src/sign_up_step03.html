@@ -1,37 +1,31 @@
 @@include('./include/header.html')
 
-<div class="mdk-header-layout js-mdk-header-layout sign-up">
+<div class="sign-up">
     <div class="flex-parent">
         <div class="flex-child">
-            <div class="layout-login__form sign-up-process">
-                <div class="title-group mb-5">
-                    <h3 class="m-0">이메일 인증</h3>
+            <div class="layout-login__form">
+                <div class="text-left mb-4">
+                    <img src="images/logo/logo.svg" class="id-logo mb-3" alt="와따" />
+                    <h4 class="m-0 text-64">AI Cloud Spatial Awareness platform</h4>
                 </div>
-                <div class="form-group mb-5">
-                    <div class="over-txt">
-                        <label class="form-label text-50 essential" for="form02">인증번호 확인</label>
-                        <input id="form02" type="text" required="" class="form-line pr-6" placeholder="인증번호를 입력해 주세요.">
-                        <a href="#n" class="btn btn-outline-secondary btn-sm btn-rounded">인증확인</a>
+                <div class="mb-5">
+                    <p class="mb-1">비밀번호를 잊으셨나요?</p>
+                    <p class="mb-1">가입하신 이메일로 초기화된 비밀번호를 발송합니다.</p>
+                    <p class="mb-1">발송된 이메일의 비밀번호는 24시간 동안 유효합니다.</p>
+                </div>
+                <div class="mb-5">
+                    <div class="form-group">
+                        <label class="form-label essential" for="">이메일</label>
+                        <input type="mail" class="form-line" placeholder="이메일을 입력해 주세요">
                     </div>
-                    <div class="invalid-feedback">인증번호가 일치 하지 않습니다.</div>
-                    <div class="invalid-feedback">인증확인 버튼을 클릭하세요.</div>
-                    <div class="support-feedback">이메일을 받지 못하셨나요? <a href="#n" class="text-body text-underline">재전송 하기</a></div>
                 </div>
-                <div class="form-group text-center mb-32pt">
-                    <button class="btn btn-block btn-lg btn-accent" onclick="location.href='sign_up_step04.html'" type="submit">다음</button>
+                <div class="form-group text-center">
+                    <a href="sign_up_step04.html" class="btn btn-block btn-lg btn-accent">확인</a>
                 </div>
             </div>
-            <ol class="step-group">
-                <li><span>STEP</span>1</li>
-                <li class="active"><span>STEP</span>2</li>
-                <li><span>STEP</span>3</li>
-                <li><span>STEP</span>4</li>
-            </ol>
         </div>
     </div>
 </div>
-
-
 
 
 @@include('./include/footer.html')

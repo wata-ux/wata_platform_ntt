@@ -233,9 +233,9 @@
                                         </div>
                                     </div>
                                     <div class="nav-profile">
-                                        <div class="d-flex flex-column">
-                                            <a href="#n" class="active">내 프로필</a>
-                                            <a href="#n">비밀번호 변경</a>
+                                        <div class="d-inline-flex flex-column">
+                                            <a href="my_profile.html" class="active">내 프로필</a>
+                                            <a href="#n" data-toggle="modal" data-target="#userPassword">비밀번호 변경</a>
                                         </div>
                                     </div>
                                 </div>
@@ -276,11 +276,11 @@
     </div>
 
 <!-- Modal -->
-<div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
+<div class="modal fade" id="userPassword" tabindex="-1" aria-labelledby="userPasswordLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
         <div class="modal-header">
-            <h4 class="modal-title" id="saddUserLabel">사용자 추가</h4>
+            <h4 class="modal-title" id="userPasswordLabel">비밀번호 확인</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true"><i class="material-icons">clear</i></span>
             </button>
@@ -288,19 +288,10 @@
 
         <div class="modal-body">
             <div class="form-group mb-32pt">
-                <label class="form-label essential" for="">이메일</label>
-                <input type="email" class="form-line" id="" placeholder="이메일을 입력해주세요">
-            </div>
-            <div class="form-group mb-32pt">
-                <label class="form-label essential" for="">사용자 그룹</label>
-                <select name="category" class="form-line">
-                    <option value="">사용자 그룹을 선택해주세요</option>
-                    <option value="">그룹A</option>
-                    <option value="">그룹B</option>
-                </select>
+                <label class="form-label" for="">현재 비밀번호</label>
+                <input type="password" class="form-line" id="" placeholder="현재 비밀번호를 입력해주세요">
             </div>
         </div>
-
         <div class="modal-footer">
             <button type="button" class="btn btn-link" data-dismiss="modal">취소</button>
             <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button>

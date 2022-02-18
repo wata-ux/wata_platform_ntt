@@ -4299,8 +4299,8 @@ fieldset:disabled a.btn {
 
 [dir] .btn-light,
 [dir] .navbar-light .navbar-btn {
-    background-color: #f8f9fa;
-    border-color: #f8f9fa
+    background-color: #F8F9FB;
+    border-color: #F8F9FB
 }
 
 [dir] .btn-light:hover,
@@ -4322,8 +4322,8 @@ fieldset:disabled a.btn {
 [dir] .btn-light:disabled,
 [dir] .navbar-light .disabled.navbar-btn,
 [dir] .navbar-light .navbar-btn:disabled {
-    background-color: #f8f9fa;
-    border-color: #f8f9fa
+    background-color: #F8F9FB;
+    border-color: #F8F9FB
 }
 
 [dir] .btn-light:not(:disabled):not(.disabled).active,
@@ -14120,6 +14120,18 @@ a.close.disabled {
 
 [dir] .shadow-none {
     box-shadow: none !important
+}
+
+.w-5 {
+    width: 5% !important
+}
+
+.w-10 {
+    width: 10% !important
+}
+
+.w-15 {
+    width: 15% !important
 }
 
 .w-25 {
@@ -32128,8 +32140,8 @@ body {
 
 [dir] .btn-light,
 [dir] .navbar-light .navbar-btn {
-    background-color: #edf0f2;
-    border-color: #edf0f2;
+    background-color: #F8F9FB;
+    border-color: #EAECEF;
     box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .15), 0 1px 1px rgba(39, 44, 51, .075)
 }
 
@@ -32140,8 +32152,8 @@ body {
 
 [dir] .btn-light:hover,
 [dir] .navbar-light .navbar-btn:hover {
-    background-color: #d7dde2;
-    border-color: #cfd7dd
+    background-color: #f1f2f5;
+    border-color: #e7e8ed
 }
 
 .btn-light.focus,
