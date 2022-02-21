@@ -5823,11 +5823,11 @@ a.cd-filter-trigger {
     a.items{
         background-color: #F8F9FB;
         color: rgba(51,51,51,0.4);
-        padding: .25rem .5rem;
+        padding: .125rem .5rem;
         border-radius: 50px;
         font-size: .875rem;
         font-weight: 500;
-        margin: .25rem;
+        margin: .125rem;
         display: inline-flex;
         &:hover{
             background-color: darken(#F8F9FB, 2%);
@@ -9366,11 +9366,8 @@ xnugget info
 }
 .contents-section{
     width: 100%;
-    margin: 3rem auto 6rem;
+    margin: 3rem auto;
     max-width: 1440px;
-    &:last-of-type{
-        margin-bottom: 0;
-    }
     &.col-md-16{
         max-width: 1600px;
         margin: 0 auto;
