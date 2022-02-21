@@ -5827,6 +5827,8 @@ a.cd-filter-trigger {
         border-radius: 50px;
         font-size: .875rem;
         font-weight: 500;
+        margin: .25rem;
+        display: inline-flex;
         &:hover{
             background-color: darken(#F8F9FB, 2%);
         }
