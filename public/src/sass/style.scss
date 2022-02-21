@@ -10534,13 +10534,17 @@ xnugget info
                     margin: 0 auto;
                     .plf-area-card{
                         padding: 1.5rem;
+                        margin-bottom: 1.5rem;
                         .plf-floor-card-info{
                             border-top: none;
                             align-items: center;
                             li{
-                                border-left: 1px solid $border-color;
+                                border-right: 1px solid $border-color;
                                 &:first-child{
-                                    border-left: none;
+                                    border-right: none;
+                                }
+                                &:last-child{
+                                    border-right: none;
                                 }
                                 .icon{
                                     font-size: 1.125rem;
@@ -10555,6 +10559,13 @@ xnugget info
                                         width: 100%;
                                         height: 100%;
                                         object-fit: cover;
+                                    }
+                                    span{
+                                        font-size: 2rem;
+                                        padding: 22.9% 0;
+                                        margin: 0;
+                                        max-height: 118px;
+                                        height: 100%;
                                     }
                                 }
                             }

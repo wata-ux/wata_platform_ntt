@@ -6,7 +6,7 @@
             <div class="navbar" id="default-navbar" data-primary>
                 <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
                 <!-- Brand -->
-                <a href="home.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                <a href="project_dashboard.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
                     data-title="대시보드로 이동" data-placement="right" data-boundary="window">
                     <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
                 </a>
@@ -55,7 +55,7 @@
         </div>
         <div class="pl-cover">
             <div class="pl-col-left" id="sidebar-left">
-                @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "active", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
+                @@include('./include/platform-side-menu.html', {"activeMonitoring": "active", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
             </div>
             <div class="pl-col-group">
                 <div class="pl-col-mid" id="main-contents" data-perfect-scrollbar>
@@ -82,9 +82,123 @@
                             <div class="plf-area-card">
                                 <div class="plf-area-top">
                                     <span class="material-icons-outlined text-danger mr-1">upload_file</span>
-                                    <h4>공간명</h4>
+                                    <h4>평면도 2층</h4>
                                     <div class="left-cell">
                                         <span class="floor-num">2F</span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <div class="thumb">
+                                                <img src="images/slider01.jpg" alt="">
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">group</span>
+                                            <span class="text-64 font-size-14pt">고객</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">category</span>
+                                            <span class="text-64 font-size-14pt">자산</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">sensors</span>
+                                            <span class="text-64 font-size-14pt">측위장비</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">event_note</span>
+                                            <span class="text-64 font-size-14pt">이벤트</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">warning_amber</span>
+                                            <span class="text-64 font-size-14pt">사고</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">notifications</span>
+                                            <span class="text-64 font-size-14pt">알림</span>
+                                            <em>20</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined mr-1">upload_file</span>
+                                    <h4>평면도 1층</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">1F</span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <div class="thumb">
+                                                <span class="material-icons-outlined text-16">upload_file</span>
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">group</span>
+                                            <span class="text-64 font-size-14pt">고객</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">category</span>
+                                            <span class="text-64 font-size-14pt">자산</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">sensors</span>
+                                            <span class="text-64 font-size-14pt">측위장비</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">event_note</span>
+                                            <span class="text-64 font-size-14pt">이벤트</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">warning_amber</span>
+                                            <span class="text-64 font-size-14pt">사고</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">notifications</span>
+                                            <span class="text-64 font-size-14pt">알림</span>
+                                            <em>20</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined text-danger mr-1">upload_file</span>
+                                    <h4>평면도 B1층</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">B1F</span>
                                         <div class="dropdown">
                                             <a href="#" data-toggle="dropdown" data-caret="false"
                                                 class="text-muted"><i class="material-icons">more_vert</i></a>
