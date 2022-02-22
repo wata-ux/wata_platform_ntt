@@ -4,7 +4,6 @@
     <div class="pl-container">
         <div class="pl-top">
             <div class="navbar" id="default-navbar" data-primary>
-                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
                 <!-- Brand -->
                 <a href="project_dashboard.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
                     data-title="대시보드로 이동" data-placement="right" data-boundary="window">
@@ -22,7 +21,6 @@
         </div>
         <div class="pl-cover">
             <div class="pl-col-left col-expand" id="sidebar-left">
-                @@include('./include/platform-side-menu.html', {"activeMonitoring": "active", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
                 <div class="side-contents" data-perfect-scrollbar>
                     <div class="d-flex flex-column h-100">
                         <div class="plf-floor-add border-bottom-0">
@@ -36,7 +34,7 @@
                                     <a href="#n" class="items">POI</a>
                                 </div>
                             </div>
-                            <div class="form-cell">
+                            <div class="form-cell mb-0">
                                 <input type="text" class="form-line">
                                 <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
                             </div>
@@ -69,176 +67,174 @@
                                 </tr>
                             </thead>
                         </table>
-                        <div class="position-relative px-3" data-perfect-scrollbar>
 
-                            <table class="table table-nowrap table-high">
-                                <colgroup>
-                                    <col width="15%">
-                                    <col width="*">
-                                    <col width="15%">
-                                </colgroup>
-                                <tbody class="list" id="projects">
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <span class="material-icons-outlined">square</span>
-                                            </div>
-                                        </td>
-                                        <td>라이언사무실</td>
-                                        <td>
-                                            <div class="option-bundle">
-                                                <a href="#n"><span class="material-icons-outlined">visibility</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="selected">
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <span class="material-icons-outlined">square</span>
-                                            </div>
-                                        </td>
-                                        <td>GF1FNZ1</td>
-                                        <td>
-                                            <div class="option-bundle">
-                                                <a href="#n" class="text-20"><span class="material-icons-outlined">visibility_off</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <span class="material-icons-outlined">timeline</span>
-                                            </div>
-                                        </td>
-                                        <td>Line1</td>
-                                        <td>
-                                            <div class="option-bundle">
-                                                <a href="#n"><span class="material-icons-outlined">visibility</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <span class="material-icons-outlined">local_cafe</span>
-                                            </div>
-                                        </td>
-                                        <td>Line1</td>
-                                        <td>
-                                            <div class="option-bundle">
-                                                <a href="#n"><span class="material-icons-outlined">visibility</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <span class="material-icons-outlined">square</span>
-                                            </div>
-                                        </td>
-                                        <td>라이언사무실</td>
-                                        <td>
-                                            <div class="option-bundle">
-                                                <a href="#n"><span class="material-icons-outlined">visibility</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <span class="material-icons-outlined">square</span>
-                                            </div>
-                                        </td>
-                                        <td>GF1FNZ1</td>
-                                        <td>
-                                            <div class="option-bundle">
-                                                <a href="#n" class="text-20"><span class="material-icons-outlined">visibility_off</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <span class="material-icons-outlined">timeline</span>
-                                            </div>
-                                        </td>
-                                        <td>Line1</td>
-                                        <td>
-                                            <div class="option-bundle">
-                                                <a href="#n"><span class="material-icons-outlined">visibility</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <span class="material-icons-outlined">local_cafe</span>
-                                            </div>
-                                        </td>
-                                        <td>Line1</td>
-                                        <td>
-                                            <div class="option-bundle">
-                                                <a href="#n"><span class="material-icons-outlined">visibility</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <span class="material-icons-outlined">square</span>
-                                            </div>
-                                        </td>
-                                        <td>라이언사무실</td>
-                                        <td>
-                                            <div class="option-bundle">
-                                                <a href="#n"><span class="material-icons-outlined">visibility</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <span class="material-icons-outlined">square</span>
-                                            </div>
-                                        </td>
-                                        <td>GF1FNZ1</td>
-                                        <td>
-                                            <div class="option-bundle">
-                                                <a href="#n" class="text-20"><span class="material-icons-outlined">visibility_off</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <span class="material-icons-outlined">timeline</span>
-                                            </div>
-                                        </td>
-                                        <td>Line1</td>
-                                        <td>
-                                            <div class="option-bundle">
-                                                <a href="#n"><span class="material-icons-outlined">visibility</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <span class="material-icons-outlined">local_cafe</span>
-                                            </div>
-                                        </td>
-                                        <td>Line1</td>
-                                        <td>
-                                            <div class="option-bundle">
-                                                <a href="#n"><span class="material-icons-outlined">visibility</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
+                        <table class="table table-nowrap table-high">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="*">
+                                <col width="15%">
+                            </colgroup>
+                            <tbody class="list" id="projects">
+                                <tr>
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="material-icons-outlined">square</span>
+                                        </div>
+                                    </td>
+                                    <td>라이언사무실</td>
+                                    <td>
+                                        <div class="option-bundle">
+                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="selected">
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="material-icons-outlined">square</span>
+                                        </div>
+                                    </td>
+                                    <td>GF1FNZ1</td>
+                                    <td>
+                                        <div class="option-bundle">
+                                            <a href="#n" class="text-20"><span class="material-icons-outlined">visibility_off</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="material-icons-outlined">timeline</span>
+                                        </div>
+                                    </td>
+                                    <td>Line1</td>
+                                    <td>
+                                        <div class="option-bundle">
+                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="material-icons-outlined">local_cafe</span>
+                                        </div>
+                                    </td>
+                                    <td>Line1</td>
+                                    <td>
+                                        <div class="option-bundle">
+                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="material-icons-outlined">square</span>
+                                        </div>
+                                    </td>
+                                    <td>라이언사무실</td>
+                                    <td>
+                                        <div class="option-bundle">
+                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="material-icons-outlined">square</span>
+                                        </div>
+                                    </td>
+                                    <td>GF1FNZ1</td>
+                                    <td>
+                                        <div class="option-bundle">
+                                            <a href="#n" class="text-20"><span class="material-icons-outlined">visibility_off</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="material-icons-outlined">timeline</span>
+                                        </div>
+                                    </td>
+                                    <td>Line1</td>
+                                    <td>
+                                        <div class="option-bundle">
+                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="material-icons-outlined">local_cafe</span>
+                                        </div>
+                                    </td>
+                                    <td>Line1</td>
+                                    <td>
+                                        <div class="option-bundle">
+                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="material-icons-outlined">square</span>
+                                        </div>
+                                    </td>
+                                    <td>라이언사무실</td>
+                                    <td>
+                                        <div class="option-bundle">
+                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="material-icons-outlined">square</span>
+                                        </div>
+                                    </td>
+                                    <td>GF1FNZ1</td>
+                                    <td>
+                                        <div class="option-bundle">
+                                            <a href="#n" class="text-20"><span class="material-icons-outlined">visibility_off</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="material-icons-outlined">timeline</span>
+                                        </div>
+                                    </td>
+                                    <td>Line1</td>
+                                    <td>
+                                        <div class="option-bundle">
+                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <span class="material-icons-outlined">local_cafe</span>
+                                        </div>
+                                    </td>
+                                    <td>Line1</td>
+                                    <td>
+                                        <div class="option-bundle">
+                                            <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
 
-                        </div>
                     </div>
                 </div>
                 <div class="side-contents sidebar-left-sub" data-perfect-scrollbar>
