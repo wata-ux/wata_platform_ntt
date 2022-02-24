@@ -185,7 +185,7 @@
                 </div>
 
 
-                <a href="#" class="nav__link " data-toggle="tooltip"
+                <a href="assets_map.html" class="nav__link " data-toggle="tooltip"
                 data-title="자산" data-placement="right" data-boundary="window">
                     <span class="material-icons-outlined">category</span>
                     <span class="nav_name">자산</span>
@@ -220,194 +220,192 @@
     </nav>
 </div>
                 <div class="side-contents" data-perfect-scrollbar>
-                    <div class="d-flex flex-column h-100">
-                        <div class="container-fluid border-bottom-1 py-4">
-                            <div class="mb-3">
-                                <small class="badge-gray">프로젝트명</small>
-                                <small class="badge-gray">건물명</small>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <div class="d-flex flex-column">
-                                    <h3 class="mb-0">평면도 2층</h3>
-                                    <span class="text-64">2F</span>
-                                </div>
-                                <a href="#n" class="btn-add-item text-identity ml-auto">
-                                    <span class="material-icons">edit</span>
-                                    수정
-                                </a>
-                            </div>
+                    <div class="container-fluid border-bottom-1 py-4">
+                        <div class="mb-3">
+                            <small class="badge-gray">프로젝트명</small>
+                            <small class="badge-gray">건물명</small>
                         </div>
-                        <div class="plf-floor-add border-bottom-0">
-                            <div class="d-flex align-items-sm-center pb-3">
-                                <div class="item-sort py-0">
-                                    <a href="#n" class="items active">전체</a>
-                                    <a href="#n" class="items">지오펜스</a>
-                                    <a href="#n" class="items">구역</a>
-                                    <a href="#n" class="items">POI</a>
-                                    <a href="#n" class="items">장비</a>
-                                </div>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex flex-column">
+                                <h3 class="mb-0">평면도 2층</h3>
+                                <span class="text-64">2F</span>
                             </div>
-                            <div class="form-cell mb-0">
-                                <input type="text" class="form-line" placeholder="오브젝트명을 입력해 주세요">
-                                <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
-                            </div>
-                            <div class="btn-cell d-none">
-                                <a href="#n" class="btn-add-item">
-                                    <span class="material-icons">location_on</span>
-                                    POI 가져오기
-                                </a>
-                                <a href="#n" class="btn-add-item text-green">
-                                    <span class="material-icons">note_add</span>
-                                    자산 엑셀 업로드
-                                </a>
-                            </div>
-                        </div>
-                        <table class="table table-nowrap table-high">
-                            <colgroup>
-                                <col width="15%">
-                                <col width="*">
-                                <col width="15%">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th class="text-center">
-                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">분류</a>
-                                    </th>
-                                    <th class="text-center">
-                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">오브젝트명</a>
-                                    </th>
-                                    <th class="text-center"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr data-toggle="collapse" data-target="#table-ac01" class="clickable collapsed">
-                                    <td class="text-center"><img src="images/poi/object_geofence.svg" alt=""></td>
-                                    <td>GF1FNZ1
-                                        <div class="d-flex mt-2">
-                                            <a href="#n" class="btn-ico-identity active"><span class="material-icons">warning</span></a>
-                                            <a href="#n" class="btn-ico-identity"><span class="material-icons-outlined">notifications</span><small>4</small></a>
-                                            <a href="#n" class="btn-ico-identity"><span class="material-icons">event_note</span><small>4</small></a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-center">
-                                            <a href="#n" class="ac-arrow d-flex"><span class="material-icons-outlined font-size-24pt">expand_less</span></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="ac-body">
-                                    <td colspan="3">
-                                        <div id="table-ac01" class="collapse">
-                                            <div class="border-top-1">
-                                                <table class="table-sub">
-                                                    <colgroup>
-                                                        <col width="15%">
-                                                        <col width="*">
-                                                    </colgroup>
-                                                    <tr>
-                                                        <td class="text-center"><img src="images/poi/food_cafe.svg" alt=""></td>
-                                                        <td>
-                                                            <a href="#n" data-toggle="modal" data-target="#detailItem">라이언커피</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center"><img src="images/poi/sensors_wifi.svg" alt=""></td>
-                                                        <td><a href="#n" data-toggle="modal" data-target="#detailItem02">UWB3</a>
-                                                            <div class="d-flex mt-2">
-                                                                <a href="#n" class="btn-ico-identity"><span class="material-icons-outlined">notifications</span><small>4</small></a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center"><img src="images/poi/medical_medicine.svg" alt=""></td>
-                                                        <td><a href="#n" data-toggle="modal" data-target="#detailItem03">청담라이언성형외과의원</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center"><img src="images/poi/srore_shop.svg" alt=""></td>
-                                                        <td><a href="#n" data-toggle="modal" data-target="#detailItem04">라이언전자</a></td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr data-toggle="collapse" data-target="#table-ac02" class="clickable collapsed">
-                                    <td class="text-center"><img src="images/poi/object_area.svg" alt=""></td>
-                                    <td>라이언사무실
-                                        <div class="d-flex mt-2">
-                                            <a href="#n" class="btn-ico-identity active"><span class="material-icons">warning</span></a>
-                                            <a href="#n" class="btn-ico-identity"><span class="material-icons-outlined">notifications</span><small>4</small></a>
-                                            <a href="#n" class="btn-ico-identity"><span class="material-icons">event_note</span><small>4</small></a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-center">
-                                            <a href="#n" class="ac-arrow d-flex"><span class="material-icons-outlined font-size-24pt">expand_less</span></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="ac-body">
-                                    <td colspan="3">
-                                        <div id="table-ac02" class="collapse">
-                                            <div class="border-top-1">
-                                                <table class="table-sub">
-                                                    <colgroup>
-                                                        <col width="15%">
-                                                        <col width="*">
-                                                    </colgroup>
-                                                    <tr>
-                                                        <td class="text-center"><img src="images/poi/food_cafe.svg" alt=""></td>
-                                                        <td>
-                                                            <a href="#n" data-toggle="modal" data-target="#detailItem">라이언커피</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center"><img src="images/poi/sensors_wifi.svg" alt=""></td>
-                                                        <td>UWB3
-                                                            <div class="d-flex mt-2">
-                                                                <a href="#n" class="btn-ico-identity"><span class="material-icons-outlined">notifications</span><small>4</small></a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center"><img src="images/poi/medical_medicine.svg" alt=""></td>
-                                                        <td>청담라이언성형외과의원</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center"><img src="images/poi/srore_shop.svg" alt=""></td>
-                                                        <td>라이언전자</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center"><img src="images/poi/food_restaurant.svg" alt=""></td>
-                                    <td>40년손맛원조라이언분식</td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="pagination align-items-center justify-content-center">
-                            <a class="page-link btn-prev" href="#" aria-label="Previous">
-                                <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                <span>이전</span>
-                            </a>
-                            <div class="d-flex align-items-center justify-content-center px-3">
-                                <select name="" id="" class="form-line">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                </select>
-                                <em>1</em>
-                            </div>
-                            <a class="page-link btn-next" href="#" aria-label="Next">
-                                <span>다음</span>
-                                <span aria-hidden="true" class="material-icons">chevron_right</span>
+                            <a href="#n" class="btn-add-item text-identity ml-auto">
+                                <span class="material-icons">edit</span>
+                                수정
                             </a>
                         </div>
+                    </div>
+                    <div class="plf-floor-add border-bottom-0">
+                        <div class="d-flex align-items-sm-center pb-3">
+                            <div class="item-sort py-0">
+                                <a href="#n" class="items active">전체</a>
+                                <a href="#n" class="items">지오펜스</a>
+                                <a href="#n" class="items">구역</a>
+                                <a href="#n" class="items">POI</a>
+                                <a href="#n" class="items">장비</a>
+                            </div>
+                        </div>
+                        <div class="form-cell mb-0">
+                            <input type="text" class="form-line" placeholder="오브젝트명을 입력해 주세요">
+                            <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
+                        </div>
+                        <div class="btn-cell d-none">
+                            <a href="#n" class="btn-add-item">
+                                <span class="material-icons">location_on</span>
+                                POI 가져오기
+                            </a>
+                            <a href="#n" class="btn-add-item text-green">
+                                <span class="material-icons">note_add</span>
+                                자산 엑셀 업로드
+                            </a>
+                        </div>
+                    </div>
+                    <table class="table table-nowrap table-high">
+                        <colgroup>
+                            <col width="15%">
+                            <col width="*">
+                            <col width="15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-center">
+                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">분류</a>
+                                </th>
+                                <th class="text-center">
+                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">오브젝트명</a>
+                                </th>
+                                <th class="text-center"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-toggle="collapse" data-target="#table-ac01" class="clickable collapsed">
+                                <td class="text-center"><img src="images/poi/object_geofence.svg" alt=""></td>
+                                <td>GF1FNZ1
+                                    <div class="d-flex mt-2">
+                                        <a href="#n" class="btn-ico-identity active"><span class="material-icons">warning</span></a>
+                                        <a href="#n" class="btn-ico-identity"><span class="material-icons-outlined">notifications</span><small>4</small></a>
+                                        <a href="#n" class="btn-ico-identity"><span class="material-icons">event_note</span><small>4</small></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="#n" class="ac-arrow d-flex"><span class="material-icons-outlined font-size-24pt">expand_less</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="ac-body">
+                                <td colspan="3">
+                                    <div id="table-ac01" class="collapse">
+                                        <div class="border-top-1">
+                                            <table class="table-sub">
+                                                <colgroup>
+                                                    <col width="15%">
+                                                    <col width="*">
+                                                </colgroup>
+                                                <tr>
+                                                    <td class="text-center"><img src="images/poi/food_cafe.svg" alt=""></td>
+                                                    <td>
+                                                        <a href="#n" data-toggle="modal" data-target="#detailItem">라이언커피</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="images/poi/sensors_wifi.svg" alt=""></td>
+                                                    <td><a href="#n" data-toggle="modal" data-target="#detailItem02">UWB3</a>
+                                                        <div class="d-flex mt-2">
+                                                            <a href="#n" class="btn-ico-identity"><span class="material-icons-outlined">notifications</span><small>4</small></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="images/poi/medical_medicine.svg" alt=""></td>
+                                                    <td><a href="#n" data-toggle="modal" data-target="#detailItem03">청담라이언성형외과의원</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="images/poi/srore_shop.svg" alt=""></td>
+                                                    <td><a href="#n" data-toggle="modal" data-target="#detailItem04">라이언전자</a></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-toggle="collapse" data-target="#table-ac02" class="clickable collapsed">
+                                <td class="text-center"><img src="images/poi/object_area.svg" alt=""></td>
+                                <td>라이언사무실
+                                    <div class="d-flex mt-2">
+                                        <a href="#n" class="btn-ico-identity active"><span class="material-icons">warning</span></a>
+                                        <a href="#n" class="btn-ico-identity"><span class="material-icons-outlined">notifications</span><small>4</small></a>
+                                        <a href="#n" class="btn-ico-identity"><span class="material-icons">event_note</span><small>4</small></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="#n" class="ac-arrow d-flex"><span class="material-icons-outlined font-size-24pt">expand_less</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="ac-body">
+                                <td colspan="3">
+                                    <div id="table-ac02" class="collapse">
+                                        <div class="border-top-1">
+                                            <table class="table-sub">
+                                                <colgroup>
+                                                    <col width="15%">
+                                                    <col width="*">
+                                                </colgroup>
+                                                <tr>
+                                                    <td class="text-center"><img src="images/poi/food_cafe.svg" alt=""></td>
+                                                    <td>
+                                                        <a href="#n" data-toggle="modal" data-target="#detailItem">라이언커피</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="images/poi/sensors_wifi.svg" alt=""></td>
+                                                    <td>UWB3
+                                                        <div class="d-flex mt-2">
+                                                            <a href="#n" class="btn-ico-identity"><span class="material-icons-outlined">notifications</span><small>4</small></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="images/poi/medical_medicine.svg" alt=""></td>
+                                                    <td>청담라이언성형외과의원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="images/poi/srore_shop.svg" alt=""></td>
+                                                    <td>라이언전자</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><img src="images/poi/food_restaurant.svg" alt=""></td>
+                                <td>40년손맛원조라이언분식</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination align-items-center justify-content-center">
+                        <a class="page-link btn-prev" href="#" aria-label="Previous">
+                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                            <span>이전</span>
+                        </a>
+                        <div class="d-flex align-items-center justify-content-center px-3">
+                            <select name="" id="" class="form-line">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                            <em>1</em>
+                        </div>
+                        <a class="page-link btn-next" href="#" aria-label="Next">
+                            <span>다음</span>
+                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                        </a>
                     </div>
                 </div>
             </div>

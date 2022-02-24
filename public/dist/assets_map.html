@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>WATA</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+        
+    <link rel="icon" href="images/icon/favicon.svg">
+	<link rel="apple-touch-icon" href="images/icon/1x/wata_symbol_64dp.png">
+	<link rel="apple-touch-icon" sizes="96x96" href="images/icon/1x/wata_symbol_96dp.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="images/icon/2x/wata_symbol_64dp.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="images/icon/2x/wata_symbol_96dp.png">
+
+    <!-- Preloader -->
+    <link type="text/css" href="vendor/spinkit.css" rel="stylesheet" />
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="vendor/perfect-scrollbar.css" rel="stylesheet" />
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="css/material-icons.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="css/fontawesome.css" rel="stylesheet" />
+
+    <!-- Preloader -->
+    <link type="text/css" href="css/preloader.css" rel="stylesheet" />
+
+    <!-- App CSS -->
+    <link type="text/css" href="css/app.css" rel="stylesheet" />
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="css/flatpickr.css" rel="stylesheet" />
+    <link type="text/css" href="css/flatpickr-airbnb.css" rel="stylesheet" />
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="vendor/daterangepicker.css" rel="stylesheet" />
+
+    <!-- Quill Theme -->
+    <link type="text/css" href="css/quill.css" rel="stylesheet" />
+
+    <!-- Touchspin -->
+    <link type="text/css" href="css/bootstrap-touchspin.css" rel="stylesheet" />
+
+    <!-- Select2 -->
+    <link type="text/css" href="vendor/select2/select2.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/select2.css" rel="stylesheet" />
+
+     <!-- ion Range Slider -->
+     <link type="text/css" href="css/ion-rangeslider.css" rel="stylesheet" />
+
+     <!-- Dragula -->
+     <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
+
+    <!-- custom CSS -->
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=round -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=sharp -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=twotone -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+</head>
+
+<body class="layout-mini-secondary layout-mini-secondary">
+
+    <!-- <div class="preloader">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div> -->
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="project_dashboard.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <div class="project-select">
+                    <select class="form-line">
+                        <option value="">프로젝트를 선택해 주세요</option>
+                        <option value="">프로젝트A</option>
+                        <option value="">프로젝트B</option>
+                        <option value="">프로젝트C</option>
+                    </select>
+                </div>
+                <ul class="top-menu">
+                    <li>
+                        <div class="btn-ico-group">
+                            <a href="assets_table.html" class="btn-ico-sm">
+                                <span class="icon material-icons">table_rows</span>
+                                <span class="text"><span>Table View</span></span>
+                            </a>
+                            <a href="assets_map.html" class="btn-ico-sm active">
+                                <span class="icon material-icons">map</span>
+                                <span class="text"><span>Map View</span></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="" class="custom-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="side-navbar expander" id="side-navbar">
+    <nav class="nav-container">
+        <div class="nav-inner">
+            <div class="nav__list">
+                <a href="project_building.html" class="nav__link " data-toggle="tooltip"
+                data-title="모니터링" data-placement="right" data-boundary="window">
+                    <span class="material-icons">insert_chart_outlined</span>
+                    <span class="nav_name">모니터링</span>
+                </a>
+                <a href="project_dashboard.html" class="nav__link " data-toggle="tooltip"
+                data-title="프로젝트" data-placement="right" data-boundary="window">
+                    <span class="material-icons">grid_view</span>
+                    <span class="nav_name">프로젝트</span>
+                </a>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="건물" data-placement="right" data-boundary="window">
+                <span class="material-icons-outlined">space_dashboard</span>
+                    <span class="nav_name">건물</span>
+                </a>
+
+                <div href="#" class="nav__link  collapse-item" data-toggle="tooltip"
+                data-title="사용자" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">person_outline</span>
+                    <span class="nav_name">사용자</span>
+
+                    <span class="material-icons collapse__link">expand_more</span>
+
+                    <div class="collapse__menu">
+                        <a href="user_table.html" class="collapse__sublink">사용자</a>
+                        <a href="user_group_table.html" class="collapse__sublink">사용자 그룹</a>
+                    </div>
+                </div>
+
+
+                <a href="assets_map.html" class="nav__link active" data-toggle="tooltip"
+                data-title="자산" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">category</span>
+                    <span class="nav_name">자산</span>
+                </a>
+
+                <div href="#" class="nav__link active collapse-item d-none" data-toggle="tooltip"
+                data-title="자산" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">category</span>
+                    <span class="nav_name">자산</span>
+
+                    <span class="material-icons collapse__link">expand_more</span>
+
+                    <div class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Data</a>
+                        <a href="#" class="collapse__sublink">Group</a>
+                        <a href="#" class="collapse__sublink">Members</a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="이벤트" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">event_note</span>
+                    <span class="nav_name">이벤트</span>
+                </a>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="사고" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">warning_amber</span>
+                    <span class="nav_name">사고</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+                <div class="side-contents" data-perfect-scrollbar>
+                    <div class="container-fluid border-bottom-1 py-4">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex flex-column">
+                                <h3 class="mb-0">자산</h3>
+                            </div>
+                            <a href="#n" class="btn-add-item text-identity ml-auto">
+                                <span class="material-icons">add</span>
+                                자산 등록
+                            </a>
+                        </div>
+                    </div>
+                    <div class="plf-floor-add border-bottom-0">
+                        <div class="d-flex align-items-sm-center pb-3">
+                            <div class="item-sort py-0">
+                                <a href="#n" class="items active">전체</a>
+                                <a href="#n" class="items">인적자산(8)</a>
+                                <a href="#n" class="items">고정자산(9)</a>
+                                <a href="#n" class="items">센서(34)</a>
+                                <a href="#n" class="items">배터리</a>
+                            </div>
+                        </div>
+                        <div class="form-cell mb-0">
+                            <input type="text" class="form-line" placeholder="자산명 또는 자산ID를 입력해 주세요">
+                            <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
+                        </div>
+                        <div class="btn-cell d-none">
+                            <a href="#n" class="btn-add-item">
+                                <span class="material-icons">location_on</span>
+                                POI 가져오기
+                            </a>
+                            <a href="#n" class="btn-add-item text-green">
+                                <span class="material-icons">note_add</span>
+                                자산 엑셀 업로드
+                            </a>
+                        </div>
+                    </div>
+                    <table class="table table-nowrap table-high">
+                        <colgroup>
+                            <col width="*">
+                            <col width="*">
+                            <col width="*">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-center">자산ID</th>
+                                <th class="text-center">자산명</th>
+                                <th class="text-center">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">NT0037</td>
+                                <td>
+                                    <a href="#n" data-toggle="modal" data-target="#detailItem">
+                                        <div class="d-inline-flex align-items-center">
+                                            <span class="material-icons-outlined text-40">person</span> 
+                                            <span class="ml-2">Leo</span> 
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01"><span class="state-dot level-item04"></span></li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">NT0037</td>
+                                <td>
+                                    <a href="#n" data-toggle="modal" data-target="#detailItem02">
+                                        <div class="d-flex align-items-center">
+                                            <span class="material-icons-outlined text-40">person</span> 
+                                            <span class="ml-2">Leo</span> 
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01"><span class="state-dot level-item01"></span></li>
+                                        <li class="arry02"></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">NT0037</td>
+                                <td>
+                                    <a href="#n" data-toggle="modal" data-target="#detailItem03">
+                                        <div class="d-flex align-items-center">
+                                            <span class="material-icons-outlined text-40">person</span> 
+                                            <span class="ml-2">Leo</span> 
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01"><span class="state-dot level-item02"></span></li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">NT0037</td>
+                                <td>
+                                    <a href="#n" data-toggle="modal" data-target="#detailItem04">
+                                        <div class="d-flex align-items-center">
+                                            <span class="material-icons-outlined text-40">battery_0_bar</span> 
+                                            <span class="ml-2">Battery</span> 
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01"><span class="text-green font-size-12pt">100%</span></li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">NT0037</td>
+                                <td>
+                                    <a href="#n" data-toggle="modal" data-target="#detailItem05">
+                                        <div class="d-flex align-items-center">
+                                            <span class="material-icons-outlined text-40">person</span> 
+                                            <span class="ml-2">Leo</span> 
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01"><span class="state-dot level-item03"></span></li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">NT0037</td>
+                                <td>
+                                    <a href="#n" data-toggle="modal" data-target="#detailItem06">
+                                        <div class="d-flex align-items-center">
+                                            <span class="material-icons-outlined text-40">person</span> 
+                                            <span class="ml-2">Leo</span> 
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01"><span class="state-dot level-item01"></span></li>
+                                        <li class="arry02"></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">NT0037</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="material-icons-outlined text-40">person</span> 
+                                        <span class="ml-2">Leo</span> 
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01"><span class="state-dot level-item02"></span></li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">NT0037</td>
+                                <td>
+                                    <div class="d-inline-flex align-items-center">
+                                        <span class="material-icons-outlined text-40">person</span> 
+                                        <span class="ml-2">Leo</span> 
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01"><span class="state-dot level-item04"></span></li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination align-items-center justify-content-center">
+                        <a class="page-link btn-prev" href="#" aria-label="Previous">
+                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                            <span>이전</span>
+                        </a>
+                        <div class="d-flex align-items-center justify-content-center px-3">
+                            <select name="" id="" class="form-line">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                            <em>20</em>
+                        </div>
+                        <a class="page-link btn-next" href="#" aria-label="Next">
+                            <span>다음</span>
+                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span class="material-icons-outlined">chevron_right</span></a>
+                        <!-- map zoom/out -->
+    <div class="btn-widget-holder">
+        <ul>
+            <li class="mb-3"><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="지도 회전" data-placement="left"
+                data-boundary="window"><img src="images/icon/map_rotate.svg" alt=""></a></li>
+            <li class="mb-3"><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="격자" data-placement="left"
+                data-boundary="window"><img src="images/icon/map_grid.svg" alt=""></a></li>
+            <li class="mb-3">
+                <div class="btn-group-vertical">
+                    <a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="2D 보기" data-placement="left"
+                    data-boundary="window">2D</a>
+                    <!-- <button type="button" class="btn btn-white font-size-12pt" data-toggle="tooltip" data-title="2.5D 보기" data-placement="left"
+                            data-boundary="window">2.5D</button> -->
+                    <a href="#layerPopup" class="btn btn-white btn_layerpopup" data-toggle="tooltip" data-title="3D 보기" data-placement="left"
+                    data-boundary="window">3D</a>
+                </div>
+            </li>
+            <li class="mb-3">
+                <div class="btn-group-vertical">
+                    <a href="" class="btn btn-white" data-toggle="tooltip" data-title="확대" data-placement="left"
+                    data-boundary="window"><i class="fas fa-plus"></i></a>
+                    <a href=""  class="btn btn-white" data-toggle="tooltip" data-title="축소" data-placement="left"
+                    data-boundary="window"><i class="fas fa-minus"></i></a>
+                </div>
+            </li>
+            <li><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="현재위치" data-placement="left"
+                data-boundary="window"><img src="images/icon/map_location.svg" alt=""></a></a></li>
+        </ul>
+    </div>
+    <!-- slide button -->
+    <a href="#n" class="side-btn btn-col-left toggle-sidebar-left"><span class="material-icons-outlined">chevron_left</span></a>
+    <!-- map container -->
+    <div id="map" style="width:100%;height:100%;"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(37.54537298405762, 127.2238266278939),
+            level: 1
+        };
+
+        var map = new kakao.maps.Map(container, options);
+        //var mapTypeControl = new kakao.maps.MapTypeControl();
+        //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+    </script>
+    <div class="layer-popup" id="layerPopup">
+        <a href="#n" class="btn_layerpopup btn_close_layer"><span class="material-icons">close</span></a>
+        <div class="layer-map">
+
+        </div>
+    </div>
+                </div>
+                <div class="pl-col-right" id="sidebar-right">
+                    <div class="cd-panel__container">
+    <div class="cd-panel__content" data-perfect-scrollbar>
+        <div class="cd-panel__title">
+            <h3 class="mb-0">NTT팩토리 3F</h3>
+            <p class="text-50 m-0">2021-07-01 13:00:00 기준</p>
+        </div>
+        <div class="accordion js-accordion list-group-flush" id="parent">
+            <div class="accordion__item open">
+                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                    data-target="#panel01" data-parent="#parent">
+                    <span class="flex d-flex align-items-center">
+                        <!-- <span class="material-icons-outlined icon--left">watch_later</span> -->
+                        실시간 집계
+                    </span>
+                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                </a>
+                <div class="accordion__menu collapse show" id="panel01">
+                    <div class="inner">
+                        <div class="accordion__menu-link px-0 state-up">
+                            <div class="visitor-group visitor-type2">
+                                <ul class="visitor-list">
+                                    <li>사용자<span>20</span></li>
+                                    <li>물류<span>5</span></li>
+                                    <li>자산<span>5</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion__menu-link state-up active">
+                            <div class="panel-list">
+                                <a href="#n" class="w-100">
+                                    <h6>A구역 <span class="d-flex badge badge-mg lv-09 ml-auto">41</span></h6>
+                                    <ul>
+                                        <li>인원 <span>32</span></li>
+                                        <li>물류 <span>4</span></li>
+                                        <li>자산 <span>5</span></li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="accordion__menu-link state-up">
+                            <div class="panel-list">
+                                <a href="#n" class="w-100">
+                                    <h6>B구역 <span class="d-flex badge badge-mg lv-03 ml-auto">15</span></h6>
+                                    <ul>
+                                        <li>인원 <span>13</span></li>
+                                        <li>물류 <span>2</span></li>
+                                        <li>자산 <span>0</span></li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="accordion__menu-link state-up">
+                            <div class="panel-list">
+                                <a href="#n" class="w-100">
+                                    <h6>C구역 <span class="d-flex badge badge-mg lv-05 ml-auto">21</span></h6>
+                                    <ul>
+                                        <li>인원 <span>15</span></li>
+                                        <li>물류 <span>4</span></li>
+                                        <li>자산 <span>2</span></li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="accordion__menu-link state-up">
+                            <div class="panel-list">
+                                <a href="#n" class="w-100">
+                                    <h6>D구역 <span class="d-flex badge badge-mg lv-10 ml-auto">44</span></h6>
+                                    <ul>
+                                        <li>인원 <span>29</span></li>
+                                        <li>물류 <span>7</span></li>
+                                        <li>자산 <span>8</span></li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="legendary">
+                            <h6>범례</h6>
+                            <div class="level-list">
+                                <ul class="step4">
+                                    <li class="text-left">원활</li>
+                                    <li></li>
+                                    <li></li>
+                                    <li class="text-right">혼잡</li>
+                                </ul>
+                                <div class="level-bar color-num2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion__item open">
+                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                    data-target="#panel04" data-parent="#parent">
+                    <span class="flex d-flex align-items-center">
+                        <!-- <span class="material-icons-outlined icon--left">emoji_events</span> -->
+                        실시간 혼잡구역</span>
+                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                </a>
+                <div class="accordion__menu collapse more-cover ac-item02 show" id="panel04">
+                    <div class="inner">
+                        <div class="accordion__menu-link">
+                            <a href="#n" class="d-flex align-items-center w-100">
+                                <p class="d-flex m-0">개발 부서 구역</p>
+                                <span class="d-flex badge badge-accent ml-auto">혼잡</span>
+                            </a>
+                        </div>
+                        <div class="accordion__menu-link">
+                            <a href="#n" class="d-flex align-items-center w-100">
+                                <p class="d-flex m-0">디자인 부서 구역</p>
+                                <span class="d-flex badge badge-success ml-auto">여유</span>
+                            </a>
+                        </div>
+                        <div class="accordion__menu-link">
+                            <a href="#n" class="d-flex align-items-center w-100">
+                                <p class="d-flex m-0">마케팅 부서 구역</p>
+                                <span class="d-flex badge badge-accent-yellow ml-auto">보통</span>
+                            </a>
+                        </div>
+                        <div class="accordion__menu-link active">
+                            <a href="#n" class="d-flex align-items-center w-100">
+                                <p class="d-flex m-0">기획팀 부서 구역</p>
+                                <span class="d-flex badge badge-success ml-auto">여유</span>
+                            </a>
+                        </div>
+                        <div class="accordion__menu-link">
+                            <a href="#n" class="d-flex align-items-center w-100">
+                                <p class="d-flex m-0">경영지원 부서 구역</p>
+                                <span class="d-flex badge badge-success ml-auto">여유</span>
+                            </a>
+                        </div>
+                        <div class="accordion__menu-link">
+                            <a href="#n" class="d-flex align-items-center w-100">
+                                <p class="d-flex m-0">글로벌 비즈니스 부서 구역</p>
+                                <span class="d-flex badge badge-success ml-auto">여유</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center more-btn-cover">
+                        <button type="button" class="btn btn-link text-secondary btn-more"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion__item open">
+                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
+                    data-target="#panel02" data-parent="#parent">
+                    <span class="flex d-flex align-items-center">
+                        <!-- <span class="material-icons-outlined icon--left">flag</span> -->
+                        알림
+                    </span>
+                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                </a>
+                <div class="accordion__menu collapse show" id="panel02">
+                    <div class="accordion__menu-link state-up">
+                        <a href="#n" class="d-flex align-items-center flex-row w-100">
+                            <span
+                                class="material-icons-outlined text-accent mr-1 font-size-16pt">info</span>
+                            <p class="d-flex m-0 text-accent pr-4">개발 부서 구역 '비인가 출입' 1명</p>
+                            <span class="d-flex text-50 ml-auto">2021.07.05</span>
+                        </a>
+                    </div>
+                    <div class="accordion__menu-link state-up">
+                        <a href="#n" class="d-flex align-items-center flex-row w-100">
+                            <span
+                                class="material-icons-outlined text-accent mr-1 font-size-16pt">info</span>
+                            <p class="d-flex m-0 text-accent pr-4">개발 부서 구역 '비인가 출입' 1명</p>
+                            <span class="d-flex text-50 ml-auto">2021.07.05</span>
+                        </a>
+                    </div>
+                    <div class="accordion__menu-link state-up">
+                        <a href="#n" class="d-flex align-items-center flex-row w-100">
+                            <span
+                                class="material-icons-outlined text-accent mr-1 font-size-16pt">info</span>
+                            <p class="d-flex m-0 text-accent pr-4">개발 부서 구역 '비인가 출입' 1명</p>
+                            <span class="d-flex text-50 ml-auto">2021.07.05</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+            <a href="chart.html" class="btn btn-accent ml-0">통계 자세히보기</a>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal modal-blank" id="detailItem" tabindex="-1" aria-labelledby="detailItemLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex">
+                        <span class="material-icons-outlined text-40 mr-2">person</span>
+                        <h4 class="modal-title" id="sdetailItemLabel">Leo</h4>
+                    </div>
+                    <a href="#n" class="btn-ico-sm">
+                        <span class="icon material-icons-outlined">open_in_browser</span>
+                        <span class="text"><span>수정</span></span>
+                    </a>
+                </div>
+                <!-- 음식점 -->
+                <div class="nav tab-menu the-num02" role="tablist">
+                    <a href="#tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                        <span class="menu-cover"><span>자산 정보</span></span>
+                    </a>
+                    <a href="#tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
+                        <span class="menu-cover"><span>히스토리</span></span>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="tab-content" style="height:550px;">
+                        <div id="tab01" class="tab-pane active" role="tabpanel">
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">자산 유형</small>
+                                <p class="m-0">Tag</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">분류</small>
+                                <p class="m-0">사람</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">식별값</small>
+                                <p class="m-0">ble2edasDd32D</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">위치</small>
+                                <p class="m-0">Check-In</p>
+                                <p class="m-0 text-40">Check-Out</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">현재 위치</small>
+                                <p class="m-0">R&D Center</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">수집 시간</small>
+                                <p class="m-0">3분 전</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">이벤트</small>
+                                <div class="badge-cover">
+                                    <small class="badge-basics">층 이탈</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab02" class="tab-pane" role="tabpanel">
+                            <div class="d-flex justify-content-end">
+                                <a href="#n" class="btn-ico-sm">
+                                    <span class="icon material-icons-outlined">timeline</span>
+                                    <span class="text"><span>지도 보기</span></span>
+                                </a>
+                            </div>
+                            <div class="route-list mb-4">
+                                <ul class="route-user01">
+                                    <li class="line-blue">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">In</span>
+                                                <h5 class="title">지오펜스 23</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">3분 전</span>
+                                        </div>
+                                    </li>
+                                    <li class="line-dark">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">Out</span>
+                                                <h5 class="title">지오펜스 24</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:23</span>
+                                        </div>
+                                    </li>
+                                    <li class="line-blue">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">In</span>
+                                                <h5 class="title">지오펜스 24</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:20</span>
+                                        </div>
+                                    </li>
+                                    <li class="line-dark">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">Out</span>
+                                                <h5 class="title">지오펜스 25</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:15</span>
+                                        </div>
+                                    </li>
+                                    <li class="line-blue">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">In</span>
+                                                <h5 class="title">지오펜스 25</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:10</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-accent" data-dismiss="modal">메세지 발송</button>
+                <button type="button" class="btn btn-accent" data-dismiss="modal">이벤트 설정</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal modal-blank" id="detailItem02" tabindex="-1" aria-labelledby="detailItemLabel02" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex">
+                        <span class="material-icons-outlined text-40 mr-2">handyman</span>
+                        <h4 class="modal-title" id="sdetailItemLabel">지게차</h4>
+                    </div>
+                    <a href="#n" class="btn-ico-sm">
+                        <span class="icon material-icons-outlined">open_in_browser</span>
+                        <span class="text"><span>수정</span></span>
+                    </a>
+                </div>
+                <!-- 음식점 -->
+                <div class="nav tab-menu the-num02" role="tablist">
+                    <a href="#tab03" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                        <span class="menu-cover"><span>자산 정보</span></span>
+                    </a>
+                    <a href="#tab04" class="" data-toggle="tab" role="tab" aria-selected="false">
+                        <span class="menu-cover"><span>히스토리</span></span>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="tab-content" style="height:550px;">
+                        <div id="tab03" class="tab-pane active" role="tabpanel">
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">자산 유형</small>
+                                <p class="m-0">Tag</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">분류</small>
+                                <p class="m-0">장비</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">식별값</small>
+                                <p class="m-0">ble2edasDd32D</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">위치</small>
+                                <p class="m-0">Connect</p>
+                                <p class="m-0 text-40">Disconnect</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">현재 위치</small>
+                                <p class="m-0">R&D Center</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">수집 시간</small>
+                                <p class="m-0">3분 전</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">이벤트</small>
+                                <div class="badge-cover">
+                                    <small class="badge-basics">층 이탈</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab04" class="tab-pane" role="tabpanel">
+                            <div class="d-flex justify-content-end">
+                                <a href="#n" class="btn-ico-sm">
+                                    <span class="icon material-icons-outlined">timeline</span>
+                                    <span class="text"><span>지도 보기</span></span>
+                                </a>
+                            </div>
+                            <div class="route-list mb-4">
+                                <ul class="route-user01">
+                                    <li class="line-blue">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">In</span>
+                                                <h5 class="title">지오펜스 23</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">3분 전</span>
+                                        </div>
+                                    </li>
+                                    <li class="line-dark">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">Out</span>
+                                                <h5 class="title">지오펜스 24</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:23</span>
+                                        </div>
+                                    </li>
+                                    <li class="line-blue">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">In</span>
+                                                <h5 class="title">지오펜스 24</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:20</span>
+                                        </div>
+                                    </li>
+                                    <li class="line-dark">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">Out</span>
+                                                <h5 class="title">지오펜스 25</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:15</span>
+                                        </div>
+                                    </li>
+                                    <li class="line-blue">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">In</span>
+                                                <h5 class="title">지오펜스 25</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:10</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-accent" data-dismiss="modal">이벤트 설정</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal modal-blank" id="detailItem03" tabindex="-1" aria-labelledby="detailItemLabel03" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex">
+                        <span class="material-icons-outlined text-40 mr-2">inventory_2</span>
+                        <h4 class="modal-title" id="sdetailItemLabel">물류</h4>
+                    </div>
+                    <a href="#n" class="btn-ico-sm">
+                        <span class="icon material-icons-outlined">open_in_browser</span>
+                        <span class="text"><span>수정</span></span>
+                    </a>
+                </div>
+                <!-- 음식점 -->
+                <div class="nav tab-menu the-num02" role="tablist">
+                    <a href="#tab05" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                        <span class="menu-cover"><span>자산 정보</span></span>
+                    </a>
+                    <a href="#tab06" class="" data-toggle="tab" role="tab" aria-selected="false">
+                        <span class="menu-cover"><span>히스토리</span></span>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="tab-content" style="height:550px;">
+                        <div id="tab05" class="tab-pane active" role="tabpanel">
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">자산 유형</small>
+                                <p class="m-0">Tag</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">분류</small>
+                                <p class="m-0">물류</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">식별값</small>
+                                <p class="m-0">ble2edasDd32D</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">위치</small>
+                                <p class="m-0">Connect</p>
+                                <p class="m-0 text-40">Disconnect</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">현재 위치</small>
+                                <p class="m-0">R&D Center</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">수집 시간</small>
+                                <p class="m-0">3분 전</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">이벤트</small>
+                                <div class="badge-cover">
+                                    <small class="badge-basics">위치 이동</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab06" class="tab-pane" role="tabpanel">
+                            <div class="d-flex justify-content-end">
+                                <a href="#n" class="btn-ico-sm">
+                                    <span class="icon material-icons-outlined">timeline</span>
+                                    <span class="text"><span>지도 보기</span></span>
+                                </a>
+                            </div>
+                            <div class="route-list mb-4">
+                                <ul class="route-user01">
+                                    <li class="line-blue">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">In</span>
+                                                <h5 class="title">구역 23</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">3분 전</span>
+                                        </div>
+                                    </li>
+                                    <li class="line-dark">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">Out</span>
+                                                <h5 class="title">구역 24</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:23</span>
+                                        </div>
+                                    </li>
+                                    <li class="line-blue">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">In</span>
+                                                <h5 class="title">구역 24</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:20</span>
+                                        </div>
+                                    </li>
+                                    <li class="line-dark">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">Out</span>
+                                                <h5 class="title">구역 25</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:15</span>
+                                        </div>
+                                    </li>
+                                    <li class="line-blue">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">In</span>
+                                                <h5 class="title">구역 25</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:10</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-accent" data-dismiss="modal">이벤트 설정</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal modal-blank" id="detailItem04" tabindex="-1" aria-labelledby="detailItemLabel04" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex">
+                        <span class="material-icons-outlined text-40 mr-2">battery_0_bar</span>
+                        <h4 class="modal-title" id="sdetailItemLabel">배터리</h4>
+                    </div>
+                    <a href="#n" class="btn-ico-sm">
+                        <span class="icon material-icons-outlined">open_in_browser</span>
+                        <span class="text"><span>수정</span></span>
+                    </a>
+                </div>
+                <div class="nav tab-menu the-num02" role="tablist">
+                    <a href="#tab07" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                        <span class="menu-cover"><span>자산 정보</span></span>
+                    </a>
+                    <a href="#tab08" class="" data-toggle="tab" role="tab" aria-selected="false">
+                        <span class="menu-cover"><span>히스토리</span></span>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="tab-content" style="height:620px;">
+                        <div id="tab07" class="tab-pane active" role="tabpanel">
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">자산 유형</small>
+                                <p class="m-0">Beacon(고정형)</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">분류</small>
+                                <p class="m-0">배터리</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">식별값</small>
+                                <p class="m-0">ble2edasDd32D</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">위치</small>
+                                <p class="m-0">
+                                    Connect
+                                    <span class="text-blue ml-2">100%</span>
+                                    <span class="text-green ml-2">80%</span>
+                                    <span class="text-yellow ml-2">60%</span>
+                                    <span class="text-red ml-2">30%</span>
+                                    <span class="text-40 ml-2">0%</span>
+                                </p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">현재 위치</small>
+                                <p class="m-0">R&D Center</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">수집 시간</small>
+                                <p class="m-0">3분 전</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">수집</small>
+                                <p class="m-0">Sensor01</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">이벤트</small>
+                                <div class="badge-cover">
+                                    <small class="badge-basics">잔량 부족</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab08" class="tab-pane" role="tabpanel">
+                            <div class="d-flex justify-content-end">
+                                <a href="#n" class="btn-ico-sm">
+                                    <span class="icon material-icons-outlined">timeline</span>
+                                    <span class="text"><span>지도 보기</span></span>
+                                </a>
+                            </div>
+                            <div class="route-list mb-4">
+                                <ul class="route-user01">
+                                    <li class="circle-dark">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">0%</span>
+                                                <h5 class="title">Scanner02</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:23</span>
+                                        </div>
+                                    </li>
+                                    <li class="circle-red">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">1%</span>
+                                                <h5 class="title">Scanner02</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:23</span>
+                                        </div>
+                                    </li>
+                                    <li class="circle-yellow">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">41%</span>
+                                                <h5 class="title">Scanner02</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:20</span>
+                                        </div>
+                                    </li>
+                                    <li class="circle-green">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">71%</span>
+                                                <h5 class="title">Scanner02</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:15</span>
+                                        </div>
+                                    </li>
+                                    <li class="circle-blue">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">100%</span>
+                                                <h5 class="title">Scanner02</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:10</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-accent" data-dismiss="modal">이벤트 설정</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal modal-blank" id="detailItem05" tabindex="-1" aria-labelledby="detailItemLabel05" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex">
+                        <span class="material-icons-outlined text-40 mr-2">thermostat</span>
+                        <h4 class="modal-title" id="sdetailItemLabel05">온습도</h4>
+                    </div>
+                    <a href="#n" class="btn-ico-sm">
+                        <span class="icon material-icons-outlined">open_in_browser</span>
+                        <span class="text"><span>수정</span></span>
+                    </a>
+                </div>
+                <!-- 음식점 -->
+                <div class="nav tab-menu the-num02" role="tablist">
+                    <a href="#tab09" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                        <span class="menu-cover"><span>자산 정보</span></span>
+                    </a>
+                    <a href="#tab10" class="" data-toggle="tab" role="tab" aria-selected="false">
+                        <span class="menu-cover"><span>히스토리</span></span>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="tab-content" style="height:550px;">
+                        <div id="tab09" class="tab-pane active" role="tabpanel">
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">자산 유형</small>
+                                <p class="m-0">Beacon(고정형)</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">분류</small>
+                                <p class="m-0">온습도 센서</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">식별값</small>
+                                <p class="m-0">ble2edasDd32D</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">위치</small>
+                                <p class="m-0">
+                                    Connect
+                                    <span class="text-blue ml-2">23&#176;, 23%</span>
+                                    <span class="text-green ml-2">30&#176;, 10%</span>
+                                    <span class="text-yellow ml-2">40&#176;, 5%</span>
+                                </p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">현재 위치</small>
+                                <p class="m-0">R&D Center</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">수집 시간</small>
+                                <p class="m-0">3분 전</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">이벤트</small>
+                                <div class="badge-cover">
+                                    <small class="badge-basics">환경 개선 필요</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab10" class="tab-pane" role="tabpanel">
+                            <div class="d-flex justify-content-end">
+                                <a href="#n" class="btn-ico-sm">
+                                    <span class="icon material-icons-outlined">timeline</span>
+                                    <span class="text"><span>지도 보기</span></span>
+                                </a>
+                            </div>
+                            <div class="route-list mb-4">
+                                <ul class="route-user01">
+                                    <li class="circle-red">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">나쁨</span>
+                                                <h5 class="title">8&#176;, 16%</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:23</span>
+                                        </div>
+                                    </li>
+                                    <li class="circle-green">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">보통</span>
+                                                <h5 class="title">20&#176;, 20%</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:23</span>
+                                        </div>
+                                    </li>
+                                    <li class="circle-dark">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text text-long">신호없음</span>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:20</span>
+                                        </div>
+                                    </li>
+                                    <li class="circle-blue">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">좋음</span>
+                                                <h5 class="title">23&#176;, 20%</h5>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:15</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-accent" data-dismiss="modal">이벤트 설정</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal modal-blank" id="detailItem06" tabindex="-1" aria-labelledby="detailItemLabel06" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex">
+                        <span class="material-icons-outlined text-40 mr-2">air</span>
+                        <h4 class="modal-title" id="sdetailItemLabel06">환경</h4>
+                    </div>
+                    <a href="#n" class="btn-ico-sm">
+                        <span class="icon material-icons-outlined">open_in_browser</span>
+                        <span class="text"><span>수정</span></span>
+                    </a>
+                </div>
+                <!-- 음식점 -->
+                <div class="nav tab-menu the-num02" role="tablist">
+                    <a href="#tab11" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                        <span class="menu-cover"><span>자산 정보</span></span>
+                    </a>
+                    <a href="#tab12" class="" data-toggle="tab" role="tab" aria-selected="false">
+                        <span class="menu-cover"><span>히스토리</span></span>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="tab-content" style="height:550px;">
+                        <div id="tab11" class="tab-pane active" role="tabpanel">
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">자산 유형</small>
+                                <p class="m-0">Beacon(고정형)</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">분류</small>
+                                <p class="m-0">환경 센서</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">식별값</small>
+                                <p class="m-0">ble2edasDd32D</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">위치</small>
+                                <p class="m-0">
+                                    Connect
+                                    <span class="text-blue ml-2">좋음</span>
+                                    <span class="text-green ml-2">보통</span>
+                                    <span class="text-red ml-2">나쁨</span>
+                                </p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">현재 위치</small>
+                                <p class="m-0">R&D Center</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">수집 시간</small>
+                                <p class="m-0">3분 전</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">이벤트</small>
+                                <div class="badge-cover">
+                                    <small class="badge-basics">공기질 저하</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab12" class="tab-pane" role="tabpanel">
+                            <div class="route-list mb-4">
+                                <ul class="route-user01">
+                                    <li class="circle-red">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">나쁨</span>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:23</span>
+                                        </div>
+                                    </li>
+                                    <li class="circle-green">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">보통</span>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:23</span>
+                                        </div>
+                                    </li>
+                                    <li class="circle-dark">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text text-long">신호없음</span>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:20</span>
+                                        </div>
+                                    </li>
+                                    <li class="circle-blue">
+                                        <div class="route-inner">
+                                            <div class="route-title">
+                                                <span class="text">좋음</span>
+                                            </div>
+                                            <span class="text-64 ml-auto">2022.01.29 12:15</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-accent" data-dismiss="modal">이벤트 설정</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .modal-content{
+            box-shadow: 0 .5rem 1rem rgba(39, 44, 51, .1) !important;
+            border-color: transparent !important;
+        }
+        .modal-backdrop.show{
+            opacity: 0;
+        }
+    </style>
+
+
+
+    
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3-min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="vendor/popper.min.js"></script>
+    <script src="vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="vendor/material-design-kit.js"></script>
+
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+
+    <!-- Preloader -->
+    <script src="js/preloader.js"></script>
+
+    <!-- Range Slider -->
+    <script src="vendor/ion.rangeSlider.min.js"></script>
+    <script src="js/ion-rangeslider.js"></script>
+
+    <!-- Quill -->
+    <script src="vendor/quill.min.js"></script>
+    <script src="js/quill.js"></script>
+
+    <!-- Global Settings -->
+    <script src="js/settings.js"></script>
+
+    <!-- DateRangePicker -->
+    <script src="vendor/moment.min.js"></script>
+    <script src="vendor/moment-range.js"></script>
+
+    <!-- Flatpickr -->
+    <script src="vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="js/flatpickr.js"></script>
+
+    <script src="vendor/daterangepicker.js"></script>
+    <script src="js/daterangepicker.js"></script>
+
+    <!-- jQuery Mask Plugin -->
+    <script src="vendor/jquery.mask.min.js"></script>
+
+    <!-- modernizr.js -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Sidebar Mini JS -->
+    <script src="js/sidebar-mini.js"></script>
+    <script>
+        (function () {
+            'use strict';
+            // ENABLE sidebar menu tabs
+            $('.js-sidebar-mini-tabs [data-toggle="tab"]').on('click', function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+            $('.js-sidebar-mini-tabs').on('show.bs.tab', function (e) {
+                $('.js-sidebar-mini-tabs > .active').removeClass('active')
+                $(e.target).parent().addClass('active')
+            })
+        })()
+    </script>
+
+    <!-- Dragula -->
+    <script src="vendor/dragula/dragula.min.js"></script>
+
+    <!-- Drag & Drop Page -->
+    <script src="js/dragula.js"></script>
+
+    <!-- List.js -->
+    <script src="vendor/list.min.js"></script>
+    <script src="js/list.js"></script>
+
+    <!-- Tables -->
+    <script src="js/toggle-check-all.js"></script>
+    <script src="js/check-selected-row.js"></script>
+
+    <!-- Select2 -->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
+    
+    <script src="js/custom.js"></script>
+    <script src="js/side-menu.js"></script>
+    <script src="js/jquery.overscroll.min.js"></script>
+    <script>
+        $('.custom-scroll').overscroll({
+            direction: 'horizontal',
+            showThumbs: false,
+            scrollDelta: 5,
+            whiteDelta: 5
+        });
+    </script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function($){
+            $(window).on("load",function(){
+                $(".custom-scroll-bar").mCustomScrollbar({theme:"minimal-dark"});
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>
+
+

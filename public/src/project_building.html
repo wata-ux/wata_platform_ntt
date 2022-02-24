@@ -56,9 +56,68 @@
         <div class="pl-cover">
             <div class="pl-col-left" id="sidebar-left">
                 @@include('./include/platform-side-menu.html', {"activeMonitoring": "active", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
+                <div class="side-contents">
+                    <div class="container-fluid border-bottom-1 py-4">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row align-items-center mb-1">
+                                <span class="material-icons cp-icon">factory</span>
+                                <p class="m-0 text-64">Factory</p>
+                            </div>
+                            <h3 class="mb-0">Smart Factory Project</h3>
+                        </div>
+                    </div>
+                    <div class="plf-floor-card p-4 position-relative" data-perfect-scrollbar>
+                        <div class="plf-area-card active">
+                            <div class="plf-area-top">
+                                <h4>건물 2</h4>
+                            </div>
+                            <div class="plf-area-content">
+                                <p class="desc">대한민국, 경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>3
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plf-area-card">
+                            <div class="plf-area-top">
+                                <h4>건물</h4>
+                            </div>
+                            <div class="plf-area-content text-50">
+                                <p class="desc">대한민국, 경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plf-area-card">
+                            <div class="plf-area-top">
+                                <h4>건물</h4>
+                            </div>
+                            <div class="plf-area-content text-50">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plf-area-card">
+                            <div class="plf-area-top">
+                                <h4>건물</h4>
+                            </div>
+                            <div class="plf-area-content text-50">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="pl-col-group">
                 <div class="pl-col-mid" id="main-contents" data-perfect-scrollbar>
+                    
                     <div class="col-list">
                         <div class="plf-floor-card">
                             <div class="plf-area-title">
@@ -102,11 +161,6 @@
                                         <li>
                                             <span class="icon material-icons-outlined">category</span>
                                             <span class="text-64 font-size-14pt">자산</span>
-                                            <em>20</em>
-                                        </li>
-                                        <li>
-                                            <span class="icon material-icons-outlined">sensors</span>
-                                            <span class="text-64 font-size-14pt">측위장비</span>
                                             <em>20</em>
                                         </li>
                                         <li>
@@ -162,11 +216,6 @@
                                             <em>20</em>
                                         </li>
                                         <li>
-                                            <span class="icon material-icons-outlined">sensors</span>
-                                            <span class="text-64 font-size-14pt">측위장비</span>
-                                            <em>20</em>
-                                        </li>
-                                        <li>
                                             <span class="icon material-icons-outlined">event_note</span>
                                             <span class="text-64 font-size-14pt">이벤트</span>
                                             <em>20</em>
@@ -219,11 +268,6 @@
                                             <em>20</em>
                                         </li>
                                         <li>
-                                            <span class="icon material-icons-outlined">sensors</span>
-                                            <span class="text-64 font-size-14pt">측위장비</span>
-                                            <em>20</em>
-                                        </li>
-                                        <li>
                                             <span class="icon material-icons-outlined">event_note</span>
                                             <span class="text-64 font-size-14pt">이벤트</span>
                                             <em>20</em>
@@ -243,6 +287,7 @@
                             </div>
                         </div>
                     </div>
+                    <a href="#n" class="side-btn btn-col-left toggle-sidebar-left"><span class="material-icons-outlined">chevron_left</span></a>
                     <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span class="material-icons-outlined">chevron_right</span></a>
                 </div>
                 <div class="pl-col-right" id="sidebar-right">
