@@ -349,7 +349,21 @@ a.btn-add-item{
         }
     }
 }
-
+.btn-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    a.btn{
+        width: 40%;
+        font-size: .875rem;
+        padding: .875rem 0;
+        font-weight: 500;
+    }
+    a.btn-light{
+        border: 1px solid rgba(0,0,0,0.07);
+        color: rgba(0,0,0,0.64);
+    }
+}
 .btn-cell{
     display: flex;
     align-items: center;
@@ -520,6 +534,16 @@ a.btn-add-item{
         }
     }
 }
+.table-line-none{
+    th{
+        border-top: none !important;
+    }
+}
+.table-align-top{
+    th, td{
+        vertical-align: top !important;
+    }
+}
 
 /***** avatar *****/
 .avatar-md{
@@ -593,6 +617,12 @@ a.btn-add-item{
     }
     &.form-blank{
         height: 50px;
+    }
+    &.line-none{
+        border-color: transparent;
+    }
+    &.is-invalid{
+        border-color: $identity;
     }
 }
 select.form-line{
@@ -2104,21 +2134,6 @@ platform map
                 color: #fff;
                 background-color: #c3c3c3;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, .05);
-            }
-        }
-        .btn-wrap{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            a{
-                width: 40%;
-                font-size: .875rem;
-                padding: .875rem 0;
-                font-weight: 500;
-            }
-            a.btn-light{
-                border: 1px solid rgba(0,0,0,0.07);
-                color: rgba(0,0,0,0.64);
             }
         }
     }
@@ -10704,6 +10719,9 @@ span.cp-icon{
                     line-height: 42px;
                 }
             }
+            input.line-none{
+                min-width: 300px;
+            }
         }
     }
     .pl-cover{
@@ -10724,6 +10742,7 @@ span.cp-icon{
             }
         }
         .pl-col-group{
+            position: relative;
             display: flex;
             flex-grow: 1;
             width: 100%;
@@ -10828,6 +10847,24 @@ span.cp-icon{
                         }
                     }
                 }
+            }
+        }
+        .pl-col-float{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 3;
+            padding: 4rem;
+            .inner{
+                max-width: 1440px;
+                margin: 0 auto;
+            }
+            .btn-wrap{
+                max-width: 320px;
+                margin: 0 auto;
             }
         }
         .pl-col-right{

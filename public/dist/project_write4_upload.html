@@ -237,7 +237,7 @@
                             </select>
                         </div>
                         <div class="btn-cell">
-                            <a href="project_write4_upload.html" class="btn-add-item text-green">
+                            <a href="#n" class="btn-add-item text-green">
                                 <span class="material-icons">note_add</span>
                                 엑셀 업로드
                             </a>
@@ -247,7 +247,7 @@
                             </a>
                         </div>
                     </div>
-                    <table class="table table-nowrap table-high table-line-none">
+                    <table class="table table-nowrap table-high table-line-none table-align-top">
                         <colgroup>
                             <col width="15%">
                             <col width="*">
@@ -262,39 +262,119 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>NT0000</td>
-                                <td>Ryan</td>
-                                <td class="text-center">Tag</td>
-                            </tr>
-                            <tr>
-                                <td>NT0000</td>
-                                <td>Main battery</td>
-                                <td class="text-center">Tag</td>
-                            </tr>
-                            <tr>
-                                <td>NT0000</td>
-                                <td>Main battery</td>
-                                <td class="text-center">Beacon</td>
-                            </tr>
-                            <tr>
-                                <td>NT0000</td>
-                                <td>Sensor</td>
-                                <td class="text-center">Tag</td>
-                            </tr>
-                            <tr>
-                                <td>NT0000</td>
-                                <td>Sensor</td>
-                                <td class="text-center">Beacon</td>
+                                <td colspan="3" class="text-center">
+                                    <p class="py-4 m-0">자산을 등록해 주세요</p>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="empty-state border-top-0 d-none">
-                        <em class="empty-txt mb-4">자산을 등록해 주세요</em>
-                        <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
-                    </div>
                 </div>
             </div>
             <div class="pl-col-group">
+                <div class="pl-col-float">
+                    <div class="inner">
+                        <h3>자산 일괄 등록</h3>
+                        <div class="d-flex justify-content-end mb-2">
+                            총 <span class="text-identity">6</span>건
+                        </div>
+                        <table class="table table-high table-head-light table-align-top mb-5">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center">자산 유형</th>
+                                    <th class="text-center">자산 분류</th>
+                                    <th class="text-center">자산명</th>
+                                    <th class="text-center">식별값</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a>
+                                        </div>
+                                    <td><input type="text" class="form-line" value="Tag"></td>
+                                    <td><input type="text" class="form-line" value="사람"></td>
+                                    <td><input type="text" class="form-line" value="Ryan"></td>
+                                    <td><input type="text" class="form-line" value="btr0101a"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" class="form-line" value="Beacon"></td>
+                                    <td><input type="text" class="form-line" value="배터리"></td>
+                                    <td><input type="text" class="form-line" value="Main battery"></td>
+                                    <td>
+                                        <input type="text" class="form-line is-invalid" value="btr0101b" required>
+                                        <div class="invalid-feedback">식별값은 중복될 수 없습니다</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" class="form-line" value="Beacon"></td>
+                                    <td><input type="text" class="form-line" value="배터리"></td>
+                                    <td><input type="text" class="form-line" value="Battery"></td>
+                                    <td>
+                                        <input type="text" class="form-line is-invalid" value="btr0101b" required>
+                                        <div class="invalid-feedback">식별값은 중복될 수 없습니다</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" class="form-line" value="Beacon"></td>
+                                    <td><input type="text" class="form-line" value="온습도센서"></td>
+                                    <td><input type="text" class="form-line" value="Sensor01"></td>
+                                    <td><input type="text" class="form-line" value="btr0102a"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" class="form-line" value="Beacon"></td>
+                                    <td><input type="text" class="form-line" value="환경 센서"></td>
+                                    <td><input type="text" class="form-line" value="Sensor02"></td>
+                                    <td><input type="text" class="form-line" value="btr0103a"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" class="form-line" value=""></td>
+                                    <td><input type="text" class="form-line" value=""></td>
+                                    <td><input type="text" class="form-line" value=""></td>
+                                    <td><input type="text" class="form-line" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-identity"><span class="material-icons">add_circle</span></a>
+                                        </div>
+                                    </td>
+                                    <td colspan="4"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn-wrap">
+                            <a href="#n" class="btn btn-light mr-4">취소</a>
+                            <a href="#n" class="btn btn-accent ml-0">저장</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="pl-col-mid" id="main-contents">
                         <!-- map zoom/out -->
     <div class="btn-widget-holder">

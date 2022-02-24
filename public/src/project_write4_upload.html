@@ -1,0 +1,224 @@
+@@include('./include/platform-header.html')
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="project_dashboard.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <div class="d-flex ml-4">
+                    <input type="text" class="form-line line-none" placeholder="프로젝트명을 입력해 주세요">
+                </div>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="custom-select" class="custom-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                @@include('./include/platform-side-menu.html', {"activeMonitoring": "active", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
+                <div class="side-contents" data-perfect-scrollbar>
+                    <div class="row-tab">
+                        <ul class="list-unstyled custom-scroll">
+                            <li><a href="project_write.html">프로젝트 정보</a></li>
+                            <li><a href="project_write2.html">건물 등록</a></li>
+                            <li><a href="project_write3.html">평면도 등록</a></li>
+                            <li class="active"><a href="project_write4.html">자산 등록</a></li>
+                        </ul>
+                    </div>
+                    <div class="plf-floor-add border-bottom-0">
+                        <div class="form-cell">
+                            <select name="category" class="form-line mb-3">
+                                <option value="">건물</option>
+                                <option value="">건물2</option>
+                                <option value="">건물3</option>
+                            </select>
+                            <select name="category" class="form-line">
+                                <option value="">평면도 1층</option>
+                                <option value="">평면도 2층</option>
+                                <option value="">평면도 3층</option>
+                            </select>
+                        </div>
+                        <div class="btn-cell">
+                            <a href="#n" class="btn-add-item text-green">
+                                <span class="material-icons">note_add</span>
+                                엑셀 업로드
+                            </a>
+                            <a href="project_write4_new.html" class="btn-add-item text-identity">
+                                <span class="material-icons">add</span>
+                                자산 등록
+                            </a>
+                        </div>
+                    </div>
+                    <table class="table table-nowrap table-high table-line-none table-align-top">
+                        <colgroup>
+                            <col width="15%">
+                            <col width="*">
+                            <col width="15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-center pl-4">자산ID</th>
+                                <th class="text-center">자산명</th>
+                                <th class="text-center pr-4">유형</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="3" class="text-center">
+                                    <p class="py-4 m-0">자산을 등록해 주세요</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-float">
+                    <div class="inner">
+                        <h3>자산 일괄 등록</h3>
+                        <div class="d-flex justify-content-end mb-2">
+                            총 <span class="text-identity">6</span>건
+                        </div>
+                        <table class="table table-high table-head-light table-align-top mb-5">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center">자산 유형</th>
+                                    <th class="text-center">자산 분류</th>
+                                    <th class="text-center">자산명</th>
+                                    <th class="text-center">식별값</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a>
+                                        </div>
+                                    <td><input type="text" class="form-line" value="Tag"></td>
+                                    <td><input type="text" class="form-line" value="사람"></td>
+                                    <td><input type="text" class="form-line" value="Ryan"></td>
+                                    <td><input type="text" class="form-line" value="btr0101a"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" class="form-line" value="Beacon"></td>
+                                    <td><input type="text" class="form-line" value="배터리"></td>
+                                    <td><input type="text" class="form-line" value="Main battery"></td>
+                                    <td>
+                                        <input type="text" class="form-line is-invalid" value="btr0101b" required>
+                                        <div class="invalid-feedback">식별값은 중복될 수 없습니다</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" class="form-line" value="Beacon"></td>
+                                    <td><input type="text" class="form-line" value="배터리"></td>
+                                    <td><input type="text" class="form-line" value="Battery"></td>
+                                    <td>
+                                        <input type="text" class="form-line is-invalid" value="btr0101b" required>
+                                        <div class="invalid-feedback">식별값은 중복될 수 없습니다</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" class="form-line" value="Beacon"></td>
+                                    <td><input type="text" class="form-line" value="온습도센서"></td>
+                                    <td><input type="text" class="form-line" value="Sensor01"></td>
+                                    <td><input type="text" class="form-line" value="btr0102a"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" class="form-line" value="Beacon"></td>
+                                    <td><input type="text" class="form-line" value="환경 센서"></td>
+                                    <td><input type="text" class="form-line" value="Sensor02"></td>
+                                    <td><input type="text" class="form-line" value="btr0103a"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" class="form-line" value=""></td>
+                                    <td><input type="text" class="form-line" value=""></td>
+                                    <td><input type="text" class="form-line" value=""></td>
+                                    <td><input type="text" class="form-line" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-center h-100">
+                                            <a href="#n" class="text-identity"><span class="material-icons">add_circle</span></a>
+                                        </div>
+                                    </td>
+                                    <td colspan="4"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn-wrap">
+                            <a href="#n" class="btn btn-light mr-4">취소</a>
+                            <a href="#n" class="btn btn-accent ml-0">저장</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl-col-mid" id="main-contents">
+                    @@include('./include/platform-tools-map.html')
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@@include('./include/platform-footer.html')
+
